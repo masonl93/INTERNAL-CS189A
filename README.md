@@ -13,9 +13,9 @@
 - Mason Levy - Software Developer
 - Prithvi Sathiya - Software Developer
 
-#### Currently on: Setup/Pre-Sprint 1
+#### Currently on: Sprint 1
 
 # To-Do:
-- Basic Website/Learn RoR
-- Facebook login
+- Learn RoR
+- Facebook login on website
 - Database/PostGRE

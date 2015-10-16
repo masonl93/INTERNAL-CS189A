@@ -1,4 +1,5 @@
-# Mezzo - Finding a _medium_ ground for musicians
+# Mezzo [![Build Status](https://magnum.travis-ci.com/Styxx/INTERNAL-CS189A.svg?token=pQvxcmrbHMs3QsSaUN6U&branch=master)](https://magnum.travis-ci.com/Styxx/INTERNAL-CS189A)
+## Finding a _medium_ for musicians to collaborate
 ##### CS 189A - Senior Capstone Project
 ###### Instructor: Chandra Krintz (ckrintz@cs.ucsb.edu)
 ###### TA: Daniel Imberman (dimberman@umail.ucsb.edu)
@@ -13,9 +14,8 @@
 - Mason Levy - Software Developer
 - Prithvi Sathiya - Software Developer
 
-#### Currently on: Sprint 1
+#### Currently on: Pre-Sprint 2
 
 # To-Do:
-- Learn RoR
-- Facebook login on website
-- Database/PostGRE
+- Sprint 1 Retrospective
+- Sprint 2 Planning

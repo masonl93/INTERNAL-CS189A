@@ -1,5 +1,7 @@
 sudo: false
 language: ruby
+cache: bundler
+bundler_args: --retry=3 --jobs=3
 rvm:
     - 1.9.3
     - 2.0
@@ -11,7 +13,7 @@ rvm:
     - ruby-head
     - jruby
     - jruby-head
-    - rbx-2
+#    - rbx-2            Hangs on build
 matrix:
     allow_failures:
     - rvm: 2.2.2p95

@@ -13,7 +13,6 @@ rvm:
     - ruby-head
     - jruby
     - jruby-head
-#    - rbx-2            Hangs on build
 matrix:
     allow_failures:
     - rvm: 2.2.2p95

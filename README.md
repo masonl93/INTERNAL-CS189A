@@ -14,8 +14,10 @@
 - Mason Levy - Software Developer
 - Prithvi Sathiya - Software Developer
 
-#### Currently on: Pre-Sprint 2
+#### Currently on: Sprint 2
 
 # To-Do:
-- Sprint 1 Retrospective
-- Sprint 2 Planning
+- Wireframe of frontpage/profiles
+- Design front page
+- Implement profile process
+- Push S1 to production

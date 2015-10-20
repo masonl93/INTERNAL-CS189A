@@ -19,3 +19,5 @@ matrix:
     - rvm: jruby
     - rvm: jruby-head
     fast_finish: true
+notifications:
+  slack: teamgigs:Nnem2T8oYDBaz6Sww5bDkhgH

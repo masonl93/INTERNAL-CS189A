@@ -20,4 +20,3 @@
 - Wireframe of frontpage/profiles
 - Design front page
 - Implement profile process
-- Push S1 to production

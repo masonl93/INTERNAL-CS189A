@@ -2574,3 +2574,41 @@ Started GET "/auth/facebook" for 169.231.69.154 at 2015-10-20 09:25:17 +0000
 
 
 Started GET "/auth/facebook" for 169.231.69.154 at 2015-10-20 09:25:17 +0000
+
+
+Started GET "/" for 70.169.190.7 at 2015-10-20 16:36:00 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 99ms (Views: 86.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 70.169.190.7 at 2015-10-20 16:36:01 +0000
+
+
+Started GET "/assets/home.css?body=1" for 70.169.190.7 at 2015-10-20 16:36:01 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 70.169.190.7 at 2015-10-20 16:36:01 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 70.169.190.7 at 2015-10-20 16:36:01 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 70.169.190.7 at 2015-10-20 16:36:01 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 70.169.190.7 at 2015-10-20 16:36:01 +0000
+
+
+Started GET "/assets/home.js?body=1" for 70.169.190.7 at 2015-10-20 16:36:01 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 70.169.190.7 at 2015-10-20 16:36:01 +0000
+
+
+Started GET "/assets/application.js?body=1" for 70.169.190.7 at 2015-10-20 16:36:01 +0000
+
+
+Started GET "/assets/facebook.png" for 70.169.190.7 at 2015-10-20 16:36:01 +0000

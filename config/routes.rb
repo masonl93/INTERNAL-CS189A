@@ -1,5 +1,6 @@
 OmniApp::Application.routes.draw do
 
+  get "users/new"
   #get "home/index"
 
   #get "home/profile"

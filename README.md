@@ -20,3 +20,11 @@
 - Wireframe of frontpage/profiles
 - Design front page
 - Implement profile process
+
+
+##### Note:
+If you want to run the server on *Cloud 9*, you will have to start the PostGRESQL service before you run:
+
+``` sudo service postgresql start ```
+
+``` rails s -b $IP -p $PORT ```

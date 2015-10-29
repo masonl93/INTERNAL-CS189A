@@ -1,5 +1,4 @@
-# Mezzo [![Build Status](https://magnum.travis-ci.com/Styxx/INTERNAL-CS189A.svg?token=pQvxcmrbHMs3QsSaUN6U&branch=master)](https://magnum.travis-ci.com/Styxx/INTERNAL-CS189A)
-## Finding a _medium_ for musicians to collaborate
+# Mezzo - Finding a _medium_ ground for musicians
 ##### CS 189A - Senior Capstone Project
 ###### Instructor: Chandra Krintz (ckrintz@cs.ucsb.edu)
 ###### TA: Daniel Imberman (dimberman@umail.ucsb.edu)
@@ -14,17 +13,3 @@
 - Mason Levy - Software Developer
 - Prithvi Sathiya - Software Developer
 
-#### Currently on: Sprint 2
-
-# To-Do:
-- Wireframe of frontpage/profiles
-- Design front page
-- Implement profile process
-
-
-##### Note:
-If you want to run the server on *Cloud 9*, you will have to start the PostGRESQL service before you run:
-
-``` sudo service postgresql start ```
-
-``` rails s -b $IP -p $PORT ```

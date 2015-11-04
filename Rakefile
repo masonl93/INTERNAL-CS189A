@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Mez2::Application.load_tasks
+OmniApp::Application.load_tasks

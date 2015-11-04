@@ -1,0 +1,44 @@
+<%= form_tag({controller: "users", action: "updateInstrument"}, method: "post") do %>
+    <%= label_tag(:instrument, "Instrument:") %>
+    <%= text_field_tag(:instrument) %>
+
+    <%= label_tag(:exp, "Experience:") %>
+    <%= text_field_tag(:exp) %>
+
+    <%= submit_tag("Search") %>
+<% end %>
+
+
+<%= form_tag({controller: "users", action: "updateGenre"}, method: "post") do %>
+    <%= label_tag(:genre, "Genre:") %>
+    <%= text_field_tag(:genre) %>
+
+
+    <%= submit_tag("Genre") %>
+<% end %>
+
+
+<%= form_tag({controller: "users", action: "updateInfluence"}, method: "post") do %>
+    <%= label_tag(:influence, "Influence:") %>
+    <%= text_field_tag(:influence) %>
+
+
+    <%= submit_tag("Influence") %>
+<% end %>
+
+
+<%= form_tag({controller: "users", action: "addMedia"}, method: "post") do %>
+    <%= label_tag(:url, "Url:") %>
+    <%= text_field_tag(:url) %>
+
+    <%= label_tag(:provider, "Provider:") %>
+    <%= text_field_tag(:provider) %>
+
+
+    <%= submit_tag("Provider") %>
+<% end %>
+
+
+
+
+</div>

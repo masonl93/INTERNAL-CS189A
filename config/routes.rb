@@ -1,26 +1,56 @@
-Mez2::Application.routes.draw do
+OmniApp::Application.routes.draw do
+
+  match '/users',      to: 'users#updateInstrument',        via: 'post'
+
+  match '/users/updateGenre', to: 'users#updateGenre', via: 'post'
+
+  match '/users/updateInfluence', to: 'users#updateInfluence', via: 'post'
+
+  match '/users/addMedia', to: 'users#addMedia', via: 'post'
+
 
   resources :users
-=begin
 
-  get "users/index"
-  get "users/new"
-  get "users/create"
-  get "users/edit"
-  get "users/update"
-  get "users/destroy"
-  get "users/show"
+  get     'edit' => 'users#edit'
+
+
+=begin
+  get "users/new"             # Currently empty; exists only to pass users/new test
+
+
+  get "/users" => "users#index"
+  get "/users/:id" => "users#show"
+  get "/users/new" => "users#new"
+  post "/users" => "users#create"  # usually a submitted form
+  get "/users/:id/edit" => "users#edit"
+  put "/users/:id" => "users#update" # usually a submitted form
+  delete "/users/:id" => "users#destroy"
 =end
 
-  root 'users#index'
 
-  get '/all', :to => 'users#index', :as => 'all'
 
-  get 'auth/:provider/callback', to: "users#new"
+  root               'home#home'
+  get     'about'   => 'home#about'
+  get     'profile' => 'profile#showVid'
 
-  #delete 'sign_out', to: "users#end_session", as: 'sign_out'
+  #get 'home/edit' => 'home#edit'
+  
+  #get 'home/profile'          # Currently empty; exists only to pass home/profile test
+                              # change to users/profile?
+  #<-for profile page stuff
+  #get "profile/showVid"
+  get "profile/showAud"
+  get "profile/showSingleVid"
+  get "profile/showAllMessage"
+  get "profile/addVid"
+  post "profile/create"
+  #end profile page stuff--->
 
-  delete '/sign_out', :to => 'users#end_session'
+
+  get 'auth/:provider/callback', to: "sessions#create"
+
+  delete 'sign_out', to: "sessions#destroy", as: 'sign_out'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

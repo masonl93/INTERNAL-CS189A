@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mez2</title>
+  <title>Mezzo</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -16,9 +16,48 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 </head>
-<body>
-
-<%= yield %>
-
-</body>
+  <body>
+  
+  <!-- navbar-inverse  -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+        <!-- <h1><%= link_to root_path do %>Mezzo<% end %></h1> -->
+        <%= link_to "mezzo", '#', id: "logo" %>
+      </div>
+  
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>><%= link_to "Profile", profile_path, id: "profile" %></li>
+          <% if current_user %>
+		<% if false %>
+              	  <li>Signed in as: <%= current_user.name %> - <%= image_tag(@auth['info']['image'], width: '50', height: '50', class: 'img-circle') %></li>
+		<% end %>
+	      <li>Signed in as: <%= current_user.name %> </li>
+              <li><%= link_to "Sign Out", 'sign_out', method: :delete %></li>
+          <% else %>
+              <li>Sign in<%= link_to "auth/facebook" do %><%= image_tag('facebook.png', width: '40', height: '40', class: 'img-circle') %><% end %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <% flash.each do |key, value| %>
+      <div class="alert alert-info"><%= value %></div>
+  <% end %>
+  
+  
+  <%= yield %>
+  <%= render 'layouts/footer' %>
+  
+  </body>
 </html>

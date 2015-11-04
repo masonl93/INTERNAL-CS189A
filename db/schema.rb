@@ -11,20 +11,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151028233152) do
+ActiveRecord::Schema.define(version: 20151104071508) do
 
-  create_table "users", force: true do |t|
-    t.string   "uid"
-    t.string   "name"
-    t.string   "email"
-    t.string   "instruments"
-    t.string   "looking_for"
+  create_table "genres", force: :cascade do |t|
+    t.string   "genre"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "influences", force: :cascade do |t|
+    t.string   "influence"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "instruments", force: :cascade do |t|
+    t.string   "instrument"
+    t.integer  "user_id"
+    t.integer  "experience"
+    t.boolean  "play"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "media", force: :cascade do |t|
+    t.string   "url"
+    t.integer  "user_id"
+    t.string   "provider"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "provider",   limit: 255
+    t.string   "uid",        limit: 255
+    t.string   "name",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "guitar"
-    t.integer  "bass"
-    t.integer  "drum"
-    t.integer  "sing"
+    t.string   "email"
+    t.decimal  "lat"
+    t.decimal  "long"
+    t.integer  "age"
   end
 
 end

@@ -1,65 +1,58 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+
   end
 
   def new
-    auth = request.env["omniauth.auth"]
-    session[:omniauth] = auth.except('extra')
-    user = User.sign_in_from_omniauth(auth)
-    puts user
-    session[:user_id] = user.id
-    #redirect_to root_url, notice: "SIGNED IN"
-    #redirect_to root_url
-    redirect_to action: :edit, id: session[:user_id]
-  end
-
-  def create
-    @user = User.new(user_params)
-    if @user.save
-      redirect_to users_path
-    else
-      redirect_to action: :new
-    end
-  end
-
-  def edit
-    @user = User.find(params[:id])
-  end
-
-  def update
-    @user = User.find(params[:id])
-    if @user.update_attributes(user_params)
-      redirect_to users_path
-    else
-      render :action => :edit
-    end
-  end
-
-  def destroy
-    @user = User.find(user_params)
-    @user.destroy
-    redirect_to users_path
-  end
-
-  def end_session
-    session[:user_id] = nil
-    session[:omniauth] = nil
-    puts 'hey'
-    redirect_to 'users_path'
   end
 
   def show
-    @user = User.find(params[:user_id])
+    @user = User.find(session[:user_id])
   end
 
+  def create
 
-  private
-
-  def user_params
-    #params.require(:user).permit(:name, :email, :instruments, :looking_for, :guitar, :drum, :bass, :sing)
-    params.require(:user).permit(:guitar, :drum, :bass, :sing)
   end
 
+  def edit
+    @user = User.find(session[:user_id])
+  end
+
+  def update
+  end
+
+  def updateInstrument
+    puts params[:instrument]
+    puts params[:exp]
+    params[:play] = 1
+    params[:uid] = session[:user_id]
+    instrument = Instrument.add(params)
+    raise "foo"
+  end
+
+  def updateGenre
+    puts params[:genre]
+    params[:uid] = session[:user_id]
+    genre = Genre.add(params)
+    raise "Yaa"
+  end
+
+  def updateInfluence
+    puts params[:influence]
+    params[:uid] = session[:user_id]
+    influence = Influence.add(params)
+    raise "Taadaa"
+  end
+
+  def addMedia
+    puts params[:url]
+    params[:uid] = session[:user_id]
+    media = Medium.add(params)
+    raise "Media!!"
+  end
+
+  def destroy
+
+  end
 
 end

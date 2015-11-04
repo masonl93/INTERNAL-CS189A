@@ -1,0 +1,59 @@
+// Place all the styles related to the Profile controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.bioLayout {
+
+    height: 200px;
+    width: 100%;
+    //border-top: 2px solid #AC1D59;
+    background-color: #A6D8DF;
+    //background-image: url('http://stockfresh.com/files/l/lem/m/45/537594_stock-photo-abstract-musical-background-guitar.jpg');
+    padding: 20px;
+}
+
+.second {
+    height: 200px;
+    width: 100%;
+    //border-top: 2px solid #AC1D59;
+    background-color: #E6F0E6;
+    //background-image: url('http://stockfresh.com/files/l/lem/m/45/537594_stock-photo-abstract-musical-background-guitar.jpg');
+    padding: 20px;
+}
+
+#pic {
+    
+    display: inline-block;
+}
+
+.bio {
+    position: absolute;
+    
+    
+    color: #5F5F5F;
+    right: 10px;
+    display: inline-block;
+    width: 75%;
+}
+
+.Videolist {
+    width: 100%;
+    text-align: center;
+    
+    padding-top: 5px;
+}
+
+.VideoWrapper {
+    width: 100%;
+    
+    text-align: center;
+    margin: 10px;
+    position: relative;
+}
+
+
+
+.thumbnailimage {
+    width: 30%;
+    margin: 5px auto;
+}

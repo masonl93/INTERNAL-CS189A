@@ -1,16 +1,19 @@
 class User < ActiveRecord::Base
-  validates_presence_of :uid
+  has_many :instruments
+  has_many :genres
+  has_many :influences
+  has_many :mediums
+
 
   def self.sign_in_from_omniauth(auth)
-    puts auth
-    find_by(uid: auth['uid']) || create_user_from_omniauth(auth)
+    find_by(provider: auth['provider'], uid: auth['uid']) || create_user_from_omniauth(auth)
   end
 
   def self.create_user_from_omniauth(auth)
     create(
+        provider: auth['provider'],
         uid: auth['uid'],
-        name: auth['info']['name'],
-        email: auth['info']['email']
+        name: auth['info']['name']
     )
   end
 

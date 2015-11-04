@@ -1,0 +1,32 @@
+<div class="center jumbotron">
+    <h1> Welcome to Mezzo </h1>
+    
+    <h2>
+        A <em>medium</em> for musicians to collaborate.
+    </h2>
+    
+    <%= link_to image_tag("mezzo_transparent2.png", alt: "Mezzo logo"),
+            '' %>
+
+
+
+
+
+  <table border="1">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>uid</th>
+
+    </tr>
+    </thead>
+
+    <% @users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.uid %></td>
+        </tr>
+    <% end -%>
+  </table>
+
+</div>

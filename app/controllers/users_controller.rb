@@ -21,6 +21,17 @@ class UsersController < ApplicationController
   def update
   end
 
+  def updateSurvey
+    params[:play] = 1
+    params[:uid] = session[:user_id]
+    instrument = Instrument.add(params)
+    genre = Genre.add(params)
+    influence = Influence.add(params)
+    media = Medium.add(params)
+    User.update_bio(session[:user_id], params[:bio])
+    redirect_to action: "show", id: session[:user_id]
+  end
+
   def updateInstrument
     puts params[:instrument]
     puts params[:exp]

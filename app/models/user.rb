@@ -13,8 +13,17 @@ class User < ActiveRecord::Base
     create(
         provider: auth['provider'],
         uid: auth['uid'],
-        name: auth['info']['name']
+        name: auth['info']['name'],
+        image: auth['info']['image'],
+        email: auth['info']['email']
     )
   end
+
+  def self.update_bio(uid, bio)
+    user = self.find(uid)
+    user.bio = bio
+    user.save
+  end
+
 
 end

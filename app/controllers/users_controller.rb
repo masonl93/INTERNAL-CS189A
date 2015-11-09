@@ -16,12 +16,16 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(session[:user_id])
+    puts 'at param1~~~~~~~~~~~~~~'
+    puts params
   end
 
   def update
   end
 
   def updateSurvey
+    puts 'HEYYYY'
+    puts params
     params[:play] = 1
     params[:uid] = session[:user_id]
     instrument = Instrument.add(params)
@@ -32,6 +36,9 @@ class UsersController < ApplicationController
     redirect_to action: "show", id: session[:user_id]
   end
 
+
+
+=begin
   def updateInstrument
     puts params[:instrument]
     puts params[:exp]
@@ -61,6 +68,7 @@ class UsersController < ApplicationController
     media = Medium.add(params)
     raise "Media!!"
   end
+=end
 
   def destroy
 

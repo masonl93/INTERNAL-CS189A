@@ -1,5 +1,7 @@
 OmniApp::Application.routes.draw do
 
+  get 'matching/match'
+
   match '/users',      to: 'users#updateSurvey',        via: 'post'
 
   match '/users/updateGenre', to: 'users#updateGenre', via: 'post'

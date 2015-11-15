@@ -1,7 +1,5 @@
 OmniApp::Application.routes.draw do
 
-  get 'matching/match'
-
   match '/users',      to: 'users#updateSurvey',        via: 'post'
 
   match '/users/updateGenre', to: 'users#updateGenre', via: 'post'
@@ -32,13 +30,14 @@ OmniApp::Application.routes.draw do
 
 
   root               'home#home'
-  get     'about'   => 'home#about'
-  get     'profile' => 'profile#showVid'
+  get     'about'    => 'home#about'
+  get     'profile'  => 'profile#showVid'
+  get     'matching' => 'matching#match'
 
   #get 'home/edit' => 'home#edit'
   
   #get 'home/profile'          # Currently empty; exists only to pass home/profile test
-                              # change to users/profile?
+                               # change to users/profile?
   #<-for profile page stuff
   #get "profile/showVid"
   get "profile/showAud"

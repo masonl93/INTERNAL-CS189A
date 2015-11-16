@@ -56842,3 +56842,34 @@ ActionView::MissingTemplate (Missing template users/clickLike, application/click
   Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
   Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
   Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (28.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."user1" = '10153027670646326'[0m
+SQLite3::SQLException: no such column: users.user1: SELECT "users".* FROM "users" WHERE "users"."user1" = '10153027670646326'
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."user1" = '10153027670646326'
+SQLite3::SQLException: no such column: users.user1: SELECT "users".* FROM "users" WHERE "users"."user1" = '10153027670646326'
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."user2" = '10153027670646326'[0m
+SQLite3::SQLException: no such column: users.user2: SELECT "users".* FROM "users" WHERE "users"."user2" = '10153027670646326'
+  [1m[35mMatching Load (0.3ms)[0m  SELECT "matchings".* FROM "matchings"
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."user2" = '10206425663374349'[0m
+SQLite3::SQLException: no such column: users.user2: SELECT "users".* FROM "users" WHERE "users"."user2" = '10206425663374349'
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."user2" = '10206425663374349'
+SQLite3::SQLException: no such column: users.user2: SELECT "users".* FROM "users" WHERE "users"."user2" = '10206425663374349'
+  [1m[36mMatching Load (5.0ms)[0m  [1mSELECT "matchings".* FROM "matchings"[0m
+  [1m[35mMatching Load (0.3ms)[0m  SELECT "matchings".* FROM "matchings" WHERE "matchings"."user2" = ?  [["user2", "10206425663374349"]]
+  [1m[36mMatching Load (0.3ms)[0m  [1mSELECT "matchings".* FROM "matchings" WHERE "matchings"."user2" = ?[0m  [["user2", "10206425674349"]]
+  [1m[35mMatching Load (0.3ms)[0m  SELECT "matchings".* FROM "matchings" WHERE "matchings"."user2" = ?  [["user2", "10206425674349"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "matchings" WHERE "matchings"."user2" = ?[0m  [["user2", "10206425674349"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "matchings" WHERE "matchings"."user2" = ?  [["user2", "10206425663374349"]]
+  [1m[36mSQL (2.8ms)[0m  [1mDELETE FROM "matchings"[0m
+  [1m[35mSQL (7.7ms)[0m  DELETE FROM "matchings"
+  [1m[36mMatching Load (4.8ms)[0m  [1mSELECT "matchings".* FROM "matchings"[0m
+  [1m[35mMatching Exists (0.3ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10153699791134913"], ["user2", "10206425663374349"]]
+  [1m[36mSQL (59.4ms)[0m  [1mDELETE FROM "matchings"[0m
+  [1m[35mSQL (7.2ms)[0m  DELETE FROM "matchings"
+  [1m[36mSQL (6.2ms)[0m  [1mDELETE FROM "matchings"[0m
+  [1m[35mSQL (6.4ms)[0m  DELETE FROM "matchings"
+  [1m[36mSQL (5.7ms)[0m  [1mDELETE FROM "matchings"[0m
+  [1m[35mSQL (19.0ms)[0m  DELETE FROM "matchings"
+  [1m[36mMatching Load (1.3ms)[0m  [1mSELECT "matchings".* FROM "matchings"[0m
+  [1m[36mMatching Load (2.5ms)[0m  [1mSELECT "matchings".* FROM "matchings"[0m
+  [1m[35mMatching Load (0.3ms)[0m  SELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? LIMIT 1  [["user1", "10153027670646326"]]
+  [1m[36mSQL (3.8ms)[0m  [1mDELETE FROM "matchings"[0m

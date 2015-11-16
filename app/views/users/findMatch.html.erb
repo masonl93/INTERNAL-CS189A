@@ -94,11 +94,17 @@
   </div>
 
 
-<%= form_tag({controller: "users", action: "clickLike"}, method: "post") do %>
-<%= hidden_field_tag :uid , @user.uid %>
-    <%= submit_tag("Submit", :class => "btn btn-default") %>
-<% end %>
+    <%= form_tag({controller: "users", action: "clickLike"}, method: "post") do %>
+      <%= hidden_field_tag :uid , @user.uid %>
+      <%= button_tag(type: 'submit', class: "btn btn btn-primary") do %>
+          <span class="glyphicon glyphicon-ok"></span>
+      <% end %>
+      <%= button_tag(type: 'submit', class: "btn btn btn-default") do %>
+          <span class="glyphicon glyphicon-remove"></span>
+      <% end %>
+    <% end %>
+
+
 
 </div>
-  </div>
   

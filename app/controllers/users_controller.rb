@@ -46,8 +46,17 @@ class UsersController < ApplicationController
   end
 
   def clickLike
-    puts params[:uid]
-   # matched = Matching.liked()
+    user = params[:uid]
+    me = User.find(session[:user_id])
+    if Matching.where(user1: user, user2: me.uid).exists?
+      the_match = Matching.where(:user1 => user).where(:user2 => me.uid)
+    else
+      #the_match = Matching.where(user1: me.uid, user2: user)
+      the_match = Matching.where(:user1 => me.uid).where(:user2 => user)
+    end
+    puts the_match[:user1]
+    status = Matching.add_like(the_match[:id])
+    puts status
   end
   
   

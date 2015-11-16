@@ -35,18 +35,9 @@ OmniApp::Application.routes.draw do
   get     'profile'  => 'profile#showVid'
   get     'matching' => 'users#findMatch'
 
-  #get 'home/edit' => 'home#edit'
   
   #get 'home/profile'          # Currently empty; exists only to pass home/profile test
                                # change to users/profile?
-  #<-for profile page stuff
-  #get "profile/showVid"
-  get "profile/showAud"
-  get "profile/showSingleVid"
-  get "profile/showAllMessage"
-  get "profile/addVid"
-  post "profile/create"
-  #end profile page stuff--->
 
 
   get 'auth/:provider/callback', to: "sessions#create"

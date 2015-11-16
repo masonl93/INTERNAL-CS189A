@@ -12,6 +12,7 @@ OmniApp::Application.routes.draw do
   resources :users
 
   get     'edit' => 'users#edit'
+  post "users/clickLike"
 
 
 =begin
@@ -30,13 +31,14 @@ OmniApp::Application.routes.draw do
 
 
   root               'home#home'
-  get     'about'   => 'home#about'
-  get     'profile' => 'profile#showVid'
+  get     'about'    => 'home#about'
+  get     'profile'  => 'profile#showVid'
+  get     'matching' => 'users#findMatch'
 
   #get 'home/edit' => 'home#edit'
   
   #get 'home/profile'          # Currently empty; exists only to pass home/profile test
-                              # change to users/profile?
+                               # change to users/profile?
   #<-for profile page stuff
   #get "profile/showVid"
   get "profile/showAud"

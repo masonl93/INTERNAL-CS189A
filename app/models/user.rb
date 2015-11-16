@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   has_many :genres
   has_many :influences
   has_many :mediums
+  has_many :matchings
 
 
   def self.sign_in_from_omniauth(auth)

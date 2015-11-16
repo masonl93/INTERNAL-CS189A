@@ -36,7 +36,21 @@ class UsersController < ApplicationController
     redirect_to action: "show", id: session[:user_id]
   end
 
+  # Finds a possible match for swiping
+  def findMatch
+    @user = User.order("RANDOM()").first        # Matching algorithm: Find random user
+    me = User.find(session[:user_id])
+    if (!Matching.matchExists(@user.uid, me.uid) && @user.uid != me.uid)
+        @userMatch = Matching.createMatch(@user.uid, me.uid)    # Creates the match in the database 
+    else redirect_to action: "findMatch" end
+  end
 
+  def clickLike
+    puts params[:uid]
+   # matched = Matching.liked()
+  end
+  
+  
 
 =begin
   def updateInstrument

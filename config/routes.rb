@@ -13,6 +13,7 @@ OmniApp::Application.routes.draw do
 
   get     'edit' => 'users#edit'
   post "users/clickLike"
+  post "users/clickDislike"
 
 
 =begin

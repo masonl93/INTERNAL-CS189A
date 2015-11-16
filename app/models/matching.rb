@@ -20,14 +20,4 @@ class Matching < ActiveRecord::Base
     )
     end
 
-  def self.add_like(match_id)     # Returns true on a match
-    the_match = self.find(match_id)
-    the_match.status += 1
-    if the_match == 2
-      return true
-    else
-      return false
-    end
-  end
-
 end

@@ -94,17 +94,15 @@
   </div>
 
 
-    <%= form_tag({controller: "users", action: "clickLike"}, method: "post") do %>
+    <%= form_tag({controller: "users", action: "matchChoice"}, method: "post") do %>
       <%= hidden_field_tag :uid , @user.uid %>
-      <%= button_tag(type: 'submit', class: "btn btn btn-primary") do %>
+      <%= button_tag(name: 'like', type: 'submit', class: "btn btn btn-primary") do %>
           <span class="glyphicon glyphicon-ok"></span>
       <% end %>
-      <%= button_tag(type: 'submit', class: "btn btn btn-default") do %>
+      <%= button_tag(name: 'dislike', type: 'submit', class: "btn btn btn-primary") do %>
           <span class="glyphicon glyphicon-remove"></span>
       <% end %>
     <% end %>
-
-
 
 </div>
   

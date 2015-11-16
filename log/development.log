@@ -56873,3 +56873,21 @@ SQLite3::SQLException: no such column: users.user2: SELECT "users".* FROM "users
   [1m[36mMatching Load (2.5ms)[0m  [1mSELECT "matchings".* FROM "matchings"[0m
   [1m[35mMatching Load (0.3ms)[0m  SELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? LIMIT 1  [["user1", "10153027670646326"]]
   [1m[36mSQL (3.8ms)[0m  [1mDELETE FROM "matchings"[0m
+  [1m[36mSQL (28.0ms)[0m  [1mDELETE FROM "matchings"[0m
+  [1m[35mMatching Load (0.7ms)[0m  SELECT "matchings".* FROM "matchings"
+  [1m[36mMatching Load (0.3ms)[0m  [1mSELECT "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?[0m  [["user1", "10153027670646326"], ["user2", "10206425663374349"]]
+  [1m[35mSQL (6.8ms)[0m  DELETE FROM "matchings"
+  [1m[36mSQL (66.0ms)[0m  [1mDELETE FROM "matchings"[0m
+  [1m[35mSQL (71.9ms)[0m  DELETE FROM "matchings"
+  [1m[36mMatching Load (0.7ms)[0m  [1mSELECT "matchings".* FROM "matchings"[0m
+  [1m[35mMatching Load (0.4ms)[0m  SELECT "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  [["user1", "10153699791134913"], ["user2", "10206425663374349"]]
+  [1m[36mMatching Load (0.4ms)[0m  [1mSELECT "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?[0m  [["user1", "10153699791134913"], ["user2", "10206425663374349"]]
+  [1m[36mMatching Load (0.4ms)[0m  [1mSELECT "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?[0m  [["user1", "10153699791134913"], ["user2", "10206425663374349"]]
+  [1m[35mMatching Load (1.9ms)[0m  SELECT  "matchings".* FROM "matchings" WHERE "matchings"."id" = ? LIMIT 1  [["id", 69]]
+  [1m[36mMatching Load (0.7ms)[0m  [1mSELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1[0m  [["user1", "10153699791134913"], ["user2", "10206425663374349"]]
+  [1m[35mSQL (2.9ms)[0m  DELETE FROM "matchings"
+  [1m[36mInstrument Load (2.1ms)[0m  [1mSELECT "instruments".* FROM "instruments"[0m
+  [1m[35mSQL (2.2ms)[0m  DELETE FROM "matchings"
+  [1m[36mSQL (2.2ms)[0m  [1mDELETE FROM "matchings"[0m
+  [1m[35mSQL (7.4ms)[0m  DELETE FROM "matchings"
+  [1m[36mSQL (64.4ms)[0m  [1mDELETE FROM "matchings"[0m

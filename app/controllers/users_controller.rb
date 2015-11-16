@@ -45,53 +45,26 @@ class UsersController < ApplicationController
     else redirect_to action: "findMatch" end
   end
 
-  def clickLike
+  # Updates Matching object after user clicks yes or no on another user
+  def matchChoice
     user = params[:uid]
     me = User.find(session[:user_id])
+
+    # Find the correct match between the two users
     if Matching.where(user1: user, user2: me.uid).exists?
-      the_match = Matching.where(:user1 => user).where(:user2 => me.uid)
+      @the_match = Matching.where(:user1 => user).where(:user2 => me.uid).first()
     else
-      #the_match = Matching.where(user1: me.uid, user2: user)
-      the_match = Matching.where(:user1 => me.uid).where(:user2 => user)
+      @the_match = Matching.where(:user1 => me.uid).where(:user2 => user).first()
     end
-    puts the_match[:user1]
-    status = Matching.add_like(the_match[:id])
-    puts status
-  end
-  
-  
 
-=begin
-  def updateInstrument
-    puts params[:instrument]
-    puts params[:exp]
-    params[:play] = 1
-    params[:uid] = session[:user_id]
-    instrument = Instrument.add(params)
-    raise "foo"
+    # Checking if the like button or dislike button was pressed
+    # in order to properly update status value
+    if params.has_key?(:like)
+      @the_match.increment!(:status)
+    elsif params.has_key?(:dislike)
+      @the_match.decrement!(:status)
+    end
   end
-
-  def updateGenre
-    puts params[:genre]
-    params[:uid] = session[:user_id]
-    genre = Genre.add(params)
-    raise "Yaa"
-  end
-
-  def updateInfluence
-    puts params[:influence]
-    params[:uid] = session[:user_id]
-    influence = Influence.add(params)
-    raise "Taadaa"
-  end
-
-  def addMedia
-    puts params[:url]
-    params[:uid] = session[:user_id]
-    media = Medium.add(params)
-    raise "Media!!"
-  end
-=end
 
   def destroy
 

@@ -1,5 +1,5 @@
 # Mezzo [![Build Status](https://magnum.travis-ci.com/sagarsaija/INTERNAL-CS189A.svg?token=pQvxcmrbHMs3QsSaUN6U&branch=master)](https://magnum.travis-ci.com/sagarsaija/INTERNAL-CS189A)
-#### Finding a _medium_ ground for musicians
+#### Finding a _medium_ for musicians to collaborate
 #### CS 189A - Senior Capstone Project
 ###### Instructor: Chandra Krintz (ckrintz@cs.ucsb.edu)
 ###### TA: Daniel Imberman (dimberman@umail.ucsb.edu)
@@ -15,10 +15,14 @@
 - Mason Levy - Software Developer
 - Prithvi Sathiya - Software Developer
 
-## Currently on: Pre-sprint 4
-**Goal:** 
+## Currently on: Sprint 4
+**Goal:** Develop fully functional MVP
 
 ###To-do: [PivotalTracker](https://www.pivotaltracker.com/n/projects/1440674)
-
-
-##### 3 Things We're Focusing on This Sprint:
+* Fully functional matching (2) -- [ML, VC, PS]
+* Fully funcitonal chat (5) -- [ML, SB, PS]
+* Create 50 FB user profiles (2) -- [SS]
+* Finish survey page (2) -- [SS, SB]
+* Route profile button (1) -- [VC, SB]
+* Implement location on matching page (1) -- [SS, ML]
+* Talk to Appfolio UX/UI designers (1) -- [VC]

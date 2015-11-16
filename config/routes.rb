@@ -12,8 +12,7 @@ OmniApp::Application.routes.draw do
   resources :users
 
   get     'edit' => 'users#edit'
-  post "users/clickLike"
-  post "users/clickDislike"
+  post "users/matchChoice"
 
 
 =begin

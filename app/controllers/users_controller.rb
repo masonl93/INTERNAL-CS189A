@@ -89,6 +89,10 @@ class UsersController < ApplicationController
     redirect_to action: "findMatch"
   end
 
+  def showMatches
+    
+  end
+
   def destroy
 
   end

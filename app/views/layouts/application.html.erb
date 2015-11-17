@@ -29,14 +29,15 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        
+
         <!-- <h1><%= link_to root_path do %>Mezzo<% end %></h1> -->
         <%= link_to "mezzo", '#', id: "logo" %>
       </div>
-  
+
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Profile", profile_path, id: "profile" %></li>
+          <li><%= link_to "Profile", user_path(current_user.id), id: "profile" %></li>
+          <li><%= link_to "Matches", user_matches_path(current_user.id), id: "profile" %></li>
           <% if current_user %>
 		<% if false %>
               	  <li>Signed in as: <%= current_user.name %> - <%= image_tag(@auth['info']['image'], width: '50', height: '50', class: 'img-circle') %></li>

@@ -13,6 +13,8 @@ OmniApp::Application.routes.draw do
 
   get     'edit' => 'users#edit'
   post "users/matchChoice"
+  get 'view_matches' => 'users#view_matches'
+  get 'findMatch' => 'users#findMatch'
 
 
 =begin

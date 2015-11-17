@@ -16,8 +16,6 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(session[:user_id])
-    puts 'at param1~~~~~~~~~~~~~~'
-    puts params
   end
 
   def update
@@ -38,11 +36,24 @@ class UsersController < ApplicationController
 
   # Finds a possible match for swiping
   def findMatch
-    @user = User.order("RANDOM()").first        # Matching algorithm: Find random user
+    @users = User.ids       # Matching algorithm: Find all users and iterate over them
     me = User.find(session[:user_id])
-    if (!Matching.matchExists(@user.uid, me.uid) && @user.uid != me.uid)
-        @userMatch = Matching.createMatch(@user.uid, me.uid)    # Creates the match in the database 
-    else redirect_to action: "findMatch" end
+    @users.each do |u|
+      @user = User.find(u)
+      if (!Matching.matchExists(@user.uid, me.uid) && @user.uid != me.uid)
+        @userMatch = Matching.createMatch(@user.uid, me.uid)    # Creates the match in the database
+        return
+      end
+    end
+    render "no_new_users"
+  end
+
+  def notify_user_match
+
+  end
+
+  def init_message
+
   end
 
   # Updates Matching object after user clicks yes or no on another user
@@ -64,6 +75,18 @@ class UsersController < ApplicationController
     elsif params.has_key?(:dislike)
       @the_match.decrement!(:status)
     end
+
+    # Check to see if we have a match
+    if @the_match[:status] == 2
+      # we have a match
+      start_message = notify_user_match
+      if start_message
+        redirect_to action: "init_message"
+      else
+        redirect_to action: "findMatch"
+      end
+    end
+    redirect_to action: "findMatch"
   end
 
   def destroy

@@ -56891,3 +56891,11 @@ SQLite3::SQLException: no such column: users.user2: SELECT "users".* FROM "users
   [1m[36mSQL (2.2ms)[0m  [1mDELETE FROM "matchings"[0m
   [1m[35mSQL (7.4ms)[0m  DELETE FROM "matchings"
   [1m[36mSQL (64.4ms)[0m  [1mDELETE FROM "matchings"[0m
+  [1m[36mMatching Load (2.6ms)[0m  [1mSELECT "matchings".* FROM "matchings"[0m
+  [1m[35mSQL (3.1ms)[0m  DELETE FROM "matchings"
+  [1m[36mSQL (2.6ms)[0m  [1mDELETE FROM "matchings"[0m
+  [1m[35mSQL (4.0ms)[0m  DELETE FROM "matchings"
+  [1m[36m (0.3ms)[0m  [1mSELECT "users"."id" FROM "users"[0m
+  [1m[35mSQL (2.5ms)[0m  DELETE FROM "matchings"
+  [1m[36mSQL (4.7ms)[0m  [1mDELETE FROM "matchings"[0m
+  [1m[35mSQL (11.4ms)[0m  DELETE FROM "matchings"

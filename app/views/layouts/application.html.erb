@@ -31,20 +31,17 @@
         </button>
         
         <!-- <h1><%= link_to root_path do %>Mezzo<% end %></h1> -->
-        <%= link_to "mezzo", '#', id: "logo" %>
+        <%= link_to "mezzo", root_path, id: "logo" %>
       </div>
   
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Profile", profile_path, id: "profile" %></li>
+		      
           <% if current_user %>
-		<% if false %>
-              	  <li>Signed in as: <%= current_user.name %> - <%= image_tag(@auth['info']['image'], width: '50', height: '50', class: 'img-circle') %></li>
-		<% end %>
-	      <li>Signed in as: <%= current_user.name %> </li>
-              <li><%= link_to "Sign Out", 'sign_out', method: :delete %></li>
+	          <li><%= link_to current_user.name, profile_path, id: "profile" %></li>
+	          <li><%= link_to "Sign Out", 'sign_out', method: :delete %></li>
           <% else %>
-              <li>Sign in<%= link_to "auth/facebook" do %><%= image_tag('facebook.png', width: '40', height: '40', class: 'img-circle') %><% end %></li>
+            <li>Sign in<%= link_to "auth/facebook" do %><%= image_tag('facebook.png', width: '40', height: '40', class: 'img-circle') %><% end %></li>
           <% end %>
         </ul>
       </div>

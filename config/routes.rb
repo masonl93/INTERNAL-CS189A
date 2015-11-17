@@ -32,7 +32,7 @@ OmniApp::Application.routes.draw do
 
   root               'home#home'
   get     'about'    => 'home#about'
-  get     'profile'  => 'profile#showVid'
+  get     'profile'  => 'users#show'
   get     'matching' => 'users#findMatch'
 
   

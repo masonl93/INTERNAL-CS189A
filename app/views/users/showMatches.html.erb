@@ -1,1 +1,15 @@
-<p>heyyy</p>
+<% @users.each do |user| %>
+
+    <div class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object" src="<%= user.image %>" alt="...">
+        </a>
+      </div>
+      <div class="media-body">
+
+        <h4 class="media-heading"><%= link_to user.name, user_path(user.id) %></h4>
+        <%= link_to "MESSAGESSS", root_path %>
+      </div>
+    </div>
+<% end %>

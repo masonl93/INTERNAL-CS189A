@@ -36,15 +36,18 @@
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
+          <% if current_page?(:controller => 'home', :action => 'home') %>
+              <% else %>
           <li><%= link_to "Profile", user_path(current_user.id), id: "profile" %></li>
           <li><%= link_to "Matches", user_matches_path(current_user.id), id: "profile" %></li>
+              <% end %>
           <% if current_user %>
-		<% if false %>
-              	  <li>Signed in as: <%= current_user.name %> - <%= image_tag(@auth['info']['image'], width: '50', height: '50', class: 'img-circle') %></li>
-		<% end %>
-	      <li>Signed in as: <%= current_user.name %> </li>
+		        <% if false %>
+                      <li>Signed in as: <%= current_user.name %> - <%= image_tag(@auth['info']['image'], width: '50', height: '50', class: 'img-circle') %></li>
+		        <% end %>
+	          <li>Signed in as: <%= current_user.name %> </li>
               <li><%= link_to "Sign Out", 'sign_out', method: :delete %></li>
-          <% else %>
+              <% else %>
               <li>Sign in<%= link_to "auth/facebook" do %><%= image_tag('facebook.png', width: '40', height: '40', class: 'img-circle') %><% end %></li>
           <% end %>
         </ul>

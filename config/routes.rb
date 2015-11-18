@@ -36,7 +36,6 @@ OmniApp::Application.routes.draw do
   get     'about'    => 'home#about'
   get     'profile'  => 'users#show'
   get     'matching' => 'users#findMatch'
-  get     'users/:id/matches'  => 'users#showMatches', :as => :user_matches
 
   
   #get 'home/profile'          # Currently empty; exists only to pass home/profile test

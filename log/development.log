@@ -72313,3 +72313,358 @@ Started GET "/assets/sessions.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:3
 
 
 Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 68.6.87.114 at 2015-11-18 08:38:35 +0000
+
+
+Started GET "/auth/facebook" for 68.6.87.114 at 2015-11-18 08:55:07 +0000
+
+
+Started GET "/auth/facebook" for 68.6.87.114 at 2015-11-18 08:55:07 +0000
+
+
+Started GET "/auth/facebook/callback?code=AQA1XqEQk32y_wntCo25YjW5f6naUiRB1fl76UUJMSmhVDpXp-jKjJjmHFI93kBmMo8aWmyEcEz1YLJ1gQCZHxSZ_f1Yx5iioKC24dBON9AhGpukVK6djz4Jd1GWIfpOFENFlDLtVhbE4V_Wyo_1NibmR2HZ2u7zyOL0kJiUPKTjswwrAyUj6YN0-Z5PluxtdE4qudWdAve5z3dzGCa-jc8ekvicEG8C150lmpvKh-FOH_XioGW7sh-P0wbtRXKqLLiS48s3Gpd2r8lQbKqX9OWEI7EZ6J8fr2WyY_OzI3geFmCbDv1ItdSbh2dsv2nRe46UER4tISN5_jSBqItCUZpq7wBXLh_cCmJbnImCd0RRJQ&state=08b90fbc925c8b07bc0f8a7345ada95c48dcd8303a52bfc9" for 68.6.87.114 at 2015-11-18 08:55:08 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQA1XqEQk32y_wntCo25YjW5f6naUiRB1fl76UUJMSmhVDpXp-jKjJjmHFI93kBmMo8aWmyEcEz1YLJ1gQCZHxSZ_f1Yx5iioKC24dBON9AhGpukVK6djz4Jd1GWIfpOFENFlDLtVhbE4V_Wyo_1NibmR2HZ2u7zyOL0kJiUPKTjswwrAyUj6YN0-Z5PluxtdE4qudWdAve5z3dzGCa-jc8ekvicEG8C150lmpvKh-FOH_XioGW7sh-P0wbtRXKqLLiS48s3Gpd2r8lQbKqX9OWEI7EZ6J8fr2WyY_OzI3geFmCbDv1ItdSbh2dsv2nRe46UER4tISN5_jSBqItCUZpq7wBXLh_cCmJbnImCd0RRJQ", "state"=>"08b90fbc925c8b07bc0f8a7345ada95c48dcd8303a52bfc9", "provider"=>"facebook"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? LIMIT 1[0m  [["provider", "facebook"], ["uid", "10208537666945539"]]
+Redirected to https://survey-fix-workspace-catso10.c9users.io/edit
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/edit" for 68.6.87.114 at 2015-11-18 08:55:08 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/edit.html.erb within layouts/application (3.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 68ms (Views: 66.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 68.6.87.114 at 2015-11-18 08:55:08 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:55:08 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:55:08 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 68.6.87.114 at 2015-11-18 08:55:08 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:55:08 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 68.6.87.114 at 2015-11-18 08:55:08 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 68.6.87.114 at 2015-11-18 08:55:08 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 68.6.87.114 at 2015-11-18 08:55:08 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:55:08 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:55:08 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:55:09 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:55:09 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:55:09 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:55:09 +0000
+
+
+Started GET "/edit" for 68.6.87.114 at 2015-11-18 08:58:16 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered users/_form.html.erb (4.3ms)
+  Rendered users/edit.html.erb within layouts/application (5.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 86ms (Views: 83.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 68.6.87.114 at 2015-11-18 08:58:16 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:58:16 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 68.6.87.114 at 2015-11-18 08:58:17 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 68.6.87.114 at 2015-11-18 08:58:17 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 68.6.87.114 at 2015-11-18 08:58:17 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:58:17 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 68.6.87.114 at 2015-11-18 08:58:17 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:58:17 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:58:17 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:58:17 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:58:17 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:58:17 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:58:17 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:58:17 +0000
+
+
+Started GET "/edit" for 68.6.87.114 at 2015-11-18 08:59:00 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered users/_form.html.erb (4.4ms)
+  Rendered users/edit.html.erb within layouts/application (5.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 81ms (Views: 79.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 68.6.87.114 at 2015-11-18 08:59:01 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:59:01 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 68.6.87.114 at 2015-11-18 08:59:01 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 68.6.87.114 at 2015-11-18 08:59:01 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:59:01 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 68.6.87.114 at 2015-11-18 08:59:01 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 68.6.87.114 at 2015-11-18 08:59:01 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:59:01 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:59:01 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:59:01 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:59:01 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:59:01 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:59:01 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 68.6.87.114 at 2015-11-18 08:59:01 +0000
+
+
+Started GET "/edit" for 68.6.87.114 at 2015-11-18 09:03:47 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered users/_form.html.erb (3.4ms)
+  Rendered users/edit.html.erb within layouts/application (4.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 77ms (Views: 75.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 68.6.87.114 at 2015-11-18 09:03:47 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:03:47 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 68.6.87.114 at 2015-11-18 09:03:47 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 68.6.87.114 at 2015-11-18 09:03:47 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 68.6.87.114 at 2015-11-18 09:03:47 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 68.6.87.114 at 2015-11-18 09:03:47 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:03:47 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:03:47 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:03:48 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:03:48 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:03:48 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:03:48 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:03:48 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:03:48 +0000
+
+
+Started GET "/edit" for 68.6.87.114 at 2015-11-18 09:04:08 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered users/_form.html.erb (3.4ms)
+  Rendered users/edit.html.erb within layouts/application (4.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 77ms (Views: 74.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 68.6.87.114 at 2015-11-18 09:04:08 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:04:08 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:04:08 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 68.6.87.114 at 2015-11-18 09:04:08 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:04:08 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 68.6.87.114 at 2015-11-18 09:04:08 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 68.6.87.114 at 2015-11-18 09:04:08 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 68.6.87.114 at 2015-11-18 09:04:08 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:04:08 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:04:08 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:04:08 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:04:08 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:04:08 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:04:08 +0000
+
+
+Started POST "/users" for 68.6.87.114 at 2015-11-18 09:04:36 +0000
+Processing by UsersController#updateSurvey as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A3Wub0tVP5OP/YIDNkzrD971DnKkyO0ES4GTuLFdLdiTuXJSOZbwhyuPq48MkLW9NTX7xrIY3HOSKor2yy5LRA==", "instrument"=>"Drums", "genre"=>"Future Bass", "influence"=>"dj;fajdsf", "url"=>"https://www.youtube.com/watch?v=OLisADopbeo", "bio"=>"jkdj;flkasjdf;kl", "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "instruments" ("instrument", "play", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["instrument", "Drums"], ["play", "t"], ["user_id", 10], ["created_at", "2015-11-18 09:04:36.453353"], ["updated_at", "2015-11-18 09:04:36.453353"]]
+  [1m[35m (7.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "genres" ("genre", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["genre", "Future Bass"], ["user_id", 10], ["created_at", "2015-11-18 09:04:36.528734"], ["updated_at", "2015-11-18 09:04:36.528734"]]
+  [1m[36m (8.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "influences" ("influence", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["influence", "dj;fajdsf"], ["user_id", 10], ["created_at", "2015-11-18 09:04:36.540557"], ["updated_at", "2015-11-18 09:04:36.540557"]]
+  [1m[35m (9.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "media" ("url", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["url", "https://www.youtube.com/embed/OLisADopbeo"], ["user_id", 10], ["created_at", "2015-11-18 09:04:36.554414"], ["updated_at", "2015-11-18 09:04:36.554414"]]
+  [1m[36m (8.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "bio" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["bio", "jkdj;flkasjdf;kl"], ["updated_at", "2015-11-18 09:04:36.566711"], ["id", 10]]
+  [1m[36m (8.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://survey-fix-workspace-catso10.c9users.io/users/10
+Completed 302 Found in 127ms (ActiveRecord: 44.0ms)
+
+
+Started GET "/users/10" for 68.6.87.114 at 2015-11-18 09:04:36 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mInstrument Load (0.4ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 10]]
+  [1m[35mGenre Load (0.5ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?  [["user_id", 10]]
+  [1m[36mMedium Load (0.4ms)[0m  [1mSELECT "media".* FROM "media" WHERE "media"."user_id" = ?[0m  [["user_id", 10]]
+  Rendered users/show.html.erb within layouts/application (11.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 98ms (Views: 94.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:04:37 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:04:37 +0000
+
+
+Started GET "/assets/application.self.css?body=1" for 68.6.87.114 at 2015-11-18 09:04:37 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 68.6.87.114 at 2015-11-18 09:04:37 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 68.6.87.114 at 2015-11-18 09:04:37 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 68.6.87.114 at 2015-11-18 09:04:37 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 68.6.87.114 at 2015-11-18 09:04:37 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:04:37 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:04:37 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:04:37 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:04:37 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:04:37 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:04:37 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 68.6.87.114 at 2015-11-18 09:04:37 +0000
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 68.6.87.114 at 2015-11-18 09:04:37 +0000

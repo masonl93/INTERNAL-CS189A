@@ -70,6 +70,14 @@
   </div>
 </div>
 
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Bio:</label>  
+  <div class="col-md-4">
+  <!-- <input id="textinput" name="textinput" type="text" placeholder="Enter your influences" class="form-control input-md"> -->
+  <%= text_area_tag :bio %>
+  </div>
+</div>
+
 
   <!-- <%= label_tag(:exp, "Experience:") %> -->
   <!-- <%= text_field_tag(:exp) %> -->
@@ -86,10 +94,18 @@
   <!-- <%= label_tag(:provider, "Provider:") %> -->
   <!-- <%= text_field_tag(:provider) %> -->
 
-  <%= label_tag(:bio, "Bio:") %>
-  <%= text_area_tag(:bio) %>
+  <!-- <%= label_tag(:bio, "Bio:") %> -->
+  <!-- <%= text_area_tag(:bio) %> -->
+  
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput"></label>
+  <div class="col-md-4">
+  <!-- <input id="textinput" name="textinput" type="text" placeholder="Enter your influences" class="form-control input-md"> -->
+  <%= submit_tag "Submit" %>
+  </div>
+</div>
 
-  <%= submit_tag("Submit") %>
+  <!-- <%= submit_tag("Submit") %> -->
 <% end %>
 
 </div>

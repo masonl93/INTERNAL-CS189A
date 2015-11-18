@@ -61,7 +61,7 @@ class UsersController < ApplicationController
   end
 
   def notify_user_match
-    redirect_to action: "view_matches"
+
   end
 
   def init_message
@@ -91,14 +91,15 @@ class UsersController < ApplicationController
     # Check to see if we have a match
     if @the_match[:status] == 2
       # we have a match
+      redirect_to action: "view_matches" and return
       start_message = notify_user_match
       if start_message
-        redirect_to action: "init_message"
+        redirect_to action: "init_message" and return
       else
-        redirect_to action: "findMatch"
+        redirect_to action: "findMatch" and return
       end
     end
-    redirect_to action: "findMatch"
+    redirect_to action: "findMatch" and return
   end
 
 

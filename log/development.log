@@ -63832,3 +63832,2713 @@ Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 09:59:
 
 
 Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 09:59:56 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-17 14:52:06 -0800
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (7.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (105.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 1093ms (Views: 1063.6ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 14:52:09 -0800
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 14:52:09 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 14:52:09 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 14:52:09 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 14:52:09 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 14:52:09 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 14:52:09 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 14:52:09 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 14:52:09 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 14:52:09 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 14:52:09 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 14:52:09 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 14:52:09 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 14:52:09 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 14:52:10 -0800
+
+
+Started GET "/assets/mezzo_transparent2.png" for 127.0.0.1 at 2015-11-17 14:52:10 -0800
+
+
+Started GET "/matching" for 127.0.0.1 at 2015-11-17 20:03:57 -0800
+Processing by UsersController#findMatch as HTML
+  [1m[35m (1.5ms)[0m  SELECT "users"."id" FROM "users"
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mMatching Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10153699791134913"], ["user2", "10206425663374349"]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "10153699791134913"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mMatching Exists (0.2ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10153027670646326"], ["user2", "10206425663374349"]]
+  [1m[36mMatching Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "10153027670646326"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "107998112900405"], ["user2", "10206425663374349"]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "107998112900405"]]
+  Rendered users/no_new_users.html.erb within layouts/application (1.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 646ms (Views: 467.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:03:59 -0800
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:03:59 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:03:59 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:03:59 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:03:59 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:03:59 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:04:00 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:04:00 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:04:00 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:04:00 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:04:00 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:04:00 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:04:00 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:04:00 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:04:00 -0800
+  [1m[35mSQL (9.0ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (48.0ms)[0m  [1mDELETE FROM "matchings"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-17 20:04:51 -0800
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (57.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 7]]
+Completed 500 Internal Server Error in 522ms (ActiveRecord: 0.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=7):
+  app/controllers/application_controller.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:40:in `_app_views_layouts_application_html_erb__2606342466330672115_70094584124960'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (115.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-17 20:05:27 -0800
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 282ms (Views: 280.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:05:27 -0800
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:05:27 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:05:27 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:05:27 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:05:27 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:05:27 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:05:27 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:05:27 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:05:27 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:05:27 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:05:27 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:05:27 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:05:27 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:05:27 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:05:27 -0800
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2015-11-17 20:05:27 -0800
+
+
+Started GET "/assets/mezzo_transparent2.png" for 127.0.0.1 at 2015-11-17 20:05:27 -0800
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-11-17 20:05:30 -0800
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-11-17 20:05:30 -0800
+
+
+Started GET "/auth/facebook/callback?code=AQCcnVixcqp67W0WBSehcJITuzC6VGooTNbx8odoDdNXZHqoLUrZpFxFOMhXIwSRQg95TkSPwe4X7bhjT80hVRoxYL4o5hWDmuRmQort9yF_MB9IDDFHSx8R7_FqDxH9B3Kuyfo4COuHb-k-BCZ6mNexCW958xsXl505wzlOQ8Q8FFftmvw4aOZhMYIub4chV_8aC6P-mSeu6G9qTkISgE1Ls9ZEvsqYcrg6w8kmYnTfnY0ug5GnBNBuTXV4sX3siQo_CzXzh7m_oVBc2t3Zme9HzhnYPKvUDRBN0onh4T_PInEEroqSmGG9n1IYET7mfXI&state=7e7b1f30b4cb4daa7a81f361c288dbcfd05044c8bc752371" for 127.0.0.1 at 2015-11-17 20:05:36 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCcnVixcqp67W0WBSehcJITuzC6VGooTNbx8odoDdNXZHqoLUrZpFxFOMhXIwSRQg95TkSPwe4X7bhjT80hVRoxYL4o5hWDmuRmQort9yF_MB9IDDFHSx8R7_FqDxH9B3Kuyfo4COuHb-k-BCZ6mNexCW958xsXl505wzlOQ8Q8FFftmvw4aOZhMYIub4chV_8aC6P-mSeu6G9qTkISgE1Ls9ZEvsqYcrg6w8kmYnTfnY0ug5GnBNBuTXV4sX3siQo_CzXzh7m_oVBc2t3Zme9HzhnYPKvUDRBN0onh4T_PInEEroqSmGG9n1IYET7mfXI", "state"=>"7e7b1f30b4cb4daa7a81f361c288dbcfd05044c8bc752371", "provider"=>"facebook"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["uid", "10206425663374349"]]
+  [1m[35mUser Load (53.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? LIMIT 1  [["provider", "facebook"], ["uid", "10206425663374349"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("provider", "uid", "name", "image", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["provider", "facebook"], ["uid", "10206425663374349"], ["name", "Mason Levy"], ["image", "http://graph.facebook.com/10206425663374349/picture"], ["email", "masonlevy93@gmail.com"], ["created_at", "2015-11-18 04:05:38.054136"], ["updated_at", "2015-11-18 04:05:38.054136"]]
+  [1m[36m (12.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/edit
+Completed 302 Found in 73ms (ActiveRecord: 66.4ms)
+
+
+Started GET "/edit" for 127.0.0.1 at 2015-11-17 20:05:38 -0800
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered users/_form.html.erb (2.4ms)
+  Rendered users/edit.html.erb within layouts/application (12.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 133ms (Views: 128.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:05:38 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:05:38 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:05:38 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:05:38 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:05:38 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:05:38 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:05:38 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:05:38 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:05:38 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:05:38 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:05:38 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:05:38 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:05:38 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:05:38 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:05:38 -0800
+
+
+Started GET "/matching" for 127.0.0.1 at 2015-11-17 20:06:38 -0800
+Processing by UsersController#findMatch as HTML
+  [1m[35m (0.2ms)[0m  SELECT "users"."id" FROM "users"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mMatching Exists (12.5ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  Rendered users/no_new_users.html.erb within layouts/application (0.3ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 393ms (Views: 372.6ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/matching" for 127.0.0.1 at 2015-11-17 20:06:38 -0800
+Processing by UsersController#findMatch as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT "users"."id" FROM "users"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  Rendered users/no_new_users.html.erb within layouts/application (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 97ms (Views: 77.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:06:38 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:06:38 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:06:38 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:06:38 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:06:38 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:06:38 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:06:38 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:06:38 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:06:38 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:06:38 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:06:38 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:06:38 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:06:38 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:06:38 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:06:38 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-17 20:07:39 -0800
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 159ms (Views: 158.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:07:39 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:07:39 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:07:39 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:07:39 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:07:39 -0800
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:07:39 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:07:39 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:07:39 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:07:39 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:07:39 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:07:39 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:07:39 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:07:39 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:07:39 -0800
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2015-11-17 20:07:39 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:07:39 -0800
+
+
+Started GET "/assets/mezzo_transparent2.png" for 127.0.0.1 at 2015-11-17 20:07:39 -0800
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-11-17 20:07:42 -0800
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-11-17 20:07:42 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-17 20:10:22 -0800
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (12.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 7]]
+Completed 500 Internal Server Error in 487ms (ActiveRecord: 0.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=7):
+  app/controllers/application_controller.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:40:in `_app_views_layouts_application_html_erb__2606342466330672115_70094584124960'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-17 20:12:51 -0800
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 155ms (Views: 154.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:12:51 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:12:51 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:12:51 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:12:51 -0800
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:12:51 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:12:51 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:12:51 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:12:51 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:12:51 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:12:51 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:12:51 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:12:51 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:12:51 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:12:51 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:12:51 -0800
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2015-11-17 20:12:51 -0800
+
+
+Started GET "/assets/mezzo_transparent2.png" for 127.0.0.1 at 2015-11-17 20:12:51 -0800
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-11-17 20:12:55 -0800
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-11-17 20:12:56 -0800
+
+
+Started GET "/auth/facebook/callback?code=AQBXTQcWpGejTt9FnTQZ1FOl10pUJlPGYxUBgse-1LIMLiAyvVel8dOUnJmkXPmf3ZTnF3zyLy6u2k7MZI94rm-HR6P20bos8F4WUmG6a8jYg7f8gS0i1-JRmodpD3dyfYLMAs3Xo6o0rP_NnHEklZSLZmG-1m00Cqk4OswvKcAx6ovKpVVT8ym3R9vKbnmsE1UD_vMdeVZlmsxpVyuBbWozjYxIWeHpA7w6hU0ptRxVDzWiWm9x2x4S6B9BUqJDXWmnrNzw8TQ1UoQ6nfLTjrAKZCEaqziMxuMBiiCE5_VO78Ltw7QhecZbTY_ApkhsLFGrigmnhtJ9VutpngYl_whu&state=4e31ec7c89ba508a77716d2899a7bc30f544e6533e9d7364" for 127.0.0.1 at 2015-11-17 20:13:39 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBXTQcWpGejTt9FnTQZ1FOl10pUJlPGYxUBgse-1LIMLiAyvVel8dOUnJmkXPmf3ZTnF3zyLy6u2k7MZI94rm-HR6P20bos8F4WUmG6a8jYg7f8gS0i1-JRmodpD3dyfYLMAs3Xo6o0rP_NnHEklZSLZmG-1m00Cqk4OswvKcAx6ovKpVVT8ym3R9vKbnmsE1UD_vMdeVZlmsxpVyuBbWozjYxIWeHpA7w6hU0ptRxVDzWiWm9x2x4S6B9BUqJDXWmnrNzw8TQ1UoQ6nfLTjrAKZCEaqziMxuMBiiCE5_VO78Ltw7QhecZbTY_ApkhsLFGrigmnhtJ9VutpngYl_whu", "state"=>"4e31ec7c89ba508a77716d2899a7bc30f544e6533e9d7364", "provider"=>"facebook"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["uid", "102413230126905"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? LIMIT 1[0m  [["provider", "facebook"], ["uid", "102413230126905"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (60.6ms)[0m  [1mINSERT INTO "users" ("provider", "uid", "name", "image", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["provider", "facebook"], ["uid", "102413230126905"], ["name", "Patricia Alajgdfhdacfc Riceberg"], ["image", "http://graph.facebook.com/102413230126905/picture"], ["email", "cjkrcah_riceberg_1447742595@tfbnw.net"], ["created_at", "2015-11-18 04:13:43.952689"], ["updated_at", "2015-11-18 04:13:43.952689"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/edit
+Completed 302 Found in 68ms (ActiveRecord: 62.4ms)
+
+
+Started GET "/edit" for 127.0.0.1 at 2015-11-17 20:13:44 -0800
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered users/_form.html.erb (1.9ms)
+  Rendered users/edit.html.erb within layouts/application (45.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 784ms (Views: 782.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:13:44 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:13:44 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:13:44 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:13:44 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:13:44 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:13:44 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:13:44 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:13:44 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:13:44 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:13:44 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:13:44 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:13:44 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:13:44 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:13:44 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:13:44 -0800
+
+
+Started GET "/matching" for 127.0.0.1 at 2015-11-17 20:13:51 -0800
+Processing by UsersController#findMatch as HTML
+  [1m[36m (0.9ms)[0m  [1mSELECT "users"."id" FROM "users"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mMatching Exists (0.9ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "102413230126905"]]
+  [1m[36mMatching Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "102413230126905"], ["user2", "10206425663374349"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (18.0ms)[0m  [1mINSERT INTO "matchings" ("user1", "user2", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user1", "10206425663374349"], ["user2", "102413230126905"], ["status", 0], ["created_at", "2015-11-18 04:13:51.194495"], ["updated_at", "2015-11-18 04:13:51.194495"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36mInstrument Load (8.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 11]]
+  [1m[35mGenre Load (0.8ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?  [["user_id", 11]]
+  [1m[36mMedium Load (0.4ms)[0m  [1mSELECT "media".* FROM "media" WHERE "media"."user_id" = ?[0m  [["user_id", 11]]
+  Rendered users/findMatch.html.erb within layouts/application (16.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 333ms (Views: 290.3ms | ActiveRecord: 32.5ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:13:51 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:13:51 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:13:51 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:13:51 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:13:51 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:13:51 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:13:51 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:13:51 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:13:51 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:13:51 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:13:51 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:13:51 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:13:51 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:13:51 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:13:51 -0800
+
+
+Started POST "/users/matchChoice" for 127.0.0.1 at 2015-11-17 20:14:07 -0800
+Processing by UsersController#matchChoice as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6I1a116yENRiF9VTKRp8/Kvl6kOM7gwB+lDW8p6fk0nSK3nClrtixsYTniAjn/11A/kpsTt4EfuZTpJAE+85Ww==", "uid"=>"10206425663374349", "like"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "102413230126905"]]
+  [1m[36mMatching Load (0.1ms)[0m  [1mSELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "102413230126905"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "matchings" SET "status" = ?, "updated_at" = ? WHERE "matchings"."id" = ?[0m  [["status", 1], ["updated_at", "2015-11-18 04:14:07.283309"], ["id", 96]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/findMatch
+Completed 302 Found in 18ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/findMatch" for 127.0.0.1 at 2015-11-17 20:14:07 -0800
+Processing by UsersController#findMatch as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT "users"."id" FROM "users"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mMatching Exists (0.3ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "102413230126905"]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "102413230126905"], ["user2", "10206425663374349"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "102413230126905"], ["user2", "102413230126905"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "102413230126905"], ["user2", "102413230126905"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "102413230126905"], ["user2", "102413230126905"]]
+  Rendered users/no_new_users.html.erb within layouts/application (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 249ms (Views: 241.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:14:07 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:14:07 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:14:07 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:14:07 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:14:07 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:14:07 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:14:07 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:14:07 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:14:07 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:14:07 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:14:07 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:14:07 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:14:07 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:14:07 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:14:07 -0800
+
+
+Started GET "/view_matches" for 127.0.0.1 at 2015-11-17 20:14:12 -0800
+Processing by UsersController#view_matches as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mMatching Load (0.4ms)[0m  SELECT "matchings".* FROM "matchings" WHERE ((user1 = '102413230126905' OR user2 = '102413230126905') AND status = 2)
+  Rendered users/view_matches.html.erb within layouts/application (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 129ms (Views: 125.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:14:12 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:14:12 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:14:12 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:14:12 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:14:12 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:14:12 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:14:12 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:14:12 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:14:12 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:14:12 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:14:12 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:14:12 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:14:12 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:14:12 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:14:12 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-17 20:15:04 -0800
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 131ms (Views: 129.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:15:04 -0800
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:15:04 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:15:04 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:04 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:04 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:15:04 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:04 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:04 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:04 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:15:04 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:04 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:04 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:04 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:04 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:15:04 -0800
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2015-11-17 20:15:05 -0800
+
+
+Started GET "/assets/mezzo_transparent2.png" for 127.0.0.1 at 2015-11-17 20:15:05 -0800
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-11-17 20:15:09 -0800
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-11-17 20:15:09 -0800
+
+
+Started GET "/auth/facebook/callback?code=AQCFjvIPUdClwkIHUI7kRNCDFYQWbqWvwjKJHo8_U7gfwfeSpc6ImHe-bwClpvj5ZJBctZ5mpFCnYJbcOK9VZhEbpqIMkJrmIaLvQKYSunMxfQQP-ruxzIp44A_QsXus-7HErkbb9wcXJpwUpj_Tapvb8cZU3hMcidybSM-lga6tYYI8CJ_Z-ZlauPkhUyT8n40s9mIZIuFV0AJWEYask-KRgzbUX22C_zn4Ovuw3yCfyz7oBEQ9jCzk2jCdX6OsL6e9lPFewTpVTk86Yai8eNePij1e7GJFUP7zc647dFuEDK6E3CKPI3_Nr7VcjWSbLtxFyjHTOjcWniJZiZpKdalk&state=2f6579d3cee3c8e984f89a36be988099148477dc57908294" for 127.0.0.1 at 2015-11-17 20:15:21 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCFjvIPUdClwkIHUI7kRNCDFYQWbqWvwjKJHo8_U7gfwfeSpc6ImHe-bwClpvj5ZJBctZ5mpFCnYJbcOK9VZhEbpqIMkJrmIaLvQKYSunMxfQQP-ruxzIp44A_QsXus-7HErkbb9wcXJpwUpj_Tapvb8cZU3hMcidybSM-lga6tYYI8CJ_Z-ZlauPkhUyT8n40s9mIZIuFV0AJWEYask-KRgzbUX22C_zn4Ovuw3yCfyz7oBEQ9jCzk2jCdX6OsL6e9lPFewTpVTk86Yai8eNePij1e7GJFUP7zc647dFuEDK6E3CKPI3_Nr7VcjWSbLtxFyjHTOjcWniJZiZpKdalk", "state"=>"2f6579d3cee3c8e984f89a36be988099148477dc57908294", "provider"=>"facebook"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["uid", "107464332954003"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? LIMIT 1  [["provider", "facebook"], ["uid", "107464332954003"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("provider", "uid", "name", "image", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["provider", "facebook"], ["uid", "107464332954003"], ["name", "Patricia Alajgacjiejfh Bharambesky"], ["image", "http://graph.facebook.com/107464332954003/picture"], ["email", "tddvebs_bharambesky_1447742592@tfbnw.net"], ["created_at", "2015-11-18 04:15:23.080156"], ["updated_at", "2015-11-18 04:15:23.080156"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/edit
+Completed 302 Found in 9ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/edit" for 127.0.0.1 at 2015-11-17 20:15:23 -0800
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered users/_form.html.erb (1.5ms)
+  Rendered users/edit.html.erb within layouts/application (2.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 186ms (Views: 184.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:15:23 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:23 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:23 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:15:23 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:15:23 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:15:23 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:15:23 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:23 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:23 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:15:23 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:23 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:23 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:23 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:23 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:23 -0800
+
+
+Started GET "/matching" for 127.0.0.1 at 2015-11-17 20:15:27 -0800
+Processing by UsersController#findMatch as HTML
+  [1m[35m (0.3ms)[0m  SELECT "users"."id" FROM "users"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "107464332954003"]]
+  [1m[35mMatching Exists (0.2ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "107464332954003"], ["user2", "10206425663374349"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "matchings" ("user1", "user2", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["user1", "10206425663374349"], ["user2", "107464332954003"], ["status", 0], ["created_at", "2015-11-18 04:15:27.330296"], ["updated_at", "2015-11-18 04:15:27.330296"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 11]]
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 11]]
+  [1m[35mMedium Load (0.1ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 11]]
+  Rendered users/findMatch.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 85ms (Views: 73.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:15:27 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:27 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:15:27 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:15:27 -0800
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:15:27 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:15:27 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:27 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:27 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:27 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:27 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:15:27 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:27 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:27 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:27 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:27 -0800
+
+
+Started POST "/users/matchChoice" for 127.0.0.1 at 2015-11-17 20:15:59 -0800
+Processing by UsersController#matchChoice as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4Tb3XFiq+uupTXqMHSi9NnLHJztg/b25yzANalzHeYQQ80yn4oau30H2C0chDEX9d/V4H/dOSkTou2Np8Y1GHA==", "uid"=>"10206425663374349", "like"=>""}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "107464332954003"]]
+  [1m[35mMatching Load (0.1ms)[0m  SELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1  [["user1", "10206425663374349"], ["user2", "107464332954003"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "matchings" SET "status" = ?, "updated_at" = ? WHERE "matchings"."id" = ?  [["status", 1], ["updated_at", "2015-11-18 04:15:59.348233"], ["id", 97]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/findMatch
+Completed 302 Found in 9ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/findMatch" for 127.0.0.1 at 2015-11-17 20:15:59 -0800
+Processing by UsersController#findMatch as HTML
+  [1m[35m (0.2ms)[0m  SELECT "users"."id" FROM "users"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "107464332954003"]]
+  [1m[35mMatching Exists (0.3ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "107464332954003"], ["user2", "10206425663374349"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "102413230126905"], ["user2", "107464332954003"]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "107464332954003"], ["user2", "102413230126905"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "matchings" ("user1", "user2", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user1", "102413230126905"], ["user2", "107464332954003"], ["status", 0], ["created_at", "2015-11-18 04:15:59.374991"], ["updated_at", "2015-11-18 04:15:59.374991"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mInstrument Load (0.2ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 12]]
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?  [["user_id", 12]]
+  [1m[36mMedium Load (0.1ms)[0m  [1mSELECT "media".* FROM "media" WHERE "media"."user_id" = ?[0m  [["user_id", 12]]
+  Rendered users/findMatch.html.erb within layouts/application (3.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 215ms (Views: 201.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:15:59 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:15:59 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:59 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:15:59 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:15:59 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:59 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:59 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:15:59 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:59 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:59 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:59 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:59 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:59 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:15:59 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:15:59 -0800
+
+
+Started POST "/users/matchChoice" for 127.0.0.1 at 2015-11-17 20:16:03 -0800
+Processing by UsersController#matchChoice as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GklzPjteBtGVavZmaWEIa5P07kQlpN2/7Jc4SoAVJ6brjMjFgXJS5X3Rh61VRfCglsaxYLIXKkLPHFZJLV8YPg==", "uid"=>"102413230126905", "dislike"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mMatching Exists (0.2ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "102413230126905"], ["user2", "107464332954003"]]
+  [1m[36mMatching Load (0.2ms)[0m  [1mSELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1[0m  [["user1", "102413230126905"], ["user2", "107464332954003"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "matchings" SET "status" = ?, "updated_at" = ? WHERE "matchings"."id" = ?[0m  [["status", -1], ["updated_at", "2015-11-18 04:16:03.144526"], ["id", 98]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/findMatch
+Completed 302 Found in 12ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/findMatch" for 127.0.0.1 at 2015-11-17 20:16:03 -0800
+Processing by UsersController#findMatch as HTML
+  [1m[36m (1.1ms)[0m  [1mSELECT "users"."id" FROM "users"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "107464332954003"]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "107464332954003"], ["user2", "10206425663374349"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "102413230126905"], ["user2", "107464332954003"]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "107464332954003"], ["user2", "102413230126905"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mMatching Exists (0.2ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "107464332954003"], ["user2", "107464332954003"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "107464332954003"], ["user2", "107464332954003"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "107464332954003"], ["user2", "107464332954003"]]
+  Rendered users/no_new_users.html.erb within layouts/application (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 77ms (Views: 66.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:16:03 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:03 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:16:03 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:03 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:03 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:16:03 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:16:03 -0800
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:16:03 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:03 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:03 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:03 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:03 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:03 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:03 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:16:03 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-17 20:16:08 -0800
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 80ms (Views: 78.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:16:09 -0800
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:16:09 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:16:09 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:09 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:16:09 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:16:09 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:09 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:09 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:09 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:09 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:09 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:09 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:16:09 -0800
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2015-11-17 20:16:09 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:09 -0800
+
+
+Started GET "/assets/mezzo_transparent2.png" for 127.0.0.1 at 2015-11-17 20:16:09 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:09 -0800
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-11-17 20:16:13 -0800
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-11-17 20:16:13 -0800
+
+
+Started GET "/auth/facebook/callback?code=AQCzor-fwN8s1gL-XnOpReCDK97oSoaKUIXrtGWmXa7lzjAUwL5sUXr2hkQE6QUgM3TvnJWWJPRoqyzpuiTjGR4UmUphJtP_wZF-tHVNHUCdvwfng1aoc0WGOg4nd7z5s3DxobzJetpFWhfRj25dQg5cIaYfzI3ZmRzklFHlrFhZs7-fq16TmFudTOmQfelQPyN8zabQMCpOY7WoAhSaQEzcPWDzVJ_Zqc9yTlFrS13sEQyjHUd-Fi52Y9u_U3-WUp-lLXoNGJXAZwI_cSt0T4nm-uRGGsAuhTN5_wiVQ9Lb8VnxQN90zjKv6Q7ylpd4nMQ&state=a64a1099490cbf4477fa20c70b628808d723ca62f1399641" for 127.0.0.1 at 2015-11-17 20:16:21 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCzor-fwN8s1gL-XnOpReCDK97oSoaKUIXrtGWmXa7lzjAUwL5sUXr2hkQE6QUgM3TvnJWWJPRoqyzpuiTjGR4UmUphJtP_wZF-tHVNHUCdvwfng1aoc0WGOg4nd7z5s3DxobzJetpFWhfRj25dQg5cIaYfzI3ZmRzklFHlrFhZs7-fq16TmFudTOmQfelQPyN8zabQMCpOY7WoAhSaQEzcPWDzVJ_Zqc9yTlFrS13sEQyjHUd-Fi52Y9u_U3-WUp-lLXoNGJXAZwI_cSt0T4nm-uRGGsAuhTN5_wiVQ9Lb8VnxQN90zjKv6Q7ylpd4nMQ", "state"=>"a64a1099490cbf4477fa20c70b628808d723ca62f1399641", "provider"=>"facebook"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["uid", "10206425663374349"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["uid", "10206425663374349"]]
+Redirected to http://0.0.0.0:3000/findMatch
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/findMatch" for 127.0.0.1 at 2015-11-17 20:16:22 -0800
+Processing by UsersController#findMatch as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT "users"."id" FROM "users"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "102413230126905"], ["user2", "10206425663374349"]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "102413230126905"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "102413230126905"]]
+  [1m[36mMatching Load (0.1ms)[0m  [1mSELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "102413230126905"]]
+  [1m[35mInstrument Load (0.1ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 12]]
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 12]]
+  [1m[35mMedium Load (0.1ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 12]]
+  Rendered users/findMatch.html.erb within layouts/application (3.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 206ms (Views: 197.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:16:22 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:16:22 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:16:22 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:22 -0800
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:16:22 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:22 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:16:22 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:22 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:22 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:22 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:22 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:22 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:22 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:16:22 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:16:22 -0800
+
+
+Started POST "/users/matchChoice" for 127.0.0.1 at 2015-11-17 20:16:25 -0800
+Processing by UsersController#matchChoice as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BNgbDtRirH6Aax01tnMGwpgbTvKGlfQbc5qkfWoXI899iZYR0VyL2pjXNV01NT3hT6zKvvjRamzcRqm7K8dD8g==", "uid"=>"102413230126905", "like"=>""}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mMatching Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "102413230126905"], ["user2", "10206425663374349"]]
+  [1m[35mMatching Load (5.7ms)[0m  SELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1  [["user1", "10206425663374349"], ["user2", "102413230126905"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "matchings" SET "status" = ?, "updated_at" = ? WHERE "matchings"."id" = ?  [["status", 2], ["updated_at", "2015-11-18 04:16:25.095097"], ["id", 96]]
+  [1m[36m (4.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/view_matches
+Redirected to 
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 11.2ms)
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/users_controller.rb:96:in `matchChoice'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (105.1ms)
+
+
+Started GET "/matching" for 127.0.0.1 at 2015-11-17 20:19:52 -0800
+Processing by UsersController#findMatch as HTML
+  [1m[35m (0.2ms)[0m  SELECT "users"."id" FROM "users"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mMatching Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "102413230126905"], ["user2", "10206425663374349"]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "102413230126905"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "102413230126905"]]
+  [1m[35mMatching Load (0.2ms)[0m  SELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1  [["user1", "10206425663374349"], ["user2", "102413230126905"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "107464332954003"], ["user2", "10206425663374349"]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "107464332954003"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "107464332954003"]]
+  [1m[36mMatching Load (0.1ms)[0m  [1mSELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "107464332954003"]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 13]]
+  [1m[36mGenre Load (0.2ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 13]]
+  [1m[35mMedium Load (0.3ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 13]]
+  Rendered users/findMatch.html.erb within layouts/application (57.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 303ms (Views: 208.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:19:53 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:19:53 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:19:53 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:19:53 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:19:53 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:19:53 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:19:53 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:19:53 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:19:53 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:19:53 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:19:53 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:19:53 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:19:53 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:19:53 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:19:53 -0800
+
+
+Started POST "/users/matchChoice" for 127.0.0.1 at 2015-11-17 20:19:55 -0800
+Processing by UsersController#matchChoice as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"arAnRKze2noIYJyJ6SGfFXMPP3gpPPzdkzX3O2dbuqET4apbqeD93hDctOFqZ6Q2pLi7NFd4Yqo86fr9JovanA==", "uid"=>"107464332954003", "like"=>""}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mMatching Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "107464332954003"], ["user2", "10206425663374349"]]
+  [1m[35mMatching Load (0.4ms)[0m  SELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1  [["user1", "10206425663374349"], ["user2", "107464332954003"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "matchings" SET "status" = ?, "updated_at" = ? WHERE "matchings"."id" = ?  [["status", 2], ["updated_at", "2015-11-18 04:19:55.400175"], ["id", 97]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/view_matches
+Redirected to 
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 3.0ms)
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/users_controller.rb:96:in `matchChoice'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (105.1ms)
+
+
+Started GET "/matching" for 127.0.0.1 at 2015-11-17 20:22:04 -0800
+Processing by UsersController#findMatch as HTML
+  [1m[35m (0.3ms)[0m  SELECT "users"."id" FROM "users"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mMatching Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "102413230126905"], ["user2", "10206425663374349"]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "102413230126905"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "102413230126905"]]
+  [1m[35mMatching Load (0.3ms)[0m  SELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1  [["user1", "10206425663374349"], ["user2", "102413230126905"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "107464332954003"], ["user2", "10206425663374349"]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "107464332954003"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "107464332954003"]]
+  [1m[36mMatching Load (0.1ms)[0m  [1mSELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "107464332954003"]]
+  Rendered users/no_new_users.html.erb within layouts/application (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 434ms (Views: 178.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:22:04 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:22:04 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:22:04 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:22:04 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:22:04 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:22:04 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:22:04 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:22:04 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:22:04 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:22:04 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:22:04 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:22:04 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:22:04 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:22:04 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:22:04 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-17 20:23:10 -0800
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (20.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 409ms (Views: 407.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-17 20:23:11 -0800
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 184ms (Views: 182.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:23:11 -0800
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:23:11 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:23:11 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:23:11 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:11 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:11 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:11 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:11 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:11 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:11 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:23:11 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:11 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:11 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:23:11 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:11 -0800
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2015-11-17 20:23:11 -0800
+
+
+Started GET "/assets/mezzo_transparent2.png" for 127.0.0.1 at 2015-11-17 20:23:11 -0800
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-11-17 20:23:15 -0800
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-11-17 20:23:16 -0800
+
+
+Started GET "/auth/facebook/callback?code=AQAXSJdx9O0Kd-hrmozpyY2Wy2sjuvBOWsIC5rVnIa4woSlacshqLsYwCDsExmlUOmbzXoucx5kmGKD0W2mWJ6LqmHP0trIvgIszXNA5OrLm8pdJaA-hrbTXpUf_ZMiCBtd2x1J1JcLoK8q85vSR3PWqnrJzceQOEWVmF6y-sM-_OJaiVyH_C99T4dNqGrwgtvA9S0VEC-JhyKVxKPhRpTaspkEMwXCgX3mOEs3WnNRb61jucWKd-RSZ6Rj1WN25cueBc-L4L6LD4DF-onWj5Q0YZSJ5SWUf4e_tS8HHdeAWVJ_tOLBUuYtjXh4gcVhmk8rNIqFP0KxStIKb3O4ow_Fw&state=cab43c8b5075b880166e7ca2ec2cdf38107ab8f78bb591f3" for 127.0.0.1 at 2015-11-17 20:23:52 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAXSJdx9O0Kd-hrmozpyY2Wy2sjuvBOWsIC5rVnIa4woSlacshqLsYwCDsExmlUOmbzXoucx5kmGKD0W2mWJ6LqmHP0trIvgIszXNA5OrLm8pdJaA-hrbTXpUf_ZMiCBtd2x1J1JcLoK8q85vSR3PWqnrJzceQOEWVmF6y-sM-_OJaiVyH_C99T4dNqGrwgtvA9S0VEC-JhyKVxKPhRpTaspkEMwXCgX3mOEs3WnNRb61jucWKd-RSZ6Rj1WN25cueBc-L4L6LD4DF-onWj5Q0YZSJ5SWUf4e_tS8HHdeAWVJ_tOLBUuYtjXh4gcVhmk8rNIqFP0KxStIKb3O4ow_Fw", "state"=>"cab43c8b5075b880166e7ca2ec2cdf38107ab8f78bb591f3", "provider"=>"facebook"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["uid", "118950595136616"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? LIMIT 1  [["provider", "facebook"], ["uid", "118950595136616"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (27.1ms)[0m  INSERT INTO "users" ("provider", "uid", "name", "image", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["provider", "facebook"], ["uid", "118950595136616"], ["name", "Betty Alajfejbhahgh Sadansky"], ["image", "http://graph.facebook.com/118950595136616/picture"], ["email", "ldfwjgy_sadansky_1447742590@tfbnw.net"], ["created_at", "2015-11-18 04:23:54.503102"], ["updated_at", "2015-11-18 04:23:54.503102"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/edit
+Completed 302 Found in 43ms (ActiveRecord: 29.0ms)
+
+
+Started GET "/edit" for 127.0.0.1 at 2015-11-17 20:23:54 -0800
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered users/_form.html.erb (2.3ms)
+  Rendered users/edit.html.erb within layouts/application (33.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 264ms (Views: 262.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:23:54 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:23:54 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:54 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:54 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:54 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:23:54 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:54 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:23:54 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:23:54 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:54 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:54 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:54 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:55 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:23:55 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:55 -0800
+
+
+Started GET "/matching" for 127.0.0.1 at 2015-11-17 20:23:58 -0800
+Processing by UsersController#findMatch as HTML
+  [1m[35m (0.2ms)[0m  SELECT "users"."id" FROM "users"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mMatching Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "118950595136616"]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "118950595136616"], ["user2", "10206425663374349"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "matchings" ("user1", "user2", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["user1", "10206425663374349"], ["user2", "118950595136616"], ["status", 0], ["created_at", "2015-11-18 04:23:58.677646"], ["updated_at", "2015-11-18 04:23:58.677646"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 11]]
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 11]]
+  [1m[35mMedium Load (0.3ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 11]]
+  Rendered users/findMatch.html.erb within layouts/application (67.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 210ms (Views: 195.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:23:58 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:58 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:23:58 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:23:58 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:23:59 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:59 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:59 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:59 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:59 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:59 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:23:59 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:59 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:59 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:23:59 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:23:59 -0800
+
+
+Started POST "/users/matchChoice" for 127.0.0.1 at 2015-11-17 20:24:01 -0800
+Processing by UsersController#matchChoice as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zaheAi6OQK8RTcfcqNzOdM5LnwH0BKTfe7i70QElCfHbW2sflEyMmOnTcGhO7JcRIKVLz5af38XskH9Ws+8g1A==", "uid"=>"10206425663374349", "like"=>""}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mMatching Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "118950595136616"]]
+  [1m[35mMatching Load (0.1ms)[0m  SELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1  [["user1", "10206425663374349"], ["user2", "118950595136616"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "matchings" SET "status" = ?, "updated_at" = ? WHERE "matchings"."id" = ?  [["status", 1], ["updated_at", "2015-11-18 04:24:01.835101"], ["id", 99]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/findMatch
+Completed 302 Found in 10ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/findMatch" for 127.0.0.1 at 2015-11-17 20:24:01 -0800
+Processing by UsersController#findMatch as HTML
+  [1m[35m (0.2ms)[0m  SELECT "users"."id" FROM "users"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "118950595136616"]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "118950595136616"], ["user2", "10206425663374349"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "102413230126905"], ["user2", "118950595136616"]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "118950595136616"], ["user2", "102413230126905"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "matchings" ("user1", "user2", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user1", "102413230126905"], ["user2", "118950595136616"], ["status", 0], ["created_at", "2015-11-18 04:24:01.857463"], ["updated_at", "2015-11-18 04:24:01.857463"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 12]]
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?  [["user_id", 12]]
+  [1m[36mMedium Load (0.1ms)[0m  [1mSELECT "media".* FROM "media" WHERE "media"."user_id" = ?[0m  [["user_id", 12]]
+  Rendered users/findMatch.html.erb within layouts/application (3.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 237ms (Views: 225.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:02 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:02 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:02 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:02 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:02 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:02 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:02 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:02 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:02 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:02 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:02 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:02 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:02 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:02 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:24:02 -0800
+
+
+Started POST "/users/matchChoice" for 127.0.0.1 at 2015-11-17 20:24:04 -0800
+Processing by UsersController#matchChoice as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FfmBPXw79MD+ee/3rV5DCDo4NabchhdTo1gbEBehI0EDCrQgxvk49wbnWENLbhpt1NbhaL4dbEk0cN+XpWsKZA==", "uid"=>"102413230126905", "dislike"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mMatching Exists (0.2ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "102413230126905"], ["user2", "118950595136616"]]
+  [1m[36mMatching Load (0.1ms)[0m  [1mSELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1[0m  [["user1", "102413230126905"], ["user2", "118950595136616"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "matchings" SET "status" = ?, "updated_at" = ? WHERE "matchings"."id" = ?[0m  [["status", -1], ["updated_at", "2015-11-18 04:24:04.027192"], ["id", 100]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/findMatch
+Completed 302 Found in 11ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/findMatch" for 127.0.0.1 at 2015-11-17 20:24:04 -0800
+Processing by UsersController#findMatch as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT "users"."id" FROM "users"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "118950595136616"]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "118950595136616"], ["user2", "10206425663374349"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "102413230126905"], ["user2", "118950595136616"]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "118950595136616"], ["user2", "102413230126905"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "107464332954003"], ["user2", "118950595136616"]]
+  [1m[36mMatching Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "118950595136616"], ["user2", "107464332954003"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "matchings" ("user1", "user2", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user1", "107464332954003"], ["user2", "118950595136616"], ["status", 0], ["created_at", "2015-11-18 04:24:04.059899"], ["updated_at", "2015-11-18 04:24:04.059899"]]
+  [1m[35m (51.1ms)[0m  commit transaction
+  [1m[36mInstrument Load (0.2ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 13]]
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?  [["user_id", 13]]
+  [1m[36mMedium Load (0.1ms)[0m  [1mSELECT "media".* FROM "media" WHERE "media"."user_id" = ?[0m  [["user_id", 13]]
+  Rendered users/findMatch.html.erb within layouts/application (4.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 195ms (Views: 122.8ms | ActiveRecord: 53.6ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:04 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:04 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:04 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:04 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:04 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:04 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:04 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:04 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:04 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:04 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:04 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:04 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:04 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:04 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:24:04 -0800
+
+
+Started POST "/users/matchChoice" for 127.0.0.1 at 2015-11-17 20:24:06 -0800
+Processing by UsersController#matchChoice as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5vBDb0LCgiUaxt5DmMAspaVxGd6q2VahXrKap2v67WLwA3Zy+ABOEuJYafd+8HXAS5/NEMhCLbvJml4g2TDERw==", "uid"=>"107464332954003", "like"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mMatching Exists (0.2ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "107464332954003"], ["user2", "118950595136616"]]
+  [1m[36mMatching Load (0.1ms)[0m  [1mSELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1[0m  [["user1", "107464332954003"], ["user2", "118950595136616"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "matchings" SET "status" = ?, "updated_at" = ? WHERE "matchings"."id" = ?[0m  [["status", 1], ["updated_at", "2015-11-18 04:24:06.106150"], ["id", 101]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/findMatch
+Completed 302 Found in 17ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/findMatch" for 127.0.0.1 at 2015-11-17 20:24:06 -0800
+Processing by UsersController#findMatch as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT "users"."id" FROM "users"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "118950595136616"]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "118950595136616"], ["user2", "10206425663374349"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "102413230126905"], ["user2", "118950595136616"]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "118950595136616"], ["user2", "102413230126905"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "107464332954003"], ["user2", "118950595136616"]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "118950595136616"], ["user2", "107464332954003"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "118950595136616"], ["user2", "118950595136616"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "118950595136616"], ["user2", "118950595136616"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "118950595136616"], ["user2", "118950595136616"]]
+  Rendered users/no_new_users.html.erb within layouts/application (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 90ms (Views: 77.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:06 -0800
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:06 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:06 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:06 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:06 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:06 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:06 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:06 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:06 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:06 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:06 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:24:06 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:06 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:06 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:06 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-17 20:24:19 -0800
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 71ms (Views: 69.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:19 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:19 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:19 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:19 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:19 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:19 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:19 -0800
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:19 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:19 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:19 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:19 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:19 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:19 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:19 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:24:19 -0800
+
+
+Started GET "/assets/mezzo_transparent2.png" for 127.0.0.1 at 2015-11-17 20:24:19 -0800
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2015-11-17 20:24:19 -0800
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-11-17 20:24:23 -0800
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-11-17 20:24:26 -0800
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-11-17 20:24:26 -0800
+
+
+Started GET "/auth/facebook/callback?code=AQD8_be2XGBIxoHds6GwsWTb5xN905zBNaQcDRqbwP40MbfSRyNAjo3fh_DTMTiLEeztSWTYfUt0KFfHSUT2_CdtCS_1StsMnQaGJLrKfOUhonOKVMg6ljQiaMh0ErtvfuV83q-a5Ew6j60Uq_tW1y6WI8WZQOM_lKlTYnkjAcpBJTUjRgGoLdwMI0K252h6qdzxGySzSG7CzGII_j4ie3TP8ibVyL7DTb6ybbG0E7hLAdzPc5EXzIAwetuTiHG4xkOp-doiUOua92MankGIuIxTZE6aL4BLT7RLLsQodGuM2awdwLB_toy0u8fnK80bmPI&state=d3f33c4768d0070cb149a7718bb257954677011ad30e68ea" for 127.0.0.1 at 2015-11-17 20:24:31 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQD8_be2XGBIxoHds6GwsWTb5xN905zBNaQcDRqbwP40MbfSRyNAjo3fh_DTMTiLEeztSWTYfUt0KFfHSUT2_CdtCS_1StsMnQaGJLrKfOUhonOKVMg6ljQiaMh0ErtvfuV83q-a5Ew6j60Uq_tW1y6WI8WZQOM_lKlTYnkjAcpBJTUjRgGoLdwMI0K252h6qdzxGySzSG7CzGII_j4ie3TP8ibVyL7DTb6ybbG0E7hLAdzPc5EXzIAwetuTiHG4xkOp-doiUOua92MankGIuIxTZE6aL4BLT7RLLsQodGuM2awdwLB_toy0u8fnK80bmPI", "state"=>"d3f33c4768d0070cb149a7718bb257954677011ad30e68ea", "provider"=>"facebook"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["uid", "10206425663374349"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["uid", "10206425663374349"]]
+Redirected to http://0.0.0.0:3000/findMatch
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/findMatch" for 127.0.0.1 at 2015-11-17 20:24:31 -0800
+Processing by UsersController#findMatch as HTML
+  [1m[35m (0.2ms)[0m  SELECT "users"."id" FROM "users"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "102413230126905"], ["user2", "10206425663374349"]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "102413230126905"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "102413230126905"]]
+  [1m[35mMatching Load (0.1ms)[0m  SELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1  [["user1", "10206425663374349"], ["user2", "102413230126905"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "107464332954003"], ["user2", "10206425663374349"]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "107464332954003"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "107464332954003"]]
+  [1m[36mMatching Load (0.1ms)[0m  [1mSELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "107464332954003"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "118950595136616"], ["user2", "10206425663374349"]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "118950595136616"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "118950595136616"]]
+  [1m[35mMatching Load (0.1ms)[0m  SELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1  [["user1", "10206425663374349"], ["user2", "118950595136616"]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 14]]
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?  [["user_id", 14]]
+  [1m[36mMedium Load (0.1ms)[0m  [1mSELECT "media".* FROM "media" WHERE "media"."user_id" = ?[0m  [["user_id", 14]]
+  Rendered users/findMatch.html.erb within layouts/application (4.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 93ms (Views: 78.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:32 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:32 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:32 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:32 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:32 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:32 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:32 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:24:32 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:32 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:32 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:32 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:32 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:32 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:24:32 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:24:32 -0800
+
+
+Started POST "/users/matchChoice" for 127.0.0.1 at 2015-11-17 20:24:34 -0800
+Processing by UsersController#matchChoice as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RY3meKIYm1tPqnVvJg5bhv12VdMLtTu1OtcDU9YC4mpyuNfq9mmZtSdrYLW2GLu/UE31wNVZAVyRv2n0444LfQ==", "uid"=>"118950595136616", "like"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mMatching Exists (0.2ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "118950595136616"], ["user2", "10206425663374349"]]
+  [1m[36mMatching Load (0.1ms)[0m  [1mSELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "118950595136616"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (26.1ms)[0m  [1mUPDATE "matchings" SET "status" = ?, "updated_at" = ? WHERE "matchings"."id" = ?[0m  [["status", 2], ["updated_at", "2015-11-18 04:24:34.854937"], ["id", 99]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/view_matches
+Redirected to 
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 27.7ms)
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/users_controller.rb:99:in `matchChoice'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (28.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (282.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-17 20:26:49 -0800
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (28.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 623ms (Views: 579.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:26:50 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:26:50 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:26:50 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:26:50 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:26:50 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:26:50 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:26:50 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:26:50 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:26:50 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:26:50 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:26:50 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:26:50 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:26:50 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:26:50 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:26:50 -0800
+
+
+Started GET "/assets/mezzo_transparent2.png" for 127.0.0.1 at 2015-11-17 20:26:50 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-17 20:27:04 -0800
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 137ms (Views: 135.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:04 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:04 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:04 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:04 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:04 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:04 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:04 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:04 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:04 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:04 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:04 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:04 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:27:04 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:04 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:04 -0800
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2015-11-17 20:27:04 -0800
+
+
+Started GET "/assets/mezzo_transparent2.png" for 127.0.0.1 at 2015-11-17 20:27:05 -0800
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-11-17 20:27:08 -0800
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-11-17 20:27:08 -0800
+
+
+Started GET "/auth/facebook/callback?code=AQBU5dH-MXXV5_4zRfHgdCOF_YpbXc3rXadqGuxUz2YwJ5MDkQMfawnVQ7MbauSJ2iRUURZ3et-GmQZ7t8GoM6M7BjYuoW6IRaOJZuX4ds5Kjg7a8_flmm9XQlPRrA2SUai9gtJ5qy8JMmC274m6o0uIHSgy-IJUM-0MqAzFuur8UzCynFk8US3nyGQtrpVgiUA8lnGSteCO-mMXmq7qtOvPHjnvS-KetpAUgZ9vUyeYf2Q5eoOuPg9DWzZyrjKxfgAAIy8o69sWzwWG2G3Kp3kS2rDFdEf2qRDxjlD2GnuXqmGtxU4syVFvb1EQQg9MbrH80oD9hG8rwhMqOkUwRuCM&state=45aaeb57d3b1f8c69714abc28fa87de6111ee707d3ffed91" for 127.0.0.1 at 2015-11-17 20:27:20 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBU5dH-MXXV5_4zRfHgdCOF_YpbXc3rXadqGuxUz2YwJ5MDkQMfawnVQ7MbauSJ2iRUURZ3et-GmQZ7t8GoM6M7BjYuoW6IRaOJZuX4ds5Kjg7a8_flmm9XQlPRrA2SUai9gtJ5qy8JMmC274m6o0uIHSgy-IJUM-0MqAzFuur8UzCynFk8US3nyGQtrpVgiUA8lnGSteCO-mMXmq7qtOvPHjnvS-KetpAUgZ9vUyeYf2Q5eoOuPg9DWzZyrjKxfgAAIy8o69sWzwWG2G3Kp3kS2rDFdEf2qRDxjlD2GnuXqmGtxU4syVFvb1EQQg9MbrH80oD9hG8rwhMqOkUwRuCM", "state"=>"45aaeb57d3b1f8c69714abc28fa87de6111ee707d3ffed91", "provider"=>"facebook"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["uid", "115536418812021"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? LIMIT 1[0m  [["provider", "facebook"], ["uid", "115536418812021"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("provider", "uid", "name", "image", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["provider", "facebook"], ["uid", "115536418812021"], ["name", "Lisa Alajffihiigie Fergieescu"], ["image", "http://graph.facebook.com/115536418812021/picture"], ["email", "ghhgspx_fergieescu_1447742580@tfbnw.net"], ["created_at", "2015-11-18 04:27:21.561612"], ["updated_at", "2015-11-18 04:27:21.561612"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/edit
+Completed 302 Found in 10ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/edit" for 127.0.0.1 at 2015-11-17 20:27:21 -0800
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 15]]
+  Rendered users/_form.html.erb (2.6ms)
+  Rendered users/edit.html.erb within layouts/application (13.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 15]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 164ms (Views: 162.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:21 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:21 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:21 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:21 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:21 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:21 -0800
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:21 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:21 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:21 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:21 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:21 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:21 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:27:21 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:21 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:21 -0800
+
+
+Started GET "/matching" for 127.0.0.1 at 2015-11-17 20:27:25 -0800
+Processing by UsersController#findMatch as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT "users"."id" FROM "users"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mMatching Exists (0.3ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "115536418812021"]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "115536418812021"], ["user2", "10206425663374349"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "matchings" ("user1", "user2", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user1", "10206425663374349"], ["user2", "115536418812021"], ["status", 0], ["created_at", "2015-11-18 04:27:25.575473"], ["updated_at", "2015-11-18 04:27:25.575473"]]
+  [1m[35m (12.3ms)[0m  commit transaction
+  [1m[36mInstrument Load (0.2ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 11]]
+  [1m[35mGenre Load (0.2ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?  [["user_id", 11]]
+  [1m[36mMedium Load (0.6ms)[0m  [1mSELECT "media".* FROM "media" WHERE "media"."user_id" = ?[0m  [["user_id", 11]]
+  Rendered users/findMatch.html.erb within layouts/application (188.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 15]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 462ms (Views: 399.0ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:26 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:26 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:26 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:26 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:26 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:26 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:26 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:26 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:26 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:26 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:26 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:26 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:26 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:26 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:27:26 -0800
+
+
+Started POST "/users/matchChoice" for 127.0.0.1 at 2015-11-17 20:27:28 -0800
+Processing by UsersController#matchChoice as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M6grGy/Hx6xly1FxCXvi6+TDnrKykoMXcewlINXxb2CWTyMjPtJoRSuvFbHPrhQn+RE5Vbe54Fdh82cf4ttjuw==", "uid"=>"10206425663374349", "like"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mMatching Exists (0.2ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "115536418812021"]]
+  [1m[36mMatching Load (0.3ms)[0m  [1mSELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "115536418812021"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "matchings" SET "status" = ?, "updated_at" = ? WHERE "matchings"."id" = ?[0m  [["status", 1], ["updated_at", "2015-11-18 04:27:28.197478"], ["id", 102]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/findMatch
+Completed 302 Found in 16ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/findMatch" for 127.0.0.1 at 2015-11-17 20:27:28 -0800
+Processing by UsersController#findMatch as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT "users"."id" FROM "users"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "115536418812021"]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "115536418812021"], ["user2", "10206425663374349"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mMatching Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "102413230126905"], ["user2", "115536418812021"]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "115536418812021"], ["user2", "102413230126905"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "matchings" ("user1", "user2", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["user1", "102413230126905"], ["user2", "115536418812021"], ["status", 0], ["created_at", "2015-11-18 04:27:28.269621"], ["updated_at", "2015-11-18 04:27:28.269621"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mInstrument Load (0.1ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 12]]
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 12]]
+  [1m[35mMedium Load (0.1ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 12]]
+  Rendered users/findMatch.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 15]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 127ms (Views: 71.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:28 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:28 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:28 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:28 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:28 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:28 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:28 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:28 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:28 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:28 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:28 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:28 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:28 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:28 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:27:28 -0800
+
+
+Started POST "/users/matchChoice" for 127.0.0.1 at 2015-11-17 20:27:29 -0800
+Processing by UsersController#matchChoice as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ylIuLz7roz3R9qPM6pdvM4Rcg60yZjllbROtDGE4QCZvtSYXL/4M1J+S5wwsQpn/mY4kSjdNWiV9DO8zVhJM/Q==", "uid"=>"102413230126905", "like"=>""}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "102413230126905"], ["user2", "115536418812021"]]
+  [1m[35mMatching Load (0.1ms)[0m  SELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1  [["user1", "102413230126905"], ["user2", "115536418812021"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "matchings" SET "status" = ?, "updated_at" = ? WHERE "matchings"."id" = ?  [["status", 1], ["updated_at", "2015-11-18 04:27:29.612514"], ["id", 103]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/findMatch
+Completed 302 Found in 12ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/findMatch" for 127.0.0.1 at 2015-11-17 20:27:29 -0800
+Processing by UsersController#findMatch as HTML
+  [1m[35m (0.2ms)[0m  SELECT "users"."id" FROM "users"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "115536418812021"]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "115536418812021"], ["user2", "10206425663374349"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "102413230126905"], ["user2", "115536418812021"]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "115536418812021"], ["user2", "102413230126905"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "107464332954003"], ["user2", "115536418812021"]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "115536418812021"], ["user2", "107464332954003"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "matchings" ("user1", "user2", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["user1", "107464332954003"], ["user2", "115536418812021"], ["status", 0], ["created_at", "2015-11-18 04:27:29.744677"], ["updated_at", "2015-11-18 04:27:29.744677"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 13]]
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 13]]
+  [1m[35mMedium Load (0.1ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 13]]
+  Rendered users/findMatch.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 15]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 237ms (Views: 113.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:29 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:29 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:29 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:29 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:29 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:29 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:29 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:30 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:30 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:30 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:30 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:30 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:30 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:27:30 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:30 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-17 20:27:33 -0800
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (13.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 98ms (Views: 96.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:33 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:33 -0800
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:33 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:33 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:33 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:33 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:33 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:33 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:34 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:34 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:34 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:34 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:34 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:34 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:27:34 -0800
+
+
+Started GET "/assets/mezzo_transparent2.png" for 127.0.0.1 at 2015-11-17 20:27:34 -0800
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2015-11-17 20:27:34 -0800
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-11-17 20:27:36 -0800
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-11-17 20:27:36 -0800
+
+
+Started GET "/auth/facebook/callback?code=AQDt1-TO4cNLOgTO308tZWO7SFGn3HCShrRW1WDeiCVKvLj2ImuG1hAD3xIDpsdu7awWJUzgjqxc5doIxztkFolotVhOvIQEWQsNj6Vup-YSpidGQdAlIqmSqDp2mn9AQwHtJriaKO9tlY_ZlyhCP9xuTDnZ-8NoUeOhobH2Se0Yn1Lku8hQ3AlNmNOczvWPx-dzu5hl2Nl1p6jGOAg8CNA5g9KzvDgufH1u0uT5D_uVdr-A0FxGZpLPi4B_otWRW3bZYG5iUD-s75VkpFwfel-5_TgxELxMrByzzFk4ixZO93rH45d875xhuM9kkVeyq6U&state=4ad302b356a6cbc244219c2fe349057a719b1233d22e1f6e" for 127.0.0.1 at 2015-11-17 20:27:41 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDt1-TO4cNLOgTO308tZWO7SFGn3HCShrRW1WDeiCVKvLj2ImuG1hAD3xIDpsdu7awWJUzgjqxc5doIxztkFolotVhOvIQEWQsNj6Vup-YSpidGQdAlIqmSqDp2mn9AQwHtJriaKO9tlY_ZlyhCP9xuTDnZ-8NoUeOhobH2Se0Yn1Lku8hQ3AlNmNOczvWPx-dzu5hl2Nl1p6jGOAg8CNA5g9KzvDgufH1u0uT5D_uVdr-A0FxGZpLPi4B_otWRW3bZYG5iUD-s75VkpFwfel-5_TgxELxMrByzzFk4ixZO93rH45d875xhuM9kkVeyq6U", "state"=>"4ad302b356a6cbc244219c2fe349057a719b1233d22e1f6e", "provider"=>"facebook"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["uid", "10206425663374349"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["uid", "10206425663374349"]]
+Redirected to http://0.0.0.0:3000/findMatch
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/findMatch" for 127.0.0.1 at 2015-11-17 20:27:42 -0800
+Processing by UsersController#findMatch as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT "users"."id" FROM "users"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "10206425663374349"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "102413230126905"], ["user2", "10206425663374349"]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "102413230126905"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "102413230126905"]]
+  [1m[36mMatching Load (0.1ms)[0m  [1mSELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "102413230126905"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "107464332954003"], ["user2", "10206425663374349"]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "107464332954003"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "107464332954003"]]
+  [1m[35mMatching Load (0.1ms)[0m  SELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1  [["user1", "10206425663374349"], ["user2", "107464332954003"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "118950595136616"], ["user2", "10206425663374349"]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "118950595136616"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "118950595136616"]]
+  [1m[36mMatching Load (0.1ms)[0m  [1mSELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "118950595136616"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mMatching Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "115536418812021"], ["user2", "10206425663374349"]]
+  [1m[35mMatching Exists (0.1ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "10206425663374349"], ["user2", "115536418812021"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "115536418812021"]]
+  [1m[35mMatching Load (0.2ms)[0m  SELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1  [["user1", "10206425663374349"], ["user2", "115536418812021"]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 15]]
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?  [["user_id", 15]]
+  [1m[36mMedium Load (0.1ms)[0m  [1mSELECT "media".* FROM "media" WHERE "media"."user_id" = ?[0m  [["user_id", 15]]
+  Rendered users/findMatch.html.erb within layouts/application (3.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 88ms (Views: 71.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:42 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:42 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:42 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:42 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:42 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:42 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:42 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:42 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:42 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:42 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:42 -0800
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:42 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:42 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:42 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:27:42 -0800
+
+
+Started POST "/users/matchChoice" for 127.0.0.1 at 2015-11-17 20:27:51 -0800
+Processing by UsersController#matchChoice as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8xjlivxpa6F6tIE63NHETfDSQlDv7fZyNlcwdGFjWqOxCQpbexbrE/fEr6UaHKd4LP2q8PdE56CNun9/qbJvdA==", "uid"=>"115536418812021", "like"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mMatching Exists (0.2ms)[0m  SELECT  1 AS one FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ? LIMIT 1  [["user1", "115536418812021"], ["user2", "10206425663374349"]]
+  [1m[36mMatching Load (0.1ms)[0m  [1mSELECT  "matchings".* FROM "matchings" WHERE "matchings"."user1" = ? AND "matchings"."user2" = ?  ORDER BY "matchings"."id" ASC LIMIT 1[0m  [["user1", "10206425663374349"], ["user2", "115536418812021"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.8ms)[0m  [1mUPDATE "matchings" SET "status" = ?, "updated_at" = ? WHERE "matchings"."id" = ?[0m  [["status", 2], ["updated_at", "2015-11-18 04:27:51.831088"], ["id", 102]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/view_matches
+Completed 302 Found in 13ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/view_matches" for 127.0.0.1 at 2015-11-17 20:27:51 -0800
+Processing by UsersController#view_matches as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mMatching Load (0.2ms)[0m  SELECT "matchings".* FROM "matchings" WHERE ((user1 = '10206425663374349' OR user2 = '10206425663374349') AND status = 2)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["uid", "102413230126905"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["uid", "107464332954003"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["uid", "118950595136616"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["uid", "115536418812021"]]
+  Rendered users/view_matches.html.erb within layouts/application (0.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 232ms (Views: 225.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:52 -0800
+
+
+Started GET "/assets/home.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:52 -0800
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:52 -0800
+
+
+Started GET "/assets/users.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:52 -0800
+
+
+Started GET "/assets/sessions.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:52 -0800
+
+
+Started GET "/assets/profile.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:52 -0800
+
+
+Started GET "/assets/profile.self.css?body=1" for 127.0.0.1 at 2015-11-17 20:27:52 -0800
+
+
+Started GET "/assets/users.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:52 -0800
+
+
+Started GET "/assets/location.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:52 -0800
+
+
+Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:52 -0800
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:52 -0800
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 127.0.0.1 at 2015-11-17 20:27:52 -0800
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:52 -0800
+
+
+Started GET "/assets/home.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:52 -0800
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-11-17 20:27:52 -0800

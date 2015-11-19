@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151115220010) do
+ActiveRecord::Schema.define(version: 20151118230535) do
 
   create_table "genres", force: :cascade do |t|
     t.string   "genre"
@@ -23,6 +23,12 @@ ActiveRecord::Schema.define(version: 20151115220010) do
   create_table "influences", force: :cascade do |t|
     t.string   "influence"
     t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "instrument_choices", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

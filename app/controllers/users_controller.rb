@@ -16,18 +16,31 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(session[:user_id])
+    @instruments = InstrumentChoice.all       # todo: add all instrument choices to this database
+                                              # then have for loop creating checkboxes in _form.html.erb
   end
 
   def update
   end
 
   def updateSurvey
-    puts 'HEYYYY'
     puts params
     params[:play] = 1
     params[:uid] = session[:user_id]
-    instrument = Instrument.add(params)
-    genre = Genre.add(params)
+    # loop through all checkboxes checked for instruments user plays
+    # creates entry in Instrument database with plays=1
+    params[:instrument].each do |i|
+      Instrument.add(i, 1, 1, params[:uid])   # todo: replace paramas with real values for experience and plays
+    end
+    # loop through all checkboxes checked for instruments user is looking for
+    # creates entry in Instrument database with plays=0
+    params[:looking].each do |l|
+      Instrument.add(l, 1, 0, params[:uid])
+    end
+    # creating genre entry for each genre checked
+    params[:genre].each do |g|
+      Genre.add(g, params[:uid])
+    end
     influence = Influence.add(params)
     media = Medium.add(params)
     User.update_bio(session[:user_id], params[:bio])
@@ -60,10 +73,16 @@ class UsersController < ApplicationController
     render "no_new_users"
   end
 
+  # todo: notify user that a match occured and ask
+  # if they want to continue looking for users or
+  # begin a message
+  # Return True if user wants to begin messaging
+  # false otherwise
   def notify_user_match
 
   end
 
+  # Begin a message with someone matched
   def init_message
 
   end
@@ -91,7 +110,9 @@ class UsersController < ApplicationController
     # Check to see if we have a match
     if @the_match[:status] == 2
       # we have a match
-      redirect_to action: "view_matches" and return
+      redirect_to action: "view_matches" and return   # this is here until we have messaging
+                                                      # This just forwards a user to view their matches
+                                                      # after new match occurs
       start_message = notify_user_match
       if start_message
         redirect_to action: "init_message" and return

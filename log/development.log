@@ -64421,3 +64421,3086 @@ OmniAuth::Strategies::Facebook::NoAuthorizationCodeError (must pass either a `co
   Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
   Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
   Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.5ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 07:47:14 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (174.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 402ms (Views: 373.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:47:15 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:47:15 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:47:15 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:47:15 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:47:15 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:47:15 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:47:15 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:47:15 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:47:15 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:47:15 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:47:15 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:47:15 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:47:15 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:47:15 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 07:47:15 +0000
+
+
+Started GET "/assets/facebook.png" for 169.231.71.43 at 2015-11-19 07:47:15 +0000
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 07:47:15 +0000
+
+
+Started GET "/auth/facebook" for 169.231.71.43 at 2015-11-19 07:47:17 +0000
+
+
+Started GET "/auth/facebook" for 169.231.71.43 at 2015-11-19 07:47:17 +0000
+
+
+Started GET "/auth/facebook/callback?code=AQCxFqHeMrvdqHFdyR43m7RnfOyyQellrqBpnnZONn71tmqvDVpFwHWOzoxJWd0kgMrFluMuCB-wIs_c1PGx3Dm2EXR-kUZu7dIr6ILee4GJanX_3_0a4MGHIa19Y-679A-E4Hnf8A7O8nnf-Ignd5bPT8eS6TeMyAbVGdisltFihAW-WkpJ7MsES5nFUTAMjHrvsH5nDrzK1KN2PF5kek-GAqW2plZ4V-crQnJ1yMn3vZ9FwMH4Ys1KiylmX7YJKLc3JDYz2TypxCxq-DvX7ZxdFuCgh70xcLSdDMgv_bossLMW2DUl4q_SsqI6AR0F_ZmhJYKJjiSppW9k94OxQ_6j&state=0836dfb59fe838ea7dae659d72b91c9eeb016fedd3b7d64b" for 169.231.71.43 at 2015-11-19 07:47:17 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCxFqHeMrvdqHFdyR43m7RnfOyyQellrqBpnnZONn71tmqvDVpFwHWOzoxJWd0kgMrFluMuCB-wIs_c1PGx3Dm2EXR-kUZu7dIr6ILee4GJanX_3_0a4MGHIa19Y-679A-E4Hnf8A7O8nnf-Ignd5bPT8eS6TeMyAbVGdisltFihAW-WkpJ7MsES5nFUTAMjHrvsH5nDrzK1KN2PF5kek-GAqW2plZ4V-crQnJ1yMn3vZ9FwMH4Ys1KiylmX7YJKLc3JDYz2TypxCxq-DvX7ZxdFuCgh70xcLSdDMgv_bossLMW2DUl4q_SsqI6AR0F_ZmhJYKJjiSppW9k94OxQ_6j", "state"=>"0836dfb59fe838ea7dae659d72b91c9eeb016fedd3b7d64b", "provider"=>"facebook"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["uid", "134293440266963"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? LIMIT 1  [["provider", "facebook"], ["uid", "134293440266963"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("provider", "uid", "name", "image", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["provider", "facebook"], ["uid", "134293440266963"], ["name", "Jennifer Alajehibchifg Carrierosky"], ["image", "http://graph.facebook.com/134293440266963/picture"], ["email", "xlxbymm_carrierosky_1447742393@tfbnw.net"], ["created_at", "2015-11-19 07:47:17.915837"], ["updated_at", "2015-11-19 07:47:17.915837"]]
+  [1m[36m (10.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://mason-fork-styxx.c9users.io/edit
+Completed 302 Found in 31ms (ActiveRecord: 11.8ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 07:47:18 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered users/_form.html.erb (2.7ms)
+  Rendered users/edit.html.erb within layouts/application (3.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `filledSurveyPage' for #<#<Class:0x007fc171ecf858>:0x007fc171eced90>):
+    38:         <ul class="nav navbar-nav navbar-right">
+    39: 		      
+    40:           <% if current_user %>
+    41:             <% if filledSurveyPage %>
+    42:               <li><%= link_to current_user.name, profile_path, id: "profile" %></li>
+    43:             <% else %> <!-- Survey page not done, route to survey page -->
+    44: 	            <li><%= link_to current_user.name, edit_path, id: "profile" %></li>
+  app/views/layouts/application.html.erb:41:in `_app_views_layouts_application_html_erb___111997415262444465_47807560'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.1ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 07:48:06 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered users/_form.html.erb (1.4ms)
+  Rendered users/edit.html.erb within layouts/application (2.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from filledSurveyPage at /home/ubuntu/workspace/app/controllers/application_controller.rb:13)
+  [1m[36mInstrument Load (0.2ms)[0m  [1mSELECT  "instruments".* FROM "instruments" WHERE "instruments"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 500 Internal Server Error in 161ms (ActiveRecord: 1.7ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Instrument with 'id'=11):
+  app/controllers/application_controller.rb:13:in `filledSurveyPage'
+  app/views/layouts/application.html.erb:41:in `_app_views_layouts_application_html_erb___111997415262444465_47807560'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.7ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 07:53:05 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered users/_form.html.erb (1.7ms)
+  Rendered users/edit.html.erb within layouts/application (2.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (undefined method `call' for #<Class:0x007fc171f2aa50>):
+    38:         <ul class="nav navbar-nav navbar-right">
+    39: 		      
+    40:           <% if current_user %>
+    41:             <% if filledSurveyPage %>
+    42:               <li><%= link_to current_user.name, profile_path, id: "profile" %></li>
+    43:             <% else %> <!-- Survey page not done, route to survey page -->
+    44: 	            <li><%= link_to current_user.name, edit_path, id: "profile" %></li>
+  app/controllers/application_controller.rb:13:in `filledSurveyPage'
+  app/views/layouts/application.html.erb:41:in `_app_views_layouts_application_html_erb___111997415262444465_47807560'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.2ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 07:53:21 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered users/_form.html.erb (1.7ms)
+  Rendered users/edit.html.erb within layouts/application (2.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 500 Internal Server Error in 180ms (ActiveRecord: 1.4ms)
+
+ActionView::Template::Error (undefined method `[]' for #<Class:0x007fc171362268>):
+    38:         <ul class="nav navbar-nav navbar-right">
+    39: 		      
+    40:           <% if current_user %>
+    41:             <% if filledSurveyPage %>
+    42:               <li><%= link_to current_user.name, profile_path, id: "profile" %></li>
+    43:             <% else %> <!-- Survey page not done, route to survey page -->
+    44: 	            <li><%= link_to current_user.name, edit_path, id: "profile" %></li>
+  app/controllers/application_controller.rb:13:in `filledSurveyPage'
+  app/views/layouts/application.html.erb:41:in `_app_views_layouts_application_html_erb___111997415262444465_47807560'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.4ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 07:55:06 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered users/_form.html.erb (1.8ms)
+  Rendered users/edit.html.erb within layouts/application (2.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (unsupported: Symbol):
+    38:         <ul class="nav navbar-nav navbar-right">
+    39: 		      
+    40:           <% if current_user %>
+    41:             <% if filledSurveyPage %>
+    42:               <li><%= link_to current_user.name, profile_path, id: "profile" %></li>
+    43:             <% else %> <!-- Survey page not done, route to survey page -->
+    44: 	            <li><%= link_to current_user.name, edit_path, id: "profile" %></li>
+  app/controllers/application_controller.rb:13:in `filledSurveyPage'
+  app/views/layouts/application.html.erb:41:in `_app_views_layouts_application_html_erb___111997415262444465_47807560'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (41.8ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 07:56:02 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered users/_form.html.erb (2.1ms)
+  Rendered users/edit.html.erb within layouts/application (2.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 138ms (Views: 115.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:56:02 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:56:02 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:56:02 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:56:02 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:02 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:56:02 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:02 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:02 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:02 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:02 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:02 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:02 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:02 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:02 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 07:56:02 +0000
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 07:56:05 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (4.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 98ms (Views: 96.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 07:56:05 +0000
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 07:56:06 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered users/_form.html.erb (2.9ms)
+  Rendered users/edit.html.erb within layouts/application (4.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 86ms (Views: 84.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 07:56:08 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 65ms (Views: 64.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 07:56:08 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered users/_form.html.erb (1.1ms)
+  Rendered users/edit.html.erb within layouts/application (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 62ms (Views: 61.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 07:56:10 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (3.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 77ms (Views: 74.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 07:56:11 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered users/_form.html.erb (1.2ms)
+  Rendered users/edit.html.erb within layouts/application (1.9ms)
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 79ms (Views: 77.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 169.231.71.43 at 2015-11-19 07:56:30 +0000
+Processing by UsersController#updateSurvey as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B0QL9FITe51g2o3jKBFCE8q16AnpTlPEi/5ymvxAuLfRXHO5SskWA5eRbvF5CIA94r846T4wUwA50j+ZV2aAmA==", "instrument"=>"asdf", "exp"=>"asdf", "genre"=>"asdf", "influence"=>"asdf", "url"=>"https://www.youtube.com/watch?v=-ITcbN9OgPU", "provider"=>"Facebook", "bio"=>"lsda;kja", "commit"=>"Submit"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "instruments" ("instrument", "experience", "play", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["instrument", "asdf"], ["experience", 0], ["play", "t"], ["user_id", 11], ["created_at", "2015-11-19 07:56:30.517157"], ["updated_at", "2015-11-19 07:56:30.517157"]]
+  [1m[36m (8.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "genres" ("genre", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["genre", "asdf"], ["user_id", 11], ["created_at", "2015-11-19 07:56:30.631744"], ["updated_at", "2015-11-19 07:56:30.631744"]]
+  [1m[35m (6.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "influences" ("influence", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["influence", "asdf"], ["user_id", 11], ["created_at", "2015-11-19 07:56:30.646203"], ["updated_at", "2015-11-19 07:56:30.646203"]]
+  [1m[36m (8.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "media" ("url", "user_id", "provider", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/-ITcbN9OgPU"], ["user_id", 11], ["provider", "Facebook"], ["created_at", "2015-11-19 07:56:30.664282"], ["updated_at", "2015-11-19 07:56:30.664282"]]
+  [1m[35m (6.0ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "bio" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["bio", "lsda;kja"], ["updated_at", "2015-11-19 07:56:30.673201"], ["id", 11]]
+  [1m[35m (7.1ms)[0m  commit transaction
+Redirected to http://mason-fork-styxx.c9users.io/users/11
+Completed 302 Found in 174ms (ActiveRecord: 40.0ms)
+
+
+Started GET "/users/11" for 169.231.71.43 at 2015-11-19 07:56:30 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mInstrument Load (0.3ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 11]]
+  [1m[36mGenre Load (0.2ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 11]]
+  [1m[35mMedium Load (0.2ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 11]]
+  Rendered users/show.html.erb within layouts/application (22.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 80ms (Views: 77.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:56:31 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:56:31 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:56:31 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:56:31 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:31 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:56:31 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:31 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:31 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:31 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:31 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:31 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:31 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:31 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:31 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 07:56:31 +0000
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 07:56:33 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (2.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 66ms (Views: 64.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 07:56:33 +0000
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 07:56:34 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered users/_form.html.erb (1.0ms)
+  Rendered users/edit.html.erb within layouts/application (1.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 70ms (Views: 68.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 07:56:49 +0000
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered users/_form.html.erb (1.6ms)
+  Rendered users/edit.html.erb within layouts/application (2.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 86ms (Views: 67.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:56:49 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:56:49 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:56:49 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:56:49 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:56:49 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:49 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:49 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:50 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:50 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:50 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:50 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:50 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:50 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:56:50 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 07:56:50 +0000
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 07:56:51 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 211ms (Views: 209.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 07:56:51 +0000
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 07:56:52 +0000
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mInstrument Load (0.3ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 11]]
+  [1m[36mGenre Load (0.2ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 11]]
+  [1m[35mMedium Load (0.2ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 11]]
+  Rendered users/show.html.erb within layouts/application (31.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 102ms (Views: 98.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 07:56:54 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (3.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 155ms (Views: 152.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 07:56:55 +0000
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mInstrument Load (0.3ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 11]]
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?  [["user_id", 11]]
+  [1m[36mMedium Load (0.1ms)[0m  [1mSELECT "media".* FROM "media" WHERE "media"."user_id" = ?[0m  [["user_id", 11]]
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 74ms (Views: 71.7ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/sign_out" for 169.231.71.43 at 2015-11-19 07:57:30 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"C8ZqrbWD/NSm+xY7fU4ZERRfu0fVyrOdNOTVvSSQZVXd3hLgrVmRSlGw9SksV9s/PFVrpwK0s1mGyJi+j7Zdeg=="}
+Redirected to http://mason-fork-styxx.c9users.io/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 07:57:30 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 82ms (Views: 80.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:57:30 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:57:30 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:57:30 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:57:30 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:57:30 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:57:30 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:57:30 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:57:30 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:57:30 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:57:30 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:57:30 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:57:30 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:57:31 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:57:31 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 07:57:31 +0000
+
+
+Started GET "/assets/facebook.png" for 169.231.71.43 at 2015-11-19 07:57:31 +0000
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 07:57:31 +0000
+
+
+Started GET "/auth/facebook" for 169.231.71.43 at 2015-11-19 07:57:32 +0000
+
+
+Started GET "/auth/facebook" for 169.231.71.43 at 2015-11-19 07:57:33 +0000
+
+
+Started GET "/auth/facebook/callback?code=AQB7LwAsj2SiGprhkrlnsjSWxmwR_uK7hgM1YdZN8efjro415fwgOnQA01OJHj7RzeyerFkgAl2DHJ_ZdfyG7-r6JauduLHSTeKgZwGXgOW1Q_6uAewxfDKyXEt8c4Fp8yzEGQwUWR4se9qkQLjzPszAQLE6HT0bf4TzePjnDnuuTaQPL_FeO9abjHuxsTMZKz7IIM0I6h1V8Nb3x1sXFFqPBWovr7Bt2J5ztFSus3OgLCYLpJSbE-l9HAs7gUd0iKaMfFWO7024EmE6DH1SL6gib-4QGsWmLdu5BB-RA_NOq_hBpV5gIr0Vtvfi7NQQggvoFRnbPXJXDW3Rr-JkPc1t&state=a003029be11b0801148984638496caf9c489913583f0ed9e" for 169.231.71.43 at 2015-11-19 07:57:37 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQB7LwAsj2SiGprhkrlnsjSWxmwR_uK7hgM1YdZN8efjro415fwgOnQA01OJHj7RzeyerFkgAl2DHJ_ZdfyG7-r6JauduLHSTeKgZwGXgOW1Q_6uAewxfDKyXEt8c4Fp8yzEGQwUWR4se9qkQLjzPszAQLE6HT0bf4TzePjnDnuuTaQPL_FeO9abjHuxsTMZKz7IIM0I6h1V8Nb3x1sXFFqPBWovr7Bt2J5ztFSus3OgLCYLpJSbE-l9HAs7gUd0iKaMfFWO7024EmE6DH1SL6gib-4QGsWmLdu5BB-RA_NOq_hBpV5gIr0Vtvfi7NQQggvoFRnbPXJXDW3Rr-JkPc1t", "state"=>"a003029be11b0801148984638496caf9c489913583f0ed9e", "provider"=>"facebook"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["uid", "132493687113806"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? LIMIT 1  [["provider", "facebook"], ["uid", "132493687113806"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("provider", "uid", "name", "image", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["provider", "facebook"], ["uid", "132493687113806"], ["name", "Charlie Alajeiebfhace Fergieberg"], ["image", "http://graph.facebook.com/132493687113806/picture"], ["email", "wyfvaam_fergieberg_1447742388@tfbnw.net"], ["created_at", "2015-11-19 07:57:37.764367"], ["updated_at", "2015-11-19 07:57:37.764367"]]
+  [1m[36m (8.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://mason-fork-styxx.c9users.io/edit
+Completed 302 Found in 14ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 07:57:37 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered users/_form.html.erb (1.0ms)
+  Rendered users/edit.html.erb within layouts/application (1.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 60ms (Views: 59.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:57:38 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:57:38 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:57:38 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:57:38 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:57:38 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:57:38 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:57:38 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:57:38 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:57:38 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:57:38 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:57:38 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:57:38 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:57:38 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:57:38 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 07:57:38 +0000
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 07:57:40 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (2.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 72ms (Views: 71.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 07:57:40 +0000
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 07:57:41 +0000
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 12]]
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?  [["user_id", 12]]
+  [1m[36mMedium Load (0.1ms)[0m  [1mSELECT "media".* FROM "media" WHERE "media"."user_id" = ?[0m  [["user_id", 12]]
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 59ms (Views: 57.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 07:57:44 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 57ms (Views: 55.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 07:58:13 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (11.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 76ms (Views: 67.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 07:58:18 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered users/_form.html.erb (1.3ms)
+  Rendered users/edit.html.erb within layouts/application (2.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 82ms (Views: 55.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 07:58:20 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (2.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 53ms (Views: 51.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 07:58:21 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered users/_form.html.erb (0.8ms)
+  Rendered users/edit.html.erb within layouts/application (1.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 53.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 07:58:22 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (2.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 64ms (Views: 62.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 07:58:22 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered users/_form.html.erb (1.2ms)
+  Rendered users/edit.html.erb within layouts/application (2.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 87ms (Views: 84.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 169.231.71.43 at 2015-11-19 07:58:32 +0000
+Processing by UsersController#updateSurvey as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yLoJWhHq6zPW2IodEeHJONbrPFvfr4FXoFrXGcBV1H4eonEXCTCGrSGTaQ9A+AsW/uHsuwjRgZMSdpoaa3PsUQ==", "instrument"=>"asdf", "exp"=>"asdf", "genre"=>"asdf", "influence"=>"asdf", "url"=>"https://www.youtube.com/watch?v=-ITcbN9OgPU", "provider"=>"asdf", "bio"=>"Determination", "commit"=>"Submit"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "instruments" ("instrument", "experience", "play", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["instrument", "asdf"], ["experience", 0], ["play", "t"], ["user_id", 12], ["created_at", "2015-11-19 07:58:32.828023"], ["updated_at", "2015-11-19 07:58:32.828023"]]
+  [1m[36m (9.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "genres" ("genre", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["genre", "asdf"], ["user_id", 12], ["created_at", "2015-11-19 07:58:32.845888"], ["updated_at", "2015-11-19 07:58:32.845888"]]
+  [1m[35m (8.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "influences" ("influence", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["influence", "asdf"], ["user_id", 12], ["created_at", "2015-11-19 07:58:32.862416"], ["updated_at", "2015-11-19 07:58:32.862416"]]
+  [1m[36m (8.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "media" ("url", "user_id", "provider", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/-ITcbN9OgPU"], ["user_id", 12], ["provider", "asdf"], ["created_at", "2015-11-19 07:58:32.878685"], ["updated_at", "2015-11-19 07:58:32.878685"]]
+  [1m[35m (8.6ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "bio" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["bio", "Determination"], ["updated_at", "2015-11-19 07:58:32.889856"], ["id", 12]]
+  [1m[35m (8.8ms)[0m  commit transaction
+Redirected to http://mason-fork-styxx.c9users.io/users/12
+Completed 302 Found in 79ms (ActiveRecord: 47.2ms)
+
+
+Started GET "/users/12" for 169.231.71.43 at 2015-11-19 07:58:32 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 12]]
+  [1m[36mGenre Load (0.2ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 12]]
+  [1m[35mMedium Load (0.2ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 12]]
+  Rendered users/show.html.erb within layouts/application (7.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:58:33 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:58:33 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:58:33 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:58:33 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:58:33 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:58:33 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:58:33 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:58:33 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:58:33 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:58:33 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:58:33 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:58:33 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:58:33 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:58:33 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 07:58:33 +0000
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 07:58:35 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (2.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 57ms (Views: 55.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 07:58:35 +0000
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 07:58:37 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered users/_form.html.erb (1.0ms)
+  Rendered users/edit.html.erb within layouts/application (1.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 144ms (Views: 142.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 07:58:38 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (3.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 87ms (Views: 85.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 07:58:39 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered users/_form.html.erb (1.1ms)
+  Rendered users/edit.html.erb within layouts/application (1.9ms)
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "-1"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 81ms (Views: 79.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 07:59:09 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (12.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 213ms (Views: 203.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 07:59:11 +0000
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mInstrument Load (0.3ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 12]]
+  [1m[36mGenre Load (0.2ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 12]]
+  [1m[35mMedium Load (0.2ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 12]]
+  Rendered users/show.html.erb within layouts/application (31.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 100ms (Views: 97.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 07:59:12 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 62ms (Views: 60.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 07:59:13 +0000
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 12]]
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?  [["user_id", 12]]
+  [1m[36mMedium Load (0.1ms)[0m  [1mSELECT "media".* FROM "media" WHERE "media"."user_id" = ?[0m  [["user_id", 12]]
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 61ms (Views: 59.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 07:59:15 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (2.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 78ms (Views: 77.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/sign_out" for 169.231.71.43 at 2015-11-19 07:59:57 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ep4YPjTy7cU3xv/zYYH8xKDvpOls6OtdmBXg0ITZWZmshmBzLCiAW8CNHOEwmD7qiOV0CbuW65kqOa3TL/9htg=="}
+Redirected to http://mason-fork-styxx.c9users.io/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 07:59:57 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 81ms (Views: 79.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:59:57 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:59:57 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:59:57 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:59:57 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:59:57 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:59:57 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 07:59:57 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:59:57 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:59:57 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:59:57 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:59:57 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:59:57 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:59:57 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 07:59:57 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 07:59:57 +0000
+
+
+Started GET "/assets/facebook.png" for 169.231.71.43 at 2015-11-19 07:59:58 +0000
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 07:59:58 +0000
+
+
+Started GET "/auth/facebook" for 169.231.71.43 at 2015-11-19 07:59:59 +0000
+
+
+Started GET "/auth/facebook" for 169.231.71.43 at 2015-11-19 07:59:59 +0000
+
+
+Started GET "/auth/facebook/callback?code=AQCh1ue3OBcjycBZdCsVXP9UCNMu_SDyeCcX7kSslQJtFFmDR9yEZk-UBmGvcHdAxJ3RNvL0ix8mgh5CEimPR25dgvSeYlBC-zdATJj4P0kyDzOYUdy9rtPDZsvIfm6Oz6JTR5F-tKNdTr3rAUVmFl641s616sbchF3rhwVo4k93HipNKHsYvVacNGKQsKP7IiTNexUpvi0b-rJD6Jx9MrQM_LAPEjUc7UN8Sh0FQhv8v3DL2YnGU4mcgDTjEDKDRAWDMmLeSAFi-Yi98byCatSgzIsCI9GYSZEZl7HBSZFo4bulxfcMyMBR3YHpMHjhp7TTKCKUuU68NVp4vX-Rs75N&state=8279cfbee0a3d61c5a5ecdfa936f7f560dd94c4bb0c4772f" for 169.231.71.43 at 2015-11-19 08:00:13 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCh1ue3OBcjycBZdCsVXP9UCNMu_SDyeCcX7kSslQJtFFmDR9yEZk-UBmGvcHdAxJ3RNvL0ix8mgh5CEimPR25dgvSeYlBC-zdATJj4P0kyDzOYUdy9rtPDZsvIfm6Oz6JTR5F-tKNdTr3rAUVmFl641s616sbchF3rhwVo4k93HipNKHsYvVacNGKQsKP7IiTNexUpvi0b-rJD6Jx9MrQM_LAPEjUc7UN8Sh0FQhv8v3DL2YnGU4mcgDTjEDKDRAWDMmLeSAFi-Yi98byCatSgzIsCI9GYSZEZl7HBSZFo4bulxfcMyMBR3YHpMHjhp7TTKCKUuU68NVp4vX-Rs75N", "state"=>"8279cfbee0a3d61c5a5ecdfa936f7f560dd94c4bb0c4772f", "provider"=>"facebook"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["uid", "130182204012157"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? LIMIT 1[0m  [["provider", "facebook"], ["uid", "130182204012157"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("provider", "uid", "name", "image", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["provider", "facebook"], ["uid", "130182204012157"], ["name", "Mark Alajfaacdfede Fallerescu"], ["image", "http://graph.facebook.com/130182204012157/picture"], ["email", "oqlefao_fallerescu_1447742390@tfbnw.net"], ["created_at", "2015-11-19 08:00:13.732284"], ["updated_at", "2015-11-19 08:00:13.732284"]]
+  [1m[35m (8.2ms)[0m  commit transaction
+Redirected to http://mason-fork-styxx.c9users.io/edit
+Completed 302 Found in 16ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 08:00:13 +0000
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered users/_form.html.erb (1.4ms)
+  Rendered users/edit.html.erb within layouts/application (2.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 69ms (Views: 67.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:00:14 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:00:14 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:00:14 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:00:14 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:00:14 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:00:14 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:00:14 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:00:14 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:00:14 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:00:14 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:00:14 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:00:14 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:00:14 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:00:14 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 08:00:14 +0000
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:00:15 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 08:00:16 +0000
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 08:00:17 +0000
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.1ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 13]]
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 13]]
+  [1m[35mMedium Load (0.1ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 13]]
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 67ms (Views: 65.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:00:19 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 08:00:20 +0000
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.3ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 13]]
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?  [["user_id", 13]]
+  [1m[36mMedium Load (0.1ms)[0m  [1mSELECT "media".* FROM "media" WHERE "media"."user_id" = ?[0m  [["user_id", 13]]
+  Rendered users/show.html.erb within layouts/application (3.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 104ms (Views: 102.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:00:21 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (2.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 58ms (Views: 56.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 08:00:22 +0000
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.1ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 13]]
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 13]]
+  [1m[35mMedium Load (0.1ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 13]]
+  Rendered users/show.html.erb within layouts/application (2.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 67ms (Views: 66.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:00:23 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 90ms (Views: 88.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 08:00:24 +0000
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 13]]
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?  [["user_id", 13]]
+  [1m[36mMedium Load (0.1ms)[0m  [1mSELECT "media".* FROM "media" WHERE "media"."user_id" = ?[0m  [["user_id", 13]]
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 69ms (Views: 67.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:02:54 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (11.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 1.5ms)
+
+ActionView::Template::Error (undefined method `key' for #<Class:0x007fc172595ae8>):
+    38:         <ul class="nav navbar-nav navbar-right">
+    39: 		      
+    40:           <% if current_user %>
+    41:             <% if filledSurveyPage %>
+    42:               <li><%= link_to current_user.name, profile_path, id: "profile" %></li>
+    43:             <% else %> <!-- Survey page not done, route to survey page -->
+    44: 	            <li><%= link_to current_user.name, edit_path, id: "profile" %></li>
+  app/controllers/application_controller.rb:13:in `filledSurveyPage'
+  app/views/layouts/application.html.erb:41:in `_app_views_layouts_application_html_erb___111997415262444465_47807560'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.8ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:02:54 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (2.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `key' for #<Class:0x007fc172595ae8>):
+    38:         <ul class="nav navbar-nav navbar-right">
+    39: 		      
+    40:           <% if current_user %>
+    41:             <% if filledSurveyPage %>
+    42:               <li><%= link_to current_user.name, profile_path, id: "profile" %></li>
+    43:             <% else %> <!-- Survey page not done, route to survey page -->
+    44: 	            <li><%= link_to current_user.name, edit_path, id: "profile" %></li>
+  app/controllers/application_controller.rb:13:in `filledSurveyPage'
+  app/views/layouts/application.html.erb:41:in `_app_views_layouts_application_html_erb___111997415262444465_47807560'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.3ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:03:09 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (11.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 1.4ms)
+
+ActionView::Template::Error (undefined method `key?' for #<Class:0x007fc172a4c780>):
+    38:         <ul class="nav navbar-nav navbar-right">
+    39: 		      
+    40:           <% if current_user %>
+    41:             <% if filledSurveyPage %>
+    42:               <li><%= link_to current_user.name, profile_path, id: "profile" %></li>
+    43:             <% else %> <!-- Survey page not done, route to survey page -->
+    44: 	            <li><%= link_to current_user.name, edit_path, id: "profile" %></li>
+  app/controllers/application_controller.rb:13:in `filledSurveyPage'
+  app/views/layouts/application.html.erb:41:in `_app_views_layouts_application_html_erb___111997415262444465_47807560'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (21.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.0ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:03:36 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (10.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 1.4ms)
+
+ActionView::Template::Error (undefined method `has_key?' for #<Class:0x007fc17201ec40>):
+    38:         <ul class="nav navbar-nav navbar-right">
+    39: 		      
+    40:           <% if current_user %>
+    41:             <% if filledSurveyPage %>
+    42:               <li><%= link_to current_user.name, profile_path, id: "profile" %></li>
+    43:             <% else %> <!-- Survey page not done, route to survey page -->
+    44: 	            <li><%= link_to current_user.name, edit_path, id: "profile" %></li>
+  app/controllers/application_controller.rb:13:in `filledSurveyPage'
+  app/views/layouts/application.html.erb:41:in `_app_views_layouts_application_html_erb___111997415262444465_47807560'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.7ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:03:45 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (12.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 1.4ms)
+
+ActionView::Template::Error (undefined method `has_key?' for #<Class:0x000000056153c8>):
+    38:         <ul class="nav navbar-nav navbar-right">
+    39: 		      
+    40:           <% if current_user %>
+    41:             <% if filledSurveyPage %>
+    42:               <li><%= link_to current_user.name, profile_path, id: "profile" %></li>
+    43:             <% else %> <!-- Survey page not done, route to survey page -->
+    44: 	            <li><%= link_to current_user.name, edit_path, id: "profile" %></li>
+  app/controllers/application_controller.rb:13:in `filledSurveyPage'
+  app/views/layouts/application.html.erb:41:in `_app_views_layouts_application_html_erb___111997415262444465_47807560'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.4ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:03:52 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (10.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 1.4ms)
+
+ActionView::Template::Error (undefined method `key?' for #<Class:0x007fc171a34ac8>):
+    38:         <ul class="nav navbar-nav navbar-right">
+    39: 		      
+    40:           <% if current_user %>
+    41:             <% if filledSurveyPage %>
+    42:               <li><%= link_to current_user.name, profile_path, id: "profile" %></li>
+    43:             <% else %> <!-- Survey page not done, route to survey page -->
+    44: 	            <li><%= link_to current_user.name, edit_path, id: "profile" %></li>
+  app/controllers/application_controller.rb:13:in `filledSurveyPage'
+  app/views/layouts/application.html.erb:41:in `_app_views_layouts_application_html_erb___111997415262444465_47807560'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.4ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:04:23 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (11.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 1.6ms)
+
+ActionView::Template::Error (undefined method `defined?' for #<Class:0x007fc17222fa48>):
+    38:         <ul class="nav navbar-nav navbar-right">
+    39: 		      
+    40:           <% if current_user %>
+    41:             <% if filledSurveyPage %>
+    42:               <li><%= link_to current_user.name, profile_path, id: "profile" %></li>
+    43:             <% else %> <!-- Survey page not done, route to survey page -->
+    44: 	            <li><%= link_to current_user.name, edit_path, id: "profile" %></li>
+  app/controllers/application_controller.rb:13:in `filledSurveyPage'
+  app/views/layouts/application.html.erb:41:in `_app_views_layouts_application_html_erb___111997415262444465_47807560'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.2ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:07:58 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (12.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "13"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 96ms (Views: 87.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:07:59 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:07:59 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:07:59 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:07:59 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:07:59 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:07:59 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:07:59 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:07:59 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:07:59 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:07:59 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:07:59 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:07:59 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:07:59 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:07:59 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 08:07:59 +0000
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 08:07:59 +0000
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:08:01 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (2.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.1ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "13"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 73ms (Views: 70.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 08:08:02 +0000
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered users/_form.html.erb (1.6ms)
+  Rendered users/edit.html.erb within layouts/application (2.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "13"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 74ms (Views: 72.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:08:03 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.1ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "13"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 64ms (Views: 62.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 08:08:04 +0000
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered users/_form.html.erb (0.9ms)
+  Rendered users/edit.html.erb within layouts/application (1.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "13"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 66ms (Views: 64.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:08:05 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.1ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "13"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 53.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 08:08:06 +0000
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered users/_form.html.erb (0.7ms)
+  Rendered users/edit.html.erb within layouts/application (1.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "13"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 53.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 169.231.71.43 at 2015-11-19 08:08:12 +0000
+Processing by UsersController#updateSurvey as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ARWucYqAlufSqkBBW4hiLFvWWqljG2FmnC6pUIzQbjfXDdY8klr7eSXho1MKkaACc9yKSbRlYaIuAuRTJ/ZWGA==", "instrument"=>"st", "exp"=>"sdf", "genre"=>"asdf", "influence"=>"adsf", "url"=>"https://www.youtube.com/watch?v=-ITcbN9OgPU", "provider"=>"asdf", "bio"=>"sdfasfdsaf", "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "instruments" ("instrument", "experience", "play", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["instrument", "st"], ["experience", 0], ["play", "t"], ["user_id", 13], ["created_at", "2015-11-19 08:08:12.421419"], ["updated_at", "2015-11-19 08:08:12.421419"]]
+  [1m[35m (15.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "genres" ("genre", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["genre", "asdf"], ["user_id", 13], ["created_at", "2015-11-19 08:08:12.449935"], ["updated_at", "2015-11-19 08:08:12.449935"]]
+  [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "influences" ("influence", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["influence", "adsf"], ["user_id", 13], ["created_at", "2015-11-19 08:08:12.469945"], ["updated_at", "2015-11-19 08:08:12.469945"]]
+  [1m[35m (6.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "media" ("url", "user_id", "provider", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["url", "https://www.youtube.com/embed/-ITcbN9OgPU"], ["user_id", 13], ["provider", "asdf"], ["created_at", "2015-11-19 08:08:12.486246"], ["updated_at", "2015-11-19 08:08:12.486246"]]
+  [1m[36m (7.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "bio" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["bio", "sdfasfdsaf"], ["updated_at", "2015-11-19 08:08:12.497611"], ["id", 13]]
+  [1m[36m (7.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://mason-fork-styxx.c9users.io/users/13
+Completed 302 Found in 94ms (ActiveRecord: 47.5ms)
+
+
+Started GET "/users/13" for 169.231.71.43 at 2015-11-19 08:08:12 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 13]]
+  [1m[35mGenre Load (0.2ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?  [["user_id", 13]]
+  [1m[36mMedium Load (0.2ms)[0m  [1mSELECT "media".* FROM "media" WHERE "media"."user_id" = ?[0m  [["user_id", 13]]
+  Rendered users/show.html.erb within layouts/application (9.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "13"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 75ms (Views: 72.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:08:13 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:08:13 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:08:13 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:08:13 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:08:13 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:08:13 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:08:13 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:08:13 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:08:13 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:08:13 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:08:13 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:08:13 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:08:13 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:08:13 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 08:08:13 +0000
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:08:14 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "13"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 83ms (Views: 81.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 08:08:14 +0000
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 08:08:16 +0000
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered users/_form.html.erb (1.3ms)
+  Rendered users/edit.html.erb within layouts/application (2.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "13"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 163ms (Views: 161.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:08:17 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.1ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "13"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 128ms (Views: 126.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 08:08:18 +0000
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered users/_form.html.erb (1.5ms)
+  Rendered users/edit.html.erb within layouts/application (2.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "13"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 80ms (Views: 78.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 08:08:31 +0000
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 13]]
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?  [["user_id", 13]]
+  [1m[36mMedium Load (0.1ms)[0m  [1mSELECT "media".* FROM "media" WHERE "media"."user_id" = ?[0m  [["user_id", 13]]
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "13"]]
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 114ms (Views: 112.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:08:32 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:08:32 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:08:32 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:08:32 +0000
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:08:32 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:08:32 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:08:32 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:08:32 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:08:32 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:08:32 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:08:32 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:08:32 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:08:32 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:08:32 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 08:08:32 +0000
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:09:20 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (15.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 114ms (Views: 104.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 08:09:20 +0000
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 08:09:21 +0000
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 13]]
+  [1m[36mGenre Load (0.2ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 13]]
+  [1m[35mMedium Load (0.2ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 13]]
+  Rendered users/show.html.erb within layouts/application (23.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 147ms (Views: 143.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 08:09:24 +0000
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered users/_form.html.erb (1.4ms)
+  Rendered users/edit.html.erb within layouts/application (2.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 76ms (Views: 74.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:09:25 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:09:25 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:09:25 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:09:25 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:09:25 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:09:25 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:09:25 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:09:25 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:09:25 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:09:25 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:09:25 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:09:25 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:09:25 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:09:25 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 08:09:25 +0000
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:09:26 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 56ms (Views: 54.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 08:09:27 +0000
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 08:09:30 +0000
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 13]]
+  [1m[36mGenre Load (0.2ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 13]]
+  [1m[35mMedium Load (0.2ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 13]]
+  Rendered users/show.html.erb within layouts/application (6.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 87ms (Views: 83.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 08:09:34 +0000
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.1ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 13]]
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 13]]
+  [1m[35mMedium Load (0.1ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 13]]
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 86ms (Views: 84.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:09:35 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (2.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 84ms (Views: 82.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 08:09:36 +0000
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 13]]
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?  [["user_id", 13]]
+  [1m[36mMedium Load (0.1ms)[0m  [1mSELECT "media".* FROM "media" WHERE "media"."user_id" = ?[0m  [["user_id", 13]]
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 139ms (Views: 137.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:09:37 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.3ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 60ms (Views: 58.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 08:09:38 +0000
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.1ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 13]]
+  [1m[36mGenre Load (0.2ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 13]]
+  [1m[35mMedium Load (0.1ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 13]]
+  Rendered users/show.html.erb within layouts/application (4.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 78ms (Views: 75.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:10:37 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (13.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 96ms (Views: 87.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 08:10:38 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered users/_form.html.erb (1.4ms)
+  Rendered users/edit.html.erb within layouts/application (2.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 59ms (Views: 57.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:10:40 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (3.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 192ms (Views: 189.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 08:10:40 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered users/_form.html.erb (1.5ms)
+  Rendered users/edit.html.erb within layouts/application (2.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 90ms (Views: 88.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:10:41 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (4.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 110ms (Views: 108.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 08:10:42 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered users/_form.html.erb (1.2ms)
+  Rendered users/edit.html.erb within layouts/application (2.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.3ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 150ms (Views: 148.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:10:53 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (11.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (unsupported: Symbol):
+    38:         <ul class="nav navbar-nav navbar-right">
+    39: 		      
+    40:           <% if current_user %>
+    41:             <% if filledSurveyPage %>
+    42:               <li><%= link_to current_user.name, profile_path, id: "profile" %></li>
+    43:             <% else %> <!-- Survey page not done, route to survey page -->
+    44: 	            <li><%= link_to current_user.name, edit_path, id: "profile" %></li>
+  app/controllers/application_controller.rb:13:in `filledSurveyPage'
+  app/views/layouts/application.html.erb:41:in `_app_views_layouts_application_html_erb___111997415262444465_47807560'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.2ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:10:53 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (2.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (unsupported: Symbol):
+    38:         <ul class="nav navbar-nav navbar-right">
+    39: 		      
+    40:           <% if current_user %>
+    41:             <% if filledSurveyPage %>
+    42:               <li><%= link_to current_user.name, profile_path, id: "profile" %></li>
+    43:             <% else %> <!-- Survey page not done, route to survey page -->
+    44: 	            <li><%= link_to current_user.name, edit_path, id: "profile" %></li>
+  app/controllers/application_controller.rb:13:in `filledSurveyPage'
+  app/views/layouts/application.html.erb:41:in `_app_views_layouts_application_html_erb___111997415262444465_47807560'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.5ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:11:39 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (14.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.3ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 140ms (Views: 128.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:11:40 +0000
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:11:40 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:11:40 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:11:40 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:11:40 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:11:40 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:11:40 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:11:40 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:11:40 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:11:40 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:11:40 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:11:40 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:11:40 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:11:40 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 08:11:40 +0000
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 08:11:40 +0000
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 08:11:41 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered users/_form.html.erb (1.9ms)
+  Rendered users/edit.html.erb within layouts/application (3.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 78ms (Views: 76.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:11:43 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (3.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 132ms (Views: 130.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 08:11:43 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered users/_form.html.erb (1.8ms)
+  Rendered users/edit.html.erb within layouts/application (3.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 158ms (Views: 87.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 169.231.71.43 at 2015-11-19 08:12:08 +0000
+Processing by UsersController#updateSurvey as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hokhrzw0QcK/OGG6PVGy8t6usQZN0BwJC6CC46n1YTdQkVniJO4sXEhzgqhsSHDc9qRh5pquHM25jM/gAtNZGA==", "instrument"=>"Drums", "exp"=>";lskdf", "genre"=>"asdf", "influence"=>"asdf", "url"=>"https://www.youtube.com/watch?v=-ITcbN9OgPU", "provider"=>"asdf", "bio"=>"asdf", "commit"=>"Submit"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "instruments" ("instrument", "experience", "play", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["instrument", "Drums"], ["experience", 0], ["play", "t"], ["user_id", 13], ["created_at", "2015-11-19 08:12:08.460003"], ["updated_at", "2015-11-19 08:12:08.460003"]]
+  [1m[36m (8.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "genres" ("genre", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["genre", "asdf"], ["user_id", 13], ["created_at", "2015-11-19 08:12:08.631387"], ["updated_at", "2015-11-19 08:12:08.631387"]]
+  [1m[35m (7.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "influences" ("influence", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["influence", "asdf"], ["user_id", 13], ["created_at", "2015-11-19 08:12:08.649114"], ["updated_at", "2015-11-19 08:12:08.649114"]]
+  [1m[36m (7.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "media" ("url", "user_id", "provider", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/-ITcbN9OgPU"], ["user_id", 13], ["provider", "asdf"], ["created_at", "2015-11-19 08:12:08.668007"], ["updated_at", "2015-11-19 08:12:08.668007"]]
+  [1m[35m (6.8ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "bio" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["bio", "asdf"], ["updated_at", "2015-11-19 08:12:08.678326"], ["id", 13]]
+  [1m[35m (6.7ms)[0m  commit transaction
+Redirected to http://mason-fork-styxx.c9users.io/users/13
+Completed 302 Found in 230ms (ActiveRecord: 40.5ms)
+
+
+Started GET "/users/13" for 169.231.71.43 at 2015-11-19 08:12:08 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.3ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 13]]
+  [1m[36mGenre Load (0.2ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 13]]
+  [1m[35mMedium Load (0.2ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 13]]
+  Rendered users/show.html.erb within layouts/application (10.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 99ms (Views: 96.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:12:09 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:12:09 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:12:09 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:12:09 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:12:09 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:12:09 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:12:09 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:12:09 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:12:09 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:12:09 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:12:09 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:12:09 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:12:09 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:12:09 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 08:12:09 +0000
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:12:12 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (3.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.3ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 91ms (Views: 89.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 08:12:13 +0000
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 08:12:13 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered users/_form.html.erb (1.2ms)
+  Rendered users/edit.html.erb within layouts/application (2.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 121ms (Views: 119.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:12:15 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (2.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 140ms (Views: 138.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 08:12:16 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered users/_form.html.erb (1.2ms)
+  Rendered users/edit.html.erb within layouts/application (2.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 188ms (Views: 186.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 169.231.71.43 at 2015-11-19 08:12:31 +0000
+Processing by UsersController#updateSurvey as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9jMtdoDDXJjPub4ZuMzMMFoYjZ/2le8XZU11xWV594AgK1U7mBkxBjjyXQvp1Q4echJdfyHr79PXYTjGzl/Prw==", "instrument"=>"Guitar", "exp"=>"sdf", "genre"=>"sdf", "influence"=>"sdf", "url"=>"https://www.youtube.com/watch?v=-ITcbN9OgPU", "provider"=>"adfs", "bio"=>"adf", "commit"=>"Submit"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "instruments" ("instrument", "experience", "play", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["instrument", "Guitar"], ["experience", 0], ["play", "t"], ["user_id", 13], ["created_at", "2015-11-19 08:12:31.769820"], ["updated_at", "2015-11-19 08:12:31.769820"]]
+  [1m[36m (55.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "genres" ("genre", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["genre", "sdf"], ["user_id", 13], ["created_at", "2015-11-19 08:12:31.828895"], ["updated_at", "2015-11-19 08:12:31.828895"]]
+  [1m[35m (8.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "influences" ("influence", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["influence", "sdf"], ["user_id", 13], ["created_at", "2015-11-19 08:12:31.840158"], ["updated_at", "2015-11-19 08:12:31.840158"]]
+  [1m[36m (6.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "media" ("url", "user_id", "provider", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/-ITcbN9OgPU"], ["user_id", 13], ["provider", "adfs"], ["created_at", "2015-11-19 08:12:31.849780"], ["updated_at", "2015-11-19 08:12:31.849780"]]
+  [1m[35m (7.2ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "bio" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["bio", "adf"], ["updated_at", "2015-11-19 08:12:31.859668"], ["id", 13]]
+  [1m[35m (5.9ms)[0m  commit transaction
+Redirected to http://mason-fork-styxx.c9users.io/users/13
+Completed 302 Found in 102ms (ActiveRecord: 85.8ms)
+
+
+Started GET "/users/13" for 169.231.71.43 at 2015-11-19 08:12:31 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.1ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 13]]
+  [1m[36mGenre Load (0.2ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 13]]
+  [1m[35mMedium Load (0.2ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 13]]
+  Rendered users/show.html.erb within layouts/application (5.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 93ms (Views: 90.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:12:32 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:12:32 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:12:32 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:12:32 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:12:32 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:12:32 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:12:32 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:12:32 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:12:32 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:12:32 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:12:32 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:12:32 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:12:32 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:12:32 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 08:12:32 +0000
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:12:37 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (3.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 193ms (Views: 191.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 08:12:37 +0000
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 08:12:38 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered users/_form.html.erb (1.0ms)
+  Rendered users/edit.html.erb within layouts/application (2.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.3ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 68ms (Views: 65.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:13:00 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (18.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.3ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 132ms (Views: 119.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 08:13:01 +0000
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 13]]
+  [1m[35mGenre Load (0.2ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?  [["user_id", 13]]
+  [1m[36mMedium Load (0.2ms)[0m  [1mSELECT "media".* FROM "media" WHERE "media"."user_id" = ?[0m  [["user_id", 13]]
+  Rendered users/show.html.erb within layouts/application (22.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 135ms (Views: 131.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:13:02 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.1ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 57ms (Views: 55.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 08:13:03 +0000
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.1ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 13]]
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 13]]
+  [1m[35mMedium Load (0.1ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 13]]
+  Rendered users/show.html.erb within layouts/application (3.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 60ms (Views: 58.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:13:04 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (3.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 79ms (Views: 77.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 08:13:05 +0000
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 13]]
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?  [["user_id", 13]]
+  [1m[36mMedium Load (0.1ms)[0m  [1mSELECT "media".* FROM "media" WHERE "media"."user_id" = ?[0m  [["user_id", 13]]
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 65ms (Views: 62.9ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/sign_out" for 169.231.71.43 at 2015-11-19 08:13:08 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0ZjwvEhXdUk3dKzkPnB8TvxKpXAddXQz2DNIc9WVGYEHgIjxUI0Y18A/T/Zvab5g1EB1kMoLdPdqHwVwfrMhrg=="}
+Redirected to http://mason-fork-styxx.c9users.io/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:13:08 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 69ms (Views: 67.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:13:08 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:13:08 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:13:08 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:13:08 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:13:09 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:13:09 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:13:09 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:13:09 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:13:09 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:13:09 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:13:09 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:13:09 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:13:09 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:13:09 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 08:13:09 +0000
+
+
+Started GET "/assets/facebook.png" for 169.231.71.43 at 2015-11-19 08:13:09 +0000
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 08:13:09 +0000
+
+
+Started GET "/auth/facebook" for 169.231.71.43 at 2015-11-19 08:13:40 +0000
+
+
+Started GET "/auth/facebook" for 169.231.71.43 at 2015-11-19 08:13:41 +0000
+
+
+Started GET "/auth/facebook/callback?code=AQCjlJT_GbjBS8CIK3H2HmpcAFZPxlnReDOQ86diEvnivwEcFVI4TIaOLMwuvSEh98k9jqMX7uEQJd3A3eMz0Mljutz9p9rBTLRDBb_M0dCmiAso62vhO_Rij5nZWP03Mvurxe060xcuivFVCvWgmisbev0VHnu3JixTFku88XPWfa7-lq0U41c3H5i_D2k42i2iOHLQQ2YUH9AU6RKkUN0k0Yvawtxy2dScjVo8b1i9bXtloP9GzyuTDLvc95l9bld9HP17UIAGUkXbNliGSc5QVnwzyPIlGIIdz3QcySI94-JI2E9qIbS5YfHzENLtCrBXTYDwbPGTBlRF6isUVBpC&state=20cda448fcff3ce67fb9e0586612cece295fbde236d196db" for 169.231.71.43 at 2015-11-19 08:13:45 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCjlJT_GbjBS8CIK3H2HmpcAFZPxlnReDOQ86diEvnivwEcFVI4TIaOLMwuvSEh98k9jqMX7uEQJd3A3eMz0Mljutz9p9rBTLRDBb_M0dCmiAso62vhO_Rij5nZWP03Mvurxe060xcuivFVCvWgmisbev0VHnu3JixTFku88XPWfa7-lq0U41c3H5i_D2k42i2iOHLQQ2YUH9AU6RKkUN0k0Yvawtxy2dScjVo8b1i9bXtloP9GzyuTDLvc95l9bld9HP17UIAGUkXbNliGSc5QVnwzyPIlGIIdz3QcySI94-JI2E9qIbS5YfHzENLtCrBXTYDwbPGTBlRF6isUVBpC", "state"=>"20cda448fcff3ce67fb9e0586612cece295fbde236d196db", "provider"=>"facebook"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["uid", "128235294207035"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? LIMIT 1  [["provider", "facebook"], ["uid", "128235294207035"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("provider", "uid", "name", "image", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["provider", "facebook"], ["uid", "128235294207035"], ["name", "Sandra Alajfafieeide Fergieman"], ["image", "http://graph.facebook.com/128235294207035/picture"], ["email", "devetqy_fergieman_1447742391@tfbnw.net"], ["created_at", "2015-11-19 08:13:45.924587"], ["updated_at", "2015-11-19 08:13:45.924587"]]
+  [1m[36m (8.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://mason-fork-styxx.c9users.io/edit
+Completed 302 Found in 15ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 08:13:46 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered users/_form.html.erb (1.2ms)
+  Rendered users/edit.html.erb within layouts/application (1.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 57ms (Views: 55.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:13:46 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:13:46 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:13:46 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:13:46 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:13:46 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:13:46 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:13:46 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:13:46 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:13:46 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:13:46 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:13:46 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:13:46 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:13:46 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:13:46 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 08:13:46 +0000
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:13:47 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (2.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 62ms (Views: 60.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 08:13:47 +0000
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 08:13:48 +0000
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 14]]
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?  [["user_id", 14]]
+  [1m[36mMedium Load (0.1ms)[0m  [1mSELECT "media".* FROM "media" WHERE "media"."user_id" = ?[0m  [["user_id", 14]]
+  Rendered users/show.html.erb within layouts/application (2.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."instrument" = ?[0m  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 59ms (Views: 57.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:14:53 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (14.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mInstrument Exists (0.2ms)[0m  SELECT  1 AS one FROM "instruments" WHERE "instruments"."instrument" = ? LIMIT 1  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 100ms (Views: 90.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 08:14:54 +0000
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mInstrument Load (0.4ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 14]]
+  [1m[36mGenre Load (0.2ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 14]]
+  [1m[35mMedium Load (0.2ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 14]]
+  Rendered users/show.html.erb within layouts/application (27.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mInstrument Exists (0.1ms)[0m  SELECT  1 AS one FROM "instruments" WHERE "instruments"."instrument" = ? LIMIT 1  [["instrument", "Guitar"]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 138ms (Views: 135.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:16:59 +0000
+
+SyntaxError (/home/ubuntu/workspace/app/controllers/application_controller.rb:15: syntax error, unexpected keyword_else, expecting ')'
+/home/ubuntu/workspace/app/controllers/application_controller.rb:17: syntax error, unexpected keyword_end, expecting ')'
+/home/ubuntu/workspace/app/controllers/application_controller.rb:25: syntax error, unexpected keyword_end, expecting ')'):
+  app/controllers/application_controller.rb:15: syntax error, unexpected keyword_else, expecting ')'
+  app/controllers/application_controller.rb:17: syntax error, unexpected keyword_end, expecting ')'
+  app/controllers/application_controller.rb:25: syntax error, unexpected keyword_end, expecting ')'
+  app/controllers/home_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.5ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:17:00 +0000
+
+SyntaxError (/home/ubuntu/workspace/app/controllers/application_controller.rb:15: syntax error, unexpected keyword_else, expecting ')'
+/home/ubuntu/workspace/app/controllers/application_controller.rb:17: syntax error, unexpected keyword_end, expecting ')'
+/home/ubuntu/workspace/app/controllers/application_controller.rb:25: syntax error, unexpected keyword_end, expecting ')'):
+  app/controllers/application_controller.rb:15: syntax error, unexpected keyword_else, expecting ')'
+  app/controllers/application_controller.rb:17: syntax error, unexpected keyword_end, expecting ')'
+  app/controllers/application_controller.rb:25: syntax error, unexpected keyword_end, expecting ')'
+  app/controllers/home_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.3ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:17:11 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (17.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 131ms (Views: 119.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:17:12 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:17:12 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:17:12 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:17:12 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:12 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:17:12 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:12 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:12 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:12 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:12 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:12 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:12 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:12 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:12 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 08:17:12 +0000
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 08:17:12 +0000
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:17:13 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (75.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 156ms (Views: 153.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 08:17:14 +0000
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered users/_form.html.erb (1.8ms)
+  Rendered users/edit.html.erb within layouts/application (2.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 74ms (Views: 72.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 169.231.71.43 at 2015-11-19 08:17:21 +0000
+Processing by UsersController#updateSurvey as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kHPRMuHkREH7toRge2aZCJkIH6cyyVfS7uT2QClll7JGa6l/+T4p3wz9Z3Iqf1smsQLPR+W3VxZcyLtDgkOvnQ==", "instrument"=>"asdf", "exp"=>"asdf", "genre"=>"asdf", "influence"=>"asdf", "url"=>"https://www.youtube.com/watch?v=-ITcbN9OgPU", "provider"=>"asdf", "bio"=>"asdf", "commit"=>"Submit"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "instruments" ("instrument", "experience", "play", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["instrument", "asdf"], ["experience", 0], ["play", "t"], ["user_id", 14], ["created_at", "2015-11-19 08:17:21.261723"], ["updated_at", "2015-11-19 08:17:21.261723"]]
+  [1m[36m (7.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "genres" ("genre", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["genre", "asdf"], ["user_id", 14], ["created_at", "2015-11-19 08:17:21.279636"], ["updated_at", "2015-11-19 08:17:21.279636"]]
+  [1m[35m (6.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "influences" ("influence", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["influence", "asdf"], ["user_id", 14], ["created_at", "2015-11-19 08:17:21.432245"], ["updated_at", "2015-11-19 08:17:21.432245"]]
+  [1m[36m (8.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "media" ("url", "user_id", "provider", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/-ITcbN9OgPU"], ["user_id", 14], ["provider", "asdf"], ["created_at", "2015-11-19 08:17:21.454023"], ["updated_at", "2015-11-19 08:17:21.454023"]]
+  [1m[35m (5.9ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "bio" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["bio", "asdf"], ["updated_at", "2015-11-19 08:17:21.464944"], ["id", 14]]
+  [1m[35m (7.2ms)[0m  commit transaction
+Redirected to http://mason-fork-styxx.c9users.io/users/14
+Completed 302 Found in 223ms (ActiveRecord: 39.9ms)
+
+
+Started GET "/users/14" for 169.231.71.43 at 2015-11-19 08:17:21 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 14]]
+  [1m[36mGenre Load (0.2ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 14]]
+  [1m[35mMedium Load (0.2ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 14]]
+  Rendered users/show.html.erb within layouts/application (8.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 71ms (Views: 69.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:17:21 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:17:21 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:17:22 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:17:22 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:17:22 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:22 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:22 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:22 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:22 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:22 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:22 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:22 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:22 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:22 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 08:17:22 +0000
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:17:24 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 08:17:24 +0000
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 08:17:25 +0000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered users/_form.html.erb (0.9ms)
+  Rendered users/edit.html.erb within layouts/application (1.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 57ms (Views: 55.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:17:41 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (12.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mInstrument Load (0.2ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 14]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 183ms (Views: 174.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 08:17:42 +0000
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mInstrument Load (0.1ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 14]]
+  [1m[36mGenre Load (0.2ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 14]]
+  [1m[35mMedium Load (0.2ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 14]]
+  Rendered users/show.html.erb within layouts/application (18.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 14]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 71ms (Views: 68.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:17:44 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (2.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 14]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 08:17:45 +0000
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 14]]
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?  [["user_id", 14]]
+  [1m[36mMedium Load (0.1ms)[0m  [1mSELECT "media".* FROM "media" WHERE "media"."user_id" = ?[0m  [["user_id", 14]]
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 14]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 58ms (Views: 56.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:17:47 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mInstrument Load (0.1ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 14]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 73ms (Views: 71.4ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/sign_out" for 169.231.71.43 at 2015-11-19 08:17:48 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"81dpzJsXB82iFcFVKF+zZBpIzxpM5a/PwWgRRissm2QlTxGBg81qU1VeIkd5RnFKMkIf+pubrwtzRFxFgAqjSw=="}
+Redirected to http://mason-fork-styxx.c9users.io/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:17:48 +0000
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered home/home.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 75ms (Views: 73.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:17:48 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:17:48 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:17:48 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:17:48 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:48 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:48 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:17:48 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:48 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:48 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:48 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:48 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:48 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:48 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:17:48 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 08:17:48 +0000
+
+
+Started GET "/assets/facebook.png" for 169.231.71.43 at 2015-11-19 08:17:49 +0000
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 08:17:49 +0000
+
+
+Started GET "/auth/facebook" for 169.231.71.43 at 2015-11-19 08:18:32 +0000
+
+
+Started GET "/auth/facebook" for 169.231.71.43 at 2015-11-19 08:18:33 +0000
+
+
+Started GET "/auth/facebook/callback?code=AQBXd2yWQKIxIpZ8bKk2OudBlIpy8XkxQfJGtR0h2-ZfhKZTxxIudSF08ufShttSiSMOkoWa7B0VefPt-hAdM6o-K_gGP_jpjOrLDROLt7INWnASC4dAcx5jaWXEgPZLyDmAEC-PjeTjdseLs076rBJglU0B0PCno9UOMQlfVjdBpP4bPIVmlcaEGvKgrHBGGG4qGLiHRyfm-6ObSGiiqqDQwmq0YEmHb7k65SribqiYAByb5bNK7JnCUVOXVonYHqSZAG1QrVSE5jdTQHZTS7FSgpcsERckAzdqnc2qOCCWup4qdWeo_yr2MvmxOdSzLLJ31U9mjg-rb3k3vOKefhOb&state=5ca42c8faf19164ba2f99b9e825d0d80b5e22cc6c6dd4fe5" for 169.231.71.43 at 2015-11-19 08:18:38 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBXd2yWQKIxIpZ8bKk2OudBlIpy8XkxQfJGtR0h2-ZfhKZTxxIudSF08ufShttSiSMOkoWa7B0VefPt-hAdM6o-K_gGP_jpjOrLDROLt7INWnASC4dAcx5jaWXEgPZLyDmAEC-PjeTjdseLs076rBJglU0B0PCno9UOMQlfVjdBpP4bPIVmlcaEGvKgrHBGGG4qGLiHRyfm-6ObSGiiqqDQwmq0YEmHb7k65SribqiYAByb5bNK7JnCUVOXVonYHqSZAG1QrVSE5jdTQHZTS7FSgpcsERckAzdqnc2qOCCWup4qdWeo_yr2MvmxOdSzLLJ31U9mjg-rb3k3vOKefhOb", "state"=>"5ca42c8faf19164ba2f99b9e825d0d80b5e22cc6c6dd4fe5", "provider"=>"facebook"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["uid", "134066633623026"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? LIMIT 1[0m  [["provider", "facebook"], ["uid", "134066633623026"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("provider", "uid", "name", "image", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["provider", "facebook"], ["uid", "134066633623026"], ["name", "John Alajeijgjhehi Lauwitz"], ["image", "http://graph.facebook.com/134066633623026/picture"], ["email", "anlhzlu_lauwitz_1447742417@tfbnw.net"], ["created_at", "2015-11-19 08:18:39.442664"], ["updated_at", "2015-11-19 08:18:39.442664"]]
+  [1m[35m (10.4ms)[0m  commit transaction
+Redirected to http://mason-fork-styxx.c9users.io/edit
+Completed 302 Found in 23ms (ActiveRecord: 11.8ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 08:18:39 +0000
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 15]]
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/edit.html.erb within layouts/application (3.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 15]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 87ms (Views: 85.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:18:40 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:18:40 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:18:40 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:18:40 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:18:40 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:18:40 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:18:40 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:18:40 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:18:40 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:18:40 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:18:40 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:18:40 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:18:40 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:18:40 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 08:18:40 +0000
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:18:41 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mInstrument Load (0.1ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 15]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 84ms (Views: 82.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 08:18:41 +0000
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 08:18:42 +0000
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 15]]
+  Rendered users/_form.html.erb (1.2ms)
+  Rendered users/edit.html.erb within layouts/application (2.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 15]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 97ms (Views: 95.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:18:43 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mInstrument Load (0.1ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 15]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 129ms (Views: 128.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/edit" for 169.231.71.43 at 2015-11-19 08:18:44 +0000
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 15]]
+  Rendered users/_form.html.erb (1.0ms)
+  Rendered users/edit.html.erb within layouts/application (1.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mInstrument Load (28.2ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 15]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 102ms (Views: 72.2ms | ActiveRecord: 28.4ms)
+
+
+Started POST "/users" for 169.231.71.43 at 2015-11-19 08:18:50 +0000
+Processing by UsersController#updateSurvey as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SXOPE4/d+ZjAtwLe8FhrqRYu6KOfd+UNm2rH+8QV4Oifa/delweUBjf84cyhQamHPiQ4Q0gJ5ckpRor4bzPYxw==", "instrument"=>"asdf", "exp"=>"asdf", "genre"=>"asdf", "influence"=>"asdf", "url"=>"https://www.youtube.com/watch?v=-ITcbN9OgPU", "provider"=>"asdf", "bio"=>"dasdfs", "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "instruments" ("instrument", "experience", "play", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["instrument", "asdf"], ["experience", 0], ["play", "t"], ["user_id", 15], ["created_at", "2015-11-19 08:18:50.121792"], ["updated_at", "2015-11-19 08:18:50.121792"]]
+  [1m[35m (7.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "genres" ("genre", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["genre", "asdf"], ["user_id", 15], ["created_at", "2015-11-19 08:18:50.133166"], ["updated_at", "2015-11-19 08:18:50.133166"]]
+  [1m[36m (7.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "influences" ("influence", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["influence", "asdf"], ["user_id", 15], ["created_at", "2015-11-19 08:18:50.153764"], ["updated_at", "2015-11-19 08:18:50.153764"]]
+  [1m[35m (8.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "media" ("url", "user_id", "provider", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["url", "https://www.youtube.com/embed/-ITcbN9OgPU"], ["user_id", 15], ["provider", "asdf"], ["created_at", "2015-11-19 08:18:50.225044"], ["updated_at", "2015-11-19 08:18:50.225044"]]
+  [1m[36m (8.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "bio" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["bio", "dasdfs"], ["updated_at", "2015-11-19 08:18:50.237641"], ["id", 15]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://mason-fork-styxx.c9users.io/users/15
+Completed 302 Found in 129ms (ActiveRecord: 41.3ms)
+
+
+Started GET "/users/15" for 169.231.71.43 at 2015-11-19 08:18:50 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mInstrument Load (0.1ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 15]]
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?  [["user_id", 15]]
+  [1m[36mMedium Load (0.1ms)[0m  [1mSELECT "media".* FROM "media" WHERE "media"."user_id" = ?[0m  [["user_id", 15]]
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?[0m  [["user_id", 15]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 67ms (Views: 64.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:18:50 +0000
+
+
+Started GET "/assets/sessions.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:18:50 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:18:50 +0000
+
+
+Started GET "/assets/home.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:18:50 +0000
+
+
+Started GET "/assets/profile.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:18:50 +0000
+
+
+Started GET "/assets/users.self.css?body=1" for 169.231.71.43 at 2015-11-19 08:18:50 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:18:50 +0000
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:18:50 +0000
+
+
+Started GET "/assets/home.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:18:50 +0000
+
+
+Started GET "/assets/location.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:18:50 +0000
+
+
+Started GET "/assets/profile.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:18:50 +0000
+
+
+Started GET "/assets/sessions.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:18:50 +0000
+
+
+Started GET "/assets/users.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:18:50 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 169.231.71.43 at 2015-11-19 08:18:50 +0000
+
+
+Started GET "/assets/ITC_New_Baskerville.PNG" for 169.231.71.43 at 2015-11-19 08:18:50 +0000
+
+
+Started GET "/" for 169.231.71.43 at 2015-11-19 08:18:52 +0000
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered home/home.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mInstrument Load (0.1ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 15]]
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 80ms (Views: 78.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/mezzo_transparent2.png" for 169.231.71.43 at 2015-11-19 08:18:52 +0000
+
+
+Started GET "/profile" for 169.231.71.43 at 2015-11-19 08:18:53 +0000
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mInstrument Load (0.1ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 15]]
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."user_id" = ?[0m  [["user_id", 15]]
+  [1m[35mMedium Load (0.1ms)[0m  SELECT "media".* FROM "media" WHERE "media"."user_id" = ?  [["user_id", 15]]
+  Rendered users/show.html.erb within layouts/application (3.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "instruments".* FROM "instruments" WHERE "instruments"."user_id" = ?  [["user_id", 15]]
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 186ms (Views: 184.7ms | ActiveRecord: 0.5ms)

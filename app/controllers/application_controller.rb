@@ -10,13 +10,16 @@ class ApplicationController < ActionController::Base
   end
   
   def filledSurveyPage
-    if (Instrument.find(User.find(session[:user_id])))
-      return true
+    if (Instrument.where(:user_id => session[:user_id]).blank?)
+      return false
+    else
+    return true
     end
-    return false
   end
     
 
   helper_method :current_user
+  helper_method :filledSurveyPage
+  
 
 end

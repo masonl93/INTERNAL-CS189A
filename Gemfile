@@ -56,10 +56,10 @@ gem 'bootstrap-sass', '~> 3.3.5'
 
 # If in production, use PostGRES
 group :production do
-  gem pg
+  gem 'pg'
 end
 
 # If in development, use Sqlite3
 group :development do
-  gem sqlite3
+  gem 'sqlite3'
 end

@@ -1,32 +1,110 @@
-<%= form_tag({controller: "users", action: "updateSurvey"}, method: "post") do %>
-    <%= label_tag(:instrument, "Instrument:") %>
-    <%= text_field_tag(:instrument) %>
+<div class="legendary">
+  <legend>BASIC INFORMATION</legend>
+</div>
 
-    <%= label_tag(:exp, "Experience:") %>
-    <%= text_field_tag(:exp) %>
+<%= form_tag({controller: "users", action: "updateSurvey"}, method: "post", :class => "form-horizontal") do %>
+  
+<div class="form-group">
+  <label class="col-md-4 control-label" for="radios">Instruments:</label>
+  <div class="col-md-4">
+  <div class="radio">
+    <label for="radios-0">
+      <%= check_box_tag :instrument, 'Guitar' %> Guitar
+    </label>
+	</div>
+  <div class="radio">
+    <label for="radios-1">
+      <%= check_box_tag :instrument, 'Bass' %> Bass
+    </label>
+	</div>
+	<div class="radio">
+    <label for="radios-0">
+      <%= check_box_tag :instrument, 'Vocals' %> Vocals
+    </label>
+	</div>
+	<div class="radio">
+    <label for="radios-0">
+      <%= check_box_tag :instrument, 'Drums' %> Drums
+    </label>
+	</div>
+	<div class="radio">
+    <label for="radios-0">
+      <%= check_box_tag :instrument, 'Keyboard' %> Keyboard
+    </label>
+	</div>
+  </div>
+</div>
 
-    <%= label_tag(:genre, "Genre:") %>
-    <%= text_field_tag(:genre) %>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="checkboxes">Genres:</label>
+  <div class="col-md-4">
+    <label class="checkbox-inline" for="checkboxes-0">
+      <%= check_box_tag :genre, 'Rockabilly' %> Rockabilly
+    </label>
+    <label class="checkbox-inline" for="checkboxes-1">
+      <%= check_box_tag :genre, 'Metalcore' %> Metalcore
+    </label>
+    <label class="checkbox-inline" for="checkboxes-2">
+      <%= check_box_tag :genre, 'Future Bass' %> Future Bass
+    </label>
+    <label class="checkbox-inline" for="checkboxes-3">
+      <%= check_box_tag :genre, 'Experimental' %> Experimental
+    </label>
+  </div>
+</div>
 
-    <%= label_tag(:influence, "Influence:") %>
-    <%= text_field_tag(:influence) %>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Influence:</label>  
+  <div class="col-md-4">
+  <!-- <input id="textinput" name="textinput" type="text" placeholder="Enter your influences" class="form-control input-md"> -->
+  <%= text_field_tag :influence %>
+  </div>
+</div>
 
-    <%= label_tag(:url, "Url:") %>
-    <%= text_field_tag(:url) %>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Media:</label>  
+  <div class="col-md-4">
+  <!-- <input id="textinput" name="textinput" type="text" placeholder="Enter your influences" class="form-control input-md"> -->
+  <%= text_field_tag :url %>
+  </div>
+</div>
 
-    <%= label_tag(:provider, "Provider:") %>
-    <%= text_field_tag(:provider) %>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Bio:</label>  
+  <div class="col-md-4">
+  <!-- <input id="textinput" name="textinput" type="text" placeholder="Enter your influences" class="form-control input-md"> -->
+  <%= text_area_tag :bio %>
+  </div>
+</div>
 
-    <%= label_tag(:bio, "Bio:") %>
-    <%= text_area_tag(:bio) %>
 
-    <%= submit_tag("Submit") %>
+  <!-- <%= label_tag(:exp, "Experience:") %> -->
+  <!-- <%= text_field_tag(:exp) %> -->
+
+  <!-- <%= label_tag(:genre, "Genre:") %> -->
+  <!-- <%= text_field_tag(:genre) %> -->
+
+  <!-- <%= label_tag(:influence, "Influence:") %> -->
+  <!-- <%= text_field_tag(:influence) %> -->
+
+  <!-- <%= label_tag(:url, "Url:") %> -->
+  <!-- <%= text_field_tag(:url) %> -->
+
+  <!-- <%= label_tag(:provider, "Provider:") %> -->
+  <!-- <%= text_field_tag(:provider) %> -->
+
+  <!-- <%= label_tag(:bio, "Bio:") %> -->
+  <!-- <%= text_area_tag(:bio) %> -->
+  
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput"></label>
+  <div class="col-md-4">
+  <!-- <input id="textinput" name="textinput" type="text" placeholder="Enter your influences" class="form-control input-md"> -->
+  <%= submit_tag "Submit" %>
+  </div>
+</div>
+
+  <!-- <%= submit_tag("Submit") %> -->
 <% end %>
-
-
-
-
-
-
 
 </div>

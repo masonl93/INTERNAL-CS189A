@@ -54,12 +54,11 @@ gem 'omniauth-facebook'
 
 gem 'bootstrap-sass', '~> 3.3.5'
 
-# If in production, use PostGRES
-group :production do
-  gem 'pg'
-end
-
-# If in development, use Sqlite3
+# Databases for Active Record
 group :development do
   gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
 end

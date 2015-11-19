@@ -38,7 +38,11 @@
         <ul class="nav navbar-nav navbar-right">
 		      
           <% if current_user %>
-	          <li><%= link_to current_user.name, profile_path, id: "profile" %></li>
+            <% if filledSurveyPage %>
+              <li><%= link_to current_user.name, profile_path, id: "profile" %></li>
+            <% else %> <!-- Survey page not done, route to survey page -->
+	            <li><%= link_to current_user.name, edit_path, id: "profile" %></li>
+	          <% end %>
 	          <li><%= link_to "Sign Out", 'sign_out', method: :delete, id: "signout" %></li>
           <% else %>
             <li>Sign in<%= link_to "auth/facebook" do %><%= image_tag('facebook.png', width: '40', height: '40', class: 'img-circle') %><% end %></li>

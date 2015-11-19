@@ -101,13 +101,6 @@ class UsersController < ApplicationController
     redirect_to action: "findMatch"
   end
 
-<<<<<<< HEAD
-  def showMatches
-    @users = User.all
-
-  end
-
-=======
 
   def view_matches
     me = User.find(session[:user_id])
@@ -124,7 +117,11 @@ class UsersController < ApplicationController
   end
 
 
->>>>>>> master
+  def showMatches
+    @users = User.all
+
+  end
+
   def destroy
 
   end

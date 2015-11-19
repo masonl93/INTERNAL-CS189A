@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
 
+
   def create
     auth = request.env["omniauth.auth"]
     puts auth
@@ -14,6 +15,18 @@ class SessionsController < ApplicationController
     end
   end
 
+
+  # Uncomment this create function and comment out the other create function
+  # when testing survey since this function redirects to survey on each login
+
+  # def create
+  #   auth = request.env["omniauth.auth"]
+  #   puts auth
+  #   session[:omniauth] = auth.except('extra')
+  #   user = User.sign_in_from_omniauth(auth)
+  #   session[:user_id] = user.id
+  #   redirect_to "/edit", id: user.id
+  # end
 
 
   def destroy

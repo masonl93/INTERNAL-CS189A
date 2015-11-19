@@ -42,38 +42,28 @@
       <div class="tab-pane fade in" id="tab2">
         <h3>
           <table>
-          <tr>
-            <th>Instrument</th>
-            <th>Instrument Primary Key</th>
-            <th>Experience</th>
-            <th>Instrument User ID (all same)</th>
-          </tr>
-          <% @user.instruments.each do |instrument| %>
-              <tr>
-                <td><%= instrument.instrument %></td>
-                <td><%= instrument.id %></td>
-                <td><%= instrument.experience %></td>
-                <td><%= instrument.user_id %></td>
-              </tr>
-          <% end %>
-         </table>
+            <tr>
+              <th>Instruments</th>
+            </tr>
+            <% @user.instruments.each do |instrument| %>
+                <tr>
+                  <td><%= instrument.instrument %></td>
+                </tr>
+            <% end %>
+          </table>
         </h3>
       </div>
       <div class="tab-pane fade in" id="tab3">
         <h3>
           <table>
-              <tr>
-                <th>Genre</th>
-                <th>Genre Primary Key</th>
-                <th>Genre User ID (all same)</th>
-              </tr>
-              <% @user.genres.each do |genre| %>
-                  <tr>
-                    <td><%= genre.genre %></td>
-                    <td><%= genre.id %></td>
-                    <td><%= genre.user_id %></td>
-                  </tr>
-              <% end %>
+            <tr>
+              <th>Genres</th>
+            </tr>
+            <% @user.genres.each do |genre| %>
+                <tr>
+                  <td><%= genre.genre %></td>
+                </tr>
+            <% end %>
           </table>
         </h3>
       </div>
@@ -93,8 +83,12 @@
     </div>
   </div>
 
+</div>
 
-    <%= form_tag({controller: "users", action: "matchChoice"}, method: "post") do %>
+
+
+
+<%= form_tag({controller: "users", action: "matchChoice"}, method: "post") do %>
       <%= hidden_field_tag :uid , @user.uid %>
       <%= button_tag(name: 'like', type: 'submit', class: "btn btn btn-primary") do %>
           <span class="glyphicon glyphicon-ok"></span>

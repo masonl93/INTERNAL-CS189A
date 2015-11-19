@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 #gem 'rails', '4.0.0.rc2'
+
+#FOR MESSAGES
+gem 'layer-ruby', require: 'layer'
+gem 'acts-as-messageable'
 gem 'rails','4.2.2'
 
 # Use PostGRES as the database for Active Record
@@ -38,7 +42,6 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'tabulous'
 
-gem 'layer-ruby', require: 'layer'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

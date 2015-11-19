@@ -1,0 +1,36 @@
+<% if current_user %>
+    <div class="page-header">
+      <h2>Messages with <%= @match.name %></h2>
+    </div>
+
+    <%= render 'form2' %>
+<% else %>
+    nope
+<% end %>
+
+<div class="panel panel-default" id="comments">
+  <div class="panel-body">
+
+    <ul class="media-list">
+      <% @chats.each do |chats| %>
+      <li class="media comment">
+        <%= link_to image_tag(chats.user.image, alt: chats.user.name, class: "media-object"),
+                    chats.user.image, target: '_blank', class: 'pull-left' %>
+        <div class="media-body">
+          <h4 class="media-heading"><%= link_to chats.user.name, chats.user.image, target: '_blank' %>
+            <small class="text-muted"> <%= chats.created_at.strftime('%-d %B %Y, %H:%M:%S') %></small></h4>
+          <p><%= chats.body %></p>
+          
+        </div>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+
+
+
+<%# @myMsg.each do |my|  %>
+  <p><%#= my %></p>
+<%# end %>

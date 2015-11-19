@@ -46,9 +46,11 @@
             <th>Instruments</th>
           </tr>
           <% @user.instruments.each do |instrument| %>
+            <% if instrument.play == true %>
               <tr>
                 <td><%= instrument.instrument %></td>
               </tr>
+            <% end %>
           <% end %>
          </table>
         </h3>

@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find(session[:user_id])
   end
 
   def create
@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
+    @user = User.find(session[:user_id])
   end
 
   def update
@@ -115,7 +115,6 @@ class UsersController < ApplicationController
       @matched_users << user
     end
   end
-
 
   def showMatches
     @users = User.all

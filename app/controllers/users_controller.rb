@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find(session[:user_id])
   end
 
   def create
@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
+    @user = User.find(session[:user_id])
   end
 
   def update
@@ -40,16 +40,28 @@ class UsersController < ApplicationController
     me = User.find(session[:user_id])
     @users.each do |u|
       @user = User.find(u)
-      if (!Matching.matchExists(@user.uid, me.uid) && @user.uid != me.uid)
+      # Checks if one user already saw me, or vice versa, and makes sure it's not self
+      # If users have never seen each other, then new match is created
+      # and user gets to like/dislike user
+      if (!Matching.matchExists(@user.uid, me.uid) && !Matching.matchExists(me.uid, @user.uid) && @user.uid != me.uid)
         @userMatch = Matching.createMatch(@user.uid, me.uid)    # Creates the match in the database
         return
+        # Checks if user has already reviewed and waiting on me
+        # If match exists and the other user has already liked/disliked
+        # me (hence status =1 or =-1), then me gets to like/dislike user
+      elsif Matching.matchExists(me.uid, @user.uid)
+        @the_match = Matching.where(:user1 => me.uid).where(:user2 => @user.uid).first()
+        if (@the_match[:status] == 1 || @the_match[:status] == -1)
+          return
+        end
       end
     end
+    # gone through all user options
     render "no_new_users"
   end
 
   def notify_user_match
-
+    redirect_to action: "view_matches"
   end
 
   def init_message
@@ -87,6 +99,21 @@ class UsersController < ApplicationController
       end
     end
     redirect_to action: "findMatch"
+  end
+
+
+  def view_matches
+    me = User.find(session[:user_id])
+    @matches = Matching.where("(user1 = ? OR user2 = ?) AND status = ?", me.uid, me.uid, 2)
+    @matched_users = []
+    @matches.each do |match|
+      if match.user1 == me.uid
+        user = User.where(:uid => match.user2).first()
+      else
+        user = User.where(:uid => match.user1).first()
+      end
+      @matched_users << user
+    end
   end
 
   def showMatches
@@ -131,3 +158,5 @@ class UsersController < ApplicationController
   end
 
 end
+
+

@@ -61,25 +61,41 @@ p {
 #logo {
     float: left;
     margin-right: 10px;
-    font-size: 4.5em;
-    color: #9400D3;    //dark violet
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    padding-top: 9px;
-    font-weight: bold;
+    //font-size: 4.5em;
+    //color: #9400D3;    //dark violet
+    //text-transform: lowercase;
+    //letter-spacing: -1px;
+    //font-weight: bold;
+    //font-family: serif;
 }
 
+/* Only for text logo
 #logo:hover {
     //color: #fff;
-    text-decoration: none;
+    font-style: italic;
+    text-transform: lowercase;
 }
+*/
 
 #profile {
     float: right;
     font-size: 1.5em;
-    padding-top: 55px;
-    padding-right: 50px;
+    padding-top: 20%;
     font-weight: bold;
+}
+
+#profile:hover {
+    font-style: italic;
+}
+
+#signout {
+    float: right;
+    font-size: 1.2em;
+    padding-top: 39%;
+}
+
+#signout:hover{
+    font-style: italic;
 }
 
 /* footer */

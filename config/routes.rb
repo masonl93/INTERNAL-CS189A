@@ -13,6 +13,8 @@ OmniApp::Application.routes.draw do
 
   get     'edit' => 'users#edit'
   post "users/matchChoice"
+  get 'view_matches' => 'users#view_matches'
+  get 'findMatch' => 'users#findMatch'
 
 
 =begin
@@ -32,11 +34,13 @@ OmniApp::Application.routes.draw do
 
   root               'home#home'
   get     'about'    => 'home#about'
-  get     'profile'  => 'profile#showVid'
+  get     'profile'  => 'users#show'
   get     'matching' => 'users#findMatch'
+
   get     'users/:id/matches'  => 'users#showMatches', :as => :user_matches
   get     'users/:id/messages'  => 'users#showMatchMsgs', :as => :user_match_msg
   post    "users/:id/createChat" => 'users#createChat', :as => :create_chat
+
 
   
   #get 'home/profile'          # Currently empty; exists only to pass home/profile test

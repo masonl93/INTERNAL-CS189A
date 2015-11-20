@@ -8,11 +8,6 @@ gem 'layer-ruby', require: 'layer'
 gem 'acts-as-messageable'
 gem 'rails','4.2.2'
 
-# Use PostGRES as the database for Active Record
-#gem 'pg'
-
-gem 'sqlite3'
-
 # Use SCSS for stylesheets
 # gem 'sass-rails', '~> 4.0.0.rc2'
 # gem 'sass-rails', '~> 4.0.0'
@@ -42,7 +37,6 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'tabulous'
 
-
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -63,3 +57,12 @@ end
 gem 'omniauth-facebook'
 
 gem 'bootstrap-sass', '~> 3.3.5'
+
+# Databases for Active Record
+group :development do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end

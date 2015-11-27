@@ -124,7 +124,7 @@ class UsersController < ApplicationController
   def showMatchMsgs
     @chat = Chat.new
     @match = User.find(params[:id])
-    me = User.find(session[:user_id])
+    me = User.find(session[:user_id])       #WARNING: Unused variable 'me'
 
     mychat = Chat.order('created_at DESC').where(:user_id => current_user.id).where(:match_id => @match.id)
     matchchat = Chat.order('created_at DESC').where(:user_id => @match.id).where(:match_id => current_user.id)

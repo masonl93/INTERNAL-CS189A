@@ -1,0 +1,2 @@
+$('#msgList').prepend("<%= j render partial: 'ajaxchat', :locals => {:image => @chats.user.image, :name => @chats.user.name, :created => @chats.created_at.strftime('%-d %B %Y, %H:%M:%S'),:body => @chats.body }%>");
+$('#chatBody').val("");

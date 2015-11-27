@@ -1,13 +1,13 @@
 <div class="well">
-  <%= form_for @chat, :url => create_chat_path(@match.id) do |f| %>
+  <%= form_for @chat, :url => create_chat_path(@match.id), remote: true do |f| %>
       <div class="form-group">
         <%= f.label :body,"Conversation here:" %>
-        <%= f.text_area :body, rows: 1, cols: 20, class: 'form-control', required: true, maxlength: 2000, :placeholder => "RESPOND HERE..." %>
+        <%= f.text_area :body, id: "chatBody", rows: 1, cols: 20, class: 'form-control', required: true, maxlength: 2000, :placeholder => "RESPOND HERE..." %>
         <small class="label label-warning">Cannot be blank or contain more than 2000 symbols.</small>
       </div>
 
 
       <%= f.hidden_field :match_id, rows: 1, class: 'form-control', required: true, maxlength: 2000, value: @match.id%>
-      <%= f.submit 'Post', class: 'btn btn-primary btn-sm' %>
+      <%= f.submit 'Post', class: 'btn btn-primary btn-sm', id: 'msgSubmit' %>
   <% end %>
 </div>

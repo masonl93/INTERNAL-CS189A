@@ -136,16 +136,25 @@ class UsersController < ApplicationController
   end
 
   def createChat
-    if current_user
-      @chat = current_user.chats.build(chat_params)
-      if @chat.save
-        flash[:success] = 'Your message was sent!'
+    respond_to do |format|
+      if current_user
+        @chats = current_user.chats.build(chat_params)
+        if @chats.save
+          flash[:success] = 'Your message was sent!'
+        else
+          flash[:error] = 'Your message not sent :('
+        end
+        #redirect_to action: "showMatchMsgs", id:params[:id]
+
+        format.html {redirect_to action: "showMatchMsgs", id:params[:id]}
+        format.js
       else
-        flash[:error] = 'Your message not sent :('
+        format.html {redirect_to root_url}
+        format.js {render nothing: true}
       end
     end
-    redirect_to action: "showMatchMsgs", id:params[:id]
   end
+
 
   def destroy
 

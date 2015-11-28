@@ -2,6 +2,6 @@
 $("document").ready(function(){
 
 // this is called content creation
-$("body").append("<h1>This is a heading</h1>");
+//$("body").append("<h1>This is a heading</h1>");
 
 });

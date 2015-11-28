@@ -1,10 +1,10 @@
 class Genre < ActiveRecord::Base
   belongs_to :user
 
-  def self.add(data_genre)
+  def self.add(genre, uid)
     create(
-        genre: data_genre['genre'],
-        user_id: data_genre['uid'],
+        genre: genre,
+        user_id: uid,
     )
   end
 

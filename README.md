@@ -26,3 +26,4 @@
 * ~~Route profile button (1) -- [VC, SB]~~
 * Implement location on matching page (1) -- [SS, ML]
 * Talk to Appfolio UX/UI designers (1) -- [VC]
+

@@ -43,18 +43,14 @@
         <h3>
           <table>
           <tr>
-            <th>Instrument</th>
-            <th>Instrument Primary Key</th>
-            <th>Experience</th>
-            <th>Instrument User ID (all same)</th>
+            <th>Instruments</th>
           </tr>
           <% @user.instruments.each do |instrument| %>
+            <% if instrument.play == true %>
               <tr>
                 <td><%= instrument.instrument %></td>
-                <td><%= instrument.id %></td>
-                <td><%= instrument.experience %></td>
-                <td><%= instrument.user_id %></td>
               </tr>
+            <% end %>
           <% end %>
          </table>
         </h3>
@@ -63,15 +59,11 @@
         <h3>
           <table>
               <tr>
-                <th>Genre</th>
-                <th>Genre Primary Key</th>
-                <th>Genre User ID (all same)</th>
+                <th>Genres</th>
               </tr>
               <% @user.genres.each do |genre| %>
                   <tr>
                     <td><%= genre.genre %></td>
-                    <td><%= genre.id %></td>
-                    <td><%= genre.user_id %></td>
                   </tr>
               <% end %>
           </table>

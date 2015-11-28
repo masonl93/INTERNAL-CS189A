@@ -86,6 +86,18 @@
   -webkit-border-radius:0 !important;
 }
 
+#message {
+  text-align: right;
+}
+#myMsg{
+  border-bottom: 1px dashed maroon;
+  background-color: #EFEFEF;
+}
+
+#matchMsg {
+  border-bottom: 1px dashed maroon;
+  background-color: ivory;
+}
 .legendary {
   padding-left: 10px;
 }

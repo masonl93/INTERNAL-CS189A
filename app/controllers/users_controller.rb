@@ -138,9 +138,54 @@ class UsersController < ApplicationController
     end
   end
 
+  def showMatches
+    @users = User.all
+    #Chat.delete_all
+  end
+
+  def showMatchMsgs
+    @chat = Chat.new
+    @match = User.find(params[:id])
+    me = User.find(session[:user_id])       #WARNING: Unused variable 'me'
+
+    mychat = Chat.order('created_at DESC').where(:user_id => current_user.id).where(:match_id => @match.id)
+    matchchat = Chat.order('created_at DESC').where(:user_id => @match.id).where(:match_id => current_user.id)
+    @chats = (mychat + matchchat).sort_by { |chat| chat[:id] }.reverse!
+
+    #@chats = Chat.order('created_at DESC').where(:user_id => @match.id).where(:match_id => current_user.id)
+      #@chats = Chat.all
+    #@chats = current_user.chats.where()
+  end
+
+  def createChat
+    respond_to do |format|
+      if current_user
+        @chats = current_user.chats.build(chat_params)
+        if @chats.save
+          flash[:success] = 'Your message was sent!'
+        else
+          flash[:error] = 'Your message not sent :('
+        end
+        #redirect_to action: "showMatchMsgs", id:params[:id]
+
+        format.html {redirect_to action: "showMatchMsgs", id:params[:id]}
+        format.js
+      else
+        format.html {redirect_to root_url}
+        format.js {render nothing: true}
+      end
+    end
+  end
+
 
   def destroy
 
+  end
+
+  private
+
+  def chat_params
+    params.require(:chat).permit(:body, :match_id)
   end
 
 end

@@ -1,0 +1,9 @@
+<li class="media comment" id="myMsg">
+  <%= link_to image_tag(image, alt: name, class: "media-object"),
+              image, target: '_blank', class: 'pull-right' %>
+  <div class="media-body" id="message">
+    <h4 class="media-heading"><%= link_to name, image, target: '_blank' %>
+      <small class="text-muted"> <%= created %></small></h4>
+    <p><%= body %></p>
+  </div>
+</li>

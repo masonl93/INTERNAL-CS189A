@@ -37,6 +37,11 @@ OmniApp::Application.routes.draw do
   get     'profile'  => 'users#show'
   get     'matching' => 'users#findMatch'
 
+  get     'users/:id/matches'  => 'users#showMatches', :as => :user_matches
+  get     'users/:id/messages'  => 'users#showMatchMsgs', :as => :user_match_msg
+  post    "users/:id/createChat" => 'users#createChat', :as => :create_chat
+
+
   
   #get 'home/profile'          # Currently empty; exists only to pass home/profile test
                                # change to users/profile?

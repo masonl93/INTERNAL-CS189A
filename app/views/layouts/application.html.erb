@@ -4,10 +4,11 @@
   <title>Mezzo</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
 
+  <link rel="icon" type="image/png" href="assets/m_gold.png">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -16,6 +17,7 @@
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 
 </head>
   <body>
@@ -45,6 +47,7 @@
             <% else %> <!-- Survey page not done, route to survey page -->
 	            <li><%= link_to current_user.name, edit_path, id: "profile" %></li>
 	          <% end %>
+              <li><%= link_to "Matches", user_matches_path(current_user.id) , id: "profile" %></li>
 	          <li><%= link_to "Sign Out", 'sign_out', method: :delete, id: "signout" %></li>
           <% else %>
             <li>Sign in<%= link_to "auth/facebook" do %><%= image_tag('facebook.png', width: '40', height: '40', class: 'img-circle') %><% end %></li>

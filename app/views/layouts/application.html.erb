@@ -2,13 +2,17 @@
 <html>
 <head>
   <title>Mezzo</title>
+  
+  <script src="../javascripts/jquery.js"></script>
+  <script src="../javascripts/scripts.js"></script>
+
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
 
-  <link rel="icon" type="image/png" href="assets/m_gold.png">
+  <link rel="icon" type="image/png" href="assets/tab_image.png">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -35,7 +39,7 @@
         </button>
         
         <!-- <h1><%= link_to root_path do %>Mezzo<% end %></h1> -->
-        <%= link_to image_tag("ITC_New_Baskerville.PNG"), root_path, id: "logo" %>
+        <%= link_to image_tag("mezzo_title_logo.png"), root_path, id: "logo" %>
       </div>
   
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

@@ -240,3 +240,11 @@ input[type=checkbox] + label {
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
 }
+
+.round {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}

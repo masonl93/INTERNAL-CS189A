@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  protect_from_forgery except: :showMatchMsgs
+
   def index
 
   end
@@ -7,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(session[:user_id])
+    @user = User.find(params[:id])
   end
 
   def create
@@ -139,7 +141,7 @@ class UsersController < ApplicationController
   end
 
   def showMatches
-    @users = User.all
+    @users = User.where('id != ?', current_user.id)
     #Chat.delete_all
   end
 
@@ -152,6 +154,7 @@ class UsersController < ApplicationController
     matchchat = Chat.order('created_at DESC').where(:user_id => @match.id).where(:match_id => current_user.id)
     @chats = (mychat + matchchat).sort_by { |chat| chat[:id] }.reverse!
 
+    #render :template => 'users/showMatchMsgs.js.erb'
     #@chats = Chat.order('created_at DESC').where(:user_id => @match.id).where(:match_id => current_user.id)
       #@chats = Chat.all
     #@chats = current_user.chats.where()
@@ -162,14 +165,15 @@ class UsersController < ApplicationController
       if current_user
         @chats = current_user.chats.build(chat_params)
         if @chats.save
-          flash[:success] = 'Your message was sent!'
+          #flash[:success] = 'Your message was sent!'
+          format.html {redirect_to action: "showMatchMsgs", id:params[:id]}
+          format.js
         else
           flash[:error] = 'Your message not sent :('
         end
         #redirect_to action: "showMatchMsgs", id:params[:id]
 
-        format.html {redirect_to action: "showMatchMsgs", id:params[:id]}
-        format.js
+
       else
         format.html {redirect_to root_url}
         format.js {render nothing: true}

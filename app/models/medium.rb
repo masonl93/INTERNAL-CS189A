@@ -3,7 +3,6 @@ class Medium < ActiveRecord::Base
   belongs_to :user
 
   def self.add(data_media)
-    if data_media.any? && data_media.include?('=') && data_media.include?('&')
       bad_url = data_media['url']
       url_arr = bad_url.split('=', 2)
       url_id = url_arr[1].split('&', 2)
@@ -17,6 +16,5 @@ class Medium < ActiveRecord::Base
           provider: data_media['provider'],
       )
     end
-  end
 
 end

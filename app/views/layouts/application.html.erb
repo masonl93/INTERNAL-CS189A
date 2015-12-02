@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Mezzo</title>
   
   <script src="../javascripts/jquery.js"></script>
@@ -21,8 +24,9 @@
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-
+  <!-- Font Awesome Stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  
 </head>
   <body>
   
@@ -43,7 +47,7 @@
       </div>
   
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav">
 		      
           <% if current_user %>
               <li><%= link_to "Messages", user_matches_path(current_user.id) , id: "profile" %></li>
@@ -53,7 +57,8 @@
             <% else %> <!-- Survey page not done, route to survey page -->
 	            <li><%= link_to current_user.name, user_path(current_user.id), id: "profile" %></li>
 	          <% end %>
-
+	      </ul>
+        <ul class="nav navbar-nav navbar-right">
 	          <li><%= link_to "Sign Out", 'sign_out', method: :delete, id: "signout" %></li>
           <% else %>
             <li>Sign in<%= link_to "auth/facebook" do %><%= image_tag('facebook.png', width: '40', height: '40', class: 'img-circle') %><% end %></li>
@@ -70,6 +75,9 @@
   
   <%= yield %>
   <%= render 'layouts/footer' %>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
   
   </body>
 </html>

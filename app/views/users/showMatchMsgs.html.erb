@@ -7,7 +7,28 @@
 <% else %>
     nope
 <% end %>
+<script>
+  function call() {
+    var req = $.ajax({
+      url: "/users/<%= @match.id %>/messages",
+      success: function (result) {
+        //response = $($.parseHTML(result)).filter("#msgList");
+        response = $(result).find('#msgList').html();
+        $('#msgList').html(response);
+        console.log(response);
+      }
+    });
+    $(window).unload(function(){
+      req.abort();
+    });
+  }
+  <% if current_page?(controller: 'users', action: 'showMatchMsgs')%>
 
+  setInterval(function() {
+    call();
+  }, 2000);
+  <% end %>
+</script>
 <div class="panel panel-default" id="comments">
   <div class="panel-body">
 

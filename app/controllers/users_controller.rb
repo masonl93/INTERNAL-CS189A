@@ -141,7 +141,18 @@ class UsersController < ApplicationController
   end
 
   def showMatches
-    @users = User.where('id != ?', current_user.id)
+    #FOR PRODUCTION
+    #@users = User.where('id != ?', current_user.id)
+
+    #FOR JUST THE DEMOOO
+    if current_user.name == "Ringo Starr"
+      @users = User.where('name = ?', "John Lennon")
+    elsif current_user.name == "John Lennon"
+      @users = User.where('name = ?', "Ringo Starr")
+    else
+      @users = User.where('id != ?', current_user.id)
+    end
+
     #Chat.delete_all
   end
 

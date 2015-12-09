@@ -15,15 +15,4 @@
 - Mason Levy - Software Developer
 - Prithvi Sathiya - Software Developer
 
-## Currently on: Sprint 4
-**Goal:** Develop fully functional MVP
-
-###To-do: [PivotalTracker](https://www.pivotaltracker.com/n/projects/1440674)
-* Fully functional matching (2) -- [ML, VC, PS]
-* Fully funcitonal chat (5) -- [ML, SB, PS]
-* ~~Create 50 FB user profiles (2) -- [SS, VC]~~
-* Finish survey page (2) -- [SS, SB]
-* ~~Route profile button (1) -- [VC, SB]~~
-* Implement location on matching page (1) -- [SS, ML]
-* Talk to Appfolio UX/UI designers (1) -- [VC]
-
+## Currently on: Christmas Break

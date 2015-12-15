@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.2.1'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 #gem 'rails', '4.0.0.rc2'
 
@@ -67,4 +69,5 @@ end
 group :production do
   gem 'pg'
   gem 'newrelic_rpm'      #Heroku monitoring
+  gem 'rails_12factor'
 end

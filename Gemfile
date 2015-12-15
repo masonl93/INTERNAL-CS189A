@@ -68,6 +68,5 @@ end
 
 group :production do
   gem 'pg'
-  gem 'newrelic_rpm'      #Heroku monitoring
   gem 'rails_12factor'
 end

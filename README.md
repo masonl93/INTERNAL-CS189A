@@ -1,4 +1,4 @@
-# Mezzo [![Build Status](https://travis-ci.com/Styxx/INTERNAL-CS189A.svg?token=pQvxcmrbHMs3QsSaUN6U&branch=master)](https://travis-ci.com/Styxx/INTERNAL-CS189A)
+# Mezzo [![Build Status](https://travis-ci.com/Styxx/mezzo-production.svg?token=pQvxcmrbHMs3QsSaUN6U&branch=master)](https://travis-ci.com/Styxx/mezzo-production)
 #### Finding a _medium_ for musicians to collaborate
 #### CS 189 - Senior Capstone Project
 ###### Winter Instructor: Tim Sherwood

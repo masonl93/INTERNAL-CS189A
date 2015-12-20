@@ -12,5 +12,11 @@ matrix:
     - rvm: jruby
     - rvm: jruby-head
     fast_finish: true
+    
+before_script:
+  - psql -c 'create database mezzo_test;' -U postgres
+  - psql -c 'create database mezzo_development;' -U postgres
+  - psql -c 'create database mezzo_production;' -U postgres
+  
 notifications:
   slack: teamgigs:Nnem2T8oYDBaz6Sww5bDkhgH

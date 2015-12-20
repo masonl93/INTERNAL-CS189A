@@ -33,4 +33,11 @@ OmniApp::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+  
+  # Fix depreciation warning for not specifying a value for
+  # option `active_support.test_order`
+  Rails.application.configure do
+    config.active_support.test_order = :sorted
+  end
+  
 end

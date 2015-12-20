@@ -8,7 +8,9 @@ rvm:
     - jruby
     - jruby-head
 matrix:
+    # Should figure out what ruby-head, jruby, and jruby-head are
     allow_failures:
+    - rvm: ruby-head
     - rvm: jruby
     - rvm: jruby-head
     fast_finish: true

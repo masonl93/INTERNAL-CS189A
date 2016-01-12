@@ -1,3 +1,31 @@
+
+
+<div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="<%= @group.first!.image %>" alt="...">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">
+      <%=current_user.id.to_s + @group[0].name%>
+      <% len = @group.length - 1 %>
+      <% for i in 1..len %>
+        <%=", " + @group[i].name%>
+      <% end %>
+
+      <%groupid = @group[0].id.to_s%>
+      <% len = @group.length - 1 %>
+      <% for i in 1..len %>
+          <%groupid = groupid + "," + @group[i].id.to_s%>
+      <% end %>
+
+    </h4>
+    <%= link_to "MESSAGES", group_msgs_path(current_user.id.to_s + "," + groupid) %>
+  </div>
+</div>
+
+
 <% @users.each do |user| %>
 
     <div class="media">

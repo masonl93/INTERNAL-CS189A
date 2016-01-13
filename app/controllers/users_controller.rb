@@ -142,7 +142,7 @@ class UsersController < ApplicationController
 
   def showMatches
     #FOR PRODUCTION
-    @group = User.where('id = ? OR id = ? OR id = ?', 16, 17, 18)
+    @group = User.where('id = ? OR id = ? OR id = ? OR id = ?', 16, 17, 18, 19).order(:id)
     @users = User.where('id != ?', current_user.id)
 
     #FOR JUST THE DEMOOO
@@ -176,7 +176,9 @@ class UsersController < ApplicationController
     @groupChat = Group.new
     @groupid = params[:ids]
     groupdIdArray = @groupid.split(",")
-    @groupUsers = User.find(groupdIdArray)
+    @groupUsers = User.find(groupdIdArray).sort_by { |user| user[:id]}
+
+    @chats = Group.where(:participants => @groupid).order(:id).reverse_order
   end
 
   def createChat
@@ -232,7 +234,7 @@ class UsersController < ApplicationController
   end
 
   def group_chat_params
-    params.require(:groupChat).permit(:body, :participants)
+    params.require(:group).permit(:body, :participants)
   end
 
 end

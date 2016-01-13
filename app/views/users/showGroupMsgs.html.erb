@@ -1,3 +1,24 @@
+<script>
+  $(document).on('page:before-unload', function() {
+    clearInterval(refreshId);
+  });
+  window.refreshId = setInterval(function() {
+    function call() {
+      req = $.ajax({
+        url: "/users/<%= @groupid %>/groupsMessages",
+        success: function (result) {
+          //response = $($.parseHTML(result)).filter("#msgList");
+          response = $(result).find('#msgList').html();
+          $('#msgList').html(response);
+          console.log(response);
+        }
+      });
+    }
+    call();
+  }, 2000);
+
+</script>
+
 
 
 <% if current_user %>
@@ -6,7 +27,9 @@
         <%=@groupUsers[0].name%>
         <% len = @groupUsers.length - 1 %>
         <% for i in 1..len %>
-            <%=", " + @groupUsers[i].name%>
+            <% unless  @groupUsers[i].id == current_user.id%>
+              <%=", " + @groupUsers[i].name%>
+            <% end %>
         <% end %>
       </h2>
     </div>
@@ -20,7 +43,7 @@
   <div class="panel-body">
 
     <ul class="media-list" id="msgList">
-      <%#= render 'chats' %>
+      <%= render 'chats' %>
     </ul>
   </div>
 </div>

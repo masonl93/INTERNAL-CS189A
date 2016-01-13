@@ -1,0 +1,2 @@
+$('#msgList').prepend($("<%= j render partial: 'ajaxchat', :locals => {:image => @groupChats.user.image, :name => @groupChats.user.name, :created => @groupChats.created_at.strftime('%-d %B %Y, %H:%M:%S'),:body => @groupChats.body }%>").hide().fadeIn(1000));
+$('#chatBody').val("");

@@ -8,20 +8,25 @@
   </div>
   <div class="media-body">
     <h4 class="media-heading">
-      <%=current_user.id.to_s + @group[0].name%>
+      <%= @group[0].name%>
       <% len = @group.length - 1 %>
       <% for i in 1..len %>
-        <%=", " + @group[i].name%>
+          <% unless  @group[i].id == current_user.id%>
+              <%=", " + @group[i].name%>
+          <% end %>
       <% end %>
 
+      <!--VERRRYYY IMPORTANTTT!-->
+      <%# @group.push(current_user).sort_by { |user| user[:id]}%>
+      <% @group.sort_by { |user| user[:id]}%>
       <%groupid = @group[0].id.to_s%>
       <% len = @group.length - 1 %>
       <% for i in 1..len %>
           <%groupid = groupid + "," + @group[i].id.to_s%>
       <% end %>
-
+      <%#= groupid %>
     </h4>
-    <%= link_to "MESSAGES", group_msgs_path(current_user.id.to_s + "," + groupid) %>
+    <%= link_to "MESSAGES", group_msgs_path(groupid) %>
   </div>
 </div>
 

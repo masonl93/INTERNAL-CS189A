@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_many :mediums
   has_many :matchings
   has_many :chats, dependent: :delete_all
+  has_many :groups, dependent: :delete_all
 
   def self.sign_in_from_omniauth(auth)
     find_by(provider: auth['provider'], uid: auth['uid']) || create_user_from_omniauth(auth)

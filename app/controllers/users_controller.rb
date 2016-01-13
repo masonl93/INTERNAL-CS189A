@@ -142,16 +142,17 @@ class UsersController < ApplicationController
 
   def showMatches
     #FOR PRODUCTION
-    #@users = User.where('id != ?', current_user.id)
+    @group = User.where('id = ? OR id = ? OR id = ?', 16, 17, 18)
+    @users = User.where('id != ?', current_user.id)
 
     #FOR JUST THE DEMOOO
-    if current_user.name == "Ringo Starr"
-      @users = User.where('name = ?', "John Lennon")
-    elsif current_user.name == "John Lennon"
-      @users = User.where('name = ?', "Ringo Starr")
-    else
-      @users = User.where('id != ?', current_user.id)
-    end
+    # if current_user.name == "Ringo Starr"
+    #   @users = User.where('name = ?', "John Lennon")
+    # elsif current_user.name == "John Lennon"
+    #   @users = User.where('name = ?', "Ringo Starr")
+    # else
+    #   @users = User.where('id != ?', current_user.id)
+    # end
 
     #Chat.delete_all
   end
@@ -169,6 +170,13 @@ class UsersController < ApplicationController
     #@chats = Chat.order('created_at DESC').where(:user_id => @match.id).where(:match_id => current_user.id)
       #@chats = Chat.all
     #@chats = current_user.chats.where()
+  end
+
+  def showGroupMsgs
+    @groupChat = Group.new
+    @groupid = params[:ids]
+    groupdIdArray = @groupid.split(",")
+    @groupUsers = User.find(groupdIdArray)
   end
 
   def createChat
@@ -192,6 +200,26 @@ class UsersController < ApplicationController
     end
   end
 
+  def createGroupChat
+    respond_to do |format|
+      if current_user
+        @groupChats = current_user.groups.build(group_chat_params)
+        if @groupChats.save
+          #flash[:success] = 'Your message was sent!'
+          format.html {redirect_to action: "showGroupMsgs", id:params[:ids]}
+          format.js
+        else
+          flash[:error] = 'Your message not sent :('
+        end
+        #redirect_to action: "showMatchMsgs", id:params[:id]
+
+
+      else
+        format.html {redirect_to root_url}
+        format.js {render nothing: true}
+      end
+    end
+  end
 
   def destroy
 
@@ -201,6 +229,10 @@ class UsersController < ApplicationController
 
   def chat_params
     params.require(:chat).permit(:body, :match_id)
+  end
+
+  def group_chat_params
+    params.require(:groupChat).permit(:body, :participants)
   end
 
 end

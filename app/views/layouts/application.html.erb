@@ -55,10 +55,15 @@
 		      
 		      <!--<li><a href="http://linkedin.com/in/StyxxC" class="icon fa-linkedin-square"><span class="label">LinkedIn</span></a></li> -->
           <% if current_user %>
+              <li>
+                <%= link_to user_matches_path(current_user.id), id: "icon" do %>
+                    <span class="fa fa-weixin fa-3x"></span>
+                <% end %>
+              </li>
             <li>
               <%= link_to user_matches_path(current_user.id), id: "icon" do %>
-                <span class="fa fa-weixin fa-3x"></span>
-            <% end %>
+                <span class="fa fa-users fa-3x"></span>
+              <% end %>
             </li>
             <li>
               <%= link_to findMatch_path, id: "icon" do %>

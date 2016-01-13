@@ -11,6 +11,7 @@ OmniApp::Application.routes.draw do
 
   resources :users
 
+  # asks the router to match the request to the edit action of the users' controller
   get     'edit' => 'users#edit'
   post "users/matchChoice"
   get 'view_matches' => 'users#view_matches'

@@ -26,7 +26,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <!-- Font Awesome Stylesheet -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  
+  <script>
+
+
+  </script>
 </head>
   <body>
   
@@ -49,18 +52,44 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
 		      
+		      
+		      <!--<li><a href="http://linkedin.com/in/StyxxC" class="icon fa-linkedin-square"><span class="label">LinkedIn</span></a></li> -->
           <% if current_user %>
-              <li><%= link_to "Messages", user_matches_path(current_user.id) , id: "profile" %></li>
-              <li><%= link_to "Find Musicians", findMatch_path , id: "profile" %></li>
+            <li>
+              <%= link_to user_matches_path(current_user.id), id: "icon" do %>
+                <span class="fa fa-weixin fa-3x"></span>
+            <% end %>
+            </li>
+            <li>
+              <%= link_to findMatch_path, id: "icon" do %>
+                <span class="fa fa-search fa-3x"></span>
+              <% end %>
+            </li>
             <% if filledSurveyPage %>
-              <li><%= link_to current_user.name, user_path(current_user.id), id: "profile" %></li>
+              <li>
+                <%= link_to user_path(current_user.id), id: "icon" do %>
+                  <span class="fa fa-user-secret fa-3x"></span>
+                <% end %>
+              </li>
             <% else %> <!-- Survey page not done, route to survey page -->
-	            <li><%= link_to current_user.name, user_path(current_user.id), id: "profile" %></li>
+              <li>
+                <%= link_to edit_path, id: "icon" do %>
+                  <span class="fa fa-user-secret fa-3x"></span>
+                <% end %>
+              </li>
 	          <% end %>
-
-	          <li><%= link_to "Sign Out", 'sign_out', method: :delete, id: "signout" %></li>
+            <li>
+              <%= link_to 'sign_out', method: :delete, id: "signout" do %>
+                <span class="fa fa-sign-out fa-3x"></span>
+              <% end %>
+            </li>
           <% else %>
-            <li>Sign in<%= link_to "auth/facebook" do %><%= image_tag('facebook.png', width: '40', height: '40', class: 'img-circle') %><% end %></li>
+            <li>
+              <%= link_to "auth/facebook", id: "icon" do %>
+                <span class="fa fa-facebook-official fa-3x"></span> <br>
+                Login
+              <% end %>
+            </li>
           <% end %>
         </ul>
       </div>

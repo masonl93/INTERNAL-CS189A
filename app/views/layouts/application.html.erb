@@ -78,6 +78,11 @@
                 <% end %>
               </li>
 	          <% end %>
+	          <li> <!-- Settings page -->
+              <%= link_to '', method: :delete, id: "icon" do %>
+                <span class="fa fa-cog fa-3x"></span>
+              <% end %>
+            </li>
             <li>
               <%= link_to 'sign_out', method: :delete, id: "signout" do %>
                 <span class="fa fa-sign-out fa-3x"></span>

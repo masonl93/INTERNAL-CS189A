@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// THIS IS FOR THE user page and survey page
+@import url(https://fonts.googleapis.com/css?family=Oswald);
 
 /* USER PROFILE PAGE */
 .card {
@@ -247,4 +249,42 @@ input[type=checkbox] + label {
   border-radius: 50%;
   width: 100px;
   height: 100px;
+}
+
+/*
+.circle {
+    border-radius: 50%/50%; 
+    width: 50px;
+    height: 50px;
+    background: black;
+}*/
+
+.img-circular{
+ width: 100px;
+ height: 100px;
+ background-size: cover;
+ display: block;
+ border-radius: 100px;
+ background: black;
+ -webkit-border-radius: 100px;
+ -moz-border-radius: 100px;
+}
+
+.invert:hover {
+  -webkit-filter: invert(.9);
+  filter: invert(.9);
+}
+
+.img-circular:active {
+  background: green;
+}
+
+.blur-hue:hover {
+  -webkit-filter: blur(5px) saturate(6);
+  filter: blur(5px) saturate(6);
+}
+
+.f1 {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
 }

@@ -10,8 +10,7 @@
       <label class="col-md-4 control-label" for="checkboxes">Instruments:</label>
       <div class="col-md-4">
         <label class="checkbox-inline" >
-            <%= check_box_tag "instrument[]", 'Guitar' %> Guitar <br>
-              <%= image_tag("instruments/guitar.png", alt: "Guitar") %>
+            <%= check_box_tag "instrument[]", 'Guitar' %> Guitar <br><%= image_tag("instruments/guitar.png", alt: "Guitar") %>
         </label>
         <label class="checkbox-inline">
           <%= check_box_tag "instrument[]", 'Bass' %> Bass <br><%= image_tag("instruments/bass.png", alt: "Bass") %>
@@ -77,7 +76,7 @@
     </div>
 
     <div class="form-group legendary">
-      <label class="col-md-4 control-label" for="textinput">Media:</label>
+      <label class="col-md-4 control-label" for="textinput">Youtube URL:</label>
       <div class="col-md-4">
         <!-- <input id="textinput" name="textinput" type="text" placeholder="Enter your influences" class="form-control input-md"> -->
         <%= text_field_tag :url, nil, :required => true %>

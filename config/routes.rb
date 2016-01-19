@@ -12,6 +12,7 @@ OmniApp::Application.routes.draw do
   resources :users
 
   get     'edit' => 'users#edit'
+  get     'edit2' => 'users#edit2'
   post "users/matchChoice"
   get 'view_matches' => 'users#view_matches'
   get 'findMatch' => 'users#findMatch'

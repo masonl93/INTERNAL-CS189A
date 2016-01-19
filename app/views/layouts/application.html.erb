@@ -57,35 +57,35 @@
           <% if current_user %>
             <li>
               <%= link_to user_matches_path(current_user.id), id: "icon" do %>
-                <span class="fa fa-weixin fa-3x"></span>
+                <span class="fa fa-weixin fa-2x"></span>
             <% end %>
             </li>
             <li>
               <%= link_to findMatch_path, id: "icon" do %>
-                <span class="fa fa-search fa-3x"></span>
+                <span class="fa fa-search fa-2x"></span>
               <% end %>
             </li>
             <% if filledSurveyPage %>
               <li>
                 <%= link_to user_path(current_user.id), id: "icon" do %>
-                  <span class="fa fa-user-secret fa-3x"></span>
+                  <span class="fa fa-user-secret fa-2x"></span>
                 <% end %>
               </li>
             <% else %> <!-- Survey page not done, route to survey page -->
               <li>
                 <%= link_to edit_path, id: "icon" do %>
-                  <span class="fa fa-user-secret fa-3x"></span>
+                  <span class="fa fa-user-secret fa-2x"></span>
                 <% end %>
               </li>
 	          <% end %>
 	          <li> <!-- Settings page -->
-              <%= link_to '', method: :delete, id: "icon" do %>
-                <span class="fa fa-cog fa-3x"></span>
+              <%= link_to edit_path, id: "icon" do %>
+                <span class="fa fa-cog fa-2x"></span>
               <% end %>
             </li>
             <li>
               <%= link_to 'sign_out', method: :delete, id: "signout" do %>
-                <span class="fa fa-sign-out fa-3x"></span>
+                <span class="fa fa-sign-out fa-2x"></span>
               <% end %>
             </li>
           <% else %>

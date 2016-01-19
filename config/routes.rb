@@ -11,7 +11,9 @@ OmniApp::Application.routes.draw do
 
   resources :users
 
+  # asks the router to match the request to the edit action of the users' controller
   get     'edit' => 'users#edit'
+  get     'edit2' => 'users#edit2'
   post "users/matchChoice"
   get 'view_matches' => 'users#view_matches'
   get 'findMatch' => 'users#findMatch'
@@ -39,7 +41,9 @@ OmniApp::Application.routes.draw do
 
   get     'users/:id/matches'  => 'users#showMatches', :as => :user_matches
   get     'users/:id/messages'  => 'users#showMatchMsgs', :as => :user_match_msg
+  get     'users/:ids/groupsMessages' =>  'users#showGroupMsgs', :as => :group_msgs
   post    "users/:id/createChat" => 'users#createChat', :as => :create_chat
+  post    "users/:ids/createGroupChat" => 'users#createGroupChat', :as => :create_group_chat
 
 
   

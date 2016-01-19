@@ -1,4 +1,4 @@
-
+<!-- this is actually the 'edit' page -->
 
 <div class="legendary">
   <legend>BASIC INFORMATION</legend>
@@ -9,21 +9,20 @@
     <div class="form-group legendary">
       <label class="col-md-4 control-label" for="checkboxes">Instruments:</label>
       <div class="col-md-4">
-        <label class="checkbox-inline" >
-            <%= check_box_tag "instrument[]", 'Guitar' %> Guitar <br>
-              <%= image_tag("instruments/guitar.png", alt: "Guitar") %>
+        <label class="checkbox-inline f1" >
+            <%= check_box_tag "instrument[]", 'Guitar' %> Guitar <br><%= image_tag("instruments/guitar.png", alt: "Guitar", class: "img-circular invert") %>
         </label>
-        <label class="checkbox-inline">
-          <%= check_box_tag "instrument[]", 'Bass' %> Bass <br><%= image_tag("instruments/bass.png", alt: "Bass") %>
+        <label class="checkbox-inline f1">
+          <%= check_box_tag "instrument[]", 'Bass' %> Bass <br><%= image_tag("instruments/bass.png", alt: "Bass", class: "img-circular invert") %>
         </label>
-        <label class="checkbox-inline" >
-          <%= check_box_tag "instrument[]", 'Vocals' %> Vocals <br><%= image_tag("instruments/vocals.png", alt: "Vocals") %>
+        <label class="checkbox-inline f1" >
+          <%= check_box_tag "instrument[]", 'Vocals' %> Vocals <br><%= image_tag("instruments/vocals.png", alt: "Vocals", class: "img-circular invert") %>
         </label>
-        <label class="checkbox-inline" >
-          <%= check_box_tag "instrument[]", 'Drums' %> Drums <br><%= image_tag("instruments/drums.png", alt: "Drums") %>
+        <label class="checkbox-inline f1" >
+          <%= check_box_tag "instrument[]", 'Drums' %> Drums <br><%= image_tag("instruments/drums.png", alt: "Drums", class: "img-circular invert") %>
         </label>
-        <label class="checkbox-inline" >
-          <%= check_box_tag "instrument[]", 'Keyboard' %> Keyboard <br><%= image_tag("instruments/keyboard.png", alt: "Keyboard") %>
+        <label class="checkbox-inline f1" >
+          <%= check_box_tag "instrument[]", 'Keyboard' %> Keyboard <br><%= image_tag("instruments/keyboard.png", alt: "Keyboard", class: "img-circular invert") %>
         </label>
       </div>
     </div>
@@ -31,20 +30,20 @@
     <div class="form-group legendary">
       <label class="col-md-4 control-label" for="checkboxes">Artists you are looking for:</label>
       <div class="col-md-4">
-        <label class="checkbox-inline" >
-            <%= check_box_tag "looking[]", 'Guitar' %> Guitar <br><%= image_tag("instruments/guitar.png", alt: "Guitar") %>
+        <label class="checkbox-inline f1" >
+            <%= check_box_tag "looking[]", 'Guitar' %> Guitar <br><%= image_tag("instruments/guitar.png", alt: "Guitar", class: "img-circular invert") %>
         </label>
-        <label class="checkbox-inline" >
-          <%= check_box_tag "looking[]", 'Bass' %> Bass <br><%= image_tag("instruments/bass.png", alt: "Bass") %>
+        <label class="checkbox-inline f1" >
+          <%= check_box_tag "looking[]", 'Bass' %> Bass <br><%= image_tag("instruments/bass.png", alt: "Bass", class: "img-circular invert") %>
         </label>
-        <label class="checkbox-inline" >
-          <%= check_box_tag "looking[]", 'Vocals' %> Vocals <br><%= image_tag("instruments/vocals.png", alt: "Vocals") %>
+        <label class="checkbox-inline f1" >
+          <%= check_box_tag "looking[]", 'Vocals' %> Vocals <br><%= image_tag("instruments/vocals.png", alt: "Vocals", class: "img-circular invert") %>
         </label>
-        <label class="checkbox-inline" >
-          <%= check_box_tag "looking[]", 'Drums' %> Drums <br><%= image_tag("instruments/drums.png", alt: "Drums") %>
+        <label class="checkbox-inline f1" >
+          <%= check_box_tag "looking[]", 'Drums' %> Drums <br><%= image_tag("instruments/drums.png", alt: "Drums", class: "img-circular invert") %>
         </label>
-        <label class="checkbox-inline" >
-          <%= check_box_tag "looking[]", 'Keyboard' %> Keyboard <br><%= image_tag("instruments/keyboard.png", alt: "Keyboard") %>
+        <label class="checkbox-inline f1" >
+          <%= check_box_tag "looking[]", 'Keyboard' %> Keyboard <br><%= image_tag("instruments/keyboard.png", alt: "Keyboard", class: "img-circular invert") %>
         </label>
       </div>
     </div>
@@ -53,16 +52,16 @@
     <div class="form-group legendary">
       <label class="col-md-4 control-label" for="checkboxes">Genres:</label>
       <div class="col-md-4">
-        <label class="checkbox-inline" for="checkboxes-a0">
+        <label class="checkbox-inline f1" for="checkboxes-a0">
           <%= check_box_tag "genre[]", 'Rockabilly' %> Rockabilly
         </label>
-        <label class="checkbox-inline" for="checkboxes-a1">
+        <label class="checkbox-inline f1" for="checkboxes-a1">
           <%= check_box_tag "genre[]", 'Metalcore' %> Metalcore
         </label>
-        <label class="checkbox-inline" for="checkboxes-a2">
+        <label class="checkbox-inline f1" for="checkboxes-a2">
           <%= check_box_tag "genre[]", 'Future Bass' %> Future Bass
         </label>
-        <label class="checkbox-inline" for="checkboxes-a3">
+        <label class="checkbox-inline f1" for="checkboxes-a3">
           <%= check_box_tag "genre[]", 'Experimental' %> Experimental
         </label>
       </div>
@@ -77,25 +76,24 @@
     </div>
 
     <div class="form-group legendary">
-      <label class="col-md-4 control-label" for="textinput">Media:</label>
+      <label class="col-md-4 control-label" for="textinput">Youtube URL:</label>
       <div class="col-md-4">
         <!-- <input id="textinput" name="textinput" type="text" placeholder="Enter your influences" class="form-control input-md"> -->
-        <%= text_field_tag :url, nil, :required => true %>
+        <%= text_field_tag :url, nil, placeholder: "Add some YouTube videos of you playing!", maxlength: 200, :size => 50, :required => true %>
       </div>
     </div>
 
     <div class="form-group legendary">
       <label class="col-md-4 control-label" for="textinput">Bio:</label>
       <div class="col-md-4">
-        <%= text_area_tag :bio, nil, :required =>true %>
+        <%= text_area_tag :bio, nil, placeholder: "Add a blurb about yourself!", :required =>true %>
       </div>
     </div>
 
     <div class="form-group legendary">
       <label class="col-md-4 control-label" for="textinput"></label>
       <div class="col-md-4">
-        <!-- <input id="textinput" name="textinput" type="text" placeholder="Enter your influences" class="form-control input-md"> -->
-        <%= submit_tag "Submit" %>
+        <%= submit_tag "Continue" %>
       </div>
     </div>
 

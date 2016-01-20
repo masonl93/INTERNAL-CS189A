@@ -1,12 +1,12 @@
 <!-- this is actually the 'edit' page -->
 
-<div class="legendary">
+<div class="legendary osw">
   <legend>BASIC INFORMATION</legend>
 </div>
 
 <%= form_tag({controller: "users", action: "updateSurvey"}, method: "post", :class => "form-horizontal") do %>
 
-    <div class="form-group legendary">
+    <div class="form-group legendary osw">
       <label class="col-md-4 control-label" for="checkboxes">Instruments:</label>
       <div class="col-md-4">
         <label class="checkbox-inline f1" >
@@ -27,7 +27,7 @@
       </div>
     </div>
     
-    <div class="form-group legendary">
+    <div class="form-group legendary osw">
       <label class="col-md-4 control-label" for="checkboxes">Artists you are looking for:</label>
       <div class="col-md-4">
         <label class="checkbox-inline f1" >
@@ -67,7 +67,7 @@
       </div>
     </div>
 
-    <div class="form-group legendary">
+    <div class="form-group legendary osw">
       <label class="col-md-4 control-label" for="textinput">Influence:</label>
       <div class="col-md-4">
         <!-- <input id="textinput" name="textinput" type="text" placeholder="Enter your influences" class="form-control input-md"> -->
@@ -75,7 +75,7 @@
       </div>
     </div>
 
-    <div class="form-group legendary">
+    <div class="form-group legendary osw">
       <label class="col-md-4 control-label" for="textinput">Media:</label>
       <div class="col-md-4">
         <!-- <input id="textinput" name="textinput" type="text" placeholder="Enter your influences" class="form-control input-md"> -->
@@ -83,14 +83,14 @@
       </div>
     </div>
 
-    <div class="form-group legendary">
+    <div class="form-group legendary osw">
       <label class="col-md-4 control-label" for="textinput">Bio:</label>
       <div class="col-md-4">
         <%= text_area_tag :bio, nil, placeholder: "Add a blurb about yourself!", :required =>true %>
       </div>
     </div>
 
-    <div class="form-group legendary">
+    <div class="form-group legendary osw">
       <label class="col-md-4 control-label" for="textinput"></label>
       <div class="col-md-4">
         <%= submit_tag "Continue" %>

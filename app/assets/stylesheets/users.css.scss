@@ -275,7 +275,7 @@ input[type=checkbox] + label {
   filter: invert(.9);
 }
 
-.img-circular:active {
+.img-circular:actived {
   background: green;
 }
 
@@ -287,4 +287,8 @@ input[type=checkbox] + label {
 .f1 {
   font-family: 'Oswald', sans-serif;
   text-align: center;
+}
+
+.osw {
+  font-family: 'Oswald', sans-serif;
 }

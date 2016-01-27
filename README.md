@@ -1,4 +1,4 @@
-# Mezzo [![Build Status](https://travis-ci.com/Styxx/mezzo-production.svg?token=pQvxcmrbHMs3QsSaUN6U&branch=master)](https://travis-ci.com/Styxx/mezzo-production)
+# Mezzo [![Build Status](https://travis-ci.com/masonl93/INTERNAL-CS189A.svg?token=pQvxcmrbHMs3QsSaUN6U&branch=master)](https://travis-ci.com/masonl93/INTERNAL-CS189A)
 #### Finding a _medium_ for musicians to collaborate
 #### CS 189 - Senior Capstone Project
 ###### Winter Instructor: Tim Sherwood
@@ -16,5 +16,5 @@
 - Mason Levy - Software Developer
 - Prithvi Sathiya - Software Developer
 
-## Currently on: Christmas Break
+
 #### [Trello](https://trello.com/b/zl9blTis/mezzo)

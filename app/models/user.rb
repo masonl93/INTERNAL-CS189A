@@ -29,6 +29,11 @@ class User < ActiveRecord::Base
     user.bio = bio
     user.save
   end
-
-
+  
+  # Add function to add interest_level
+  def self.update_interest_level(uid, ilevel)
+    user1 = self.find(uid)
+    user1.interest_level = ilevel
+    user.save
+  end
 end

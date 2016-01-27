@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  protect_from_forgery except: :showMatchMsgs
+  protect_from_forgery except: [:showMatchMsgs, :save_user_location]
 
   def index
 
@@ -21,8 +21,8 @@ class UsersController < ApplicationController
     @instruments = InstrumentChoice.all       # todo: add all instrument choices to this database
                                               # then have for loop creating checkboxes in _form.html.erb
   end
-  
-  
+
+
   def edit2
     @user = User.find(session[:user_id])
   end
@@ -228,6 +228,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def save_user_location
+   current_user.update_attributes!(user_location_params)
+   head :ok
+  end
+
   def destroy
 
   end
@@ -242,6 +247,8 @@ class UsersController < ApplicationController
     params.require(:group).permit(:body, :participants)
   end
 
+  def user_location_params
+    params.permit(:lat,:long)
+  end
+
 end
-
-

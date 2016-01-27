@@ -30,5 +30,12 @@ class User < ActiveRecord::Base
     user.save
   end
 
+  
+  # Add function to add interest_level
+  def self.update_interest_level(uid, interest_level)
+    user = self.find(uid)
+    user.interest_level = interest_level
+    user.save
+  end
 
 end

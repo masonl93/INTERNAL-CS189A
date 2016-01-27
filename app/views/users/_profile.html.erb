@@ -33,6 +33,7 @@
     <div class="tab-content">
       <div class="tab-pane fade in active" id="tab1">
         <p><%= @user.bio %></p>
+        <p><%= @user.interest_level %></p>
         <h3>Genres</h3>
         <% @user.genres.each do |genre| %>
             <p><%= genre.genre %></p>

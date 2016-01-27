@@ -58,19 +58,20 @@
             <li>
               <%= link_to user_matches_path(current_user.id), id: "icon" do %>
                 <span class="fa fa-weixin fa-2x"></span>
+                  <p>Messages</p>
             <% end %>
             </li>
             <li>
               <%= link_to findMatch_path, id: "icon" do %>
                 <span class="fa fa-search fa-2x"></span>
+                  <p>Search</p>
               <% end %>
             </li>
             <% if filledSurveyPage %>
               <li>
                 <%= link_to user_path(current_user.id), id: "icon" do %>
-                    <i class="pe-7s-search"></i>
-                    <p>Search</p>
                   <span class="fa fa-user-secret fa-2x"></span>
+                    <p>Profile</p>
                 <% end %>
               </li>
             <% else %> <!-- Survey page not done, route to survey page -->
@@ -83,11 +84,13 @@
 	          <li> <!-- Settings page -->
               <%= link_to edit2_path, id: "icon" do %>
                 <span class="fa fa-cog fa-2x"></span>
+                    <p>Update Profile</p>
               <% end %>
             </li>
             <li>
               <%= link_to 'sign_out', method: :delete, id: "signout" do %>
                 <span class="fa fa-sign-out fa-2x"></span>
+                  <p>Sign Out</p>
               <% end %>
             </li>
           <% else %>

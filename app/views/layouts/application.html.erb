@@ -68,6 +68,8 @@
             <% if filledSurveyPage %>
               <li>
                 <%= link_to user_path(current_user.id), id: "icon" do %>
+                    <i class="pe-7s-search"></i>
+                    <p>Search</p>
                   <span class="fa fa-user-secret fa-2x"></span>
                 <% end %>
               </li>
@@ -79,7 +81,7 @@
               </li>
 	          <% end %>
 	          <li> <!-- Settings page -->
-              <%= link_to edit_path, id: "icon" do %>
+              <%= link_to edit2_path, id: "icon" do %>
                 <span class="fa fa-cog fa-2x"></span>
               <% end %>
             </li>

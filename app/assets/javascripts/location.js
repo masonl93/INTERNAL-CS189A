@@ -16,5 +16,10 @@ function showPosition(position) {
     });
 }
 $(document).ready(function(){
-  getLocation();
+  console.log(window.location.pathname)
+   if (window.location.pathname === "/findMatch"
+   || window.location.pathname === "/edit"){
+     getLocation();
+ }
 });
+//localstorage.getItem("isLoggedIn")

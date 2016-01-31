@@ -1,0 +1,13 @@
+<div id="geolocation" >
+</div>
+
+<div class="legendary osw">
+  <legend>BASIC INFORMATION</legend>
+</div>
+
+<%= form_tag({controller: "users", action: "location"}, method: "post", :class => "form-horizontal") do %>
+<div class="item">
+  <div class="fill">
+    <%= link_to image_tag("redarrow.png", alt: "band") %>
+  </div>
+</div>

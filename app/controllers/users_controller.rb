@@ -22,6 +22,30 @@ class UsersController < ApplicationController
                                               # then have for loop creating checkboxes in _form.html.erb
   end
 
+  def location
+    @user = User.find(session[:user_id])
+    #user = params[:uid]
+    #@users = User.ids       # Matching algorithm: Find all users and iterate over them
+    #me = User.find(session[:user_id])
+    ##if User.where(:uid => auth['lat']).first() != nil
+      #session[:user_id] = User.where(:uid => auth['uid']).first()[:id]
+      #redirect_to "/edit", id: session[:user_id]
+    #else
+      #redirect_to action: "/location", id: session[:user_id]
+      #redirect_to "/edit", id: user.id
+    #redirect_to action: "show", id: session[:user_id]
+    user = params[:uid]
+    me = User.find(session[:user_id])
+
+    # Find the correct match between the two users
+    if params[:lat] != null#(@user[:lat] != null)#User.where(lat: lat, long: long).exists?
+      redirect_to action: "location" and return
+    else
+      redirect_to action: "location" and return
+    end
+
+
+  end
 
   def edit2
     @user = User.find(session[:user_id])

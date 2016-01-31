@@ -75,6 +75,7 @@ class UsersController < ApplicationController
     influence = Influence.add(params)
     media = Medium.add(params)
     User.update_bio(session[:user_id], params[:bio])
+    User.update_interest_level(session[:user_id], params[:interest_level])
     redirect_to action: "show", id: session[:user_id]
   end
 

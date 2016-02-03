@@ -3,21 +3,13 @@ language: ruby
 cache: bundler
 bundler_args: --retry=3 --jobs=3
 rvm:
-    - 1.9.3
     - 2.0
     - 2.1
     - 2.2.0
     - 2.2.1
     - 2.2.2
-    - ruby-head
-    - jruby
-    - jruby-head
+    - 2.3.0
 matrix:
-    # Should figure out what ruby-head, jruby, and jruby-head are
-    allow_failures:
-    - rvm: ruby-head
-    - rvm: jruby
-    - rvm: jruby-head
     fast_finish: true
     
 before_script:

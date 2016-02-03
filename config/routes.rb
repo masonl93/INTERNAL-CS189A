@@ -1,12 +1,14 @@
 OmniApp::Application.routes.draw do
 
-  match '/users',      to: 'users#updateSurvey',        via: 'post'
+  match '/users/updateSurvey',      to: 'users#updateSurvey',        via: 'post'
 
   match '/users/updateGenre', to: 'users#updateGenre', via: 'post'
 
   match '/users/updateInfluence', to: 'users#updateInfluence', via: 'post'
 
   match '/users/addMedia', to: 'users#addMedia', via: 'post'
+
+  match '/users/editSurvey',      to: 'users#editSurvey',        via: 'post'
 
 
   resources :users

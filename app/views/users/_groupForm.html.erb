@@ -2,7 +2,7 @@
   <%= form_for @groupChat, :url => create_group_chat_path(@groupid), remote: true do |f| %>
       <div class="form-group">
         <%= f.label :body,"Conversation here:" %>
-        <%= f.text_area :body, id: "chatBody", rows: 1, cols: 20, class: 'form-control', required: true, maxlength: 2000, :placeholder => "RESPOND HERE..." %>
+        <%= f.text_field :body, id: "chatBody", rows: 1, cols: 20, class: 'form-control', required: true, maxlength: 2000, :placeholder => "RESPOND HERE..." %>
         <small class="label label-warning">Cannot be blank or contain more than 2000 symbols.</small>
       </div>
 

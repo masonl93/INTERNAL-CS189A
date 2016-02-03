@@ -15,9 +15,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-//$(document).ready(function() {
-//    $('#msgSubmit').click(function() {
-//        $("#msgList").load('/users/9/messages #msgList');
-//    });
-//});

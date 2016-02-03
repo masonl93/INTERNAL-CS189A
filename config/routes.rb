@@ -12,6 +12,7 @@ OmniApp::Application.routes.draw do
   resources :users
 
   # asks the router to match the request to the edit action of the users' controller
+  post "/users/save_user_location" => 'users#save_user_location'
   get     'edit' => 'users#edit'
   get     'edit2' => 'users#edit2'
   post "users/matchChoice"
@@ -48,7 +49,7 @@ OmniApp::Application.routes.draw do
   post    "users/:ids/createGroupChat" => 'users#createGroupChat', :as => :create_group_chat
 
 
-  
+
   #get 'home/profile'          # Currently empty; exists only to pass home/profile test
                                # change to users/profile?
 
@@ -98,7 +99,7 @@ OmniApp::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

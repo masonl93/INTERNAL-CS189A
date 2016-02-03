@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160111064028) do
+ActiveRecord::Schema.define(version: 20160127012303) do
 
   create_table "chats", force: :cascade do |t|
     t.string   "body"
@@ -99,9 +99,9 @@ ActiveRecord::Schema.define(version: 20160111064028) do
   add_index "messages", ["sent_messageable_id", "received_messageable_id"], name: "acts_as_messageable_ids"
 
   create_table "users", force: :cascade do |t|
-    t.string   "provider",   limit: 255
-    t.string   "uid",        limit: 255
-    t.string   "name",       limit: 255
+    t.string   "provider",       limit: 255
+    t.string   "uid",            limit: 255
+    t.string   "name",           limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "email"
@@ -110,6 +110,7 @@ ActiveRecord::Schema.define(version: 20160111064028) do
     t.integer  "age"
     t.string   "image"
     t.text     "bio"
+    t.string   "interest_level"
   end
 
 end

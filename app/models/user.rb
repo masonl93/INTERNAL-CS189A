@@ -30,6 +30,7 @@ class User < ActiveRecord::Base
     user.save
   end
 
+
   def getDistance(loc1, loc2)
     rad_per_deg = Math::PI/180  # PI / 180
     rkm = 6371                  # Earth radius in kilometers
@@ -45,6 +46,14 @@ class User < ActiveRecord::Base
     c = 2 * Math::atan2(Math::sqrt(a), Math::sqrt(1-a))
 
     return rm * c # Delta in meters
+  end
+  
+  # Add function to add interest_level
+  def self.update_interest_level(uid, interest_level)
+    user = self.find(uid)
+    user.interest_level = interest_level
+    user.save
+
   end
 
 end

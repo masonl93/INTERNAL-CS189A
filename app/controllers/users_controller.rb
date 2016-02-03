@@ -21,6 +21,41 @@ class UsersController < ApplicationController
     @instruments = InstrumentChoice.all       # todo: add all instrument choices to this database
                                               # then have for loop creating checkboxes in _form.html.erb
   end
+  
+  
+  def edit2
+    @user = User.find(session[:user_id])
+    @user_instruments = [false, false, false, false, false]
+    @user_looking = [false, false, false, false, false]
+    @user.instruments.each do |i|
+      if i.play == true
+        if i.instrument == 'Guitar'
+          @user_instruments[0] = true
+        elsif i.instrument == 'Bass'
+          @user_instruments[1] = true
+        elsif i.instrument == 'Vocals'
+          @user_instruments[2] = true
+        elsif i.instrument == 'Drums'
+          @user_instruments[3] = true
+        elsif i.instrument == 'Keyboard'
+          @user_instruments[4] = true
+        end
+      elsif i.play == false   # User does not play but is searching for this instrument
+        if i.instrument == 'Guitar'
+          @user_looking[0] = true
+        elsif i.instrument == 'Bass'
+          @user_looking[1] = true
+        elsif i.instrument == 'Vocals'
+          @user_looking[2] = true
+        elsif i.instrument == 'Drums'
+          @user_looking[3] = true
+        elsif i.instrument == 'Keyboard'
+          @user_looking[4] = true
+        end
+      end
+    end
+
+  end
 
   def update
   end
@@ -46,7 +81,20 @@ class UsersController < ApplicationController
     influence = Influence.add(params)
     media = Medium.add(params)
     User.update_bio(session[:user_id], params[:bio])
+    User.update_interest_level(session[:user_id], params[:interest_level])
     redirect_to action: "show", id: session[:user_id]
+  end
+
+  def editSurvey
+
+    ### add logic here to edit the database
+    # from the new survey results
+
+    # add instruments
+    # delete unchecked instruments
+    #
+
+
   end
 
   # Finds a possible match for swiping
@@ -118,7 +166,6 @@ class UsersController < ApplicationController
 
     @users = sorted.sort_by { |user, score| score}.reverse!
   end
-
 
 
   # todo: notify user that a match occured and ask

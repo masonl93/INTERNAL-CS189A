@@ -27,6 +27,8 @@ class UsersController < ApplicationController
     @user = User.find(session[:user_id])
     @user_instruments = [false, false, false, false, false]
     @user_looking = [false, false, false, false, false]
+    @user_influence = Influence.where(session[:user_id])[0].influence
+    @user_media = Medium.where(session[:user_id])[0].url
     @user.instruments.each do |i|
       if i.play == true
         if i.instrument == 'Guitar'
@@ -54,7 +56,6 @@ class UsersController < ApplicationController
         end
       end
     end
-
   end
 
   def update
@@ -86,15 +87,27 @@ class UsersController < ApplicationController
   end
 
   def editSurvey
-
-    ### add logic here to edit the database
-    # from the new survey results
-
-    # add instruments
-    # delete unchecked instruments
-    #
-
-
+    params[:uid] = session[:user_id]
+    uid = session[:user_id]
+    user = User.find(session[:user_id])
+    Instrument.delete_all(uid)
+    params[:instrument].each do |i|
+      Instrument.add(i, 1, 1, uid)   # todo: replace paramas with real values for experience and plays
+    end
+    params[:looking].each do |l|
+      Instrument.add(l, 1, 0, uid)
+    end
+    Genre.delete_all(uid)
+    params[:genre].each do |g|
+      Genre.add(g, uid)
+    end
+    Influence.delete_all(uid)
+    Influence.add(params)
+    User.update_bio(uid, params[:bio])
+    User.update_interest_level(uid, params[:interest_level])
+    Medium.delete_all(uid)
+    Medium.add(params)
+    redirect_to action: "show", id: session[:user_id]
   end
 
   # Finds a possible match for swiping

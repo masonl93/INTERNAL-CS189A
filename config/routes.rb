@@ -39,8 +39,10 @@ OmniApp::Application.routes.draw do
   get     'about'    => 'home#about'
   get     'profile'  => 'users#show'
   get     'matching' => 'users#findMatch'
+  get     'testmatching' => 'users#testFindMatch', :as => :testFindMatch
 
   get     'users/:id/matches'  => 'users#showMatches', :as => :user_matches
+  get     "users/:id/messagesList" =>  'users#showMsgList', :as => :messages_list
   get     'users/:id/messages'  => 'users#showMatchMsgs', :as => :user_match_msg
   get     'users/:ids/groupsMessages' =>  'users#showGroupMsgs', :as => :group_msgs
   post    "users/:id/createChat" => 'users#createChat', :as => :create_chat

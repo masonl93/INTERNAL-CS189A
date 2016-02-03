@@ -2,4 +2,3 @@ log/
 tmp/**/*
 .idea
 config/initializers/omniauth.rb
-db/development.sqlite3

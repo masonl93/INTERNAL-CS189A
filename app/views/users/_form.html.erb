@@ -69,11 +69,25 @@
         </label>
       </div>
     </div>
+    
+    <div class="form-group legendary osw">
+      <label class="col-md-4 control-label" for="checkboxes">Interest level:</label>
+      <div class="col-md-4">
+        <label class="checkbox-inline f1" for="checkboxes-i0">
+          <%= check_box_tag "interest_level", 'I just want to jam!' %> I just want to jam!
+        </label>
+        <label class="checkbox-inline f1" for="checkboxes-i1">
+          <%= check_box_tag "interest_level", 'I want to start a band!' %> I want to start a band!
+        </label>
+        <label class="checkbox-inline f1" for="checkboxes-i2">
+          <%= check_box_tag "interest_level", 'I\'m open to jamming and starting a band!' %> I'm open to both!          
+        </label>
+      </div>
+    </div>
 
     <div class="form-group legendary osw">
       <label class="col-md-4 control-label" for="textinput">Influence:</label>
       <div class="col-md-4">
-        <!-- <input id="textinput" name="textinput" type="text" placeholder="Enter your influences" class="form-control input-md"> -->
         <%= text_field_tag :influence, nil, placeholder: "Enter your influences here!", maxlength: 200, :size => 50, :required => true %>
       </div>
     </div>
@@ -81,7 +95,6 @@
     <div class="form-group legendary osw">
       <label class="col-md-4 control-label" for="textinput">Youtube URL:</label>
       <div class="col-md-4">
-        <!-- <input id="textinput" name="textinput" type="text" placeholder="Enter your influences" class="form-control input-md"> -->
         <%= text_field_tag :url, nil, placeholder: "Add some YouTube videos of you playing!", maxlength: 200, :size => 50, :required => true %>
       </div>
     </div>

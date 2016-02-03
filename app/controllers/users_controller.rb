@@ -25,6 +25,36 @@ class UsersController < ApplicationController
 
   def edit2
     @user = User.find(session[:user_id])
+    @user_instruments = [false, false, false, false, false]
+    @user_looking = [false, false, false, false, false]
+    @user.instruments.each do |i|
+      if i.play == true
+        if i.instrument == 'Guitar'
+          @user_instruments[0] = true
+        elsif i.instrument == 'Bass'
+          @user_instruments[1] = true
+        elsif i.instrument == 'Vocals'
+          @user_instruments[2] = true
+        elsif i.instrument == 'Drums'
+          @user_instruments[3] = true
+        elsif i.instrument == 'Keyboard'
+          @user_instruments[4] = true
+        end
+      elsif i.play == false   # User does not play but is searching for this instrument
+        if i.instrument == 'Guitar'
+          @user_looking[0] = true
+        elsif i.instrument == 'Bass'
+          @user_looking[1] = true
+        elsif i.instrument == 'Vocals'
+          @user_looking[2] = true
+        elsif i.instrument == 'Drums'
+          @user_looking[3] = true
+        elsif i.instrument == 'Keyboard'
+          @user_looking[4] = true
+        end
+      end
+    end
+
   end
 
   def update
@@ -51,7 +81,20 @@ class UsersController < ApplicationController
     influence = Influence.add(params)
     media = Medium.add(params)
     User.update_bio(session[:user_id], params[:bio])
+    User.update_interest_level(session[:user_id], params[:interest_level])
     redirect_to action: "show", id: session[:user_id]
+  end
+
+  def editSurvey
+
+    ### add logic here to edit the database
+    # from the new survey results
+
+    # add instruments
+    # delete unchecked instruments
+    #
+
+
   end
 
   # Finds a possible match for swiping
@@ -78,7 +121,52 @@ class UsersController < ApplicationController
     end
     # gone through all user options
     render "no_new_users"
+    redirect_to action: "testFindMatch"
   end
+
+  def testFindMatch
+    allU = User.all
+    closeU = [], elligibleU = []
+    myLookingForInstruments = [], myInstruments = [],  myGenres = []
+    sorted = Hash.new
+
+    #GET INSTRUMENTS CURRENT USER WANTS AND PLAYS
+    current_user.instruments.each do |inst|
+      if !inst.play
+        myLookingForInstruments.append(inst.instrument)
+      else
+        myInstruments.append(inst.instrument)
+      end
+    end
+
+    #GET GENRES CURRENT USER PLAYS
+    current_user.genres.each do |g|
+      myGenres.append(g.genre)
+    end
+
+    #START GETTING POINTS
+    allU.each do |user|
+      score = 0
+      userPlays = user.instruments.where("play = ?", true)
+      userWants = user.instruments.where("play = ?", false)
+      userGenre = user.genres
+
+      # 1. get points for instruments and experience
+      score += Matching.getInstrumentAndExperiencePoints(myLookingForInstruments, userPlays, myInstruments, userWants)
+
+      # 2. if score = 0, then not matchable, because no instruments match. if != 0, then proceed to get other points
+      if score != 0
+        # 3. get genre points
+        score += Matching.getGenrePoints(myGenres, userGenre)
+
+        # FINALLY add user and score to hash.
+        sorted[user.id.to_s] = score
+      end
+    end
+
+    @users = sorted.sort_by { |user, score| score}.reverse!
+  end
+
 
   # todo: notify user that a match occured and ask
   # if they want to continue looking for users or
@@ -145,21 +233,36 @@ class UsersController < ApplicationController
     end
   end
 
+  def showMsgList
+    @singleids = Set.new
+    @groupids = Set.new
+
+    singleChat = Chat.where('user_id = ? OR match_id = ?', current_user.id, current_user.id)
+    singleChat.each do |chat|
+      if chat.user_id == current_user.id
+        @singleids.add(chat.match_id)
+      else
+        @singleids.add(chat.user_id)
+      end
+    end
+
+    groupChat = Group.all
+    groupChat.each do |chat|
+      ids = chat.participants.split(",").map(&:to_i)
+      if ids.include? current_user.id
+        @groupids.add(ids)
+      end
+
+    end
+
+  end
+
   def showMatches
     #FOR PRODUCTION
-    @group = User.where('id = ? OR id = ? OR id = ? OR id = ?', 16, 17, 18, 19).order(:id)
+    #@group = User.where('id = ? OR id = ? OR id = ? OR id = ?', 16, 17, 18, 19).order(:id)
     @users = User.where('id != ?', current_user.id)
 
-    #FOR JUST THE DEMOOO
-    # if current_user.name == "Ringo Starr"
-    #   @users = User.where('name = ?', "John Lennon")
-    # elsif current_user.name == "John Lennon"
-    #   @users = User.where('name = ?', "Ringo Starr")
-    # else
-    #   @users = User.where('id != ?', current_user.id)
-    # end
 
-    #Chat.delete_all
   end
 
   def showMatchMsgs

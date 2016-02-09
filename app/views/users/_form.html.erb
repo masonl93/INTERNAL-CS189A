@@ -1,8 +1,17 @@
 <!-- this is actually the 'edit' page -->
 
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />
+<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="http://davidstutz.github.io/bootstrap-multiselect/dist/js/bootstrap-multiselect.js"></script>
+<link rel="stylesheet" href="http://davidstutz.github.io/bootstrap-multiselect/dist/css/bootstrap-multiselect.css" type="text/css"/>
+
+
 <div class="legendary osw">
   <legend>BASIC INFORMATION</legend>
 </div>
+
 
 <%= form_tag({controller: "users", action: "updateSurvey"}, method: "post", :class => "form-horizontal") do %>
 
@@ -52,16 +61,16 @@
     <div class="form-group legendary osw">
       <label class="col-md-4 control-label" for="checkboxes">Genres:</label>
       <div class="col-md-4">
-        <label class="checkbox-inline f1" for="checkboxes-a0">
-          <%= check_box_tag "genre[]", 'Rockabilly' %> Rockabilly
+        <label class="checkbox-inline f1" >
+          <%= check_box_tag "genre[]", 'Rockabilly' %> Rockabilly 
         </label>
-        <label class="checkbox-inline f1" for="checkboxes-a1">
+        <label class="checkbox-inline f1" >
           <%= check_box_tag "genre[]", 'Metalcore' %> Metalcore
         </label>
-        <label class="checkbox-inline f1" for="checkboxes-a2">
+        <label class="checkbox-inline f1" >
           <%= check_box_tag "genre[]", 'Future Bass' %> Future Bass
         </label>
-        <label class="checkbox-inline f1" for="checkboxes-a3">
+        <label class="checkbox-inline f1" >
           <%= check_box_tag "genre[]", 'Experimental' %> Experimental
         </label>
       </div>
@@ -70,13 +79,13 @@
     <div class="form-group legendary osw">
       <label class="col-md-4 control-label" for="checkboxes">Interest level:</label>
       <div class="col-md-4">
-        <label class="checkbox-inline f1" for="checkboxes-i0">
+        <label class="checkbox-inline f1" >
           <%= check_box_tag "interest_level", 'I just want to jam!' %> I just want to jam!
         </label>
-        <label class="checkbox-inline f1" for="checkboxes-i1">
+        <label class="checkbox-inline f1" >
           <%= check_box_tag "interest_level", 'I want to start a band!' %> I want to start a band!
         </label>
-        <label class="checkbox-inline f1" for="checkboxes-i2">
+        <label class="checkbox-inline f1" >
           <%= check_box_tag "interest_level", 'I\'m open to jamming and starting a band!' %> I'm open to both!          
         </label>
       </div>
@@ -113,4 +122,6 @@
 <% end %>
 
 </div>
+
+
 

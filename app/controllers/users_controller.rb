@@ -28,7 +28,6 @@ class UsersController < ApplicationController
     @user_instruments = [false, false, false, false, false]
     @user_looking = [false, false, false, false, false]
     @user_influence = Influence.where(session[:user_id])[0].influence
-    @user_media = Medium.where(session[:user_id])[0].url
     @user.instruments.each do |i|
       if i.play == true
         if i.instrument == 'Guitar'

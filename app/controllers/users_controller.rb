@@ -83,10 +83,12 @@ class UsersController < ApplicationController
     media = Medium.add(params)
     User.update_bio(session[:user_id], params[:bio])
     User.update_interest_level(session[:user_id], params[:interest_level])
+    User.update_radius(session[:user_id], params[:radius])
     redirect_to action: "show", id: session[:user_id]
   end
 
   def editSurvey
+    puts params
     params[:uid] = session[:user_id]
     uid = session[:user_id]
     user = User.find(session[:user_id])
@@ -105,6 +107,7 @@ class UsersController < ApplicationController
     Influence.add(params)
     User.update_bio(uid, params[:bio])
     User.update_interest_level(uid, params[:interest_level])
+    User.update_radius(uid, params[:radius])
     Medium.delete_all(uid)
     Medium.add(params)
     redirect_to action: "show", id: session[:user_id]

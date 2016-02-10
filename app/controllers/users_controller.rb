@@ -80,7 +80,13 @@ class UsersController < ApplicationController
       Genre.add(g, params[:uid])
     end
     influence = Influence.add(params)
-    media = Medium.add(params)
+    if params[:url] != ''
+      if params[:url].include? "youtube"
+        media = Medium.add(params, 'youtube')
+      elsif params[:url].include? "soundcloud"
+        media = Medium.add(params, 'soundcloud')
+      end
+    end
     User.update_bio(session[:user_id], params[:bio])
     User.update_interest_level(session[:user_id], params[:interest_level])
     redirect_to action: "show", id: session[:user_id]
@@ -105,8 +111,13 @@ class UsersController < ApplicationController
     Influence.add(params)
     User.update_bio(uid, params[:bio])
     User.update_interest_level(uid, params[:interest_level])
-    Medium.delete_all(uid)
-    Medium.add(params)
+    if params[:url] != ''
+      if params[:url].include? "youtube"
+        media = Medium.add(params, 'youtube')
+      elsif params[:url].include? "soundcloud"
+        media = Medium.add(params, 'soundcloud')
+      end
+    end
     redirect_to action: "show", id: session[:user_id]
   end
 

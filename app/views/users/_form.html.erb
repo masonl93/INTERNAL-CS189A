@@ -69,7 +69,7 @@
         </label>
       </div>
     </div>
-    
+
     <div class="form-group legendary osw">
       <label class="col-md-4 control-label" for="checkboxes">Interest level:</label>
       <div class="col-md-4">
@@ -80,7 +80,7 @@
           <%= check_box_tag "interest_level", 'I want to start a band!' %> I want to start a band!
         </label>
         <label class="checkbox-inline f1" for="checkboxes-i2">
-          <%= check_box_tag "interest_level", 'I\'m open to jamming and starting a band!' %> I'm open to both!          
+          <%= check_box_tag "interest_level", 'I\'m open to jamming and starting a band!' %> I'm open to both!
         </label>
       </div>
     </div>
@@ -103,6 +103,13 @@
       <label class="col-md-4 control-label" for="textinput">Bio:</label>
       <div class="col-md-4">
         <%= text_area_tag :bio, nil, placeholder: "Add a blurb about yourself!", :required =>true, cols: 49.8 %>
+      </div>
+    </div>
+
+    <div class="form-group legendary osw">
+      <label class="col-md-4 control-label" for="textinput">Radius:</label>
+      <div class="col-md-4">
+        <%= text_area_tag :radius, nil, placeholder: "Add a radius:", :required =>true, cols: 49.8 %>
       </div>
     </div>
 

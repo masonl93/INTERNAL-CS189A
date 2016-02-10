@@ -37,7 +37,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
   <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+
   <!-- Font Awesome Stylesheet -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
@@ -65,18 +67,25 @@
 		      
 		      <!--<li><a href="http://linkedin.com/in/StyxxC" class="icon fa-linkedin-square"><span class="label">LinkedIn</span></a></li> -->
           <% if current_user %>
+              <li>
+                <%= link_to messages_list_path(current_user.id), id: "icon" do %>
+                    <span class="fa fa-weixin fa-3x"></span>
+                <% end %>
+              </li>
             <li>
               <%= link_to user_matches_path(current_user.id), id: "icon" do %>
-                <span class="fa fa-weixin fa-2x"></span>
-                  <p>Messages</p>
-            <% end %>
-            </li>
-            <li>
-              <%= link_to findMatch_path, id: "icon" do %>
-                <span class="fa fa-search fa-2x"></span>
-                  <p>Search</p>
+
+                <span class="fa fa-users fa-3x"></span>
               <% end %>
             </li>
+            <li>
+              <%= link_to testFindMatch_path, id: "icon" do %>
+                <span class="fa fa-search fa-3x"></span>
+
+
+            <% end %>
+            </li>
+
             <% if filledSurveyPage %>
               <li>
                 <%= link_to user_path(current_user.id), id: "icon" do %>
@@ -119,12 +128,14 @@
   <% flash.each do |key, value| %>
       <div class="alert alert-info"><%= value %></div>
   <% end %>
-  
-  
+
+
+
   <%= yield %>
   <%= render 'layouts/footer' %>
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
   <script src="js/bootstrap.js"></script>
   
   <script type="text/javascript">

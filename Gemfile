@@ -62,8 +62,15 @@ gem 'omniauth-facebook'
 
 gem 'bootstrap-sass', '~> 3.3.5'
 
+gem 'soundcloud'
+
 # Databases for Active Record
 group :development do
   gem 'sqlite3'
 end
 
+group :production do
+  gem 'pg'                # Heroku uses PG database
+  gem 'rails_12factor'    # For heroku full functionality
+  gem 'puma'              # HTTP server able to handle more traffic
+end

@@ -1,19 +1,116 @@
-<h1>Update your profile</h1>
+<!-- this is actually the 'edit' page -->
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
-
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
-
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
-       
-      <%= f.label :bio %>
-      <%= f.text_field :bio, class: 'form-control' %>
-
-      <%= f.submit "Save changes", class: "btn btn-primary" %>
-    <% end %>
-  </div>
+<div class="legendary osw">
+  <legend>BASIC INFORMATION</legend>
 </div>
+
+<%= form_tag({controller: "users", action: "editSurvey"}, method: "post", :class => "form-horizontal") do %>
+
+    <div class="form-group legendary osw">
+      <label class="col-md-4 control-label" for="checkboxes">What instruments do you play?:</label>
+      <div class="col-md-4">
+        <label class="checkbox-inline f1" >
+          <%= check_box_tag "instrument[]", 'Guitar', checked=@user_instruments[0] %> Guitar <br><%= image_tag("instruments/guitar.png", alt: "Guitar", class: "img-circular invert") %>
+        </label>
+        <label class="checkbox-inline f1">
+          <%= check_box_tag "instrument[]", 'Bass' , checked=@user_instruments[1]%> Bass <br><%= image_tag("instruments/bass.png", alt: "Bass", class: "img-circular invert") %>
+        </label>
+        <label class="checkbox-inline f1" >
+          <%= check_box_tag "instrument[]", 'Vocals', checked=@user_instruments[2] %> Vocals <br><%= image_tag("instruments/vocals.png", alt: "Vocals", class: "img-circular invert") %>
+        </label>
+        <label class="checkbox-inline f1" >
+          <%= check_box_tag "instrument[]", 'Drums', checked=@user_instruments[3] %> Drums <br><%= image_tag("instruments/drums.png", alt: "Drums", class: "img-circular invert") %>
+        </label>
+        <label class="checkbox-inline f1" >
+          <%= check_box_tag "instrument[]", 'Keyboard', checked=@user_instruments[4] %> Keyboard <br><%= image_tag("instruments/keyboard.png", alt: "Keyboard", class: "img-circular invert") %>
+        </label>
+      </div>
+    </div>
+
+    <div class="form-group legendary osw">
+      <label class="col-md-4 control-label" for="checkboxes">Artists you are looking for:</label>
+      <div class="col-md-4">
+        <label class="checkbox-inline f1" >
+          <%= check_box_tag "looking[]", 'Guitar', checked=@user_looking[0] %> Guitar <br><%= image_tag("instruments/guitar.png", alt: "Guitar", class: "img-circular invert") %>
+        </label>
+        <label class="checkbox-inline f1" >
+          <%= check_box_tag "looking[]", 'Bass', checked=@user_looking[1] %> Bass <br><%= image_tag("instruments/bass.png", alt: "Bass", class: "img-circular invert") %>
+        </label>
+        <label class="checkbox-inline f1" >
+          <%= check_box_tag "looking[]", 'Vocals', checked=@user_looking[2] %> Vocals <br><%= image_tag("instruments/vocals.png", alt: "Vocals", class: "img-circular invert") %>
+        </label>
+        <label class="checkbox-inline f1" >
+          <%= check_box_tag "looking[]", 'Drums', checked=@user_looking[3] %> Drums <br><%= image_tag("instruments/drums.png", alt: "Drums", class: "img-circular invert") %>
+        </label>
+        <label class="checkbox-inline f1" >
+          <%= check_box_tag "looking[]", 'Keyboard', checked=@user_looking[4] %> Keyboard <br><%= image_tag("instruments/keyboard.png", alt: "Keyboard", class: "img-circular invert") %>
+        </label>
+      </div>
+    </div>
+
+
+    <div class="form-group legendary osw">
+      <label class="col-md-4 control-label" for="checkboxes">Genres:</label>
+      <div class="col-md-4">
+        <label class="checkbox-inline f1" for="checkboxes-a0">
+          <%= check_box_tag "genre[]", 'Rockabilly' %> Rockabilly
+        </label>
+        <label class="checkbox-inline f1" for="checkboxes-a1">
+          <%= check_box_tag "genre[]", 'Metalcore' %> Metalcore
+        </label>
+        <label class="checkbox-inline f1" for="checkboxes-a2">
+          <%= check_box_tag "genre[]", 'Future Bass' %> Future Bass
+        </label>
+        <label class="checkbox-inline f1" for="checkboxes-a3">
+          <%= check_box_tag "genre[]", 'Experimental' %> Experimental
+        </label>
+      </div>
+    </div>
+
+    <div class="form-group legendary osw">
+      <label class="col-md-4 control-label" for="checkboxes">Interest level:</label>
+      <div class="col-md-4">
+        <label class="checkbox-inline f1" for="checkboxes-i0">
+          <%= check_box_tag "interest_level", 'I just want to jam!' %> I just want to jam!
+        </label>
+        <label class="checkbox-inline f1" for="checkboxes-i1">
+          <%= check_box_tag "interest_level", 'I want to start a band!' %> I want to start a band!
+        </label>
+        <label class="checkbox-inline f1" for="checkboxes-i2">
+          <%= check_box_tag "interest_level", 'I\'m open to jamming and starting a band!' %> I'm open to both!
+        </label>
+      </div>
+    </div>
+
+    <div class="form-group legendary osw">
+      <label class="col-md-4 control-label" for="textinput">Influence:</label>
+      <div class="col-md-4">
+        <%= text_field_tag :influence, nil, placeholder: "Enter your influences here!", maxlength: 200, :size => 50, :required => true %>
+      </div>
+    </div>
+
+    <div class="form-group legendary osw">
+      <label class="col-md-4 control-label" for="textinput">Youtube URL:</label>
+      <div class="col-md-4">
+        <%= text_field_tag :url, nil, placeholder: "Add additional YouTube/Soundcloud links of you playing!", maxlength: 200, :size => 50, :required => true %>
+      </div>
+    </div>
+
+    <div class="form-group legendary osw">
+      <label class="col-md-4 control-label" for="textinput">Bio:</label>
+      <div class="col-md-4">
+        <%= text_area_tag :bio, @user.bio, :required =>true, cols: 49.8 %>
+      </div>
+    </div>
+
+    <div class="form-group legendary osw">
+      <label class="col-md-4 control-label" for="textinput"></label>
+      <div class="col-md-4">
+        <%= submit_tag "Continue" %>
+      </div>
+    </div>
+
+<% end %>
+
+</div>
+

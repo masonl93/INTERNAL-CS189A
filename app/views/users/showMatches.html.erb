@@ -1,35 +1,5 @@
 
 
-<div class="media">
-  <div class="media-left">
-    <a href="#">
-      <img class="media-object" src="<%= @group.first!.image %>" alt="...">
-    </a>
-  </div>
-  <div class="media-body">
-    <h4 class="media-heading">
-      <%= @group[0].name%>
-      <% len = @group.length - 1 %>
-      <% for i in 1..len %>
-          <% unless  @group[i].id == current_user.id%>
-              <%=", " + @group[i].name%>
-          <% end %>
-      <% end %>
-
-      <!--VERRRYYY IMPORTANTTT!-->
-      <%# @group.push(current_user).sort_by { |user| user[:id]}%>
-      <% @group.sort_by { |user| user[:id]}%>
-      <%groupid = @group[0].id.to_s%>
-      <% len = @group.length - 1 %>
-      <% for i in 1..len %>
-          <%groupid = groupid + "," + @group[i].id.to_s%>
-      <% end %>
-      <%#= groupid %>
-    </h4>
-    <%= link_to "MESSAGES", group_msgs_path(groupid) %>
-  </div>
-</div>
-
 
 <% @users.each do |user| %>
 

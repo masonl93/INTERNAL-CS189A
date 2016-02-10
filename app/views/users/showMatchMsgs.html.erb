@@ -1,23 +1,4 @@
-<script>
-  $(document).on('page:before-unload', function() {
-    clearInterval(refreshId);
-  });
-  window.refreshId = setInterval(function() {
-    function call() {
-      req = $.ajax({
-        url: "/users/<%= @match.id %>/messages",
-        success: function (result) {
-          //response = $($.parseHTML(result)).filter("#msgList");
-          response = $(result).find('#msgList').html();
-          $('#msgList').html(response);
-          console.log(response);
-        }
-      });
-    }
-    call();
-  }, 2000);
 
-</script>
 
 
 <% if current_user %>
@@ -39,6 +20,36 @@
   </div>
 </div>
 
+
+<script>
+//  $(document).on('page:load', function() {
+//    $('#chatBody').keydown(function(event) {
+//      if (event.keyCode == 13) {
+//        this.form.submit();
+//        return false;
+//      }
+//    });
+//  });
+
+  $(document).on('page:before-unload', function() {
+    clearInterval(refreshId);
+  });
+  window.refreshId = setInterval(function() {
+    function call() {
+      req = $.ajax({
+        url: "/users/<%= @match.id %>/messages",
+        success: function (result) {
+          //response = $($.parseHTML(result)).filter("#msgList");
+          response = $(result).find('#msgList').html();
+          $('#msgList').html(response);
+          console.log(response);
+        }
+      });
+    }
+    call();
+  }, 2000);
+
+</script>
 
 
 

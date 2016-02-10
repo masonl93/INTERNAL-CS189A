@@ -22,4 +22,30 @@ class Matching < ActiveRecord::Base
     )
   end
 
+  def self.getInstrumentAndExperiencePoints(myLookingForInstruments, userPlays,  myInstruments, userWants)
+    score = 0
+    userPlays.each do |inst|
+      if myLookingForInstruments.include? inst.instrument
+        score += 20
+        score += 5 * inst.experience
+      end
+    end
+
+    userWants.each do |inst|
+      if myInstruments.include? inst.instrument
+        score += 10
+      end
+    end
+    return score
+  end
+
+  def self.getGenrePoints(myGenres, userGenre)
+    score = 0
+    userGenre.each do |g|
+      if myGenres.include? g.genre
+        score += 15
+      end
+    end
+    return score
+  end
 end

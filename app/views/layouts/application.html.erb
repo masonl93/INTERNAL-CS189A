@@ -50,57 +50,64 @@
   
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-		      
-		      
-		      <!--<li><a href="http://linkedin.com/in/StyxxC" class="icon fa-linkedin-square"><span class="label">LinkedIn</span></a></li> -->
-          <% if current_user %>
-              <li>
-                <%= link_to messages_list_path(current_user.id), id: "icon" do %>
-                    <span class="fa fa-weixin fa-3x"></span>
-                <% end %>
-              </li>
-            <li>
-              <%= link_to user_matches_path(current_user.id), id: "icon" do %>
 
-                <span class="fa fa-users fa-3x"></span>
+          <% if current_user %>
+            <li> <!-- Messages -->
+              <%= link_to messages_list_path(current_user.id), id: "icon" do %>
+                <span class="fa fa-weixin fa-2x"></span>
+                <p>Messages</p>
               <% end %>
             </li>
-            <li>
+            <li> <!-- Matched page -->
+              <%= link_to user_matches_path(current_user.id), id: "icon" do %>
+                <span class="fa fa-users fa-2x"></span>
+                <p>Matches</p>
+              <% end %>
+            </li>
+            <li> <!-- Find Matches -->
               <%= link_to testFindMatch_path, id: "icon" do %>
-                <span class="fa fa-search fa-3x"></span>
-
-
+                <span class="fa fa-search fa-2x"></span>
+                <p>Find Matches</p>
             <% end %>
             </li>
 
             <% if filledSurveyPage %>
-              <li>
+              <li> <!-- Profile page -->
                 <%= link_to user_path(current_user.id), id: "icon" do %>
                   <span class="fa fa-user fa-2x"></span>
-                    <p>Profile</p>
+                  <p>Profile</p>
+                <% end %>
+              </li>
+              <li> <!-- Settings page -->
+                <%= link_to edit2_path, id: "icon" do %>
+                  <span class="fa fa-cog fa-2x"></span>
+                  <p>Update Profile</p>
                 <% end %>
               </li>
             <% else %> <!-- Survey page not done, route to survey page -->
-              <li>
+              <li> <!-- Profile page -->
                 <%= link_to edit_path, id: "icon" do %>
-                  <span class="fa fa-user-secret fa-2x"></span>
+                  <span class="fa fa-user fa-2x"></span>
+                  <p>Profile</p>
+                <% end %>
+              </li>
+              <li> <!-- Settings page -->
+                <%= link_to edit_path, id: "icon" do %>
+                  <span class="fa fa-cog fa-2x"></span>
+                  <p>Update Profile</p>
                 <% end %>
               </li>
 	          <% end %>
-	          <li> <!-- Settings page -->
-              <%= link_to edit2_path, id: "icon" do %>
-                <span class="fa fa-cog fa-2x"></span>
-                    <p>Update Profile</p>
-              <% end %>
-            </li>
-            <li>
+	          
+	          
+            <li> <!-- Signout method -->
               <%= link_to 'sign_out', method: :delete, id: "signout" do %>
                 <span class="fa fa-sign-out fa-2x"></span>
                   <p>Sign Out</p>
               <% end %>
             </li>
           <% else %>
-            <li>
+            <li> <!-- FB Login method -->
               <%= link_to "auth/facebook", id: "icon" do %>
                 <span class="fa fa-facebook-official fa-3x"></span> <br>
                 Login

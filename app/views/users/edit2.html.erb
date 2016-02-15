@@ -102,6 +102,13 @@
         <%= text_area_tag :bio, @user.bio, :required =>true, cols: 49.8 %>
       </div>
     </div>
+    
+    <div class="form-group legendary osw">
+      <label class="col-md-4 control-label" for="textinput">Radius:</label>
+      <div class="col-md-4">
+        <%= text_field_tag :radius, @user.radius, placeholder: "Between 10 to 100 miles", maxlength: 3, :size => 50, :required =>true%>
+      </div>
+    </div>
 
     <div class="form-group legendary osw">
       <label class="col-md-4 control-label" for="textinput"></label>

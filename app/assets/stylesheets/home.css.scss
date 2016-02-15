@@ -60,30 +60,22 @@ p {
 
 #logo {
     float: left;
-    margin-right: 10px;
-    //font-size: 4.5em;
-    //color: #9400D3;    //dark violet
-    //text-transform: lowercase;
-    //letter-spacing: -1px;
-    //font-weight: bold;
-    //font-family: serif;
+    height: 100px;
+    line-height: 100px;
 }
 
-/* Only for text logo
-#logo:hover {
-    //color: #fff;
-    font-style: italic;
-    text-transform: lowercase;
+#logo img {
+    vertical-align: middle;
 }
-*/
+
 
 #icon {
     float: right;
     font-size: 1.5em;
     //padding-top: 20%;
-    padding-top: 35px;
-    font-weight: bold;
-    text-align: justify;
+    //padding-top: 35px;
+    //font-weight: bold;
+    //text-align: justify;
 }
 
 #icon:hover {
@@ -94,8 +86,9 @@ p {
     float: right;
     font-size: 1.5em;
     font-weight: bold;
-    padding-top: 35px;
+    //padding-top: 35px;
     //padding-top: 39%;
+    vertical-align: middle;
 }
 
 

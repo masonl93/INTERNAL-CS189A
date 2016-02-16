@@ -79,7 +79,7 @@
         </label>
       </div>
     </div>
-    
+
     <div class="form-group legendary osw">
       <label class="col-md-4 control-label" for="checkboxes">Interest level:</label>
       <div class="col-md-4">
@@ -89,8 +89,10 @@
         <label class="f3">
           <%= radio_button_tag "interest_level", 'I want to start a band!' %> I want to start a band!
         </label>
+
         <label class="f3">
           <%= radio_button_tag "interest_level", 'I\'m open to jamming and starting a band!' %> I'm open to both!     
+
         </label>
       </div>
     </div>
@@ -98,14 +100,14 @@
     <div class="form-group legendary osw">
       <label class="col-md-4 control-label" for="textinput">Influence:</label>
       <div class="col-md-4">
-        <%= text_field_tag :influence, nil, placeholder: "Enter your influences here!", maxlength: 200, :size => 50, :required => true %>
+        <%= text_field_tag :influence, nil, placeholder: "Enter your influences here! (seperated by commas)", maxlength: 200, :size => 50, :required => true %>
       </div>
     </div>
 
     <div class="form-group legendary osw">
-      <label class="col-md-4 control-label" for="textinput">Youtube URL:</label>
+      <label class="col-md-4 control-label" for="textinput">Personal Media URL:</label>
       <div class="col-md-4">
-        <%= text_field_tag :url, nil, placeholder: "Add a YouTube/Soundcloud link of you playing!", maxlength: 200, :size => 50, :required => false %>
+        <%= text_field_tag :url, nil, placeholder: "Add a YouTube/Soundcloud link of you playing!", maxlength: 200, :size => 75, :required => false %>
       </div>
     </div>
 
@@ -113,6 +115,13 @@
       <label class="col-md-4 control-label" for="textinput">Bio:</label>
       <div class="col-md-4">
         <%= text_area_tag :bio, nil, placeholder: "Add a blurb about yourself!", :required =>true, cols: 49.8 %>
+      </div>
+    </div>
+
+    <div class="form-group legendary osw">
+      <label class="col-md-4 control-label" for="textinput">Radius:</label>
+      <div class="col-md-4">
+        <%= text_field_tag :radius, nil, placeholder: "Between 10 to 100 miles", maxlength: 3, :size => 50, :required =>true%>
       </div>
     </div>
 

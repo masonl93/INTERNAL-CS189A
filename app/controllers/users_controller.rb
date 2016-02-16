@@ -27,8 +27,6 @@ class UsersController < ApplicationController
     @user = User.find(session[:user_id])
     @user_instruments = [false, false, false, false, false]
     @user_looking = [false, false, false, false, false]
-    @user_influence = Influence.where(session[:user_id])[0].influence
-    @user_media = Medium.where(session[:user_id])[0].url
     @user.instruments.each do |i|
       if i.play == true
         if i.instrument == 'Guitar'
@@ -79,7 +77,10 @@ class UsersController < ApplicationController
     params[:genre].each do |g|
       Genre.add(g, params[:uid])
     end
-    influence = Influence.add(params)
+    influences = params[:influence].split(',')
+    influences.each do |i|
+      Influence.add(i, params[:uid])
+    end
     if params[:url] != ''
       if params[:url].include? "youtube"
         media = Medium.add(params, 'youtube')
@@ -89,10 +90,12 @@ class UsersController < ApplicationController
     end
     User.update_bio(session[:user_id], params[:bio])
     User.update_interest_level(session[:user_id], params[:interest_level])
+    User.update_radius(session[:user_id], params[:radius])
     redirect_to action: "show", id: session[:user_id]
   end
 
   def editSurvey
+    puts params
     params[:uid] = session[:user_id]
     uid = session[:user_id]
     user = User.find(session[:user_id])
@@ -107,10 +110,16 @@ class UsersController < ApplicationController
     params[:genre].each do |g|
       Genre.add(g, uid)
     end
-    Influence.delete_all(uid)
-    Influence.add(params)
+    influences = params[:influence].split(',')
+    influences.each do |i|
+      Influence.add(i, params[:uid])
+    end
     User.update_bio(uid, params[:bio])
     User.update_interest_level(uid, params[:interest_level])
+    User.update_radius(uid, params[:radius])
+    Medium.delete_all(uid)
+    Medium.add(params)
+
     if params[:url] != ''
       if params[:url].include? "youtube"
         media = Medium.add(params, 'youtube')
@@ -118,6 +127,7 @@ class UsersController < ApplicationController
         media = Medium.add(params, 'soundcloud')
       end
     end
+
     redirect_to action: "show", id: session[:user_id]
   end
 

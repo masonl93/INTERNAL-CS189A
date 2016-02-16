@@ -187,6 +187,10 @@ input[type=checkbox] + label {
   text-align: center;
 }
 
+.f3 {
+  text-align: center;
+}
+
 .osw {
   font-family: 'Oswald', sans-serif;
 }
@@ -197,4 +201,13 @@ textarea {
 
 p.navtext {
   padding-left: 100px;
+}
+
+// remove default bolding from label
+label {
+    font-weight: normal !important;
+}
+
+input[type="radio"]{
+  margin: 0 10px 0 10px;
 }

@@ -1,3 +1,6 @@
+require 'json'
+require 'open-uri'
+
 class UsersController < ApplicationController
   protect_from_forgery except: [:showMatchMsgs, :save_user_location]
 
@@ -79,7 +82,8 @@ class UsersController < ApplicationController
     end
     influences = params[:influence].split(',')
     influences.each do |i|
-      Influence.add(i, params[:uid])
+      genres = get_genre_from_influence(i)
+      Influence.add(i, params[:uid], genres)
     end
     if params[:url] != ''
       if params[:url].include? "youtube"
@@ -101,7 +105,7 @@ class UsersController < ApplicationController
     user = User.find(session[:user_id])
     Instrument.delete_all(uid)
     params[:instrument].each do |i|
-      Instrument.add(i, 1, 1, uid)   # todo: replace paramas with real values for experience and plays
+      Instrument.add(i, 1, 1, uid)   # todo: replace params with real values for experience and plays
     end
     params[:looking].each do |l|
       Instrument.add(l, 1, 0, uid)
@@ -112,13 +116,13 @@ class UsersController < ApplicationController
     end
     influences = params[:influence].split(',')
     influences.each do |i|
-      Influence.add(i, params[:uid])
+      genres = get_genre_from_influence(i)
+      Influence.add(i, params[:uid], genres)
     end
     User.update_bio(uid, params[:bio])
     User.update_interest_level(uid, params[:interest_level])
     User.update_radius(uid, params[:radius])
     Medium.delete_all(uid)
-    Medium.add(params)
 
     if params[:url] != ''
       if params[:url].include? "youtube"
@@ -386,6 +390,25 @@ class UsersController < ApplicationController
 
   def user_location_params
     params.permit(:lat,:long)
+  end
+
+  # Function for getting genres from influences from EchoNest music api
+  def get_genre_from_influence(influence)
+    genres = ''
+    influence = URI.encode(influence)
+    echo_key = "HERVF6HKUVVUHY7EW"
+    echonest_url = "http://developer.echonest.com/api/v4/artist/profile?api_key=" + echo_key + "&name=" + influence + "&bucket=genre&format=json"
+    json_obj = JSON.parse(open(echonest_url).read)
+    if json_obj['response']['status']['code'] == 0
+      json_obj['response']['artist']['genres'].each do |genre|
+        if genres == ''
+          genres = genre['name']
+        else
+          genres = genres + ',' + genre['name']
+        end
+      end
+    end
+    return genres
   end
 
 end

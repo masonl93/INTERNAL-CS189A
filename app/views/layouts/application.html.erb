@@ -62,6 +62,12 @@
                 <span class="fa fa-weixin fa-2x" align="center"><br><font size="5" face="Impact">Messages</font></span>  
               <% end %>
             </li>
+
+              <li> <!-- Events -->
+                <%= link_to events_path, id: "icon" do %>
+                    <span class="fa fa-calendar fa-2x" align="center"><br><font size="5" face="Impact">Events</font></span>
+                <% end %>
+              </li>
             
             <li> <!-- Matched page -->
               <%= link_to user_matches_path(current_user.id), id: "icon" do %>

@@ -305,10 +305,22 @@ class UsersController < ApplicationController
 
   def get_local_events
     @user = User.find(session[:user_id])
+    @events_title = []
+    @events_descript = []
+    @events_url = []
+    @events_time = []
+    @events_venue = []
     eventful_key = "NVkK26nn5QQPffwS"
     eventful_url = "http://api.eventful.com/json/events/search?app_key=" + eventful_key + "&location=" + (@user.lat).to_s + ',' + (@user.long).to_s + "&within=50&sort_order=date&date=Future&category=music"
     json_obj = JSON.parse(open(eventful_url).read)
     @num_of_events = json_obj['page_size']
+    json_obj['events']['event'].each do |e|
+      @events_title << e["title"]
+      @events_descript << e["description"]
+      @events_url << e["url"]
+      @events_time << e["start_time"]
+      @events_venue << e["venue_name"]
+    end
     render "show_local_events"
   end
 

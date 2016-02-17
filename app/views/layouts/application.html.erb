@@ -8,6 +8,20 @@
   
   <script src="../javascripts/jquery.js"></script>
   <script src="../javascripts/scripts.js"></script>
+  <!-- Include jQuery library using a CDN -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  
+  <!-- Select2 -->
+  <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" rel="stylesheet" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
+  
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />
+  <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="http://davidstutz.github.io/bootstrap-multiselect/dist/js/bootstrap-multiselect.js"></script>
+  <link rel="stylesheet" href="http://davidstutz.github.io/bootstrap-multiselect/dist/css/bootstrap-multiselect.css" type="text/css"/>
+
 
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
@@ -45,21 +59,22 @@
         </button>
 
         
-        <%= link_to image_tag("mezzo_title_logo.png"), root_path, id: "logo"%>
+        <%= link_to image_tag("mezzo_title_logo.png"), root_path, id: "logo" %>
+
       </div>
   
   
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="collapse navbar-collapse osw" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <% if current_user %>
-            <li> <!-- Find Matches -->
+            <li class="osw"> <!-- Find Matches -->
               <%= link_to testFindMatch_path, id: "icon" do %>
-                <span class="fa fa-search fa-2x" align="center"><br><font size="5" face="Impact">Find Matches</font></span>
+                <span class="fa fa-search fa-2x" align="center"><div class="osw">Find Matches</div></span>
             <% end %>
             </li>
-            <li> <!-- Messages -->
+            <li class="osw"> <!-- Messages -->
               <%= link_to messages_list_path(current_user.id), id: "icon" do %>
-                <span class="fa fa-weixin fa-2x" align="center"><br><font size="5" face="Impact">Messages</font></span>  
+                <span class="fa fa-weixin fa-2x" align="center"><div class="osw">Messages</div></span> 
               <% end %>
             </li>
 
@@ -69,45 +84,45 @@
                 <% end %>
               </li>
             
-            <li> <!-- Matched page -->
+            <li class="osw"> <!-- Matched page -->
               <%= link_to user_matches_path(current_user.id), id: "icon" do %>
-                <span class="fa fa-users fa-2x" align="center"><br><font size="5" face="Impact">Matches</font></span>
+                <span class="fa fa-users fa-2x" align="center"><div class="osw">Matches</div></span>
               <% end %>
             </li>
             
             <% if filledSurveyPage %>
-              <li> <!-- Profile page -->
+              <li class="osw"> <!-- Profile page -->
                 <%= link_to user_path(current_user.id), id: "icon" do %>
-                  <span class="fa fa-user fa-2x" align="center"><br><font size="5" face="Impact">Profile</font></span>
+                  <span class="fa fa-user fa-2x" align="center"><div class="osw">Profile</div></span> 
                 <% end %>
               </li>
-              <li> <!-- Settings page -->
+              <li class="osw"> <!-- Settings page -->
                 <%= link_to edit2_path, id: "icon" do %>
-                  <span class="fa fa-cog fa-2x" align="center"><br><font size="5" face="Impact">Settings</font></span>
+                  <span class="fa fa-cog fa-2x" align="center"><div class="osw">Settings</div></span>
                 <% end %>
               </li>
             <% else %> <!-- Survey page not done, route to survey page -->
-              <li> <!-- Profile page -->
+              <li class="osw"> <!-- Profile page -->
                 <%= link_to edit_path, id: "icon" do %>
-                  <span class="fa fa-user fa-2x" align="center"><br><font size="5" face="Impact">Profile</font></span>
+                  <span class="fa fa-user fa-2x" align="center"><div class="osw">Profile</div></span>
                 <% end %>
               </li>
-              <li> <!-- Settings page -->
+              <li class="osw"> <!-- Settings page -->
                 <%= link_to edit_path, id: "icon" do %>
-                  <span class="fa fa-cog fa-2x" align="center"><br><font size="5" face="Impact">Update Profile</font></span>
+                  <span class="fa fa-cog fa-2x" align="center"><div class="osw">Update Profile</div></span> 
                 <% end %>
               </li>
 	          <% end %>
 	          
-            <li> <!-- Signout method -->
+            <li class="osw"> <!-- Signout method -->
               <%= link_to 'sign_out', method: :delete, id: "signout" do %>
-                <span class="fa fa-sign-out fa-2x" align="center"><br><font size="5" face="Impact">Sign Out</font></span>
+                <span class="fa fa-sign-out fa-2x" align="center"><div class="osw">Sign Out</div></span>
               <% end %>
             </li>
           <% else%> <!-- No current user logged in -->
             <li> <!-- FB Login method -->
               <%= link_to "auth/facebook", id: "signin" do %>
-                <span class="fa fa-facebook-official fa-3x" align="center"><br><font size="6" face="Impact">Login</font></span>
+                <span class="fa fa-facebook-official fa-3x" align="center"><div class="osw">Login</div></span>
               <% end %>
             </li>
           <% end %>
@@ -127,6 +142,11 @@
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-
+  <script src="js/bootstrap.js"></script>
+  
+  <script type="text/javascript">
+    $('select').select2();
+  </script>
+  
   </body>
 </html>

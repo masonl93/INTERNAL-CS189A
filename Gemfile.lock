@@ -223,6 +223,3 @@ DEPENDENCIES
   tabulous
   turbolinks
   uglifier (>= 1.3.0)
-
-BUNDLED WITH
-   1.11.2

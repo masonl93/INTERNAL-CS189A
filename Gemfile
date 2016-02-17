@@ -8,6 +8,9 @@ gem 'layer-ruby', require: 'layer'
 gem 'acts-as-messageable'
 gem 'rails','4.2.2'
 
+# MATERIALIZE GEM
+# gem 'materialize-sass'
+
 # Use SCSS for stylesheets
 # gem 'sass-rails', '~> 4.0.0.rc2'
 # gem 'sass-rails', '~> 4.0.0'

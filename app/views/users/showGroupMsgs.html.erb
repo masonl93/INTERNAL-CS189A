@@ -22,7 +22,7 @@
 
 
 <% if current_user %>
-    <div class="page-header">
+    <div class="page-header osw">
       <h2>Messages with
         <%=@groupUsers[0].name%>
         <% len = @groupUsers.length - 1 %>
@@ -39,7 +39,7 @@
     nope
 <% end %>
 
-<div class="panel panel-default" id="comments">
+<div class="panel panel-default osw" id="comments">
   <div class="panel-body">
 
     <ul class="media-list" id="msgList">

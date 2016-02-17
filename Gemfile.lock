@@ -223,9 +223,3 @@ DEPENDENCIES
   tabulous
   turbolinks
   uglifier (>= 1.3.0)
-<<<<<<< HEAD
-=======
-
-BUNDLED WITH
-   1.11.2
->>>>>>> 34d25ca5792d57939726f0699503c518ccce96ab

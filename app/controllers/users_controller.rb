@@ -309,6 +309,8 @@ class UsersController < ApplicationController
     @events_descript = []
     @events_url = []
     @events_time = []
+    @events_month = []
+    @events_date = []
     @events_venue = []
     eventful_key = "NVkK26nn5QQPffwS"
     eventful_url = "http://api.eventful.com/json/events/search?app_key=" + eventful_key + "&location=" + (@user.lat).to_s + ',' + (@user.long).to_s + "&within=50&sort_order=date&date=Future&category=music"
@@ -318,7 +320,9 @@ class UsersController < ApplicationController
       @events_title << e["title"]
       @events_descript << e["description"]
       @events_url << e["url"]
-      @events_time << e["start_time"]
+      @events_time << e["start_time"]     # format = 2016-05-24 15:00:00
+      @events_date << e["start_time"].split("-")[2][0,2]
+      @events_month << get_month_name(e["start_time"].split("-")[1])
       @events_venue << e["venue_name"]
     end
     render "show_local_events"
@@ -432,5 +436,35 @@ class UsersController < ApplicationController
     return genres
   end
 
+  def get_month_name(num)
+    case num
+      when '01'
+        return "Jan"
+      when '02'
+        return "Feb"
+      when '03'
+        return "Mar"
+      when '04'
+        return "Apr"
+      when '05'
+        return "May"
+      when '06'
+        return "Jun"
+      when '07'
+        return "Jul"
+      when '08'
+        return "Aug"
+      when '09'
+        return "Sept"
+      when '10'
+        return "Oct"
+      when '11'
+        return "Nov"
+      when '12'
+        return "Dec"
+      else
+        return "Month"
+    end
+  end
 
 end

@@ -113,6 +113,7 @@ ActiveRecord::Schema.define(version: 20160216223419) do
     t.text     "bio"
     t.string   "interest_level"
     t.float    "radius"
+    t.integer  "user_likes"
   end
 
 end

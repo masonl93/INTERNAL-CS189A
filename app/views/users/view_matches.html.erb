@@ -1,7 +1,10 @@
 <ul class="matches">
   <% @matched_users.each do |user| %>
+  <%# @matches.each do |m| %>
       <li>
-        <%= user.name %>
+        <%= user.name %> 
       </li>
   <% end %>
+  
+  <%= @statuses %>
 </ul>

@@ -36,7 +36,7 @@ class User < ActiveRecord::Base
     user.save
   end
 
-  def getDistance(loc1, loc2)
+  def self.getDistance(loc1, loc2)
     rad_per_deg = Math::PI/180  # PI / 180
     rkm = 6371                  # Earth radius in kilometers
     rm = rkm * 1000             # Radius in meters

@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   protect_from_forgery except: :showMatchMsgs
 
+  @neo = Neography::Rest.new("http://neo4j:arbor94@localhost.com:7474")
+
   def index
 
   end
@@ -147,21 +149,29 @@ class UsersController < ApplicationController
     #START GETTING POINTS
     allU.each do |user|
       score = 0
-      userPlays = user.instruments.where("play = ?", true)
-      userWants = user.instruments.where("play = ?", false)
-      userGenre = user.genres
+      #  FIRST CHECK TO SEE IF MATCH IS USER'S RADIUS
+      #if User.getDistance([current_user.lat, current_user.lon], [user.lat, user.lon]) <= current_user.radius
+        userPlays = user.instruments.where("play = ?", true)
+        userWants = user.instruments.where("play = ?", false)
+        userGenre = user.genres
 
-      # 1. get points for instruments and experience
-      score += Matching.getInstrumentAndExperiencePoints(myLookingForInstruments, userPlays, myInstruments, userWants)
+        # 1. get points for instruments and experience
+        score += Matching.getInstrumentAndExperiencePoints(myLookingForInstruments, userPlays, myInstruments, userWants)
 
-      # 2. if score = 0, then not matchable, because no instruments match. if != 0, then proceed to get other points
-      if score != 0
-        # 3. get genre points
-        score += Matching.getGenrePoints(myGenres, userGenre)
+        # 2. if score = 0, then not matchable, because no instruments match. if != 0, then proceed to get other points
+        if score != 0
+          # 3. get genre points
+          score += Matching.getGenrePoints(myGenres, userGenre)
 
-        # FINALLY add user and score to hash.
-        sorted[user.id.to_s] = score
-      end
+          # 4. get influence points
+          #score += Matching.getInfluencePoints(current_user.influences, user.influences)
+          # 5. get profile likes points
+
+          # FINALLY add user and score to hash.
+          sorted[user.id.to_s] = score
+        end
+      #end
+
     end
 
     @users = sorted.sort_by { |user, score| score}.reverse!
@@ -260,8 +270,16 @@ class UsersController < ApplicationController
   def showMatches
     #FOR PRODUCTION
     #@group = User.where('id = ? OR id = ? OR id = ? OR id = ?', 16, 17, 18, 19).order(:id)
+    #@neo = Neography::Rest.new("http://neo4j:arbor94@localhost:7474")
+
+    # node1 = @neo.create_node("user_id" => 14, "name" => "Chris")
+    # node2 = @neo.create_node("user_id" => 16, "name" => "Alex")
+    # @neo.create_relationship("matched", node1, node2)
+    #@neo.find_node_index_by_key_value()
+    #Neography::Node.find
     @users = User.where('id != ?', current_user.id)
 
+    #var peer = new Peer({key: 'zyjq7np7zz8y3nmi'});
 
   end
 

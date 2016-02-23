@@ -1,6 +1,5 @@
 
 
-
 <% @users.each do |user| %>
 
     <div class="media">
@@ -13,6 +12,127 @@
 
         <h4 class="media-heading"><%= link_to user.name, user_path(user.id) %></h4>
         <%= link_to "MESSAGES", user_match_msg_path(user.id) %>
+        <a hfef="#" class="video">VIDEO</a>
       </div>
     </div>
 <% end %>
+<button id="close">CLOSE</button>
+<video id = "forVid" style="position:absolute; top:0; left:50;" autoplay="true"></video>
+
+<script>
+  //$(document).on('page:change', function() {
+  //var peer = new Peer(<%= current_user.id %>, {key: 'zyjq7np7zz8y3nmi'});
+  navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia  || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+
+
+  var myS;
+  var peerS;
+
+  $('#close').click(function() {
+    if(myS) {
+      myS.getTracks().forEach(function (track) { track.stop(); });
+    }
+    else if(peerS) {
+      peerS.getTracks().forEach(function (track) { track.stop(); });
+    }
+  });
+  var peer = new Peer(<%= current_user.id %>, {key: 'zu91znea6dzk6gvi'});
+  peer.on('open', function(id) {
+    console.log('My peer ID is: ' + id);
+  });
+
+  peer.on('connection', function(conn) {
+    conn.on('open', function() {
+      console.log("connection recieved from " + conn.peer);
+
+      conn.on('data', function(data) {
+        console.log("Reciever recieved data", data);
+      });
+    });
+  });
+
+  var errorReturnStream = function() {
+    console.log("error returning stream.");
+  };
+
+  var errorSendStream = function() {
+    console.log("error sending stream.");
+  };
+  peer.on('call', function(call) {
+    console.log("getting call");
+    if(navigator.getUserMedia) {
+//      var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+//      p.then(function(myStream) {
+//        call.answer(myStream);
+//      });
+//      p.catch(function(err) { console.log(err.name); });
+      navigator.getUserMedia({audio: true, video:true}, function(myStream) {
+        peerS = myStream;
+        call.answer(myStream);
+        call.on('stream', function(remoteStream) {
+          console.log("remote stream returned");
+          $('#forVid').css({
+            'width' : '100%'
+          });
+          var video = document.querySelector('#forVid');
+          video.src = window.URL.createObjectURL(remoteStream);
+        });
+      }, function() {
+        console.log(" error return stream");
+      });
+    }
+
+  });
+
+
+  $('.video').click(function() {
+    if(navigator.getUserMedia) {
+      console.log("media exists");
+      navigator.getUserMedia({audio: true, video:true}, function(myStream) {
+        myS = myStream;
+        var call = peer.call(17, myStream);
+        call.on('stream', function(remoteStream) {
+          console.log("remote stream returned");
+          $('#forVid').css({
+            'width' : '100%'
+          });
+          var video = document.querySelector('#forVid');
+          video.src = window.URL.createObjectURL(remoteStream);
+        });
+      }, function() {
+        console.log("error send str");
+      });
+
+//      var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+//      p.then(function(myStream) {
+//        var call = peer.call(17, myStream);
+//        call.on('stream', function(remoteStream) {
+//          console.log("remote stream returned");
+//        });
+//      });
+//      p.catch(function(err) { console.log(err.name); });
+
+    }else {
+      console.log("no media");
+    }
+
+
+//    var connection = peer.connect(17);
+//    connection.on('open', function() {
+//      console.log("connection is opened by me with " + connection.peer);
+//
+//      connection.on('data', function(data) {
+//        console.log("recieved daata", data);
+//      });
+//
+//      connection.send("here is first data", function() {
+//        console.log("sent first data");
+//      });
+//    });
+
+
+  });
+
+  //});
+
+</script>

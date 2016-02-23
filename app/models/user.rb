@@ -30,6 +30,11 @@ class User < ActiveRecord::Base
     user.save
   end
 
+  def self.update_radius(uid, radius)
+    user = self.find(uid)
+    user.radius = radius
+    user.save
+  end
 
   def self.getDistance(loc1, loc2)
     rad_per_deg = Math::PI/180  # PI / 180
@@ -47,7 +52,7 @@ class User < ActiveRecord::Base
 
     return rm * c # Delta in meters
   end
-  
+
   # Add function to add interest_level
   def self.update_interest_level(uid, interest_level)
     user = self.find(uid)

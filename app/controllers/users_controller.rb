@@ -1,5 +1,8 @@
+require 'json'
+require 'open-uri'
+
 class UsersController < ApplicationController
-  protect_from_forgery except: :showMatchMsgs
+  protect_from_forgery except: [:showMatchMsgs, :save_user_location]
 
   @neo = Neography::Rest.new("http://neo4j:arbor94@localhost.com:7474")
 
@@ -23,8 +26,8 @@ class UsersController < ApplicationController
     @instruments = InstrumentChoice.all       # todo: add all instrument choices to this database
                                               # then have for loop creating checkboxes in _form.html.erb
   end
-  
-  
+
+
   def edit2
     @user = User.find(session[:user_id])
     @user_instruments = [false, false, false, false, false]
@@ -56,7 +59,6 @@ class UsersController < ApplicationController
         end
       end
     end
-
   end
 
   def update
@@ -80,23 +82,59 @@ class UsersController < ApplicationController
     params[:genre].each do |g|
       Genre.add(g, params[:uid])
     end
-    influence = Influence.add(params)
-    media = Medium.add(params)
+    influences = params[:influence].split(',')
+    influences.each do |i|
+      genres = get_genre_from_influence(i)
+      Influence.add(i, params[:uid], genres)
+    end
+    if params[:url] != ''
+      if params[:url].include? "youtube"
+        media = Medium.add(params, 'youtube')
+      elsif params[:url].include? "soundcloud"
+        media = Medium.add(params, 'soundcloud')
+      end
+    end
     User.update_bio(session[:user_id], params[:bio])
     User.update_interest_level(session[:user_id], params[:interest_level])
+    User.update_radius(session[:user_id], params[:radius])
     redirect_to action: "show", id: session[:user_id]
   end
 
   def editSurvey
+    puts params
+    params[:uid] = session[:user_id]
+    uid = session[:user_id]
+    user = User.find(session[:user_id])
+    Instrument.delete_all(uid)
+    params[:instrument].each do |i|
+      Instrument.add(i, 1, 1, uid)   # todo: replace params with real values for experience and plays
+    end
+    params[:looking].each do |l|
+      Instrument.add(l, 1, 0, uid)
+    end
+    Genre.delete_all(uid)
+    params[:genre].each do |g|
+      Genre.add(g, uid)
+    end
+    influences = params[:influence].split(',')
+    influences.each do |i|
+      genres = get_genre_from_influence(i)
+      Influence.add(i, params[:uid], genres)
+    end
+    User.update_bio(uid, params[:bio])
+    User.update_interest_level(uid, params[:interest_level])
+    User.update_radius(uid, params[:radius])
+    Medium.delete_all(uid)
 
-    ### add logic here to edit the database
-    # from the new survey results
+    if params[:url] != ''
+      if params[:url].include? "youtube"
+        media = Medium.add(params, 'youtube')
+      elsif params[:url].include? "soundcloud"
+        media = Medium.add(params, 'soundcloud')
+      end
+    end
 
-    # add instruments
-    # delete unchecked instruments
-    #
-
-
+    redirect_to action: "show", id: session[:user_id]
   end
 
   # Finds a possible match for swiping
@@ -283,6 +321,31 @@ class UsersController < ApplicationController
 
   end
 
+  def get_local_events
+    @user = User.find(session[:user_id])
+    @events_title = []
+    @events_descript = []
+    @events_url = []
+    @events_time = []
+    @events_month = []
+    @events_date = []
+    @events_venue = []
+    eventful_key = "NVkK26nn5QQPffwS"
+    eventful_url = "http://api.eventful.com/json/events/search?app_key=" + eventful_key + "&location=" + (@user.lat).to_s + ',' + (@user.long).to_s + "&within=50&sort_order=date&date=Future&category=music"
+    json_obj = JSON.parse(open(eventful_url).read)
+    @num_of_events = json_obj['page_size']
+    json_obj['events']['event'].each do |e|
+      @events_title << e["title"]
+      @events_descript << e["description"]
+      @events_url << e["url"]
+      @events_time << e["start_time"]     # format = 2016-05-24 15:00:00
+      @events_date << e["start_time"].split("-")[2][0,2]
+      @events_month << get_month_name(e["start_time"].split("-")[1])
+      @events_venue << e["venue_name"]
+    end
+    render "show_local_events"
+  end
+
   def showMatchMsgs
     @chat = Chat.new
     @match = User.find(params[:id])
@@ -349,6 +412,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def save_user_location
+   current_user.update_attributes!(user_location_params)
+   head :ok
+  end
+
   def destroy
 
   end
@@ -363,6 +431,58 @@ class UsersController < ApplicationController
     params.require(:group).permit(:body, :participants)
   end
 
+  def user_location_params
+    params.permit(:lat,:long)
+  end
+
+  # Function for getting genres from influences from EchoNest music api
+  def get_genre_from_influence(influence)
+    genres = ''
+    influence = URI.encode(influence)
+    echo_key = "HERVF6HKUVVUHY7EW"
+    echonest_url = "http://developer.echonest.com/api/v4/artist/profile?api_key=" + echo_key + "&name=" + influence + "&bucket=genre&format=json"
+    json_obj = JSON.parse(open(echonest_url).read)
+    if json_obj['response']['status']['code'] == 0
+      json_obj['response']['artist']['genres'].each do |genre|
+        if genres == ''
+          genres = genre['name']
+        else
+          genres = genres + ',' + genre['name']
+        end
+      end
+    end
+    return genres
+  end
+
+  def get_month_name(num)
+    case num
+      when '01'
+        return "Jan"
+      when '02'
+        return "Feb"
+      when '03'
+        return "Mar"
+      when '04'
+        return "Apr"
+      when '05'
+        return "May"
+      when '06'
+        return "Jun"
+      when '07'
+        return "Jul"
+      when '08'
+        return "Aug"
+      when '09'
+        return "Sept"
+      when '10'
+        return "Oct"
+      when '11'
+        return "Nov"
+      when '12'
+        return "Dec"
+      else
+        return "Month"
+    end
+  end
+
 end
-
-

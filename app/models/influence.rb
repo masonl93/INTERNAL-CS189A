@@ -1,10 +1,11 @@
 class Influence < ActiveRecord::Base
   belongs_to :user
 
-  def self.add(data_influence)
+  def self.add(i, uid, genres)
     create(
-        influence: data_influence['influence'],
-        user_id: data_influence['uid'],
+        influence: i,
+        user_id: uid,
+        genres: genres,
     )
   end
 

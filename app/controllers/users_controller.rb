@@ -149,19 +149,23 @@ class UsersController < ApplicationController
       if (!Matching.matchExists(@user.uid, me.uid) && !Matching.matchExists(me.uid, @user.uid) && @user.uid != me.uid)
         @userMatch = Matching.createMatch(@user.uid, me.uid)    # Creates the match in the database
         return
-        # Checks if user has already reviewed and waiting on me
-        # If match exists and the other user has already liked/disliked
-        # me (hence status =1 or =-1), then me gets to like/dislike user
+      # Checks if user has already reviewed and waiting on me
+      # If match exists and the other user has already liked/disliked
+      # me (hence status =1 or =-1), then me gets to like/dislike user
+      # or if match only has been initialized (status =0)
+      
+      ## Currently broken
       elsif Matching.matchExists(me.uid, @user.uid)
         @the_match = Matching.where(:user1 => me.uid).where(:user2 => @user.uid).first()
-        if (@the_match[:status] == 1 || @the_match[:status] == -1)
+        if (@the_match[:status] == 1 || @the_match[:status] == -1 || @the_match[:status] == 0)
+        #if (@the_match[:status] != 0)     # != 0 and = 0 both return no more matches
           return
         end
       end
     end
     # gone through all user options
     render "no_new_users"
-    redirect_to action: "testFindMatch"
+    #redirect_to action: "testFindMatch"
   end
 
   def testFindMatch
@@ -269,15 +273,19 @@ class UsersController < ApplicationController
 
   def view_matches
     me = User.find(session[:user_id])
-    @matches = Matching.where("(user1 = ? OR user2 = ?) AND status = ?", me.uid, me.uid, 2)
+    #@matches = Matching.where("(user1 = ? OR user2 = ?) AND status = ?", me.uid, me.uid, 2)
+    @matches = Matching.where('user1 = ? OR user2 = ?', me.uid, me.uid)
     @matched_users = []
+    @statuses = []
     @matches.each do |match|
       if match.user1 == me.uid
         user = User.where(:uid => match.user2).first()
       else
         user = User.where(:uid => match.user1).first()
       end
+        status = match.status
       @matched_users << user
+      @statuses << status
     end
   end
 
@@ -318,6 +326,7 @@ class UsersController < ApplicationController
     @users = User.where('id != ?', current_user.id)
 
     #var peer = new Peer({key: 'zyjq7np7zz8y3nmi'});
+
 
   end
 

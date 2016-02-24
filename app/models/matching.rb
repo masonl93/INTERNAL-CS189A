@@ -9,6 +9,15 @@ class Matching < ActiveRecord::Base
       return false
     end
   end
+  
+  def self.getMatch(user_1, user_2)
+    if exists?(user1: user_1, user2: user_2)
+      return self
+    else
+      return NULL
+    end
+    
+  end
 
   def self.createMatch(user_1, user_2)
     # User 2 created match, first user to like/dislike other user

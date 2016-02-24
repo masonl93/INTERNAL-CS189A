@@ -129,12 +129,12 @@ GEM
     omniauth-oauth2 (1.4.0)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
-<<<<<<< HEAD
+
     os (0.9.6)
-=======
+
     pg (0.18.4)
     puma (2.16.0)
->>>>>>> c61d295f1abd1246e3785953bf6549445ebc6b84
+
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)

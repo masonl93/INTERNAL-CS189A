@@ -13,7 +13,8 @@
               <div class="info">
                 <h2 class="title"><%= event[0] %></h2>
                 <p class="desc"><%= event[1] %></p>
-                <p class="url"><%= event[5] %></p>
+                <!--<p class="url"><%= event[5] %></p>-->
+                <p class="url"><a href=<%= event[5] %> title="Go To Site"><%= event[5] %></a></p>
               </div>
             </li>
         <% end %>

@@ -382,8 +382,8 @@ class UsersController < ApplicationController
   end
 
   def create_event
-    puts params
-    Event.add(session[:user_id], params[:title], params[:date], params[:descript], params[:link], params[:location])
+    date_time_format = params[:date] + ' ' + params[:time]  #yyyy:mm:dd time
+    Event.add(session[:user_id], params[:title], date_time_format, params[:descript], params[:link], params[:location])
     redirect_to action: "get_local_events"
   end
 

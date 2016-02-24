@@ -312,6 +312,15 @@ class UsersController < ApplicationController
     @events_month = []
     @events_date = []
     @events_venue = []
+
+    @user_title = []
+    @user_descript = []
+    @user_url = []
+    @user_time = []
+    @user_month = []
+    @user_date = []
+    @user_venue = []
+
     eventful_key = "NVkK26nn5QQPffwS"
     eventful_url = "http://api.eventful.com/json/events/search?app_key=" + eventful_key + "&location=" + (@user.lat).to_s + ',' + (@user.long).to_s + "&within=50&sort_order=date&date=Future&category=music"
     json_obj = JSON.parse(open(eventful_url).read)
@@ -325,7 +334,30 @@ class UsersController < ApplicationController
       @events_month << get_month_name(e["start_time"].split("-")[1])
       @events_venue << e["venue_name"]
     end
+
+    #user events
+    @user_events = Event.all
+    @user_events.each do |e|
+      @user_title << e.title
+      @user_descript << e.description
+      @user_url << e.url
+      @user_time << e.date.split(" ")[1]
+      @user_month << get_month_name(e.date.split("-")[1])
+      @user_date << e.date.split("-")[2][0,2]
+      @user_venue << e.location
+    end
+
     render "show_local_events"
+  end
+
+  def add_event
+    @user = User.find(session[:user_id])
+  end
+
+  def create_event
+    puts params
+    Event.add(session[:user_id], params[:title], params[:date], params[:descript], params[:link], params[:location])
+    redirect_to action: "get_local_events"
   end
 
   def showMatchMsgs

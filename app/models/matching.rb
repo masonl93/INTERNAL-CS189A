@@ -9,6 +9,15 @@ class Matching < ActiveRecord::Base
       return false
     end
   end
+  
+  def self.getMatch(user_1, user_2)
+    if exists?(user1: user_1, user2: user_2)
+      return self
+    else
+      return NULL
+    end
+    
+  end
 
   def self.createMatch(user_1, user_2)
     # User 2 created match, first user to like/dislike other user
@@ -44,6 +53,25 @@ class Matching < ActiveRecord::Base
     userGenre.each do |g|
       if myGenres.include? g.genre
         score += 15
+      end
+    end
+    return score
+  end
+
+  def self.getInfluencePoints(myInfluences, userInfluences)
+    score = 0
+    user = []
+    userInfluences.each do |u|
+      genre = u.genres
+      user.push(genre.split(","))
+    end
+
+    myInfluences.each do |i|
+      genre = i.genres
+      genre.split(",").each do |g|
+        if user.include? g
+          score += 5
+        end
       end
     end
     return score

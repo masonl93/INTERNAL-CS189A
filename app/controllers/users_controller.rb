@@ -318,8 +318,9 @@ class UsersController < ApplicationController
     @num_of_events = json_obj['page_size']
     json_obj['events']['event'].each do |e|
       @events_title << e["title"]
-      @events_descript << e["description"]
-      @events_url << e["url"]
+      @events_descript << HTMLEntities.new.decode(e["description"])
+
+      @events_url << HTMLEntities.new.decode(e["url"])
       @events_time << e["start_time"]     # format = 2016-05-24 15:00:00
       @events_date << e["start_time"].split("-")[2][0,2]
       @events_month << get_month_name(e["start_time"].split("-")[1])

@@ -53,12 +53,17 @@ body {
     text-align: center;
 }
 .event-list > li > .info > .title {
-    font-size: 17pt;
+    font-size: 13pt;
     font-weight: 700;
     margin: 0px;
 }
 .event-list > li > .info > .desc {
-    font-size: 13pt;
+    font-size: 7pt;
+    font-weight: 300;
+    margin: 0px;
+}
+.event-list > li > .info > .url {
+    font-size: 5pt;
     font-weight: 300;
     margin: 0px;
 }

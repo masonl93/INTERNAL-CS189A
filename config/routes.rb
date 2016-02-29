@@ -40,7 +40,7 @@ OmniApp::Application.routes.draw do
   root               'home#home'
   get     'about'    => 'home#about'
   get     'profile'  => 'users#show'
-  get     'matching' => 'users#findMatch'
+  get     'matching' => 'users#findMatch', :as => :find_match
   get     'testmatching' => 'users#testFindMatch', :as => :testFindMatch
 
   get     'users/:id/matches'  => 'users#showMatches', :as => :user_matches

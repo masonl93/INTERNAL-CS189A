@@ -17,10 +17,13 @@
     </div>
 <% end %>
 <button id="close">CLOSE</button>
-<video id = "forVid" style="position:absolute; top:0; left:50;" autoplay="true"></video>
+<div id="videosContainer">
+  <video id = "forVid"  autoplay="true"></video>
+</div>
+
 
 <script>
-  //$(document).on('page:change', function() {
+
   //var peer = new Peer(<%= current_user.id %>, {key: 'zyjq7np7zz8y3nmi'});
   navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia  || navigator.mozGetUserMedia || navigator.msGetUserMedia;
 
@@ -36,7 +39,7 @@
       peerS.getTracks().forEach(function (track) { track.stop(); });
     }
   });
-  var peer = new Peer(<%= current_user.id %>, {key: 'zu91znea6dzk6gvi'});
+  var peer = new Peer(<%= current_user.id %>, {key: 'j4ufp4i0c0hk6gvi'});
   peer.on('open', function(id) {
     console.log('My peer ID is: ' + id);
   });
@@ -61,18 +64,13 @@
   peer.on('call', function(call) {
     console.log("getting call");
     if(navigator.getUserMedia) {
-//      var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
-//      p.then(function(myStream) {
-//        call.answer(myStream);
-//      });
-//      p.catch(function(err) { console.log(err.name); });
       navigator.getUserMedia({audio: true, video:true}, function(myStream) {
         peerS = myStream;
         call.answer(myStream);
         call.on('stream', function(remoteStream) {
           console.log("remote stream returned");
           $('#forVid').css({
-            'width' : '100%'
+            'width' : '80%'
           });
           var video = document.querySelector('#forVid');
           video.src = window.URL.createObjectURL(remoteStream);
@@ -90,11 +88,11 @@
       console.log("media exists");
       navigator.getUserMedia({audio: true, video:true}, function(myStream) {
         myS = myStream;
-        var call = peer.call(17, myStream);
+        var call = peer.call(15, myStream);
         call.on('stream', function(remoteStream) {
           console.log("remote stream returned");
           $('#forVid').css({
-            'width' : '100%'
+            'width' : '80%'
           });
           var video = document.querySelector('#forVid');
           video.src = window.URL.createObjectURL(remoteStream);
@@ -103,36 +101,12 @@
         console.log("error send str");
       });
 
-//      var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
-//      p.then(function(myStream) {
-//        var call = peer.call(17, myStream);
-//        call.on('stream', function(remoteStream) {
-//          console.log("remote stream returned");
-//        });
-//      });
-//      p.catch(function(err) { console.log(err.name); });
 
     }else {
       console.log("no media");
     }
 
 
-//    var connection = peer.connect(17);
-//    connection.on('open', function() {
-//      console.log("connection is opened by me with " + connection.peer);
-//
-//      connection.on('data', function(data) {
-//        console.log("recieved daata", data);
-//      });
-//
-//      connection.send("here is first data", function() {
-//        console.log("sent first data");
-//      });
-//    });
-
-
   });
-
-  //});
 
 </script>

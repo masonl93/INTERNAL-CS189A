@@ -5,7 +5,7 @@
     <%= inst.instrument + " " + inst.play.to_s %><br>
 <% end %>
 <br><br>
-<%= @users %>
+<%= @users %><br>
 <% @users.each do |id, score| %>
     <% user = User.find(id.to_i) %>
     <%= user.name  + " " + score.to_s + " " + current_user.id.to_s + " " + user.id.to_s%><br>

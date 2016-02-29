@@ -79,7 +79,7 @@ class Matching < ActiveRecord::Base
     return matchRecord
   end
 
-  def self.updateDisikeStatus(matchRecord, curID, usrID)
+  def self.updateDislikeStatus(matchRecord, curID, usrID)
     if matchRecord.user1 == usrID
       if matchRecord.status == -1
         matchRecord.status = -3

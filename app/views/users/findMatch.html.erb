@@ -2,7 +2,7 @@
 
 <%= form_tag({controller: "users", action: "matchChoice"}, method: "post") do %>
 
-      <%= hidden_field_tag :id , @user.uid %>
+      <%= hidden_field_tag :id , @user.id %>
       <div class="btn-group btn-group-justified" role="group">
         <div class="btn-group" role="group">
           <%= button_tag(name: 'like', type: 'submit', class: "btn btn-success btn-lg ") do %>

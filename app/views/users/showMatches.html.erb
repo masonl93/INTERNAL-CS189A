@@ -12,7 +12,8 @@
 
         <h4 class="media-heading"><%= link_to user.name, user_path(user.id) %></h4>
         <%= link_to "MESSAGES", user_match_msg_path(user.id) %>
-        <a onclick="sendCall(<%=user.id %>)" href="#" class="video">VIDEO</a>
+        <a onclick="sendCall(<%=user.id %>)" href="#" class="video"><i class="glyphicon glyphicon-facetime-video"></i></a>
+
       </div>
     </div>
 <% end %>
@@ -48,7 +49,7 @@
       peerS.getTracks().forEach(function (track) { track.stop(); });
     }
   });
-  var peer = new Peer(<%= current_user.id %>, {key: 'a3foxewq4jp833di'});
+  var peer = new Peer(<%= current_user.id %>, {key: '4nr48rc8qp1ll3di'});
   peer.on('open', function(id) {
     console.log('My peer ID is: ' + id);
   });
@@ -96,7 +97,7 @@
 
 
   function sendCall(peerID) {
-    console.log("id is " + id);
+    console.log("id is " + peerID);
     if(navigator.getUserMedia) {
       console.log("media exists");
       navigator.getUserMedia({audio: true, video:true}, function(myStream) {

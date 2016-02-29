@@ -17,13 +17,18 @@
     </div>
 <% end %>
 <button id="close">CLOSE</button>
-<div id="videosContainer">
-  <video id = "forVid"  autoplay="true"></video>
+<div id="videosContainer" style="position: absolute; top: 200px; width: 80%; height: 50%; margin: 0 auto; left: 0; right: 0; background: #000000">
+  <video id = "peerVid"  autoplay="true" style="position: relative; width: 100%; height: 100%"></video>
+  <video id = "myVid"  autoplay="true" style="position: absolute; bottom: 10px; right: 10px; width: 20%; height: 20%; background: #FFFFFF"></video>
 </div>
 
 
 <script>
 
+  $('#videosContainer').height($('#videosContainer').width() /2);
+  $(window).resize(function(){
+    $('#videosContainer').height($('#videosContainer').width()/2);
+  });
   //var peer = new Peer(<%= current_user.id %>, {key: 'zyjq7np7zz8y3nmi'});
   navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia  || navigator.mozGetUserMedia || navigator.msGetUserMedia;
 
@@ -65,15 +70,16 @@
     console.log("getting call");
     if(navigator.getUserMedia) {
       navigator.getUserMedia({audio: true, video:true}, function(myStream) {
-        peerS = myStream;
+        myS = myStream;
+        var myvideo = document.querySelector('#myVid');
+        myvideo.src = window.URL.createObjectURL(myStream);
         call.answer(myStream);
         call.on('stream', function(remoteStream) {
+          peerS = remoteStream;
           console.log("remote stream returned");
-          $('#forVid').css({
-            'width' : '80%'
-          });
-          var video = document.querySelector('#forVid');
-          video.src = window.URL.createObjectURL(remoteStream);
+
+          var peervideo = document.querySelector('#peerVid');
+          peervideo.src = window.URL.createObjectURL(remoteStream);
         });
       }, function() {
         console.log(" error return stream");
@@ -88,14 +94,15 @@
       console.log("media exists");
       navigator.getUserMedia({audio: true, video:true}, function(myStream) {
         myS = myStream;
-        var call = peer.call(15, myStream);
+        var myvideo = document.querySelector('#myVid');
+        myvideo.src = window.URL.createObjectURL(myStream);
+        var call = peer.call(17, myStream);
         call.on('stream', function(remoteStream) {
+          peerS = remoteStream;
           console.log("remote stream returned");
-          $('#forVid').css({
-            'width' : '80%'
-          });
-          var video = document.querySelector('#forVid');
-          video.src = window.URL.createObjectURL(remoteStream);
+
+          var peervideo = document.querySelector('#peerVid');
+          peervideo.src = window.URL.createObjectURL(remoteStream);
         });
       }, function() {
         console.log("error send str");

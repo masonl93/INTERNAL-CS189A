@@ -64,12 +64,15 @@ gem 'omniauth-facebook'
 
 gem 'bootstrap-sass', '~> 3.3.5'
 
+gem 'bootstrap-datepicker-rails'
+
 gem 'soundcloud'
 
 # Databases for Active Record
 group :development do
   gem 'sqlite3'
 end
+
 
 group :production do
   gem 'pg'                # Heroku uses PG database

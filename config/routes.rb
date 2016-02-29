@@ -10,6 +10,7 @@ OmniApp::Application.routes.draw do
 
   match '/users/editSurvey',      to: 'users#editSurvey',        via: 'post'
 
+  match '/users/create_event',      to: 'users#create_event',        via: 'post'
 
   resources :users
 
@@ -21,6 +22,7 @@ OmniApp::Application.routes.draw do
   get 'view_matches' => 'users#view_matches'
   get 'findMatch' => 'users#findMatch'
   get 'events' => 'users#get_local_events'
+  get 'add_event' => 'users#add_event'
 
 =begin
   get "users/new"             # Currently empty; exists only to pass users/new test

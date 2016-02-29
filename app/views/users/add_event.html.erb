@@ -1,0 +1,62 @@
+
+
+<div class="legendary osw">
+  <legend>EVENT DETAILS</legend>
+</div>
+
+
+<%= form_tag({controller: "users", action: "create_event"}, method: "post", :class => "form-horizontal") do %>
+
+    <div class="form-group legendary osw">
+      <label class="col-md-4 control-label" for="textinput">Event Title:</label>
+      <div class="col-md-4">
+        <%= text_field_tag :title, nil, placeholder: "Event title", maxlength: 200, :size => 75, :required => true %>
+      </div>
+    </div>
+
+    <div class="form-group legendary osw">
+      <label class="col-md-4 control-label" for="textinput">Event Description:</label>
+      <div class="col-md-4">
+        <%= text_area_tag :descript, nil, placeholder: "Provide some details about the event!", :required =>false, cols: 49.8 %>
+      </div>
+    </div>
+
+    <div class="form-group legendary osw">
+      <label class="col-md-4 control-label" for="textinput">Location:</label>
+      <div class="col-md-4">
+        <%= text_area_tag :location, nil, placeholder: "Vendor or Address", :required =>false, cols: 49.8 %>
+      </div>
+    </div>
+
+    <div class="form-group legendary osw">
+      <label class="col-md-4 control-label" for="textinput">Date:</label>
+      <div class="col-md-4">
+        <input name="date" type="text" data-provide='datepicker' data-date-autoclose="true" data-date-format="yyyy-mm-dd" data-date-start-date="+0d">
+      </div>
+    </div>
+
+    <div class="form-group legendary osw">
+      <label class="col-md-4 control-label" for="textinput">Time:</label>
+      <div class="col-md-4">
+        <%= text_field_tag :time, nil, placeholder: "time of event", maxlength: 200, :size => 75, :required => false %>
+      </div>
+    </div>
+
+    <div class="form-group legendary osw">
+      <label class="col-md-4 control-label" for="textinput">Link to Event (Facebook, Website, etc):</label>
+      <div class="col-md-4">
+        <%= text_field_tag :link, nil, placeholder: "URL", maxlength: 200, :size => 75, :required => false %>
+      </div>
+    </div>
+
+    <div class="form-group legendary osw">
+      <label class="col-md-4 control-label" for="textinput"></label>
+      <div class="col-md-4">
+        <%= submit_tag "Continue" %>
+      </div>
+    </div>
+
+<% end %>
+
+</div>
+

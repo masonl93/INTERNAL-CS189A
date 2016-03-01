@@ -139,29 +139,6 @@ class UsersController < ApplicationController
 
   # Finds a possible match for swiping
   def findMatch
-    @users = User.ids       # Matching algorithm: Find all users and iterate over them
-    me = User.find(session[:user_id])
-    @users.each do |u|
-      @user = User.find(u)
-      # Checks if one user already saw me, or vice versa, and makes sure it's not self
-      # If users have never seen each other, then new match is created
-      # and user gets to like/dislike user
-      if (!Matching.matchExists(@user.uid, me.uid) && !Matching.matchExists(me.uid, @user.uid) && @user.uid != me.uid)
-        @userMatch = Matching.createMatch(@user.uid, me.uid)    # Creates the match in the database
-        return
-        # Checks if user has already reviewed and waiting on me
-        # If match exists and the other user has already liked/disliked
-        # me (hence status =1 or =-1), then me gets to like/dislike user
-      elsif Matching.matchExists(me.uid, @user.uid)
-        @the_match = Matching.where(:user1 => me.uid).where(:user2 => @user.uid).first()
-        if (@the_match[:status] == 1 || @the_match[:status] == -1)
-          return
-        end
-      end
-    end
-    # gone through all user options
-    render "no_new_users"
-    # redirect_to action: "testFindMatch"
 
     # @users = User.ids       # Matching algorithm: Find all users and iterate over them
     # me = User.find(session[:user_id])

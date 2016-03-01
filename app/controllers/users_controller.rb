@@ -499,7 +499,7 @@ class UsersController < ApplicationController
   def createChat
     respond_to do |format|
       if current_user
-        @chats = current_user.chats.build(chat_params)
+        @chats = current_user.chats.build(create_chat_params)
         if @chats.save
           #flash[:success] = 'Your message was sent!'
           format.html {redirect_to action: "showMatchMsgs", id:params[:id]}
@@ -515,6 +515,12 @@ class UsersController < ApplicationController
         format.js {render nothing: true}
       end
     end
+  end
+
+  def newChat
+    #params.require(:newChat).permit(:recipients, :body)
+    id = params[:recipients].to_i
+    body = params[:body]
   end
 
   def createGroupChat
@@ -549,7 +555,7 @@ class UsersController < ApplicationController
 
   private
 
-  def chat_params
+  def create_chat_params
     params.require(:chat).permit(:body, :match_id)
   end
 

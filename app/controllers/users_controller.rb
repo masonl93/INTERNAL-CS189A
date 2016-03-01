@@ -159,7 +159,7 @@ class UsersController < ApplicationController
     end
     # gone through all user options
     render "no_new_users"
-    redirect_to action: "testFindMatch"
+    # redirect_to action: "testFindMatch"
   end
 
   def testFindMatch

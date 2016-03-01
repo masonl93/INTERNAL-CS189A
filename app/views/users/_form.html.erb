@@ -31,14 +31,31 @@
         </label>
       </div>
     </div>
-    <!--
-    <div class="form-group legendary osw">
+
+<!--
+
+    <div class="legendary osw">
       <label class="col-md-4 control-label">What instruments do you play?:</label>
       <div class="col-md-4">
-          <%= select_tag(:instrument_id, options_for_select([['Guitar', 1],['Bass', 2],['Vocals', 3],['Drums', 4],['Keyboard',5]]), :multiple => true) %>
+          <%= select_tag(:instrument_id, options_for_select([['Guitar', 1],['Bass', 2],['Vocals', 3],['Drums', 4],['Keyboard',5]]), :multiple => true, class: "") %>
+          
       </div>
     </div>
+    
     -->
+
+    <div class="control-group">
+        <label for="s2id_autogen2" class="control-label">Select2 multi select</label>
+        <div class="controls">
+          <div class="select2-container select2-container-multi select2" id="s2id_multiple" style="width: 400px;"><ul class="select2-choices">  <li class="select2-search-field">    <input type="text" autocomplete="off" autocorrect="off" autocapitilize="off" spellcheck="false" class="select2-input select2-default" id="s2id_autogen2" style="width: 388px;">  </li></ul></div><select id="multiple" class="select2 select2-offscreen" multiple="multiple" style="width:400px;" tabindex="-1">
+            <option></option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
+        </div>
+      </div>
+  
 
     <div class="form-group legendary osw">
       <label class="col-md-4 control-label" for="checkboxes">Artists you are looking for:</label>
@@ -136,3 +153,39 @@
 
 </div>
 
+<script type="text/javascript">
+    $('select').select2();
+</script>
+
+<script>
+      $('.select2').select2({ placeholder : '' });
+
+      $('.select2-remote').select2({ data: [{id:'A', text:'A'}]});
+
+      $('button[data-select2-open]').click(function(){
+        $('#' + $(this).data('select2-open')).select2('open');
+      });
+</script>
+  
+<script type="text/javascript">
+  $(".basic-multiple").select2();
+</script>
+
+<div class="select2-sizer" style="position: absolute; left: -10000px; top: -10000px; display: none; font-size: 14px; font-family: sans-serif; font-style: normal; font-weight: normal; letter-spacing: normal; text-transform: none; white-space: nowrap;"></div>
+  
+  
+  <div class="select2-drop select2-drop-multi select2-display-none select2-drop-active" style="display: none; top: 280px; left: 220px; width: 400px;">
+    <ul class="select2-results"></ul>
+  </div>
+  
+  
+  <div class="select2-drop select2-drop-multi select2-display-none select2-drop-active" style="display: none; top: 280px; left: 220px; width: 400px;">
+    <ul class="select2-results"></ul>
+  </div>
+  
+  <div class="select2-drop select2-display-none select2-with-searchbox select2-drop-active" style="display: none; top: 580px; left: 220px; width: 90px;">
+    <div class="select2-search">
+      <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input">
+    </div>
+    <ul class="select2-results"></ul>
+  </div>

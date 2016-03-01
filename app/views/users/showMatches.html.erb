@@ -49,7 +49,7 @@
       peerS.getTracks().forEach(function (track) { track.stop(); });
     }
   });
-  var peer = new Peer(<%= current_user.id %>, {key: 'zqyp9k61zamm42t9'});
+  var peer = new Peer(<%= current_user.id %>, {host: 'mezzo-peer.herokuapp.com', port: 80, path: '/'});
   peer.on('open', function(id) {
     console.log('My peer ID is: ' + id);
   });

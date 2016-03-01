@@ -4,6 +4,8 @@ require 'open-uri'
 class UsersController < ApplicationController
   protect_from_forgery except: [:showMatchMsgs, :save_user_location]
 
+  @neo = Neography::Rest.new("http://neo4j:arbor94@localhost.com:7474")
+
   def index
 
   end
@@ -160,6 +162,95 @@ class UsersController < ApplicationController
     # gone through all user options
     render "no_new_users"
     # redirect_to action: "testFindMatch"
+
+    # @users = User.ids       # Matching algorithm: Find all users and iterate over them
+    # me = User.find(session[:user_id])
+    # @users.each do |u|
+    #   @user = User.find(u)
+    #   # Checks if one user already saw me, or vice versa, and makes sure it's not self
+    #   # If users have never seen each other, then new match is created
+    #   # and user gets to like/dislike user
+    #   if (!Matching.matchExists(@user.uid, me.uid) && !Matching.matchExists(me.uid, @user.uid) && @user.uid != me.uid)
+    #     @userMatch = Matching.createMatch(@user.uid, me.uid)    # Creates the match in the database
+    #     return
+    #     # Checks if user has already reviewed and waiting on me
+    #     # If match exists and the other user has already liked/disliked
+    #     # me (hence status =1 or =-1), then me gets to like/dislike user
+    #   elsif Matching.matchExists(me.uid, @user.uid)
+    #     the_match = Matching.where(:user1 => me.uid).where(:user2 => @user.uid).first()
+    #     if (the_match[:status] == 1 || the_match[:status] == -1)
+    #       return
+    #     end
+    #   end
+    # end
+    # # gone through all user options
+    # render "no_new_users"
+    # redirect_to action: "testFindMatch"
+
+
+
+    allU = User.all
+    closeU = [], elligibleU = []
+    myLookingForInstruments = [], myInstruments = [],  myGenres = []
+    sorted = Hash.new
+
+    #GET INSTRUMENTS CURRENT USER WANTS AND PLAYS
+    current_user.instruments.each do |inst|
+      if !inst.play
+        myLookingForInstruments.append(inst.instrument)
+      else
+        myInstruments.append(inst.instrument)
+      end
+    end
+
+    #GET GENRES CURRENT USER PLAYS
+    current_user.genres.each do |g|
+      myGenres.append(g.genre)
+    end
+    allU.each do |user|
+      if Matching.ifElligible(current_user.id.to_s, user)
+        elligibleU.append(user)
+      end
+    end
+
+    #START GETTING POINTS
+    elligibleU.each do |user|
+      score = 0
+      #  FIRST CHECK TO SEE IF MATCH IS USER'S RADIUS
+      #if User.getDistance([current_user.lat, current_user.lon], [user.lat, user.lon]) <= current_user.radius
+      userPlays = user.instruments.where("play = ?", true)
+      userWants = user.instruments.where("play = ?", false)
+      userGenre = user.genres
+
+      # 1. get points for instruments and experience
+      score += Matching.getInstrumentAndExperiencePoints(myLookingForInstruments, userPlays, myInstruments, userWants)
+
+      # 2. if score = 0, then not matchable, because no instruments match. if != 0, then proceed to get other points
+      if score != 0
+        # 3. get genre points
+        score += Matching.getGenrePoints(myGenres, userGenre)
+
+        # 4. get influence points
+        #score += Matching.getInfluencePoints(current_user.influences, user.influences)
+        # 5. get profile likes points
+
+        # FINALLY add user and score to hash.
+        sorted[user.id.to_s] = score
+      end
+      #end
+
+    end
+
+    users = sorted.sort_by { |user, score| score}
+    if users.size() == 0
+      render :no_new_users
+    else
+      users.each do |id, score|
+        @user = User.find(id.to_i)
+      end
+    end
+
+
   end
 
   def testFindMatch
@@ -185,24 +276,33 @@ class UsersController < ApplicationController
     #START GETTING POINTS
     allU.each do |user|
       score = 0
-      userPlays = user.instruments.where("play = ?", true)
-      userWants = user.instruments.where("play = ?", false)
-      userGenre = user.genres
+      #  FIRST CHECK TO SEE IF MATCH IS USER'S RADIUS
+      #if User.getDistance([current_user.lat, current_user.lon], [user.lat, user.lon]) <= current_user.radius
+        userPlays = user.instruments.where("play = ?", true)
+        userWants = user.instruments.where("play = ?", false)
+        userGenre = user.genres
 
-      # 1. get points for instruments and experience
-      score += Matching.getInstrumentAndExperiencePoints(myLookingForInstruments, userPlays, myInstruments, userWants)
+        # 1. get points for instruments and experience
+        score += Matching.getInstrumentAndExperiencePoints(myLookingForInstruments, userPlays, myInstruments, userWants)
 
-      # 2. if score = 0, then not matchable, because no instruments match. if != 0, then proceed to get other points
-      if score != 0
-        # 3. get genre points
-        score += Matching.getGenrePoints(myGenres, userGenre)
+        # 2. if score = 0, then not matchable, because no instruments match. if != 0, then proceed to get other points
+        if score != 0
+          # 3. get genre points
+          score += Matching.getGenrePoints(myGenres, userGenre)
 
-        # FINALLY add user and score to hash.
-        sorted[user.id.to_s] = score
-      end
+          # 4. get influence points
+          #score += Matching.getInfluencePoints(current_user.influences, user.influences)
+          # 5. get profile likes points
+
+          # FINALLY add user and score to hash.
+          sorted[user.id.to_s] = score
+        end
+      #end
+
     end
 
-    @users = sorted.sort_by { |user, score| score}.reverse!
+    users = sorted.sort_by { |user, score| score}.reverse!
+    @users = users
   end
 
 
@@ -222,36 +322,39 @@ class UsersController < ApplicationController
 
   # Updates Matching object after user clicks yes or no on another user
   def matchChoice
-    user = params[:uid]
-    me = User.find(session[:user_id])
+    userID = params[:id].to_s
+    meID = current_user.id.to_s
+
 
     # Find the correct match between the two users
-    if Matching.where(user1: user, user2: me.uid).exists?
-      @the_match = Matching.where(:user1 => user).where(:user2 => me.uid).first()
-    else
-      @the_match = Matching.where(:user1 => me.uid).where(:user2 => user).first()
+    if Matching.where(user1: meID, user2: userID).exists?
+      the_match = Matching.where(user1: meID, user2: userID).first!
+    elsif Matching.where(user1: userID, user2: meID).exists?
+      the_match = Matching.where(user1: userID, user2: meID).first!
     end
+
 
     # Checking if the like button or dislike button was pressed
     # in order to properly update status value
     if params.has_key?(:like)
-      @the_match.increment!(:status)
+      if !Matching.matchExists(meID, userID)
+        Matching.createMatch(meID, userID, 1)
+        the_match = Matching.where(user1: meID, user2: userID).first!
+      else
+        the_match = Matching.updateLikeStatus(the_match, meID, userID)
+      end
     elsif params.has_key?(:dislike)
-      @the_match.decrement!(:status)
+      if !Matching.matchExists(meID, userID)
+        Matching.createMatch(meID, userID, -1)
+        the_match = Matching.where(user1: meID, user2: userID).first!
+      else
+        the_match = Matching.updateDislikeStatus(the_match, meID, userID)
+      end
     end
 
     # Check to see if we have a match
-    if @the_match[:status] == 2
-      # we have a match
-      redirect_to action: "view_matches" and return   # this is here until we have messaging
-                                                      # This just forwards a user to view their matches
-                                                      # after new match occurs
-      start_message = notify_user_match
-      if start_message
-        redirect_to action: "init_message" and return
-      else
-        redirect_to action: "findMatch" and return
-      end
+    if the_match.status == 3
+      flash[:notice] = "You have a new match with " + User.find(params[:id]).name + "!"
     end
     redirect_to action: "findMatch" and return
   end
@@ -259,28 +362,34 @@ class UsersController < ApplicationController
 
   def view_matches
     me = User.find(session[:user_id])
-    @matches = Matching.where("(user1 = ? OR user2 = ?) AND status = ?", me.uid, me.uid, 2)
+    #@matches = Matching.where("(user1 = ? OR user2 = ?) AND status = ?", me.uid, me.uid, 2)
+    @matches = Matching.where('user1 = ? OR user2 = ?', me.uid, me.uid)
     @matched_users = []
+    @statuses = []
     @matches.each do |match|
       if match.user1 == me.uid
         user = User.where(:uid => match.user2).first()
       else
         user = User.where(:uid => match.user1).first()
       end
+        status = match.status
       @matched_users << user
+      @statuses << status
     end
   end
 
   def showMsgList
-    @singleids = Set.new
+    @singleids = Array.new
     @groupids = Set.new
-
+    @allids = Array.new
     singleChat = Chat.where('user_id = ? OR match_id = ?', current_user.id, current_user.id)
     singleChat.each do |chat|
       if chat.user_id == current_user.id
-        @singleids.add(chat.match_id)
+        @singleids.delete_if {|id| id == chat.match_id }
+        @singleids.unshift(chat.match_id)
       else
-        @singleids.add(chat.user_id)
+        @singleids.delete_if {|id| id == chat.user_id }
+        @singleids.unshift(chat.user_id)
       end
     end
 
@@ -292,15 +401,98 @@ class UsersController < ApplicationController
       end
 
     end
+    # chat = singleChat+groupChat
+    # chat.each do |c|
+    #   if c.is_a? Array
+    #     ids = c.participants.split(",").map(&:to_i)
+    #     if ids.include? current_user.id
+    #       @allids.add(ids)
+    #     end
+    #   else
+    #     if c.user_id == current_user.id
+    #       @allids.delete_if {|id| id == c.match_id }
+    #       @allids.unshift(chat.match_id)
+    #     else
+    #       @allids.delete_if {|id| id == c.user_id }
+    #       @allids.unshift(chat.user_id)
+    #     end
+    #   end
+    # end
 
   end
 
   def showMatches
     #FOR PRODUCTION
     #@group = User.where('id = ? OR id = ? OR id = ? OR id = ?', 16, 17, 18, 19).order(:id)
+    #@neo = Neography::Rest.new("http://neo4j:arbor94@localhost:7474")
+
+    # node1 = @neo.create_node("user_id" => 14, "name" => "Chris")
+    # node2 = @neo.create_node("user_id" => 16, "name" => "Alex")
+    # @neo.create_relationship("matched", node1, node2)
+    #@neo.find_node_index_by_key_value()
+    #Neography::Node.find
     @users = User.where('id != ?', current_user.id)
 
+    #var peer = new Peer({key: 'zyjq7np7zz8y3nmi'});
 
+
+  end
+
+  def get_local_events
+    @user = User.find(session[:user_id])
+    @events_title = []
+    @events_descript = []
+    @events_url = []
+    @events_time = []
+    @events_month = []
+    @events_date = []
+    @events_venue = []
+
+    @user_title = []
+    @user_descript = []
+    @user_url = []
+    @user_time = []
+    @user_month = []
+    @user_date = []
+    @user_venue = []
+
+    eventful_key = "NVkK26nn5QQPffwS"
+    eventful_url = "http://api.eventful.com/json/events/search?app_key=" + eventful_key + "&location=" + (@user.lat).to_s + ',' + (@user.long).to_s + "&within=50&sort_order=date&date=Future&category=music"
+    json_obj = JSON.parse(open(eventful_url).read)
+    @num_of_events = json_obj['page_size']
+    json_obj['events']['event'].each do |e|
+      @events_title << e["title"]
+      @events_descript << e["description"]
+      @events_url << e["url"]
+      @events_time << e["start_time"]     # format = 2016-05-24 15:00:00
+      @events_date << e["start_time"].split("-")[2][0,2]
+      @events_month << get_month_name(e["start_time"].split("-")[1])
+      @events_venue << e["venue_name"]
+    end
+
+    #user events
+    @user_events = Event.all
+    @user_events.each do |e|
+      @user_title << e.title
+      @user_descript << e.description
+      @user_url << e.url
+      @user_time << e.date.split(" ")[1]
+      @user_month << get_month_name(e.date.split("-")[1])
+      @user_date << e.date.split("-")[2][0,2]
+      @user_venue << e.location
+    end
+
+    render "show_local_events"
+  end
+
+  def add_event
+    @user = User.find(session[:user_id])
+  end
+
+  def create_event
+    date_time_format = params[:date] + ' ' + params[:time]  #yyyy:mm:dd time
+    Event.add(session[:user_id], params[:title], date_time_format, params[:descript], params[:link], params[:location])
+    redirect_to action: "get_local_events"
   end
 
   def showMatchMsgs
@@ -409,6 +601,37 @@ class UsersController < ApplicationController
       end
     end
     return genres
+  end
+
+  def get_month_name(num)
+    case num
+      when '01'
+        return "Jan"
+      when '02'
+        return "Feb"
+      when '03'
+        return "Mar"
+      when '04'
+        return "Apr"
+      when '05'
+        return "May"
+      when '06'
+        return "Jun"
+      when '07'
+        return "Jul"
+      when '08'
+        return "Aug"
+      when '09'
+        return "Sept"
+      when '10'
+        return "Oct"
+      when '11'
+        return "Nov"
+      when '12'
+        return "Dec"
+      else
+        return "Month"
+    end
   end
 
 end

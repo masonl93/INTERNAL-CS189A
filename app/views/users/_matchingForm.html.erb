@@ -1,8 +1,9 @@
-<%= render :partial => 'profile' %>
+<div class="col-lg-3 col-sm-3 osw"></div>
+
+
 
 <%= form_tag({controller: "users", action: "matchChoice"}, method: "post") do %>
-
-      <%= hidden_field_tag :id , @user.id %>
+      <%= hidden_field_tag :uid , @user.uid %>
       <div class="btn-group btn-group-justified" role="group">
         <div class="btn-group" role="group">
           <%= button_tag(name: 'like', type: 'submit', class: "btn btn-success btn-lg ") do %>
@@ -20,7 +21,6 @@
           <% end %>
         </div>
       </div>
-
     <% end %>
 
-</div>
+<div class="col-lg-3 col-sm-3 osw"></div>

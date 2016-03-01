@@ -19,3 +19,5 @@
 $(document).ready(function(){
   $('select').select2();
 });
+//= require bootstrap-datepicker
+

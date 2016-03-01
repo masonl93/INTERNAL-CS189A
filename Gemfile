@@ -7,7 +7,7 @@ source 'https://rubygems.org'
 gem 'layer-ruby', require: 'layer'
 gem 'acts-as-messageable'
 gem 'rails','4.2.2'
-
+gem 'bootstrap-datepicker-rails'
 # MATERIALIZE GEM
 # gem 'materialize-sass'
 
@@ -41,6 +41,8 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'tabulous'
 
+gem 'neography'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -68,6 +70,7 @@ gem 'soundcloud'
 group :development do
   gem 'sqlite3'
 end
+
 
 group :production do
   gem 'pg'                # Heroku uses PG database

@@ -1,25 +1,96 @@
 class Matching < ActiveRecord::Base
   belongs_to :user
 
-  def self.matchExists(user_1, user_2)
+  # 0 = Initialized
+  # 1 = user 1 liked user 2
+  # 2 = user 2 liked user 1
+  # 3 = both users liked
+  # -1 = user 1 disliked user 2
+  # -2 = user 2 disliked user 1
+  # -3 = both users disliked
+
+  def self.matchExists(user_1id, user_2id)
     #if exists?(user1: user_1, user2: user_2) ||  exists?(user1: user_2, user2: user_1)
-    if exists?(user1: user_1, user2: user_2)
+    if exists?(user1: user_1id, user2: user_2id)
+      return true
+    elsif exists?(user1: user_2id, user2: user_1id)
       return true
     else
       return false
     end
   end
+  
+  def self.getMatch(user_1, user_2)
+    if exists?(user1: user_1, user2: user_2)
+      return self
+    else
+      return NULL
+    end
+    
+  end
 
-  def self.createMatch(user_1, user_2)
+  def self.createMatch(user_1id, user_2id, choiceNum)
     # User 2 created match, first user to like/dislike other user
     create(
-        user1: user_1,
-        user2: user_2,
-        status: 0       # 0 = Initialized
-    # 1 = Liked_user
-    # 2 = Match :)
-    # 3 = Denied
+        user1: user_1id,
+        user2: user_2id,
+        status: choiceNum
     )
+  end
+
+  def self.ifElligible(myID, user)
+    first = [-3, -1, 1, 3]
+    second = [-3, -2, 2, 3]
+    usrID = user.id.to_s
+    if exists?(user1: myID, user2: usrID)
+      record =  where(user1: myID, user2: usrID).first!
+      if first.include? record.status
+        return false
+      else
+        return true
+      end
+    elsif exists?(user1: usrID, user2: myID)
+      record =  where(user1: usrID, user2: myID).first!
+      if second.include? record.status
+        return false
+      else
+        return true
+      end
+    else
+      return true
+    end
+  end
+
+  def self.updateLikeStatus(matchRecord, curID, usrID)
+    if matchRecord.user1 == usrID
+      if matchRecord.status == 1
+        matchRecord.status = 3
+      elsif matchRecord.status == -1
+        matchRecord.status = 2
+      end
+    elsif matchRecord.user2 == usrID
+      if matchRecord.status == 2
+        matchRecord.status = 3
+      elsif matchRecord.status == -2
+        matchRecord.status = 1
+      end
+    end
+    matchRecord.save
+    return matchRecord
+  end
+
+  def self.updateDislikeStatus(matchRecord, curID, usrID)
+    if matchRecord.user1 == usrID
+      if matchRecord.status == -1
+        matchRecord.status = -3
+      end
+    elsif matchRecord.user2 == usrID
+      if matchRecord.status == -2
+        matchRecord.status = -3
+      end
+    end
+    matchRecord.save
+    return matchRecord
   end
 
   def self.getInstrumentAndExperiencePoints(myLookingForInstruments, userPlays,  myInstruments, userWants)
@@ -44,6 +115,25 @@ class Matching < ActiveRecord::Base
     userGenre.each do |g|
       if myGenres.include? g.genre
         score += 15
+      end
+    end
+    return score
+  end
+
+  def self.getInfluencePoints(myInfluences, userInfluences)
+    score = 0
+    user = []
+    userInfluences.each do |u|
+      genre = u.genres
+      user.push(genre.split(","))
+    end
+
+    myInfluences.each do |i|
+      genre = i.genres
+      genre.split(",").each do |g|
+        if user.include? g
+          score += 5
+        end
       end
     end
     return score

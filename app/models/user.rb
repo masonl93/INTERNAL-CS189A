@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   has_many :matchings
   has_many :chats, dependent: :delete_all
   has_many :groups, dependent: :delete_all
+  has_many :events
 
   def self.sign_in_from_omniauth(auth)
     find_by(provider: auth['provider'], uid: auth['uid']) || create_user_from_omniauth(auth)
@@ -36,7 +37,7 @@ class User < ActiveRecord::Base
     user.save
   end
 
-  def getDistance(loc1, loc2)
+  def self.getDistance(loc1, loc2)
     rad_per_deg = Math::PI/180  # PI / 180
     rkm = 6371                  # Earth radius in kilometers
     rm = rkm * 1000             # Radius in meters

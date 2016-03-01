@@ -1,5 +1,4 @@
-
-
+<!-- Currently just shows all users -->
 
 <% @users.each do |user| %>
 
@@ -13,6 +12,119 @@
 
         <h4 class="media-heading"><%= link_to user.name, user_path(user.id) %></h4>
         <%= link_to "MESSAGES", user_match_msg_path(user.id) %>
+        <a onclick="sendCall(<%=user.id %>)" href="#" class="video"><i class="glyphicon glyphicon-facetime-video"></i></a>
+
       </div>
     </div>
 <% end %>
+
+<div hidden id="backdrop" style="position: absolute; background: #000000; top: 0; right: 0; bottom: 0; left: 0; opacity:0.7"></div>
+<div hidden id="videosContainer" style="position: fixed; z-index: 10; top: 200px; width: 80%; height: 50%; margin: 0 auto; left: 0; right: 0; background: #000000">
+  <video id = "peerVid"  autoplay="true" style="position: relative; width: 100%; height: 100%"></video>
+  <video id = "myVid"  autoplay="true" style="position: absolute; bottom: 10px; right: 10px; width: 20%; height: 20%; background: #FFFFFF"></video>
+  <a href="#" id="close" style="position: absolute; top: 10px; right: 10px; color: #ff6620;">X</a>
+</div>
+
+
+<script>
+
+  $('#videosContainer').height($('#videosContainer').width() /2);
+  $(window).resize(function(){
+    $('#videosContainer').height($('#videosContainer').width()/2);
+  });
+  //var peer = new Peer(<%= current_user.id %>, {key: 'zyjq7np7zz8y3nmi'});
+  navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia  || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+
+
+  var myS;
+  var peerS;
+
+  $('#close').click(function() {
+    $('#videosContainer').hide();
+    $('#backdrop').hide();
+    if(myS) {
+      myS.getTracks().forEach(function (track) { track.stop(); });
+    }
+    else if(peerS) {
+      peerS.getTracks().forEach(function (track) { track.stop(); });
+    }
+  });
+  var peer = new Peer(<%= current_user.id %>, {host: 'mezzo-peer.herokuapp.com', secure: true, port: 443});
+  peer.on('open', function(id) {
+    console.log('My peer ID is: ' + id);
+  });
+
+  peer.on('connection', function(conn) {
+    conn.on('open', function() {
+      console.log("connection recieved from " + conn.peer);
+
+      conn.on('data', function(data) {
+        console.log("Reciever recieved data", data);
+      });
+    });
+  });
+
+  var errorReturnStream = function() {
+    console.log("error returning stream.");
+  };
+
+  var errorSendStream = function() {
+    console.log("error sending stream.");
+  };
+  peer.on('call', function(call) {
+    console.log("getting call");
+    if(navigator.getUserMedia) {
+      navigator.getUserMedia({audio: true, video:true}, function(myStream) {
+        myS = myStream;
+        $('#videosContainer').show();
+        $('#backdrop').show();
+        var myvideo = document.querySelector('#myVid');
+        myvideo.src = window.URL.createObjectURL(myStream);
+        call.answer(myStream);
+        call.on('stream', function(remoteStream) {
+          peerS = remoteStream;
+          console.log("remote stream returned");
+
+          var peervideo = document.querySelector('#peerVid');
+          peervideo.src = window.URL.createObjectURL(remoteStream);
+        });
+      }, function() {
+        console.log(" error return stream");
+      });
+    }
+
+  });
+
+
+  function sendCall(peerID) {
+    console.log("id is " + peerID);
+    if(navigator.getUserMedia) {
+      console.log("media exists");
+      navigator.getUserMedia({audio: true, video:true}, function(myStream) {
+        myS = myStream;
+        $('#videosContainer').show();
+        $('#backdrop').show();
+        var myvideo = document.querySelector('#myVid');
+        myvideo.src = window.URL.createObjectURL(myStream);
+        var call = peer.call(peerID, myStream);
+        call.on('stream', function(remoteStream) {
+          peerS = remoteStream;
+          console.log("remote stream returned");
+
+          var peervideo = document.querySelector('#peerVid');
+          peervideo.src = window.URL.createObjectURL(remoteStream);
+        });
+      }, function() {
+        console.log("error send str");
+      });
+
+
+    }else {
+      console.log("no media");
+    }
+
+
+  }//);
+
+
+</script>

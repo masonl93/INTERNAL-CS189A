@@ -140,31 +140,6 @@ class UsersController < ApplicationController
   # Finds a possible match for swiping
   def findMatch
 
-    # @users = User.ids       # Matching algorithm: Find all users and iterate over them
-    # me = User.find(session[:user_id])
-    # @users.each do |u|
-    #   @user = User.find(u)
-    #   # Checks if one user already saw me, or vice versa, and makes sure it's not self
-    #   # If users have never seen each other, then new match is created
-    #   # and user gets to like/dislike user
-    #   if (!Matching.matchExists(@user.uid, me.uid) && !Matching.matchExists(me.uid, @user.uid) && @user.uid != me.uid)
-    #     @userMatch = Matching.createMatch(@user.uid, me.uid)    # Creates the match in the database
-    #     return
-    #     # Checks if user has already reviewed and waiting on me
-    #     # If match exists and the other user has already liked/disliked
-    #     # me (hence status =1 or =-1), then me gets to like/dislike user
-    #   elsif Matching.matchExists(me.uid, @user.uid)
-    #     the_match = Matching.where(:user1 => me.uid).where(:user2 => @user.uid).first()
-    #     if (the_match[:status] == 1 || the_match[:status] == -1)
-    #       return
-    #     end
-    #   end
-    # end
-    # # gone through all user options
-    # render "no_new_users"
-    # redirect_to action: "testFindMatch"
-
-
 
     allU = User.all
     closeU = [], elligibleU = []
@@ -399,18 +374,9 @@ class UsersController < ApplicationController
   end
 
   def showMatches
-    #FOR PRODUCTION
-    #@group = User.where('id = ? OR id = ? OR id = ? OR id = ?', 16, 17, 18, 19).order(:id)
-    #@neo = Neography::Rest.new("http://neo4j:arbor94@localhost:7474")
 
-    # node1 = @neo.create_node("user_id" => 14, "name" => "Chris")
-    # node2 = @neo.create_node("user_id" => 16, "name" => "Alex")
-    # @neo.create_relationship("matched", node1, node2)
-    #@neo.find_node_index_by_key_value()
-    #Neography::Node.find
     @users = User.where('id != ?', current_user.id)
 
-    #var peer = new Peer({key: 'zyjq7np7zz8y3nmi'});
 
 
   end
@@ -519,8 +485,14 @@ class UsersController < ApplicationController
 
   def newChat
     #params.require(:newChat).permit(:recipients, :body)
-    id = params[:recipients].to_i
+    matchid = params[:recipients].to_i
     body = params[:body]
+    @chat = current_user.chats.build("match_id" => matchid, "body" => body)
+    if @chat.save
+      redirect_to action: "showMatchMsgs", id:matchid
+    else
+      flash[:error] = 'Your message not sent :('
+    end
   end
 
   def createGroupChat

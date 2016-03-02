@@ -1,0 +1,26 @@
+<div class="col-lg-3 col-sm-3 osw"></div>
+
+
+
+<%= form_tag({controller: "users", action: "matchChoice"}, method: "post") do %>
+      <%= hidden_field_tag :uid , @user.uid %>
+      <div class="btn-group btn-group-justified" role="group">
+        <div class="btn-group" role="group">
+          <%= button_tag(name: 'like', type: 'submit', class: "btn btn-success btn-lg ") do %>
+              <span class="glyphicon glyphicon-ok"><div class="osw"><br>Like</div></span>
+          <% end %>
+        </div>
+        <div class="btn-group" role="group">
+          <%= button_tag(name: 'dislike', type: 'submit', class: "btn btn-danger btn-lg btn-group btn-group-justified") do %>
+              <span class="glyphicon glyphicon-remove"><div class="osw"><br>Disike</div></span>
+          <% end %>
+        </div>
+        <div class="btn-group" role="group">
+          <%= button_tag(name: 'skip', class: "btn btn-primary btn-lg btn-group btn-group-justified") do %>
+              <span class="glyphicon glyphicon-repeat"><div class="osw"><br>Skip</div></span>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+
+<div class="col-lg-3 col-sm-3 osw"></div>

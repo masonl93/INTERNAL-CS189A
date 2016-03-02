@@ -1,0 +1,78 @@
+<div id="geolocation" >
+</div>
+
+<div class="col-lg-3 col-sm-3 osw"></div>
+
+<div class="col-lg-6 col-sm-6 osw">
+  <div class="card hovercard">
+    <div class="card-background">
+      <img class="card-bkimg" alt="" src="<%= @user.image %>?type=large">
+      <!-- http://lorempixel.com/850/280/people/9/ -->
+    </div>
+    <div class="useravatar">
+      <img alt="" src="<%= @user.image %>?type=large">
+    </div>
+    <div class="card-info"> <span class="card-title"><%= @user.name %></span>
+
+    </div>
+  </div>
+  <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
+    <div class="btn-group" role="group">
+      <button type="button" id="stars" class="btn btn-primary" href="#tab1" data-toggle="tab"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <div class="hidden-xs">Bio</div>
+      </button>
+    </div>
+    <div class="btn-group" role="group">
+      <button type="button" id="favorites" class="btn btn-default" href="#tab2" data-toggle="tab"><span class="glyphicon glyphicon-music" aria-hidden="true"></span>
+        <div class="hidden-xs">Instruments</div>
+      </button>
+    </div>
+    <div class="btn-group" role="group">
+      <button type="button" id="following" class="btn btn-default" href="#tab3" data-toggle="tab"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>
+        <div class="hidden-xs">Media</div>
+      </button>
+    </div>
+  </div>
+
+  <div class="well">
+    <div class="tab-content">
+      <div class="tab-pane fade in active" id="tab1">
+        <p><%= @user.bio %></p>
+        <h3>Interest Level</h3>
+        <p><%= @user.interest_level %></p>
+        <h3>Genres</h3>
+        <% @user.genres.each do |genre| %>
+            <p><%= genre.genre %></p>
+        <% end %>
+        <h3>Influences</h3>
+        <% @user.influences.each do |influence| %>
+            <p><%= influence.influence %></p>
+        <% end %>
+      </div>
+      <div class="tab-pane fade in" id="tab2">
+        <h3>
+          <table>
+            <% @user.instruments.each do |instrument| %>
+                <% if instrument.play == true %>
+                    <tr>
+                      <td><%= instrument.instrument %></td>
+                    </tr>
+                <% end %>
+            <% end %>
+          </table>
+        </h3>
+      </div>
+      <div class="tab-pane fade in" id="tab3">
+        <h3>
+          <% @user.mediums.each do |link| %>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="<%= link.url %>" allowfullscreen></iframe>
+              </div>
+            <br>
+          <% end %>
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>
+

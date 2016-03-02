@@ -71,6 +71,7 @@ GEM
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     hashie (2.1.2)
+    htmlentities (4.3.4)
     httmultiparty (0.3.16)
       httparty (>= 0.7.3)
       mimemagic
@@ -131,8 +132,6 @@ GEM
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
     os (0.9.6)
-    pg (0.18.4)
-    puma (3.0.2)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -155,11 +154,6 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
-    rails_12factor (0.0.3)
-      rails_serve_static_assets
-      rails_stdout_logging
-    rails_serve_static_assets (0.0.5)
-    rails_stdout_logging (0.0.4)
     railties (4.2.2)
       actionpack (= 4.2.2)
       activesupport (= 4.2.2)
@@ -219,16 +213,14 @@ DEPENDENCIES
   bootstrap-datepicker-rails
   bootstrap-sass (~> 3.3.5)
   coffee-rails (~> 4.0.0)
+  htmlentities
   jbuilder (~> 1.2)
   jquery-rails
   jquery-turbolinks
   layer-ruby
   neography
   omniauth-facebook
-  pg
-  puma
   rails (= 4.2.2)
-  rails_12factor
   sass-rails (= 5.0.2)
   sdoc
   soundcloud
@@ -236,6 +228,3 @@ DEPENDENCIES
   tabulous
   turbolinks
   uglifier (>= 1.3.0)
-
-BUNDLED WITH
-   1.11.2

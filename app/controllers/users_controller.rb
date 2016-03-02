@@ -353,23 +353,6 @@ class UsersController < ApplicationController
       end
 
     end
-    # chat = singleChat+groupChat
-    # chat.each do |c|
-    #   if c.is_a? Array
-    #     ids = c.participants.split(",").map(&:to_i)
-    #     if ids.include? current_user.id
-    #       @allids.add(ids)
-    #     end
-    #   else
-    #     if c.user_id == current_user.id
-    #       @allids.delete_if {|id| id == c.match_id }
-    #       @allids.unshift(chat.match_id)
-    #     else
-    #       @allids.delete_if {|id| id == c.user_id }
-    #       @allids.unshift(chat.user_id)
-    #     end
-    #   end
-    # end
 
   end
 
@@ -400,7 +383,6 @@ class UsersController < ApplicationController
     eventful_url = "http://api.eventful.com/json/events/search?app_key=" + eventful_key + "&location=" + (@user.lat).to_s + ',' + (@user.long).to_s + "&within=50&sort_order=date&date=Future&category=music&page_size=20&change_multi_day_start=1"
     json_obj = JSON.parse(open(eventful_url).read)
     full_sanitizer = Rails::Html::FullSanitizer.new
-    puts eventful_url
     @num_of_events = json_obj['page_size']
     json_obj['events']['event'].each do |e|
       @events_title << e["title"]
@@ -434,8 +416,6 @@ class UsersController < ApplicationController
     @events_venue = []
 
     @user_events = Event.all
-    puts @user_events
-    puts 'ahhhhhhhhhhh '
     @user_events.each do |e|
       @events_title << e.title
       @events_descript << e.description
@@ -453,6 +433,10 @@ class UsersController < ApplicationController
     elsif
       render "no_events"
     end
+  end
+
+  def add_event
+
   end
 
   def create_event

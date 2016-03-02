@@ -21,9 +21,9 @@ OmniApp::Application.routes.draw do
   get  'edit2' => 'users#edit2'
   post "users/matchChoice"
   get 'view_matches' => 'users#view_matches'
-  get 'findMatch' => 'users#findMatch'
   get 'events' => 'users#get_local_events'
   get 'user_events' => 'users#get_user_events'
+  get 'add_event' => 'users#add_event'
 
 
 =begin

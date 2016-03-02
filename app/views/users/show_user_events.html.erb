@@ -1,0 +1,38 @@
+<style>
+
+    .panel {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    .panel > .panel-heading {
+        background-image: none;
+        background-color: #63E59F;
+        color: white;
+    }
+
+    .panel:nth-of-type(odd) > .panel-heading {
+        background-color: #819FE1;
+    }
+
+    .panel > .panel-body {
+        height: 100px;
+        overflow-y: scroll;
+    }
+</style>
+
+<h3 class="text-center">
+  <%= link_to events_path, id: "local_events" do %>Local Events <% end %>&nbsp; | &nbsp; User Events &nbsp; <a href="add_event"><span class="fa fa-plus-circle  fa-1x" aria-hidden="true"></span></a>
+</h3>
+<% @events.each_with_index do |event, index| %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= event[0] %> &nbsp; | &nbsp; <%= event[3] %> <%= event[2] %> &nbsp; | &nbsp; <%= event[4] %></h3>
+      </div>
+      <div class="panel-body">
+        <a href="<%= event[5] %>"><b>LINK</b> </a>
+        <br>
+        <b>DESCRIPTION:</b> <%= event[1] %>
+      </div>
+    </div>
+<% end %>

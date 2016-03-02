@@ -89,10 +89,14 @@ class Matching < ActiveRecord::Base
     if matchRecord.user1 == usrID
       if matchRecord.status == -1
         matchRecord.status = -3
+      else
+        matchRecord.status = -2
       end
     elsif matchRecord.user2 == usrID
       if matchRecord.status == -2
         matchRecord.status = -3
+      else
+        matchRecord.status = -1
       end
     end
     matchRecord.save

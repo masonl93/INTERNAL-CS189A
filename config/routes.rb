@@ -22,7 +22,7 @@ OmniApp::Application.routes.draw do
   get 'view_matches' => 'users#view_matches'
   get 'findMatch' => 'users#findMatch'
   get 'events' => 'users#get_local_events'
-  get 'add_event' => 'users#add_event'
+  get 'user_events' => 'users#get_user_events'
 
 =begin
   get "users/new"             # Currently empty; exists only to pass users/new test

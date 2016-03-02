@@ -398,19 +398,16 @@ class UsersController < ApplicationController
 
   end
 
+
   def showMatches
-    #FOR PRODUCTION
-    #@group = User.where('id = ? OR id = ? OR id = ? OR id = ?', 16, 17, 18, 19).order(:id)
-    #@neo = Neography::Rest.new("http://neo4j:arbor94@localhost:7474")
 
-    # node1 = @neo.create_node("user_id" => 14, "name" => "Chris")
-    # node2 = @neo.create_node("user_id" => 16, "name" => "Alex")
-    # @neo.create_relationship("matched", node1, node2)
-    #@neo.find_node_index_by_key_value()
-    #Neography::Node.find
-    @users = User.where('id != ?', current_user.id)
-
-    #var peer = new Peer({key: 'zyjq7np7zz8y3nmi'});
+    #@users = User.where('id != ?', current_user.id)
+    matchesID = Matching.getAllMatches(current_user.id.to_s)
+    if matchesID.length == 0
+      render :no_matches
+    else
+      @users = User.find(matchesID)
+    end
 
 
   end
@@ -424,14 +421,6 @@ class UsersController < ApplicationController
     @events_month = []
     @events_date = []
     @events_venue = []
-
-    @user_title = []
-    @user_descript = []
-    @user_url = []
-    @user_time = []
-    @user_month = []
-    @user_date = []
-    @user_venue = []
 
     eventful_key = "NVkK26nn5QQPffwS"
     eventful_url = "http://api.eventful.com/json/events/search?app_key=" + eventful_key + "&location=" + (@user.lat).to_s + ',' + (@user.long).to_s + "&within=50&sort_order=date&date=Future&category=music&page_size=20&change_multi_day_start=1"
@@ -453,30 +442,49 @@ class UsersController < ApplicationController
       @events_venue << e["venue_name"]
     end
 
-    #user events
-    @user_events = Event.all
-    @user_events.each do |e|
-      @user_title << e.title
-      @user_descript << e.description
-      @user_url << e.url
-      @user_time << e.date.split(" ")[1]
-      @user_month << get_month_name(e.date.split("-")[1])
-      @user_date << e.date.split("-")[2][0,2]
-      @user_venue << e.location
+    if @events_title != NIL
+      @events = @events_title.zip @events_descript,@events_date,@events_month,@events_venue,@events_url,@events_time
+      render "show_local_events"
+    elsif
+      render "no_events"
     end
-
-    @events = @events_title.zip @events_descript,@events_date,@events_month,@events_venue,@events_url,@events_time
-    render "show_local_events"
   end
 
-  def add_event
-    @user = User.find(session[:user_id])
+  def get_user_events
+    @events_title = []
+    @events_descript = []
+    @events_url = []
+    @events_time = []
+    @events_month = []
+    @events_date = []
+    @events_venue = []
+
+    @user_events = Event.all
+    puts @user_events
+    puts 'ahhhhhhhhhhh '
+    @user_events.each do |e|
+      @events_title << e.title
+      @events_descript << e.description
+      @events_url << e.url
+      @events_time << e.date.split(" ")[1]
+      @events_month << get_month_name(e.date.split("-")[1])
+      @events_date << e.date.split("-")[2][0,2]
+      @events_venue << e.location
+    end
+
+
+    if @user_events != NIL
+      @events = @events_title.zip @events_descript,@events_date,@events_month,@events_venue,@events_url,@events_time
+      render "show_user_events"
+    elsif
+      render "no_events"
+    end
   end
 
   def create_event
     date_time_format = params[:date] + ' ' + params[:time]  #yyyy:mm:dd time
     Event.add(session[:user_id], params[:title], date_time_format, params[:descript], params[:link], params[:location])
-    redirect_to action: "get_local_events"
+    redirect_to action: "get_user_events"
   end
 
   def showMatchMsgs

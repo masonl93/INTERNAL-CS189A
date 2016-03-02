@@ -434,13 +434,19 @@ class UsersController < ApplicationController
     @user_venue = []
 
     eventful_key = "NVkK26nn5QQPffwS"
-    eventful_url = "http://api.eventful.com/json/events/search?app_key=" + eventful_key + "&location=" + (@user.lat).to_s + ',' + (@user.long).to_s + "&within=50&sort_order=date&date=Future&category=music"
+    eventful_url = "http://api.eventful.com/json/events/search?app_key=" + eventful_key + "&location=" + (@user.lat).to_s + ',' + (@user.long).to_s + "&within=50&sort_order=date&date=Future&category=music&page_size=20&change_multi_day_start=1"
     json_obj = JSON.parse(open(eventful_url).read)
+    full_sanitizer = Rails::Html::FullSanitizer.new
+    puts eventful_url
     @num_of_events = json_obj['page_size']
     json_obj['events']['event'].each do |e|
       @events_title << e["title"]
-      @events_descript << e["description"]
-      @events_url << e["url"]
+      if e["description"] == NIL
+        @events_descript << "No description provided"
+      elsif
+        @events_descript << full_sanitizer.sanitize(HTMLEntities.new.decode(e["description"]))
+      end
+      @events_url << HTMLEntities.new.decode(e["url"])
       @events_time << e["start_time"]     # format = 2016-05-24 15:00:00
       @events_date << e["start_time"].split("-")[2][0,2]
       @events_month << get_month_name(e["start_time"].split("-")[1])
@@ -459,6 +465,7 @@ class UsersController < ApplicationController
       @user_venue << e.location
     end
 
+    @events = @events_title.zip @events_descript,@events_date,@events_month,@events_venue,@events_url,@events_time
     render "show_local_events"
   end
 

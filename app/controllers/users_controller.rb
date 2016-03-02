@@ -140,31 +140,6 @@ class UsersController < ApplicationController
   # Finds a possible match for swiping
   def findMatch
 
-    # @users = User.ids       # Matching algorithm: Find all users and iterate over them
-    # me = User.find(session[:user_id])
-    # @users.each do |u|
-    #   @user = User.find(u)
-    #   # Checks if one user already saw me, or vice versa, and makes sure it's not self
-    #   # If users have never seen each other, then new match is created
-    #   # and user gets to like/dislike user
-    #   if (!Matching.matchExists(@user.uid, me.uid) && !Matching.matchExists(me.uid, @user.uid) && @user.uid != me.uid)
-    #     @userMatch = Matching.createMatch(@user.uid, me.uid)    # Creates the match in the database
-    #     return
-    #     # Checks if user has already reviewed and waiting on me
-    #     # If match exists and the other user has already liked/disliked
-    #     # me (hence status =1 or =-1), then me gets to like/dislike user
-    #   elsif Matching.matchExists(me.uid, @user.uid)
-    #     the_match = Matching.where(:user1 => me.uid).where(:user2 => @user.uid).first()
-    #     if (the_match[:status] == 1 || the_match[:status] == -1)
-    #       return
-    #     end
-    #   end
-    # end
-    # # gone through all user options
-    # render "no_new_users"
-    # redirect_to action: "testFindMatch"
-
-
 
     allU = User.all
     closeU = [], elligibleU = []
@@ -398,7 +373,6 @@ class UsersController < ApplicationController
 
   end
 
-
   def showMatches
 
     #@users = User.where('id != ?', current_user.id)
@@ -514,7 +488,7 @@ class UsersController < ApplicationController
   def createChat
     respond_to do |format|
       if current_user
-        @chats = current_user.chats.build(chat_params)
+        @chats = current_user.chats.build(create_chat_params)
         if @chats.save
           #flash[:success] = 'Your message was sent!'
           format.html {redirect_to action: "showMatchMsgs", id:params[:id]}
@@ -529,6 +503,18 @@ class UsersController < ApplicationController
         format.html {redirect_to root_url}
         format.js {render nothing: true}
       end
+    end
+  end
+
+  def newChat
+    #params.require(:newChat).permit(:recipients, :body)
+    matchid = params[:recipients].to_i
+    body = params[:body]
+    @chat = current_user.chats.build("match_id" => matchid, "body" => body)
+    if @chat.save
+      redirect_to action: "showMatchMsgs", id:matchid
+    else
+      flash[:error] = 'Your message not sent :('
     end
   end
 
@@ -564,7 +550,7 @@ class UsersController < ApplicationController
 
   private
 
-  def chat_params
+  def create_chat_params
     params.require(:chat).permit(:body, :match_id)
   end
 

@@ -15,7 +15,8 @@ OmniApp::Application.routes.draw do
   resources :users
 
   # asks the router to match the request to the edit action of the users' controller
-  post "users/save_user_location" => 'users#save_user_location'
+  post "users/save_user_location" => 'users#save_user_location', :as => :save_user_location
+  #post "save_user_location" => 'users#save_user_location'
   get  'edit' => 'users#edit'
   get  'edit2' => 'users#edit2'
   post "users/matchChoice"

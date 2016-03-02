@@ -21,7 +21,9 @@
     }
 </style>
 
-<h3 class="text-center">Local Events &nbsp; | &nbsp; <%= link_to user_events_path, id: "user_events" do %>User Events<% end %></h3>
+<h3 class="text-center">
+  <%= link_to events_path, id: "local_events" do %>Local Events <% end %>&nbsp; | &nbsp; User Events &nbsp; <a href="add_event"><span class="fa fa-plus-circle  fa-1x" aria-hidden="true"></span></a>
+</h3>
 <% @events.each_with_index do |event, index| %>
     <div class="panel panel-default">
       <div class="panel-heading">

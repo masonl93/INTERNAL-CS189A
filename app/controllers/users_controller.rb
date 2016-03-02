@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(session[:user_id])
-    @instruments = InstrumentChoice.all       # todo: add all instrument choices to this database
+    #@instruments = InstrumentChoice.all       # todo: add all instrument choices to this database
                                               # then have for loop creating checkboxes in _form.html.erb
   end
 
@@ -379,19 +379,10 @@ class UsersController < ApplicationController
     @events_date = []
     @events_venue = []
 
-    @user_title = []
-    @user_descript = []
-    @user_url = []
-    @user_time = []
-    @user_month = []
-    @user_date = []
-    @user_venue = []
-
     eventful_key = "NVkK26nn5QQPffwS"
     eventful_url = "http://api.eventful.com/json/events/search?app_key=" + eventful_key + "&location=" + (@user.lat).to_s + ',' + (@user.long).to_s + "&within=50&sort_order=date&date=Future&category=music&page_size=20&change_multi_day_start=1"
     json_obj = JSON.parse(open(eventful_url).read)
     full_sanitizer = Rails::Html::FullSanitizer.new
-    puts eventful_url
     @num_of_events = json_obj['page_size']
     json_obj['events']['event'].each do |e|
       @events_title << e["title"]
@@ -407,30 +398,51 @@ class UsersController < ApplicationController
       @events_venue << e["venue_name"]
     end
 
-    #user events
+    if @events_title != NIL
+      @events = @events_title.zip @events_descript,@events_date,@events_month,@events_venue,@events_url,@events_time
+      render "show_local_events"
+    elsif
+      render "no_events"
+    end
+  end
+
+  def get_user_events
+    @events_title = []
+    @events_descript = []
+    @events_url = []
+    @events_time = []
+    @events_month = []
+    @events_date = []
+    @events_venue = []
+
     @user_events = Event.all
     @user_events.each do |e|
-      @user_title << e.title
-      @user_descript << e.description
-      @user_url << e.url
-      @user_time << e.date.split(" ")[1]
-      @user_month << get_month_name(e.date.split("-")[1])
-      @user_date << e.date.split("-")[2][0,2]
-      @user_venue << e.location
+      @events_title << e.title
+      @events_descript << e.description
+      @events_url << e.url
+      @events_time << e.date.split(" ")[1]
+      @events_month << get_month_name(e.date.split("-")[1])
+      @events_date << e.date.split("-")[2][0,2]
+      @events_venue << e.location
     end
 
-    @events = @events_title.zip @events_descript,@events_date,@events_month,@events_venue,@events_url,@events_time
-    render "show_local_events"
+
+    if @user_events != NIL
+      @events = @events_title.zip @events_descript,@events_date,@events_month,@events_venue,@events_url,@events_time
+      render "show_user_events"
+    elsif
+      render "no_events"
+    end
   end
 
   def add_event
-    @user = User.find(session[:user_id])
+
   end
 
   def create_event
     date_time_format = params[:date] + ' ' + params[:time]  #yyyy:mm:dd time
     Event.add(session[:user_id], params[:title], date_time_format, params[:descript], params[:link], params[:location])
-    redirect_to action: "get_local_events"
+    redirect_to action: "get_user_events"
   end
 
   def showMatchMsgs

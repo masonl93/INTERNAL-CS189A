@@ -376,7 +376,7 @@ class UsersController < ApplicationController
   def showMatches
 
     #@users = User.where('id != ?', current_user.id)
-    matchesID = Matching.getAllMatches(current_user.id)
+    matchesID = Matching.getAllMatches(current_user.id.to_s)
     if matchesID.length == 0
       render :no_matches
     else

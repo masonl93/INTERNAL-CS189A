@@ -140,31 +140,6 @@ class UsersController < ApplicationController
   # Finds a possible match for swiping
   def findMatch
 
-    # @users = User.ids       # Matching algorithm: Find all users and iterate over them
-    # me = User.find(session[:user_id])
-    # @users.each do |u|
-    #   @user = User.find(u)
-    #   # Checks if one user already saw me, or vice versa, and makes sure it's not self
-    #   # If users have never seen each other, then new match is created
-    #   # and user gets to like/dislike user
-    #   if (!Matching.matchExists(@user.uid, me.uid) && !Matching.matchExists(me.uid, @user.uid) && @user.uid != me.uid)
-    #     @userMatch = Matching.createMatch(@user.uid, me.uid)    # Creates the match in the database
-    #     return
-    #     # Checks if user has already reviewed and waiting on me
-    #     # If match exists and the other user has already liked/disliked
-    #     # me (hence status =1 or =-1), then me gets to like/dislike user
-    #   elsif Matching.matchExists(me.uid, @user.uid)
-    #     the_match = Matching.where(:user1 => me.uid).where(:user2 => @user.uid).first()
-    #     if (the_match[:status] == 1 || the_match[:status] == -1)
-    #       return
-    #     end
-    #   end
-    # end
-    # # gone through all user options
-    # render "no_new_users"
-    # redirect_to action: "testFindMatch"
-
-
 
     allU = User.all
     closeU = [], elligibleU = []
@@ -399,18 +374,14 @@ class UsersController < ApplicationController
   end
 
   def showMatches
-    #FOR PRODUCTION
-    #@group = User.where('id = ? OR id = ? OR id = ? OR id = ?', 16, 17, 18, 19).order(:id)
-    #@neo = Neography::Rest.new("http://neo4j:arbor94@localhost:7474")
 
-    # node1 = @neo.create_node("user_id" => 14, "name" => "Chris")
-    # node2 = @neo.create_node("user_id" => 16, "name" => "Alex")
-    # @neo.create_relationship("matched", node1, node2)
-    #@neo.find_node_index_by_key_value()
-    #Neography::Node.find
-    @users = User.where('id != ?', current_user.id)
-
-    #var peer = new Peer({key: 'zyjq7np7zz8y3nmi'});
+    #@users = User.where('id != ?', current_user.id)
+    matchesID = Matching.getAllMatches(current_user.id.to_s)
+    if matchesID.length == 0
+      render :no_matches
+    else
+      @users = User.find(matchesID)
+    end
 
 
   end
@@ -425,51 +396,69 @@ class UsersController < ApplicationController
     @events_date = []
     @events_venue = []
 
-    @user_title = []
-    @user_descript = []
-    @user_url = []
-    @user_time = []
-    @user_month = []
-    @user_date = []
-    @user_venue = []
-
     eventful_key = "NVkK26nn5QQPffwS"
-    eventful_url = "http://api.eventful.com/json/events/search?app_key=" + eventful_key + "&location=" + (@user.lat).to_s + ',' + (@user.long).to_s + "&within=50&sort_order=date&date=Future&category=music"
+    eventful_url = "http://api.eventful.com/json/events/search?app_key=" + eventful_key + "&location=" + (@user.lat).to_s + ',' + (@user.long).to_s + "&within=50&sort_order=date&date=Future&category=music&page_size=20&change_multi_day_start=1"
     json_obj = JSON.parse(open(eventful_url).read)
+    full_sanitizer = Rails::Html::FullSanitizer.new
+    puts eventful_url
     @num_of_events = json_obj['page_size']
     json_obj['events']['event'].each do |e|
       @events_title << e["title"]
-      @events_descript << e["description"]
-      @events_url << e["url"]
+      if e["description"] == NIL
+        @events_descript << "No description provided"
+      elsif
+        @events_descript << full_sanitizer.sanitize(HTMLEntities.new.decode(e["description"]))
+      end
+      @events_url << HTMLEntities.new.decode(e["url"])
       @events_time << e["start_time"]     # format = 2016-05-24 15:00:00
       @events_date << e["start_time"].split("-")[2][0,2]
       @events_month << get_month_name(e["start_time"].split("-")[1])
       @events_venue << e["venue_name"]
     end
 
-    #user events
-    @user_events = Event.all
-    @user_events.each do |e|
-      @user_title << e.title
-      @user_descript << e.description
-      @user_url << e.url
-      @user_time << e.date.split(" ")[1]
-      @user_month << get_month_name(e.date.split("-")[1])
-      @user_date << e.date.split("-")[2][0,2]
-      @user_venue << e.location
+    if @events_title != NIL
+      @events = @events_title.zip @events_descript,@events_date,@events_month,@events_venue,@events_url,@events_time
+      render "show_local_events"
+    elsif
+      render "no_events"
     end
-
-    render "show_local_events"
   end
 
-  def add_event
-    @user = User.find(session[:user_id])
+  def get_user_events
+    @events_title = []
+    @events_descript = []
+    @events_url = []
+    @events_time = []
+    @events_month = []
+    @events_date = []
+    @events_venue = []
+
+    @user_events = Event.all
+    puts @user_events
+    puts 'ahhhhhhhhhhh '
+    @user_events.each do |e|
+      @events_title << e.title
+      @events_descript << e.description
+      @events_url << e.url
+      @events_time << e.date.split(" ")[1]
+      @events_month << get_month_name(e.date.split("-")[1])
+      @events_date << e.date.split("-")[2][0,2]
+      @events_venue << e.location
+    end
+
+
+    if @user_events != NIL
+      @events = @events_title.zip @events_descript,@events_date,@events_month,@events_venue,@events_url,@events_time
+      render "show_user_events"
+    elsif
+      render "no_events"
+    end
   end
 
   def create_event
     date_time_format = params[:date] + ' ' + params[:time]  #yyyy:mm:dd time
     Event.add(session[:user_id], params[:title], date_time_format, params[:descript], params[:link], params[:location])
-    redirect_to action: "get_local_events"
+    redirect_to action: "get_user_events"
   end
 
   def showMatchMsgs
@@ -499,7 +488,7 @@ class UsersController < ApplicationController
   def createChat
     respond_to do |format|
       if current_user
-        @chats = current_user.chats.build(chat_params)
+        @chats = current_user.chats.build(create_chat_params)
         if @chats.save
           #flash[:success] = 'Your message was sent!'
           format.html {redirect_to action: "showMatchMsgs", id:params[:id]}
@@ -514,6 +503,18 @@ class UsersController < ApplicationController
         format.html {redirect_to root_url}
         format.js {render nothing: true}
       end
+    end
+  end
+
+  def newChat
+    #params.require(:newChat).permit(:recipients, :body)
+    matchid = params[:recipients].to_i
+    body = params[:body]
+    @chat = current_user.chats.build("match_id" => matchid, "body" => body)
+    if @chat.save
+      redirect_to action: "showMatchMsgs", id:matchid
+    else
+      flash[:error] = 'Your message not sent :('
     end
   end
 
@@ -549,7 +550,7 @@ class UsersController < ApplicationController
 
   private
 
-  def chat_params
+  def create_chat_params
     params.require(:chat).permit(:body, :match_id)
   end
 

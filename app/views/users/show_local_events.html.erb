@@ -1,44 +1,36 @@
-<div class="container">
-  <div class="row">
-    <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
-      <ul class="event-list">
-        <% @events_title.zip @events_descript,@events_date,@events_month,@events_venue,@events_url do |event| %>
-            <li>
-              <time datetime="2014-07-20">
-                <span class="day"><%= event[2] %></span>
-                <span class="month"><%= event[3] %></span>
-              </time>
-              <img alt="Independence Day" src="https://farm4.staticflickr.com/3100/2693171833_3545fb852c_q.jpg" />
-              <div class="info">
-                <h2 class="title"><%= event[0] %></h2>
-                <p class="desc"><%= event[1] %></p>
-              </div>
-            </li>
-        <% end %>
-      </ul>
+<style>
 
-      <h3>User Events</h3>
+    .panel {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
 
-      <ul class="event-list">
-        <% @user_title.zip @user_descript,@user_date,@user_month,@user_venue,@user_url do |event| %>
-            <li>
-              <time datetime="2014-07-20">
-                <span class="day"><%= event[2] %></span>
-                <span class="month"><%= event[3] %></span>
-              </time>
-              <img alt="Independence Day" src="https://farm4.staticflickr.com/3100/2693171833_3545fb852c_q.jpg" />
-              <div class="info">
-                <h2 class="title"><%= event[0] %></h2>
-                <p class="desc"><%= event[1] %></p>
-              </div>
-            </li>
-        <% end %>
-      </ul>
+    .panel > .panel-heading {
+        background-image: none;
+        background-color: #63E59F;
+        color: white;
+    }
+
+    .panel:nth-of-type(odd) > .panel-heading {
+        background-color: #819FE1;
+    }
+
+    .panel > .panel-body {
+        height: 100px;
+        overflow-y: scroll;
+    }
+
+
+</style>
+<% @events.each_with_index do |event, index| %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= event[0] %> &nbsp; | &nbsp; <%= event[3] %> <%= event[2] %> &nbsp; | &nbsp; <%= event[4] %></h3>
+      </div>
+      <div class="panel-body">
+        <a href="<%= event[5] %>"><b>LINK</b> </a>
+        <br>
+        <b>DESCRIPTION:</b> <%= event[1] %>
+      </div>
     </div>
-    <div>
-      <%= link_to add_event_path, id: "icon" do %>
-          <span class="fa fa-plus-circle  fa-2x" align="center"><div class="osw"><font size="4">Add your own Event!</font></div></span>
-      <% end %>
-  </div>
-  </div>
-</div>
+<% end %>

@@ -66,7 +66,8 @@ gem 'bootstrap-sass', '~> 3.3.5'
 
 gem 'soundcloud'
 
-gem 'select2-rails'
+gem 'htmlentities'
+
 
 # Databases for Active Record
 group :development do
@@ -79,3 +80,4 @@ group :production do
   gem 'rails_12factor'    # For heroku full functionality
   gem 'puma'              # HTTP server able to handle more traffic
 end
+

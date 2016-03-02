@@ -1,14 +1,14 @@
 
-<button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#myModal">New</button><br><br>
+<button type="button" class="btn btn-warning btn-sm osw" data-toggle="modal" data-target="#myModal">New</button><br><br>
 <%#= link_to 'New', new_chat_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#myModal'}  %>
-<div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
+<div class="btn-pref btn-group btn-group-justified btn-group-lg osw" role="group" aria-label="...">
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-primary" href="#tab1" data-toggle="tab"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+    <button type="button" class="btn btn-primary" href="#tab1" data-toggle="tab"><span class="fa fa-user" aria-hidden="true"></span>
       <div class="hidden-xs">Messages</div>
     </button>
   </div>
-  <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default" href="#tab2" data-toggle="tab"><span class="glyphicon glyphicon-music" aria-hidden="true"></span>
+  <div class="btn-group osw" role="group">
+    <button type="button" class="btn btn-default" href="#tab2" data-toggle="tab"><span class="fa fa-users" aria-hidden="true"></span>
       <div class="hidden-xs">Group</div>
     </button>
   </div>
@@ -19,13 +19,13 @@
     <div class="tab-pane fade in active" id="tab1">
       <% @singleids.each do |id| %>
           <% user = User.find(id) %>
-          <div class="media">
+          <div class="media osw">
             <div class="media-left">
               <a href="#">
                 <img class="media-object" src="<%= user.image %>" alt="...">
               </a>
             </div>
-            <div class="media-body">
+            <div class="media-body osw">
 
               <h4 class="media-heading"><%= link_to user.name, user_path(user.id) %></h4>
               <%= link_to "MESSAGES", user_match_msg_path(user.id) %>
@@ -36,13 +36,13 @@
     <div class="tab-pane fade in" id="tab2">
       <% @groupids.each do |ids| %>
           <% group = User.find(ids) %>
-          <div class="media">
+          <div class="media osw">
             <div class="media-left">
               <a href="#">
                 <img class="media-object" src="<%= group[0].image %>" alt="...">
               </a>
             </div>
-            <div class="media-body">
+            <div class="media-body osw">
               <h4 class="media-heading">
                 <%= group[0].name%>
                 <% len = group.length - 1 %>
@@ -131,7 +131,7 @@
 <!--</div>-->
 
 
-<div id="myModal" class="modal fade" role="dialog">
+<div id="myModal" class="modal fade osw" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -146,15 +146,14 @@
 
             Message: <%= text_field_tag "body",'', id: "chatBody", rows: 1, cols: 10, class: 'form-control', required: true, maxlength: 2000, :placeholder => "Ask to jam!" %>
             <%#= select_tag 'select', '',  class: "form-control select2-select"%>
-            <select class="select2-container-multi" id="tagPicker" multiple="multiple">
-              <option value="1">Cats</option>
-              <option value="2">Dogs</option>
-              <option selected="selected" value="3">Fish</option>
-              <option value="4">Reptiles</option>
-              <option selected="selected" value="5">Equine</option>
-              <option value="6">Aviary</option>
-              <option value="7">Insects</option>
-            </select>
+            <div class="form-group legendary osw">
+              <label class="col-md-4 control-label"> What instruments do you play?</label>
+              <div class="col-md-4">
+                <%= select_tag "instrument", "<option>Guitar</option>
+       <option>Bass</option>
+       <option>Keyboard</option>".html_safe, multiple: true, id: "selector", class: "form-control", placeholder: "Enter an instrument" %>
+              </div>
+            </div>
           </div>
 
           <div class="modal-footer">
@@ -166,9 +165,9 @@
   </div>
 </div>
 
-<script>
-  //var select = $('#select2').select2();
+<script type="text/javascript">
+  $('#selector').select2({
+    //theme: "bootstrap"
+    placeholder: "Select an instrument!"
+  });
 </script>
-
-
-

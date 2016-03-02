@@ -353,30 +353,13 @@ class UsersController < ApplicationController
       end
 
     end
-    # chat = singleChat+groupChat
-    # chat.each do |c|
-    #   if c.is_a? Array
-    #     ids = c.participants.split(",").map(&:to_i)
-    #     if ids.include? current_user.id
-    #       @allids.add(ids)
-    #     end
-    #   else
-    #     if c.user_id == current_user.id
-    #       @allids.delete_if {|id| id == c.match_id }
-    #       @allids.unshift(chat.match_id)
-    #     else
-    #       @allids.delete_if {|id| id == c.user_id }
-    #       @allids.unshift(chat.user_id)
-    #     end
-    #   end
-    # end
 
   end
 
   def showMatches
 
     #@users = User.where('id != ?', current_user.id)
-    matchesID = Matching.getAllMatches(current_user.id)
+    matchesID = Matching.getAllMatches(current_user.id.to_s)
     if matchesID.length == 0
       render :no_matches
     else

@@ -14,10 +14,7 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
-
-$(document).ready(function(){
-  $('select').select2();
-});
 //= require bootstrap-datepicker
+//= require_tree .
+//= require select2.min.js
 

@@ -20,13 +20,19 @@ class Matching < ActiveRecord::Base
     end
   end
   
-  def self.getMatch(user_1, user_2)
-    if exists?(user1: user_1, user2: user_2)
-      return self
-    else
-      return NULL
+  def self.getAllMatches(myID)
+    matches = []
+    where('user1 = ?', myID).each do |match|
+      if match.status == 3
+        matches.append(match.user2.to_i)
+      end
     end
-    
+    where('user2 = ?', myID).each do |match|
+      if match.status == 3
+        matches.append(match.user1.to_i)
+      end
+    end
+    return matches
   end
 
   def self.createMatch(user_1id, user_2id, choiceNum)

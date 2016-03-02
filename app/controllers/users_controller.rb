@@ -375,9 +375,9 @@ class UsersController < ApplicationController
 
   def showMatches
 
-    @users = User.where('id != ?', current_user.id)
-
-
+    #@users = User.where('id != ?', current_user.id)
+    @matchesID = Matching.getAllMatches(current_user.id)
+    @users = User.find(@matchesID)
 
   end
 

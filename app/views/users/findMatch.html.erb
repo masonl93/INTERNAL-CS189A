@@ -1,6 +1,6 @@
 <%= render :partial => 'profile' %>
-
-<%= form_tag({controller: "users", action: "matchChoice"}, method: "post") do %>
+<div style="align-items: center">
+<%= form_tag({controller: "users", action: "matchChoice"}, id:'liking', method: "post")  do %>
 
       <%= hidden_field_tag :id , @user.id %>
       <div class="btn-group btn-group-justified" role="group">
@@ -24,3 +24,7 @@
     <% end %>
 
 </div>
+
+<script>
+  //$('#liking').css({"max-width":"400px", "left":"50%", "right":"50%"});
+</script>

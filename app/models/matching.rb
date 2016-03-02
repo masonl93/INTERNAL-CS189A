@@ -131,17 +131,21 @@ class Matching < ActiveRecord::Base
   end
 
   def self.getInfluencePoints(myInfluences, userInfluences)
-    score = 0
-    user = []
-    userInfluences.each do |u|
-      genre = u.genres
-      user.push(genre.split(","))
+    if myInfluences.length == 0 || userInfluences.length == 0
+      return 10
     end
-
+    score = 0
+    me = []
+    #puts myInfluences
     myInfluences.each do |i|
       genre = i.genres
+      me += genre.split(",")
+    end
+
+    userInfluences.each do |u|
+      genre = u.genres
       genre.split(",").each do |g|
-        if user.include? g
+        if me.include? g
           score += 5
         end
       end

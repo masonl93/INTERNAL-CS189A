@@ -8,6 +8,7 @@
 <%= @users %><br>
 <% @users.each do |id, score| %>
     <% user = User.find(id.to_i) %>
+    <%= User.getDistance([current_user.lat, current_user.long], [user.lat, user.long]) %><br>
     <%= user.name  + " " + score.to_s + " " + current_user.id.to_s + " " + user.id.to_s%><br>
     <% user.genres.each do |g| %>
         <%= g.genre %><br>

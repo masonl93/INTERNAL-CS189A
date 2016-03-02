@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(session[:user_id])
-    @instruments = InstrumentChoice.all       # todo: add all instrument choices to this database
+    #@instruments = InstrumentChoice.all       # todo: add all instrument choices to this database
                                               # then have for loop creating checkboxes in _form.html.erb
   end
 

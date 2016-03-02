@@ -24,6 +24,7 @@ OmniApp::Application.routes.draw do
   get 'findMatch' => 'users#findMatch'
   get 'events' => 'users#get_local_events'
   get 'user_events' => 'users#get_user_events'
+  get 'add_event' => 'users#add_event'
 
 
 =begin

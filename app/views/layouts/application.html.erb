@@ -9,6 +9,15 @@
   <!--<script src="/assets/jquery.js" type="text/javascript"></script>-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
   <!--<script src="/assets/profile.js"></script>-->
+  <script>
+    $(document).ready(function() {
+    $(".btn-pref .btn").click(function () {
+        $(".btn-pref .btn").removeClass("btn-primary").addClass("btn-default");
+        // $(".tab").addClass("active"); // instead of this do the below
+        $(this).removeClass("btn-default").addClass("btn-primary");
+    });
+    });
+  </script>
 
   <!-- <script src="/assets/scripts.js" type="text/javascript"></script> -->
   <!-- Include jQuery library using a CDN -->

@@ -31,7 +31,7 @@
     <div class="form-group legendary osw">
       <label class="col-md-4 control-label"> Genres:</label>
       <div class="col-md-4">
-        <%= select_tag "genre", options_for_select(genres), multiple: true, id: "selector", class: "form-control", placeholder: "Enter a genre" %>
+        <%= select_tag "genre", options_for_select(genres), multiple: true, id: "genre", class: "form-control", placeholder: "Enter a genre" %>
       </div>
     </div>
 
@@ -98,5 +98,10 @@
   $('#looking').select2({
       //theme: "bootstrap"
       placeholder: "Select one or more instruments"
+  });
+
+  $('#genre').select2({
+      //theme: "bootstrap"
+      placeholder: "Select one or more genres"
   });
 </script>

@@ -20,9 +20,8 @@ OmniApp::Application.configure do
   # config.action_dispatch.rack_cache = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
-  config.serve_static_files = true
-  #config.assets.precompile += ["jquery.js", "bootstrap.js", "profile.js", "location.js", "select2.min.js","select2.css","select2-bootstrap.css"]
-
+  config.serve_static_files = false
+  
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass

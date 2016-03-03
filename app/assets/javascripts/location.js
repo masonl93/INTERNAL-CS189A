@@ -10,7 +10,7 @@ function showPosition(position) {
     //x.innerHTML="Latitude: " + position.coords.latitude +
         //"<br>Longitude: " + position.coords.longitude;
     $.ajax({
-        url: "save_user_location",
+        url: "/users/save_user_location",
         type: "POST",
         data: {lat: position.coords.latitude, long: position.coords.longitude}
     });

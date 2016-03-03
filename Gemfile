@@ -7,7 +7,6 @@ source 'https://rubygems.org'
 gem 'layer-ruby', require: 'layer'
 gem 'acts-as-messageable'
 gem 'rails','4.2.2'
-gem 'bootstrap-datepicker-rails'
 # MATERIALIZE GEM
 # gem 'materialize-sass'
 
@@ -60,15 +59,24 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Facebook Authentication
 gem 'omniauth-facebook'
 
+# Bootstrap
 gem 'bootstrap-sass', '~> 3.3.5'
 
+# Soundcloud API
 gem 'soundcloud'
 
+# Char to HTMLEnt
 gem 'htmlentities'
 
+# Select 2
 gem 'select2-rails'
+
+# Datepicker
+gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
+                              :git => 'git://github.com/Nerian/bootstrap-datepicker-rails.git'
 
 # Databases for Active Record
 group :development do

@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     session[:omniauth] = auth.except('extra')
     if User.where(:uid => auth['uid']).first() != nil
       session[:user_id] = User.where(:uid => auth['uid']).first()[:id]
-      redirect_to "/findMatch", id: session[:user_id]
+      redirect_to "/matching", id: session[:user_id]
     else
       user = User.sign_in_from_omniauth(auth)
       session[:user_id] = user.id

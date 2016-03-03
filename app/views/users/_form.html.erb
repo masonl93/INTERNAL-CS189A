@@ -1,7 +1,5 @@
 <!-- this is actually the 'edit' page -->
 
-<script src="/js/select2.min.js"></script>
-
 <div id="geolocation" >
 </div>
 
@@ -81,6 +79,13 @@
         <label class="checkbox-inline f1" >
           <%= check_box_tag "genre[]", 'Experimental' %> Experimental
         </label>
+      </div>
+    </div>
+
+    <div class="form-group legendary osw">
+      <label class="col-md-4 control-label"> Genres:</label>
+      <div class="col-md-4">
+        <%= select_tag "genre", options_for_select(genres), multiple: true, id: "selector", class: "form-control", placeholder: "Enter a genre" %>
       </div>
     </div>
 

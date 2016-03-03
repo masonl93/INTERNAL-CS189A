@@ -141,7 +141,7 @@ class UsersController < ApplicationController
   def findMatch
 
 
-    allU = User.all
+    allU = User.all.where("id != ?", current_user.id)
     closeU = [], elligibleU = []
     myLookingForInstruments = [], myInstruments = [],  myGenres = []
     sorted = Hash.new
@@ -427,7 +427,7 @@ class UsersController < ApplicationController
     end
 
 
-    if @user_events != NIL
+    if @user_events != []
       @events = @events_title.zip @events_descript,@events_date,@events_month,@events_venue,@events_url,@events_time
       render "show_user_events"
     elsif

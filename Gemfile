@@ -69,6 +69,7 @@ gem 'soundcloud'
 gem 'htmlentities'
 
 gem 'select2-rails'
+
 # Databases for Active Record
 group :development do
   gem 'sqlite3'

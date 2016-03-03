@@ -1,2 +1,7 @@
-<body onload="getLocation()">
+<script src="/assets/location.js"></script>
+<script>
+  $(document).ready(function(){
+    getLocation();
+  });
+</script>
 <%= render :partial => 'form' %>

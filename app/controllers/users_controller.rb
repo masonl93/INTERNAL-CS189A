@@ -141,7 +141,7 @@ class UsersController < ApplicationController
   def findMatch
 
 
-    allU = User.all
+    allU = User.all.where("id != ?", current_user.id)
     closeU = [], elligibleU = []
     myLookingForInstruments = [], myInstruments = [],  myGenres = []
     sorted = Hash.new

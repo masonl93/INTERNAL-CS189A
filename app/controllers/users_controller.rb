@@ -169,7 +169,7 @@ class UsersController < ApplicationController
     elligibleU.each do |user|
       score = 0
       #  FIRST CHECK TO SEE IF MATCH IS USER'S RADIUS
-      if User.getDistance([current_user.lat, current_user.long], [user.lat, user.long]) <= current_user.radius
+      #if User.getDistance([current_user.lat, current_user.long], [user.lat, user.long]) <= current_user.radius
         userPlays = user.instruments.where("play = ?", true)
         userWants = user.instruments.where("play = ?", false)
         userGenre = user.genres
@@ -189,7 +189,7 @@ class UsersController < ApplicationController
           # FINALLY add user and score to hash.
           sorted[user.id.to_s] = score
         end
-      end
+      #end
 
     end
 

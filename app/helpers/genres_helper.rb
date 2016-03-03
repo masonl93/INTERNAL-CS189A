@@ -9,6 +9,7 @@ module GenresHelper
         ["Folk","Folk"],
         ["Hip-Hop","Hip-Hop"],
         ["Jazz","Jazz"],
+        ["Metal", "Metal"],
         ["R&B","R&B"],
         ["Reggae","Reggae"],
         ["Rock","Rock"],

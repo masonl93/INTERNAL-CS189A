@@ -9,7 +9,6 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require bootstrap.min
- *= require bootstrap-datepicker
  *= require_self
  *= require font-awesome
  *= require select2
@@ -37,6 +36,6 @@
   margin-top: 50px;
 }
 
-body {
-  padding-top: 110px;
-}
+//body {
+//  padding-top: 110px;
+//}

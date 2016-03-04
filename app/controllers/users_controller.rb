@@ -441,7 +441,11 @@ class UsersController < ApplicationController
 
   def create_event
     date_time_format = params[:date] + ' ' + params[:time]  #yyyy:mm:dd time
-    Event.add(session[:user_id], params[:title], date_time_format, params[:descript], params[:link], params[:location])
+    link = params[:link]
+    if !link.start_with? 'http'
+      link = 'http://' + link
+    end
+    Event.add(session[:user_id], params[:title], date_time_format, params[:descript], link, params[:location])
     redirect_to action: "get_user_events"
   end
 

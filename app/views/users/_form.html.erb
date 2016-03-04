@@ -10,82 +10,28 @@
 
 
 <%= form_tag({controller: "users", action: "updateSurvey"}, method: "post", :class => "form-horizontal") do %>
-
-    <div class="form-group legendary osw">
-      <label class="col-md-4 control-label" for="checkboxes">What instruments do you play?:</label>
-      <div class="col-md-4">
-        <label class="checkbox-inline f1" >
-            <%= check_box_tag "instrument[]", 'Guitar' %> Guitar <br><%= image_tag("instruments/guitar.png", alt: "Guitar", class: "img-circular invert") %>
-        </label>
-        <label class="checkbox-inline f1">
-          <%= check_box_tag "instrument[]", 'Bass' %> Bass <br><%= image_tag("instruments/bass.png", alt: "Bass", class: "img-circular invert") %>
-        </label>
-        <label class="checkbox-inline f1" >
-          <%= check_box_tag "instrument[]", 'Vocals' %> Vocals <br><%= image_tag("instruments/vocals.png", alt: "Vocals", class: "img-circular invert") %>
-        </label>
-        <label class="checkbox-inline f1" >
-          <%= check_box_tag "instrument[]", 'Drums' %> Drums <br><%= image_tag("instruments/drums.png", alt: "Drums", class: "img-circular invert") %>
-        </label>
-        <label class="checkbox-inline f1" >
-          <%= check_box_tag "instrument[]", 'Keyboard' %> Keyboard <br><%= image_tag("instruments/keyboard.png", alt: "Keyboard", class: "img-circular invert") %>
-        </label>
-      </div>
-    </div>
     
     <!-- Select2 -->
     <div class="form-group legendary osw">
       <label class="col-md-4 control-label"> What instruments do you play?</label>
       <div class="col-md-4">
-        <%= select_tag "instrument", options_for_select(instruments), multiple: true, id: "selector", class: "form-control", placeholder: "Enter an instrument" %>
+        <%= select_tag "instrument", options_for_select(instruments), multiple: true, id: "instrument", class: "form-control", placeholder: "Select one or more instruments" %>
       </div>
     </div>
-    
-    <!-- Prior: "<option>Guitar</option>".html_safe --->
 
+    <!-- Select2 -->
     <div class="form-group legendary osw">
-      <label class="col-md-4 control-label" for="checkboxes">Artists you are looking for:</label>
+      <label class="col-md-4 control-label"> What instruments are you looking to jam with?</label>
       <div class="col-md-4">
-        <label class="checkbox-inline f1" >
-            <%= check_box_tag "looking[]", 'Guitar' %> Guitar <br><%= image_tag("instruments/guitar.png", alt: "Guitar", class: "img-circular invert") %>
-        </label>
-        <label class="checkbox-inline f1" >
-          <%= check_box_tag "looking[]", 'Bass' %> Bass <br><%= image_tag("instruments/bass.png", alt: "Bass", class: "img-circular invert") %>
-        </label>
-        <label class="checkbox-inline f1" >
-          <%= check_box_tag "looking[]", 'Vocals' %> Vocals <br><%= image_tag("instruments/vocals.png", alt: "Vocals", class: "img-circular invert") %>
-        </label>
-        <label class="checkbox-inline f1" >
-          <%= check_box_tag "looking[]", 'Drums' %> Drums <br><%= image_tag("instruments/drums.png", alt: "Drums", class: "img-circular invert") %>
-        </label>
-        <label class="checkbox-inline f1" >
-          <%= check_box_tag "looking[]", 'Keyboard' %> Keyboard <br><%= image_tag("instruments/keyboard.png", alt: "Keyboard", class: "img-circular invert") %>
-        </label>
+        <%= select_tag "looking", options_for_select(instruments), multiple: true, id: "looking", class: "form-control", placeholder: "Select one or more instruments" %>
       </div>
     </div>
 
-
-    <div class="form-group legendary osw">
-      <label class="col-md-4 control-label" for="checkboxes">Genres:</label>
-      <div class="col-md-4">
-        <label class="checkbox-inline f1" >
-          <%= check_box_tag "genre[]", 'Rockabilly' %> Rockabilly 
-        </label>
-        <label class="checkbox-inline f1" >
-          <%= check_box_tag "genre[]", 'Metalcore' %> Metalcore
-        </label>
-        <label class="checkbox-inline f1" >
-          <%= check_box_tag "genre[]", 'Future Bass' %> Future Bass
-        </label>
-        <label class="checkbox-inline f1" >
-          <%= check_box_tag "genre[]", 'Experimental' %> Experimental
-        </label>
-      </div>
-    </div>
 
     <div class="form-group legendary osw">
       <label class="col-md-4 control-label"> Genres:</label>
       <div class="col-md-4">
-        <%= select_tag "genre", options_for_select(genres), multiple: true, id: "selector", class: "form-control", placeholder: "Enter a genre" %>
+        <%= select_tag "genre", options_for_select(genres), multiple: true, id: "genre", class: "form-control", placeholder: "Enter a genre" %>
       </div>
     </div>
 
@@ -144,8 +90,18 @@
 </div>
 
 <script type="text/javascript">
-  $('#selector').select2({
+  $('#instrument').select2({
     //theme: "bootstrap"
-    placeholder: "Select an instrument!"
+    placeholder: "Select one or more instruments"
+  });
+
+  $('#looking').select2({
+      //theme: "bootstrap"
+      placeholder: "Select one or more instruments"
+  });
+
+  $('#genre').select2({
+      //theme: "bootstrap"
+      placeholder: "Select one or more genres"
   });
 </script>

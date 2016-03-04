@@ -11,8 +11,11 @@
       <div class="media-body">
 
         <h4 class="media-heading"><%= link_to user.name, user_path(user.id) %></h4>
-        <%= link_to "MESSAGES", user_match_msg_path(user.id) %>
-        <a onclick="sendCall(<%=user.id %>)" href="#" class="video"><i class="glyphicon glyphicon-facetime-video"></i></a>
+        <%#= link_to "MESSAGES", user_match_msg_path(user.id) %>
+        <%= link_to user_match_msg_path(user.id)  do %>
+            <i class="fa fa-comment fa-2x"></i>
+        <% end %>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a onclick="sendCall(<%=user.id %>)" href="#" class="video"><i class="fa fa-video-camera fa-2x"></i></a>
 
       </div>
     </div>
@@ -24,7 +27,7 @@
 
   <video id = "myVid" muted autoplay="true" style="position: absolute; bottom: 10px; right: 10px; width: 20%; height: 20%; background: #FFFFFF"></video>
 
-  <a href="#" id="close" style="position: absolute; top: 10px; right: 10px; color: #ff6620;">X</a>
+  <a href="#" id="close" style="position: absolute; top: 10px; right: 10px; color: #ff6620;">&times;</a>
 </div>
 
 

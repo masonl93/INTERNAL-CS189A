@@ -3,6 +3,7 @@ require 'open-uri'
 
 class UsersController < ApplicationController
   protect_from_forgery except: [:showMatchMsgs, :save_user_location]
+  skip_before_filter :verify_authenticity_token
 
   @neo = Neography::Rest.new("http://neo4j:arbor94@localhost.com:7474")
 

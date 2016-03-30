@@ -380,7 +380,7 @@ class UsersController < ApplicationController
     @events_date = []
     @events_venue = []
 
-    eventful_key = "NVkK26nn5QQPffwS"
+    eventful_key = "NULL" #replace with eventful API key
     eventful_url = "http://api.eventful.com/json/events/search?app_key=" + eventful_key + "&location=" + (@user.lat).to_s + ',' + (@user.long).to_s + "&within=50&sort_order=date&date=Future&category=music&page_size=20&change_multi_day_start=1"
     json_obj = JSON.parse(open(eventful_url).read)
     full_sanitizer = Rails::Html::FullSanitizer.new
@@ -555,7 +555,7 @@ class UsersController < ApplicationController
   def get_genre_from_influence(influence)
     genres = ''
     influence = URI.encode(influence)
-    echo_key = "HERVF6HKUVVUHY7EW"
+    echo_key = "NULL" #replace with echonest API key
     echonest_url = "http://developer.echonest.com/api/v4/artist/profile?api_key=" + echo_key + "&name=" + influence + "&bucket=genre&format=json"
     json_obj = JSON.parse(open(echonest_url).read)
     if json_obj['response']['status']['code'] == 0
